@@ -6,8 +6,8 @@
 <title>Muretto</title>
 <link rel="manifest" href="manifest.webmanifest">
 <meta name="theme-color" content="#1A1D23">
-<link rel="icon" href="icons/icon-192.png" sizes="192x192">
-<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<link rel="icon" href="icon-192.png" sizes="192x192">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -47,6 +47,7 @@
 }
 html{scroll-padding-top:env(safe-area-inset-top,0px);-webkit-text-size-adjust:100%;text-size-adjust:100%}
 *,*::before,*::after{box-sizing:border-box}
+[hidden]{display:none!important}
 body{margin:0;background:var(--bg);color:var(--text);font:16px/1.45 var(--f-body);-webkit-tap-highlight-color:transparent}
 button,input,select,textarea{font:inherit;color:inherit}
 :focus-visible{outline:2px solid var(--text);outline-offset:2px;border-radius:6px}
@@ -118,6 +119,11 @@ h3{font:600 19px/1.15 var(--f-cond);margin:22px 0 8px}
 .facts b{display:block;color:var(--text);font:600 19px/1.15 var(--f-cond)}
 
 /* telemetria */
+.cond{margin:0 0 10px;font-weight:600;font-size:15px}
+.sess{display:flex;overflow-x:auto;max-width:100%;margin:2px 0 6px;scrollbar-width:none}
+.sess::-webkit-scrollbar{display:none}
+.sess button{white-space:nowrap}
+.ty{color:var(--muted);font:500 12px var(--f-body);margin-left:3px}
 .badge{display:inline-block;font:600 12.5px/1 var(--f-body);padding:6px 10px;border-radius:999px;background:var(--hl);color:var(--text)}
 .picker{display:flex;align-items:center;gap:8px;margin:8px 0}
 .pk{font:700 16px/1 var(--f-cond);width:14px;color:var(--muted);flex:none}
@@ -303,6 +309,8 @@ dialog.sheet::backdrop{background:rgba(10,12,16,.5)}
       <span class="badge" id="tl-badge" hidden>Simulata</span>
     </div>
     <p class="note" id="tl-note"></p>
+    <p class="cond" id="tl-cond" hidden></p>
+    <div class="seg sess" id="sess" role="group" aria-label="Sessione" hidden></div>
     <div class="picker"><span class="pk">A</span><div class="chips" id="pickA" role="group" aria-label="Pilota A"></div></div>
     <div class="picker"><span class="pk">B</span><div class="chips" id="pickB" role="group" aria-label="Pilota B"></div></div>
     <div class="row" style="margin-top:8px">
@@ -420,11 +428,14 @@ function dname(code){var d=D.drivers[code];return d?d.short:code;}
 function loadData(){
   var seed=JSON.parse(document.getElementById('seed').textContent);
   if(!PWA)return Promise.resolve(seed);
-  return new Promise(function(res){
-    var done=false;var t=setTimeout(function(){if(!done){done=true;res(seed);}},3000);
-    fetch('data/weekend.json',{cache:'no-cache'}).then(function(r){return r.ok?r.json():null;}).then(function(j){
-      if(!done){done=true;clearTimeout(t);res(j&&j.weekend?j:seed);}
-    }).catch(function(){if(!done){done=true;clearTimeout(t);res(seed);}});
+  var getJ=function(url){return new Promise(function(res){
+    var done=false,t=setTimeout(function(){if(!done){done=true;res(null);}},3000);
+    fetch(url,{cache:'no-cache'}).then(function(r){return r.ok?r.json():null;}).then(function(j){if(!done){done=true;clearTimeout(t);res(j);}})
+      .catch(function(){if(!done){done=true;clearTimeout(t);res(null);}});});};
+  return Promise.all([getJ('weekend.json'),getJ('telemetry.json')]).then(function(r){
+    var d=(r[0]&&r[0].weekend)?r[0]:seed;
+    if(r[1]&&r[1].sessions&&r[1].sessions.length)d.telemetry=r[1].sessions;
+    return d;
   });
 }
 
@@ -506,18 +517,15 @@ var Weekend={
 
 /* ---------- TELEMETRIA ---------- */
 var Tele={
-  A:null,B:null,zoom:'lap',cursor:null,S:null,ds:1,cache:{},order:[],ML:34,MR:8,
+  A:null,B:null,zoom:'lap',cursor:null,S:null,sessions:[],si:0,ds:1,cache:{},order:[],ML:34,MR:8,
   init:function(){
-    var S=D.telemetry&&D.telemetry[0];
-    if(!S){$('#tl-note').textContent='Nessuna sessione caricata.';return;}
-    var self=this;this.S=S;this.ds=S.length/S.n;
-    this.order=Object.keys(S.drivers).sort(function(a,b){return S.drivers[a].lap-S.drivers[b].lap;});
-    this.A=this.order[0];this.B=this.order[1];
-    this.order.forEach(function(c){self.cache[c]=self.prep(S.drivers[c]);});
-    $('#tl-title').textContent=S.label;
-    $('#tl-badge').hidden=!S.simulated;
-    $('#tl-note').textContent=S.simulated?'Tempi Q3 reali; velocità, gas e freno sono generati per mostrare il formato. Quando colleghiamo FastF1 qui arrivano le tracce vere di ogni sessione.':S.gp;
-    this.renderPickers();
+    var self=this;
+    this.sessions=D.telemetry||[];
+    if(!this.sessions.length){$('#tl-note').textContent='Nessuna sessione caricata.';return;}
+    var sess=$('#sess');
+    sess.innerHTML=this.sessions.map(function(x,i){return '<button type="button" data-i="'+i+'" aria-pressed="false">'+esc(x.short||x.label)+'</button>';}).join('');
+    sess.hidden=this.sessions.length<2;
+    sess.addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;self.load(+b.dataset.i);self.render();});
     var wrap=$('#charts');
     var move=function(e){var r=wrap.getBoundingClientRect();self.setCursor(e.clientX-r.left,r.width);};
     wrap.addEventListener('pointerdown',move);
@@ -525,6 +533,25 @@ var Tele={
     $('#zoom').addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;self.zoom=b.dataset.z;self.cursor=null;
       $$('#zoom button').forEach(function(x){x.setAttribute('aria-pressed',String(x===b));});self.render();});
     var to=null;window.addEventListener('resize',function(){clearTimeout(to);to=setTimeout(function(){if(current==='telemetria')self.render();},150);});
+    this.load(this.sessions.length-1);
+  },
+  load:function(i){
+    var self=this,S=this.sessions[i];
+    this.si=i;this.S=S;this.ds=S.length/S.n;this.cache={};this.cursor=null;
+    this.order=Object.keys(S.drivers).sort(function(a,b){return S.drivers[a].lap-S.drivers[b].lap;});
+    if(!S.drivers[this.A])this.A=this.order[0];
+    if(!S.drivers[this.B]||this.B===this.A)this.B=this.order.filter(function(c){return c!==self.A;})[0];
+    this.order.forEach(function(c){self.cache[c]=self.prep(S.drivers[c]);});
+    $$('#sess button').forEach(function(b){b.setAttribute('aria-pressed',String(+b.dataset.i===i));});
+    $('#tl-title').textContent=S.label;
+    $('#tl-badge').hidden=!S.simulated;
+    $('#tl-note').textContent=S.simulated?'Tempi Q3 reali; velocità, gas e freno sono generati per mostrare il formato. Le tracce vere arrivano dopo ogni sessione.':
+      'Giro migliore di ogni pilota dei quattro top team'+(S.cornersAuto?'. Numeri delle curve stimati dalla telemetria':'')+'.';
+    var w=S.weather,c=$('#tl-cond');
+    if(w&&w.track){c.hidden=false;c.textContent='Asfalto '+Math.round(w.track[1])+' °C ('+Math.round(w.track[0])+'–'+Math.round(w.track[2])+')'+
+      (w.air!=null?', aria '+Math.round(w.air)+' °C':'')+(w.rain?', pioggia':'')+'.';}
+    else c.hidden=true;
+    this.renderPickers();
   },
   prep:function(dd){
     var n=dd.v.length,ds=this.ds,t=new Float64Array(n+1),i;
@@ -545,7 +572,7 @@ var Tele={
   },
   colA:function(){return dcol(this.A);},
   colB:function(){return dcol(this.B);},
-  sameTeam:function(){return D.drivers[this.A].team===D.drivers[this.B].team;},
+  sameTeam:function(){var a=D.drivers[this.A],b=D.drivers[this.B];return !!(a&&b&&a.team===b.team);},
   renderPickers:function(){
     var self=this;
     ['A','B'].forEach(function(w){
@@ -651,17 +678,18 @@ var Tele={
     $('#mini-note').textContent=this.A+' più veloce in '+wa+' minisettori su 25, '+this.B+' in '+(K-wa)+'.';
   },
   sectorTimes:function(code){
+    var dd=this.S.drivers[code];if(dd.sec&&dd.sec.length===3)return dd.sec;
     var t=this.cache[code].t,ds=this.ds,sc=this.S.sectors,n=this.S.n;
     var i1=Math.round(sc[1]/ds),i2=Math.round(sc[2]/ds);
     return [t[i1],t[i2]-t[i1],t[n]-t[i2]];
   },
   renderTable:function(){
-    var self=this,rows=this.order.map(function(c){return {c:c,s:self.sectorTimes(c),lap:self.S.drivers[c].lap};});
+    var self=this,rows=this.order.map(function(c){return {c:c,s:self.sectorTimes(c),lap:self.S.drivers[c].lap,ty:self.S.drivers[c].tyre};});
     var best=[0,1,2].map(function(k){return Math.min.apply(null,rows.map(function(r){return r.s[k];}));});
     var bestLap=Math.min.apply(null,rows.map(function(r){return r.lap;}));
     var h='<thead><tr><th>Pilota</th><th>S1</th><th>S2</th><th>S3</th><th>Giro</th></tr></thead><tbody>';
     rows.forEach(function(r){
-      h+='<tr class="'+(r.c===self.A||r.c===self.B?'sel':'')+'"><td><span class="sw" style="--c:'+dcol(r.c)+'"></span>'+r.c+'</td>'+
+      h+='<tr class="'+(r.c===self.A||r.c===self.B?'sel':'')+'"><td><span class="sw" style="--c:'+dcol(r.c)+'"></span>'+r.c+(r.ty?'<span class="ty">'+esc(r.ty)+'</span>':'')+'</td>'+
         r.s.map(function(x,k){return '<td class="'+(Math.abs(x-best[k])<0.0005?'best':'')+'">'+x.toFixed(3)+'</td>';}).join('')+
         '<td class="'+(r.lap===bestLap?'best':'')+'">'+lapf(r.lap)+'</td></tr>';
     });
