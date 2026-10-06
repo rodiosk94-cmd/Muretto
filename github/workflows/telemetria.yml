@@ -1,0 +1,49 @@
+name: Telemetria
+
+on:
+  schedule:
+    # Ogni 30 minuti, solo domenica, lunedì, venerdì e sabato (orari UTC)
+    - cron: "*/30 * * * 0,1,5,6"
+  workflow_dispatch:
+    inputs:
+      session_key:
+        description: "Facoltativo: session_key OpenF1 da elaborare. Vuoto = automatico"
+        required: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: telemetria
+  cancel-in-progress: false
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Installa numpy
+        run: pip install numpy
+
+      - name: Scarica la telemetria da OpenF1
+        env:
+          SESSION: ${{ github.event.inputs.session_key }}
+        run: python openf1_fetch.py --out telemetry.json ${SESSION:+--session "$SESSION"}
+
+      - name: Salva se ci sono novità
+        run: |
+          if [ -n "$(git status --porcelain telemetry.json)" ]; then
+            git config user.name "muretto-bot"
+            git config user.email "muretto-bot@users.noreply.github.com"
+            git add telemetry.json
+            git commit -m "Telemetria aggiornata"
+            git push
+          else
+            echo "Nessuna novità."
+          fi
+
