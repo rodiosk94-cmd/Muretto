@@ -1,0 +1,960 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Muretto</title>
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#1A1D23">
+<link rel="icon" type="image/png" sizes="32x32" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAIAAAD8GO2jAAADhUlEQVR42uVWMW8cVRCemffe7u2eDzvOHRaYyDIoURShBBCWG1CkSFAhISFRUVFR0SFo0kRQRBSUSDT4B0SiooqLCCkdiESiAMlSREIKLnaC7bvz3u6+Nx+FfZbvsne+FK7yNNrireZ9M/PN+97wy2deo5NcQie8ThzAVm0yT+GJw88zAQiLIngNx3oaMcJGoc8AwCz9shfZ+mwyp5gUnTB3806/7MWujokY9oiPycrO2YWVzy5/+0KyEJR5TKkAGMFu1v7hly832r8mrqEYmzHvtykTey1nk+Y3H91sNeazkmQiDwpKHG12nlz96f2dbMuKwxg+5LA4hd9bbl1qzszvZiUAr5MMwG5WNmfml1uXCr/HLMeUCIA18aPd+7lH7FwRgtCkFAIhdi73eLR735oY4wkzjdn5fQhn4q3uPzvZk7eWLsfOGmFn2FaZMRxZUZQ/3r5658HNxDVAegwHg0JxVnSWTl9szix4VWYhw5UsG+HHvfbfW38kUYMG4YNAOsoFj2iRsMn9ng8lCyOodouKoIhBsOJimw71D5PUIzJCRypmn2qPENkkjlLkQWajmU/OSWJJ8fTtBgDoAVMgEtas7P68oZ2cY3uIYas0QLWE1G3r+pVkdRFFOKZnB6FxZOrvLrW/WtfMs+H9WlUAsIjuZI2PLySri/7fLhvBFJrDxAiarC42Pji3vXZXTiUIOk7siEBcdwgAgZmYplE/AgEBXHdH46kqkYJT21u/1/jwvHuxrmXgKeQVgHO1st3trd/j1EJR3UUHu4a1W8QXWnOfviGRGblGqMxYSPOwvXY3/3NT6hGNAxChoBQ8sWHte/JKA7oOV2QP3YdRAtgJ14Z+25HTexnSmE/NcVDihiMeCpiZVKn9nyY1llHcAVHD4PbIA0KdPbx93n73ea05y0ErmAWRs3Tjlr+21o/sVE/mgRYxU+Fp4bTc+Do9+4oRpnqNk7jCIsPvrLiiT7d+92nMOK6BZaAQtJfj4qtypiWPd6Cg0leY91R4Knu48qa1ZorbcUSuKXb8oI0sR1qjvCCW6iddQS6ljYehDFMNBwclAlHs6OGmbm7jvRWb1thZjh1Hw2Ytz6R8+47/4vs+MBXAiFxTN8Pry+alpvgArppnAPrtr5DlVIuqm3USwH6nZjmVHjx+6KnX2MhUp1fJtVISURpPSl512tOrtUhBNLX/czD8/g9In8opXfWbKgAAAABJRU5ErkJggg==">
+<link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="icon-512.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Muretto">
+<meta name="application-name" content="Muretto">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@500;600;700&display=swap">
+<style>
+:root{
+  --bg:#ECEDEF;--surface:#FFFFFF;--surface-2:#F3F4F6;--line:#D3D6DC;--line-soft:#E2E4E8;
+  --text:#15171B;--muted:#5A6170;
+  --purple:#7A36D3;--green:#12844A;--yellow:#946E00;--red:#C92A2A;
+  --hl:rgba(242,194,48,.5);--clip:rgba(242,194,48,.75);
+  --bar-h:50px;--nav-h:64px;
+  --f-body:"Barlow","Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  --f-cond:"Barlow Condensed","Roboto Condensed","Arial Narrow","Segoe UI",sans-serif;
+  color-scheme:light;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#1A1D23;--surface:#22262E;--surface-2:#2B3039;--line:#3A404B;--line-soft:#2D323B;
+    --text:#EEF0F3;--muted:#9BA2AE;
+    --purple:#B57DFF;--green:#38D27D;--yellow:#F2C230;--red:#FF5E5E;
+    --hl:rgba(242,194,48,.38);--clip:rgba(242,194,48,.6);
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#1A1D23;--surface:#22262E;--surface-2:#2B3039;--line:#3A404B;--line-soft:#2D323B;
+  --text:#EEF0F3;--muted:#9BA2AE;
+  --purple:#B57DFF;--green:#38D27D;--yellow:#F2C230;--red:#FF5E5E;
+  --hl:rgba(242,194,48,.38);--clip:rgba(242,194,48,.6);
+  color-scheme:dark;
+}
+html{scroll-padding-top:env(safe-area-inset-top,0px);-webkit-text-size-adjust:100%;text-size-adjust:100%}
+*,*::before,*::after{box-sizing:border-box}
+[hidden]{display:none!important}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.45 var(--f-body);-webkit-tap-highlight-color:transparent}
+button,input,select,textarea{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--text);outline-offset:2px;border-radius:6px}
+.num{font-family:var(--f-cond);font-variant-numeric:tabular-nums}
+
+/* barra superiore e tab */
+.appbar{position:sticky;top:env(safe-area-inset-top,0px);z-index:30;background:var(--bg);border-bottom:1px solid var(--line-soft)}
+.appbar-in{max-width:640px;margin:0 auto;height:var(--bar-h);padding:0 16px;display:flex;align-items:center;gap:12px}
+.brand{font:700 23px/1 var(--f-cond);letter-spacing:.01em;display:flex;align-items:center;gap:8px}
+.brand svg{width:22px;height:22px}
+.ctx{margin-left:auto;color:var(--muted);font-size:13.5px;text-align:right;line-height:1.2}
+main{max-width:640px;margin:0 auto;padding:6px 16px calc(var(--nav-h) + 28px)}
+.tabbar{position:fixed;left:0;right:0;bottom:0;z-index:40;background:var(--surface);border-top:1px solid var(--line);padding-bottom:env(safe-area-inset-bottom,0px)}
+.tabbar-in{max-width:640px;margin:0 auto;display:grid;grid-template-columns:repeat(5,1fr);height:var(--nav-h)}
+.tab{appearance:none;border:0;background:none;color:var(--muted);font:500 12px/1.1 var(--f-body);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;cursor:pointer;position:relative;padding:4px 0}
+.tab svg{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.tab[aria-current="page"]{color:var(--text)}
+.tab[aria-current="page"]::before{content:"";position:absolute;top:0;left:28%;right:28%;height:3px;border-radius:0 0 3px 3px;background:var(--text)}
+.view[hidden]{display:none}
+
+/* tipografia */
+.display{font:700 50px/.92 var(--f-cond);letter-spacing:-.01em;margin:14px 0 8px}
+h2{font:600 25px/1.1 var(--f-cond);margin:0}
+h3{font:600 19px/1.15 var(--f-cond);margin:22px 0 8px}
+.sub{color:var(--muted);margin:0 0 16px;max-width:60ch}
+.note{color:var(--muted);font-size:14.5px;margin:6px 0 12px;max-width:62ch}
+.sec{padding:20px 0 4px;border-top:1px solid var(--line-soft);margin-top:18px}
+.sec-head{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.seg{display:inline-flex;background:var(--surface-2);border:1px solid var(--line-soft);border-radius:999px;padding:3px;gap:2px}
+.seg button{appearance:none;border:0;background:none;color:var(--muted);font:500 14px/1 var(--f-body);padding:8px 13px;border-radius:999px;cursor:pointer}
+.seg button[aria-pressed="true"]{background:var(--surface);color:var(--text);box-shadow:0 0 0 1px var(--line)}
+.linkbtn{appearance:none;border:0;background:none;color:var(--text);text-decoration:underline;text-underline-offset:3px;font-size:14.5px;padding:8px 0;cursor:pointer}
+.btn{appearance:none;border:1px solid var(--line);background:var(--surface);color:var(--text);font:600 15px/1 var(--f-body);padding:12px 16px;border-radius:12px;cursor:pointer}
+.btn.primary{background:var(--text);color:var(--bg);border-color:var(--text)}
+.btn.small{padding:8px 12px;font-size:14px;border-radius:10px}
+.btn.danger{color:var(--red)}
+.row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+
+/* weekend */
+.next{display:flex;align-items:baseline;gap:8px;margin:0 0 14px;font-size:15.5px}
+.next .cd{font:600 24px/1 var(--f-cond);font-variant-numeric:tabular-nums}
+.strip{list-style:none;margin:0;padding:6px 0 0;display:grid;grid-template-columns:repeat(5,1fr);position:relative}
+.strip::before{content:"";position:absolute;left:10%;right:10%;top:20px;height:2px;background:var(--line)}
+.strip li{position:relative;min-width:0}
+.strip button{appearance:none;border:0;background:none;width:100%;padding:0 1px;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:4px;text-align:center}
+.dot{width:30px;height:30px;border-radius:50%;border:2px solid var(--line);background:var(--bg);display:grid;place-items:center;font:700 13px/1 var(--f-cond);color:var(--bg)}
+.strip .done .dot{background:var(--text);border-color:var(--text)}
+.strip .now .dot,.strip .upnext .dot{border-color:var(--text);box-shadow:0 0 0 5px var(--hl)}
+.strip .now .dot{background:var(--yellow)}
+.s-name{font:600 15px/1.05 var(--f-cond);margin-top:2px}
+.s-when{font-size:12.5px;color:var(--muted);font-variant-numeric:tabular-nums;line-height:1.25}
+.s-pick{font:600 12.5px/1.1 var(--f-cond);color:var(--text);min-height:14px}
+.stand{list-style:none;margin:6px 0 0;padding:0}
+.stand li{display:grid;grid-template-columns:24px 1fr auto;align-items:center;gap:10px;padding:8px 0;border-bottom:1px solid var(--line-soft)}
+.pos{font:600 16px/1 var(--f-cond);color:var(--muted);text-align:right}
+.who{min-width:0}
+.who .nm{font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;display:flex;align-items:center;gap:7px}
+.who .tm{font-size:12.5px;color:var(--muted);font-weight:500}
+.sw{width:4px;height:16px;border-radius:2px;background:var(--c);flex:none}
+.bar{height:4px;border-radius:2px;background:var(--line-soft);margin-top:6px;overflow:hidden}
+.bar i{display:block;height:100%;background:var(--c);border-radius:2px}
+.pts{text-align:right;font:600 20px/1 var(--f-cond);font-variant-numeric:tabular-nums}
+.pts small{display:block;font:500 12.5px/1.3 var(--f-body);color:var(--muted)}
+.res{list-style:none;margin:8px 0 0;padding:0}
+.res li{display:grid;grid-template-columns:24px 1fr auto;gap:10px;align-items:center;padding:7px 0;border-bottom:1px solid var(--line-soft)}
+.res li.p1 .nm{font-size:18px}
+.facts{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:14px 0 4px}
+.facts div{font-size:13.5px;color:var(--muted)}
+.facts b{display:block;color:var(--text);font:600 19px/1.15 var(--f-cond)}
+
+/* telemetria */
+.cond{margin:0 0 10px;font-weight:600;font-size:15px}
+.sess{display:flex;overflow-x:auto;max-width:100%;margin:2px 0 6px;scrollbar-width:none}
+.sess::-webkit-scrollbar{display:none}
+.sess button{white-space:nowrap}
+.ty{color:var(--muted);font:500 12px var(--f-body);margin-left:3px}
+.badge{display:inline-block;font:600 12.5px/1 var(--f-body);padding:6px 10px;border-radius:999px;background:var(--hl);color:var(--text)}
+.picker{display:flex;align-items:center;gap:8px;margin:8px 0}
+.pk{font:700 16px/1 var(--f-cond);width:14px;color:var(--muted);flex:none}
+.chips{display:flex;gap:6px;overflow-x:auto;padding:2px;scrollbar-width:none;flex:1;min-width:0}
+.chips::-webkit-scrollbar{display:none}
+.chip{appearance:none;flex:none;border:1px solid var(--line);background:var(--surface);color:var(--text);font:600 15px/1 var(--f-cond);padding:8px 11px 8px 9px;border-radius:999px;display:flex;align-items:center;gap:6px;cursor:pointer}
+.chip i{width:9px;height:9px;border-radius:50%;background:var(--c)}
+.chip[aria-pressed="true"]{background:var(--c);border-color:var(--c);color:var(--ink)}
+.chip[aria-pressed="true"] i{background:var(--ink)}
+.chip:disabled{opacity:.35}
+.readout{position:sticky;top:calc(env(safe-area-inset-top,0px) + var(--bar-h));z-index:20;background:var(--bg);margin:8px -16px 0;padding:8px 16px;min-height:74px;border-bottom:1px solid var(--line-soft)}
+.ro-top{display:flex;justify-content:space-between;align-items:baseline;gap:10px;font-size:13.5px;color:var(--muted)}
+.ro-top b{color:var(--text);font:600 17px/1 var(--f-cond)}
+.ro-rows{display:grid;grid-template-columns:auto 1fr 1fr 1fr;gap:2px 12px;margin-top:6px;align-items:baseline}
+.ro-rows .c{font:700 16px/1.2 var(--f-cond);display:flex;align-items:center;gap:6px}
+.ro-rows .c i{width:9px;height:9px;border-radius:50%;background:var(--c)}
+.c.hol i,h4.hol i{background:transparent!important;box-shadow:inset 0 0 0 2px var(--c)}
+.ro-rows span{font:600 16px/1.2 var(--f-cond);font-variant-numeric:tabular-nums}
+.ro-rows small{font:500 12px var(--f-body);color:var(--muted)}
+.ro-sum{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap}
+.ro-sum .lt{font:700 30px/1 var(--f-cond);font-variant-numeric:tabular-nums}
+.ro-sum .gp{font:600 22px/1 var(--f-cond);font-variant-numeric:tabular-nums}
+.ro-hint{font-size:13px;color:var(--muted);margin-top:6px}
+.charts{position:relative;touch-action:pan-y;-webkit-user-select:none;user-select:none;margin-top:6px;cursor:crosshair}
+.charts svg{display:block;width:100%;height:auto;overflow:visible}
+.cap{display:flex;justify-content:space-between;gap:8px;font-size:12.5px;color:var(--muted);margin:10px 0 2px}
+.cap .k{display:inline-flex;align-items:center;gap:5px}
+.cap .k i{width:14px;height:5px;border-radius:2px;background:var(--clip)}
+.cursor{position:absolute;top:0;bottom:0;width:0;border-left:1.5px solid var(--text);pointer-events:none;display:none}
+svg .ax{fill:var(--muted);font:500 10.5px var(--f-body)}
+svg .axc{fill:var(--muted);font:600 11px var(--f-cond)}
+svg .gl{stroke:var(--line-soft);stroke-width:1}
+svg .gz{stroke:var(--line);stroke-width:1}
+svg .sb{stroke:var(--line);stroke-width:1;stroke-dasharray:3 4}
+.mini{display:grid;grid-template-columns:repeat(25,1fr);gap:2px;margin:8px 0 6px}
+.mini i{height:22px;border-radius:3px;background:var(--c)}
+.tbl{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums}
+.tbl th{font:500 12.5px/1.2 var(--f-body);color:var(--muted);text-align:right;padding:6px 4px;border-bottom:1px solid var(--line)}
+.tbl th:first-child,.tbl td:first-child{text-align:left}
+.tbl td{font:600 16px/1 var(--f-cond);text-align:right;padding:9px 4px;border-bottom:1px solid var(--line-soft)}
+.tbl td:first-child{display:flex;align-items:center;gap:7px}
+.tbl .best{color:var(--purple)}
+.tbl tr.sel td{background:var(--surface-2)}
+.tbl tr.ideal td{color:var(--muted);font-weight:500}
+.clipcols{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.clipcols h4{font:700 16px/1 var(--f-cond);margin:0 0 6px;display:flex;align-items:center;gap:6px}
+.clipcols h4 i{width:9px;height:9px;border-radius:50%;background:var(--c)}
+.clipcols ul{list-style:none;margin:0;padding:0;font-size:14px}
+.clipcols li{padding:5px 0;border-bottom:1px solid var(--line-soft)}
+.clipcols li b{font:600 15px var(--f-cond)}
+.clipcols .tot{font-size:13px;color:var(--muted);margin-top:6px}
+
+/* circuito */
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:16px 12px;margin:14px 0 6px}
+.stat b{display:block;font:600 28px/1 var(--f-cond);font-variant-numeric:tabular-nums}
+.stat b small{font:600 17px var(--f-cond);margin-left:2px}
+.stat span{font-size:13px;color:var(--muted)}
+.tyres{display:flex;gap:14px;margin:8px 0 2px}
+.tyre{display:flex;align-items:center;gap:8px;font-size:13.5px;color:var(--muted)}
+.tyre i{width:34px;height:34px;border-radius:50%;border:5px solid var(--tc);display:grid;place-items:center;font:700 12px/1 var(--f-cond);font-style:normal;color:var(--text);background:var(--surface);box-shadow:0 0 0 1px var(--line),inset 0 0 0 1px var(--line)}
+.traits{list-style:none;margin:6px 0 0;padding:0}
+.traits li{padding:10px 0;border-bottom:1px solid var(--line-soft)}
+.traits .tt{display:flex;justify-content:space-between;align-items:center;gap:10px;font-weight:600}
+.meter{display:flex;gap:3px;flex:none}
+.meter i{width:16px;height:7px;border-radius:2px;background:var(--line)}
+.meter i.on{background:var(--text)}
+.traits p{margin:3px 0 0;font-size:14px;color:var(--muted)}
+.tt b{font:600 17px var(--f-cond)}
+.hist td.num2{font:600 16px var(--f-cond);font-variant-numeric:tabular-nums}
+.plain{margin:6px 0 0;padding-left:18px}
+.plain li{margin:0 0 9px;max-width:62ch}
+.hist{width:100%;border-collapse:collapse}
+.hist th{font:500 12.5px var(--f-body);color:var(--muted);text-align:left;padding:6px 4px;border-bottom:1px solid var(--line)}
+.hist td{padding:8px 4px;border-bottom:1px solid var(--line-soft);font-weight:500}
+.hist td:first-child{font:600 16px var(--f-cond)}
+
+/* pronostici */
+.checks{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:4px 14px;margin:6px 0 4px}
+.checks summary{cursor:pointer;padding:10px 0;font-weight:600}
+.checks label{display:flex;gap:10px;align-items:flex-start;padding:8px 0;border-top:1px solid var(--line-soft);font-size:14.5px}
+.checks input{width:20px;height:20px;margin:1px 0 0;accent-color:var(--text);flex:none}
+.pcard{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:14px;margin:12px 0;scroll-margin-top:calc(var(--bar-h) + 12px)}
+.pcard>summary{list-style:none;cursor:pointer;display:block;position:relative;padding-right:26px}
+.pcard>summary::-webkit-details-marker{display:none}
+.pcard>summary::after{content:"";position:absolute;right:5px;top:8px;width:9px;height:9px;border-right:2px solid var(--muted);border-bottom:2px solid var(--muted);transform:rotate(45deg)}
+.pcard[open]>summary::after{transform:rotate(-135deg);top:13px}
+.pcard[open]>summary{margin-bottom:8px}
+.ph{display:flex;justify-content:space-between;align-items:baseline;gap:10px}
+.ph h3{margin:0;font-size:21px}
+.ph span{font-size:13px;color:var(--muted);text-align:right}
+.pstat{font-size:14px;color:var(--muted);margin-top:3px}
+.pstat b{font-weight:600}
+.pstat b.go{color:var(--green)}.pstat b.no{color:var(--red)}
+.pick{padding:10px 0 4px;border-top:1px dashed var(--line);margin-top:10px}
+.pick:first-of-type{border-top:0;margin-top:0;padding-top:4px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.field{display:flex;flex-direction:column;gap:5px;margin-top:10px;min-width:0}
+.field label{font-size:13px;color:var(--muted)}
+.field input,.field select,.field textarea{font:500 16px/1.2 var(--f-body);background:var(--surface-2);border:1px solid var(--line);border-radius:10px;padding:11px 10px;width:100%;min-width:0}
+.field textarea{min-height:160px;font-size:13px;line-height:1.35}
+.minodds{display:flex;align-items:baseline;justify-content:space-between;margin-top:12px;font-size:14px;color:var(--muted)}
+.minodds b{font:600 24px/1 var(--f-cond);color:var(--text);font-variant-numeric:tabular-nums}
+.verdict{border-radius:12px;padding:11px 12px;margin-top:10px;font-size:14.5px;background:var(--surface-2);border-left:4px solid var(--line)}
+.verdict b{display:block;font:700 20px/1.1 var(--f-cond);margin-bottom:2px}
+.verdict.go{border-left-color:var(--green);background:var(--surface-2);background:color-mix(in srgb,var(--green) 12%,var(--surface))}
+.verdict.go b{color:var(--green)}
+.verdict.no{border-left-color:var(--red);background:var(--surface-2);background:color-mix(in srgb,var(--red) 9%,var(--surface))}
+.verdict.no b{color:var(--red)}
+.pick-actions{display:flex;justify-content:space-between;align-items:center;margin-top:8px}
+
+/* registro */
+.money{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:12px 0 6px}
+.money b{display:block;font:600 32px/1 var(--f-cond);font-variant-numeric:tabular-nums}
+.money b.gain{color:var(--green)}.money b.loss{color:var(--red)}
+.money span{font-size:13px;color:var(--muted)}
+.calib{margin:14px 0 4px;font-size:14.5px}
+.prog{height:8px;border-radius:4px;background:var(--line-soft);overflow:hidden;margin:8px 0 6px}
+.prog i{display:block;height:100%;background:var(--text);border-radius:4px}
+.gp-h{font:600 18px/1.2 var(--f-cond);margin:20px 0 4px;color:var(--muted)}
+.entries{list-style:none;margin:0;padding:0}
+.entry{padding:11px 0;border-bottom:1px solid var(--line-soft);cursor:pointer}
+.e-top{display:flex;justify-content:space-between;gap:10px;align-items:baseline}
+.e-sel{font-weight:600}
+.e-pl{font:600 19px/1 var(--f-cond);font-variant-numeric:tabular-nums;white-space:nowrap}
+.e-pl.gain{color:var(--green)}.e-pl.loss{color:var(--red)}.e-pl.zero{color:var(--muted);font:500 14px/1.2 var(--f-body)}
+.e-meta{font-size:13.5px;color:var(--muted);margin-top:3px}
+.tag{display:inline-block;font:600 11.5px/1 var(--f-body);padding:4px 7px;border-radius:6px;margin-right:6px;vertical-align:1px;border:1px solid var(--line)}
+.tag.reale{background:var(--text);color:var(--bg);border-color:var(--text)}
+.tag.scartata{border-style:dashed;color:var(--muted)}
+.e-res{display:flex;gap:8px;margin-top:8px}
+
+/* foglio modale */
+dialog.sheet{position:fixed;inset:auto 0 0 0;margin:0 auto;width:100%;max-width:640px;max-height:90vh;border:0;border-radius:20px 20px 0 0;background:var(--surface);color:var(--text);padding:6px 16px calc(16px + env(safe-area-inset-bottom,0px));overflow:auto}
+dialog.sheet::backdrop{background:rgba(10,12,16,.5)}
+.grab{width:40px;height:5px;border-radius:3px;background:var(--line);margin:4px auto 10px}
+.sheet h2{margin:2px 0 4px}
+.sheet .actions{display:flex;gap:10px;justify-content:space-between;margin-top:18px;flex-wrap:wrap}
+@media (prefers-reduced-motion:no-preference){
+  dialog.sheet[open]{animation:up .22s ease-out}
+  @keyframes up{from{transform:translateY(24px);opacity:.6}to{transform:none;opacity:1}}
+}
+@media (min-width:520px){.display{font-size:58px}}
+</style>
+</head>
+<body>
+<header class="appbar">
+  <div class="appbar-in">
+    <div class="brand"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="13" height="4" rx="2" fill="#B57DFF"/><rect x="6" y="10" width="15" height="4" rx="2" fill="#38D27D"/><rect x="3" y="16" width="11" height="4" rx="2" fill="#F2C230"/></svg>Muretto</div>
+    <div class="ctx" id="ctx"></div>
+  </div>
+</header>
+
+<main>
+  <section class="view" id="v-weekend" aria-label="Weekend">
+    <h1 class="display" id="wk-title"></h1>
+    <p class="sub" id="wk-sub"></p>
+    <p class="next" id="wk-next"></p>
+    <ol class="strip" id="strip" aria-label="Sessioni del weekend"></ol>
+    <p class="note" id="wk-tz"></p>
+
+    <div class="sec">
+      <div class="sec-head">
+        <h2>Mondiale</h2>
+        <div class="seg" role="group" aria-label="Classifica">
+          <button type="button" data-st="drivers" aria-pressed="true">Piloti</button>
+          <button type="button" data-st="teams" aria-pressed="false">Costruttori</button>
+        </div>
+      </div>
+      <p class="note" id="st-after"></p>
+      <ol class="stand" id="stand"></ol>
+      <button type="button" class="linkbtn" id="st-more">Mostra la classifica completa</button>
+    </div>
+
+    <div class="sec">
+      <h2 id="lr-title"></h2>
+      <ol class="res" id="lr-res"></ol>
+      <div class="facts" id="lr-facts"></div>
+      <p class="note" id="lr-notes"></p>
+    </div>
+  </section>
+
+  <section class="view" id="v-telemetria" aria-label="Telemetria" hidden>
+    <div class="sec-head" style="margin-top:14px">
+      <h2 id="tl-title">Telemetria</h2>
+      <span class="badge" id="tl-badge" hidden>Simulata</span>
+    </div>
+    <p class="note" id="tl-note"></p>
+    <p class="cond" id="tl-cond" hidden></p>
+    <div class="seg sess" id="sess" role="group" aria-label="Sessione" hidden></div>
+    <div class="picker"><span class="pk">A</span><div class="chips" id="pickA" role="group" aria-label="Pilota A"></div></div>
+    <div class="picker"><span class="pk">B</span><div class="chips" id="pickB" role="group" aria-label="Pilota B"></div></div>
+    <div class="row" style="margin-top:8px">
+      <div class="seg" role="group" aria-label="Zoom" id="zoom">
+        <button type="button" data-z="lap" aria-pressed="true">Giro</button>
+        <button type="button" data-z="0" aria-pressed="false">S1</button>
+        <button type="button" data-z="1" aria-pressed="false">S2</button>
+        <button type="button" data-z="2" aria-pressed="false">S3</button>
+      </div>
+    </div>
+    <div class="readout" id="readout" aria-live="polite"></div>
+    <div class="charts" id="charts">
+      <div class="cap"><span>Velocità, km/h</span><span class="k"><i></i>super clipping</span></div>
+      <svg id="c-speed" role="img" aria-label="Velocità lungo il giro"></svg>
+      <div class="cap"><span id="cap-delta">Distacco, s</span></div>
+      <svg id="c-delta" role="img" aria-label="Distacco lungo il giro"></svg>
+      <div class="cap"><span>Gas, % e frenata</span></div>
+      <svg id="c-input" role="img" aria-label="Gas e freno lungo il giro"></svg>
+      <div class="cursor" id="cursor"></div>
+    </div>
+    <h3>Minisettori</h3>
+    <div class="mini" id="mini"></div>
+    <p class="note" id="mini-note"></p>
+    <h3>Settori</h3>
+    <table class="tbl" id="tbl"></table>
+    <h3>Super clipping</h3>
+    <p class="note">Tratti a gas pieno in cui la velocità smette di salire o cala: la power unit sta ricaricando invece di spingere.</p>
+    <div class="clipcols" id="clip"></div>
+  </section>
+
+  <section class="view" id="v-circuito" aria-label="Circuito" hidden>
+    <h1 class="display" id="ci-title"></h1>
+    <p class="sub" id="ci-sub"></p>
+    <div class="stats" id="ci-stats"></div>
+    <div id="ci-sec-tyres"><h3>Mescole</h3><div class="tyres" id="ci-tyres"></div></div>
+    <div class="sec" id="ci-sec-metrics">
+      <h2>Misure del circuito</h2>
+      <p class="note" id="ci-mnote"></p>
+      <ul class="traits" id="ci-metrics"></ul>
+    </div>
+    <div class="sec" id="ci-sec-traits">
+      <h2>Caratteristiche</h2>
+      <p class="note" id="ci-tnote"></p>
+      <ul class="traits" id="ci-traits"></ul>
+    </div>
+    <div class="sec" id="ci-sec-notes">
+      <h2>Per l'analisi del weekend</h2>
+      <ul class="plain" id="ci-notes"></ul>
+    </div>
+    <div class="sec" id="ci-sec-hist">
+      <h2>Ultime edizioni</h2>
+      <table class="hist" id="ci-hist"></table>
+      <p class="note" id="ci-rec"></p>
+    </div>
+  </section>
+
+  <section class="view" id="v-pronostici" aria-label="Pronostici" hidden>
+    <div class="sec-head" style="margin-top:14px"><h2 id="pr-title">Pronostici</h2></div>
+    <p class="note">Ogni analisi si chiude con favorito, probabilità stimata e quota minima. Si gioca solo se la quota offerta è almeno pari alla minima.</p>
+    <details class="checks" id="pr-checks"></details>
+    <div id="picks"></div>
+  </section>
+
+  <section class="view" id="v-registro" aria-label="Registro" hidden>
+    <div class="sec-head" style="margin-top:14px">
+      <h2>Registro giocate</h2>
+      <button type="button" class="btn small primary" id="lg-add">Aggiungi giocata</button>
+    </div>
+    <div class="money" id="lg-money"></div>
+    <div class="calib" id="lg-calib"></div>
+    <div id="lg-list"></div>
+    <div class="row" style="margin-top:18px">
+      <button type="button" class="linkbtn" id="lg-io">Esporta o importa il registro</button>
+    </div>
+  </section>
+</main>
+
+<nav class="tabbar" aria-label="Sezioni">
+  <div class="tabbar-in">
+    <button type="button" class="tab" data-v="weekend"><svg viewBox="0 0 24 24"><path d="M5 21V4"/><path d="M5 4h13l-2.5 4L18 12H5"/></svg>Weekend</button>
+    <button type="button" class="tab" data-v="telemetria"><svg viewBox="0 0 24 24"><path d="M2 15l3-4 3 2 3-7 3 9 3-5 2 3 3-2"/></svg>Telemetria</button>
+    <button type="button" class="tab" data-v="circuito"><svg viewBox="0 0 24 24"><path d="M6 19c-2.5 0-3.5-3-1.5-4.5L9 11c1.4-1 .8-3-1-3.4C6 7.2 6.4 4 8.6 4H17c2.4 0 3.5 2.6 2 4.3l-3 3.4c-1.2 1.4-.2 3.5 1.6 3.5 2.2 0 2.4 3.8.1 3.8z"/></svg>Circuito</button>
+    <button type="button" class="tab" data-v="pronostici"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r="1" fill="currentColor"/></svg>Pronostici</button>
+    <button type="button" class="tab" data-v="registro"><svg viewBox="0 0 24 24"><path d="M5 4h14v16H5z"/><path d="M8.5 9h7M8.5 12.5h7M8.5 16h4.5"/></svg>Registro</button>
+  </div>
+</nav>
+
+<dialog class="sheet" id="sheet"><div class="grab"></div><div id="sheet-body"></div></dialog>
+<datalist id="dl-sel"></datalist>
+
+<script type="application/json" id="seed">{"version":1,"updated":"2026-10-06","teams":{"mer":{"name":"Mercedes","color":"#00D7B6"},"fer":{"name":"Ferrari","color":"#E8002D"},"mcl":{"name":"McLaren","color":"#FF8000"},"rbr":{"name":"Red Bull","color":"#3671C6"},"rb":{"name":"Racing Bulls","color":"#6692FF"},"alp":{"name":"Alpine","color":"#FF87BC"},"has":{"name":"Haas","color":"#9C9FA2"},"aud":{"name":"Audi","color":"#B9A58C"},"wil":{"name":"Williams","color":"#64C4FF"},"amr":{"name":"Aston Martin","color":"#229971"},"cad":{"name":"Cadillac","color":"#C9A44C"}},"drivers":{"VER":{"name":"Max Verstappen","short":"Verstappen","team":"rbr"},"HAD":{"name":"Isack Hadjar","short":"Hadjar","team":"rbr"},"ANT":{"name":"Kimi Antonelli","short":"Antonelli","team":"mer"},"RUS":{"name":"George Russell","short":"Russell","team":"mer"},"LEC":{"name":"Charles Leclerc","short":"Leclerc","team":"fer"},"HAM":{"name":"Lewis Hamilton","short":"Hamilton","team":"fer"},"NOR":{"name":"Lando Norris","short":"Norris","team":"mcl"},"PIA":{"name":"Oscar Piastri","short":"Piastri","team":"mcl"},"LAW":{"name":"Liam Lawson","short":"Lawson","team":"rb"},"LIN":{"name":"Arvid Lindblad","short":"Lindblad","team":"rb"},"TSU":{"name":"Yuki Tsunoda","short":"Tsunoda","team":"rb"},"GAS":{"name":"Pierre Gasly","short":"Gasly","team":"alp"},"COL":{"name":"Franco Colapinto","short":"Colapinto","team":"alp"},"BEA":{"name":"Oliver Bearman","short":"Bearman","team":"has"},"OCO":{"name":"Esteban Ocon","short":"Ocon","team":"has"},"BOR":{"name":"Gabriel Bortoleto","short":"Bortoleto","team":"aud"},"HUL":{"name":"Nico Hülkenberg","short":"Hülkenberg","team":"aud"},"ALO":{"name":"Fernando Alonso","short":"Alonso","team":"amr"},"STR":{"name":"Lance Stroll","short":"Stroll","team":"amr"},"SAI":{"name":"Carlos Sainz","short":"Sainz","team":"wil"},"ALB":{"name":"Alex Albon","short":"Albon","team":"wil"},"BOT":{"name":"Valtteri Bottas","short":"Bottas","team":"cad"},"PER":{"name":"Sergio Pérez","short":"Pérez","team":"cad"}},"weekend":{"id":"2026-17-sgp","round":17,"rounds":23,"name":"GP di Singapore","short":"Singapore","circuit":"Marina Bay","dates":"9–11 ottobre","format":"sprint","sessions":[{"id":"FP1","short":"FP1","name":"Prove libere 1","market":"Miglior tempo FP1","start":"2026-10-09T16:30:00+08:00","end":"2026-10-09T17:30:00+08:00"},{"id":"SQ","short":"Sprint Q","name":"Sprint Qualifying","market":"Pole sprint","start":"2026-10-09T20:30:00+08:00","end":"2026-10-09T21:14:00+08:00"},{"id":"SPR","short":"Sprint","name":"Sprint, 21 giri","market":"Vincitore sprint","start":"2026-10-10T17:00:00+08:00","end":"2026-10-10T17:45:00+08:00"},{"id":"Q","short":"Qualifica","name":"Qualifica","market":"Pole","start":"2026-10-10T21:00:00+08:00","end":"2026-10-10T22:00:00+08:00"},{"id":"R","short":"Gara","name":"Gara, 62 giri","market":"Vincitore gara","start":"2026-10-11T20:00:00+08:00","end":"2026-10-11T22:00:00+08:00"}]},"standings":{"after":"Dopo il round 16 (Sepang).","drivers":[["ANT",320],["RUS",236],["HAM",214],["LEC",191],["NOR",188],["VER",188],["PIA",128],["HAD",96],["LAW",65],["GAS",41],["LIN",38],["COL",27],["BEA",20],["BOR",10],["HUL",7],["OCO",7],["ALO",7],["SAI",7],["ALB",5],["TSU",1],["STR",0],["BOT",0],["PER",0]],"teams":[["mer",556],["fer",405],["mcl",316],["rbr",298],["rb",90],["alp",68],["has",27],["aud",17],["wil",12],["amr",7],["cad",0]]},"lastRace":{"name":"GP del Bahrain a Sepang","round":16,"date":"4 ottobre","results":[["VER",null],["ANT",2.307],["HAM",4.919],["LEC",7.258],["HAD",8.571],["PIA",9.454],["LAW",12.753],["ALO",13.372],["NOR",13.993],["LIN",15.928]],"pole":["VER","1:35.130"],"fastest":["VER","1:38.220"],"notes":"Partenza ritardata dalla pioggia, gara su 55 giri. Russell ritirato al giro 49 mentre era terzo. Antonelli ora ha 84 punti su Russell con 7 GP da correre."},"circuit":{"name":"Marina Bay Street Circuit","place":"Singapore, gara in notturna","stats":[["4,927","km","lunghezza"],["62","","giri"],["305,5","km","distanza gara"],["19","","curve"],["21","","giri sprint"]],"tyres":[["C3","Hard","#F2F2F2"],["C4","Medium","#F2C230"],["C5","Soft","#E8002D"]],"traits":[["Carico aerodinamico",5,"Massimo: tante curve lente e medie"],["Frenate",4,"Molte e ravvicinate, ottimo recupero di energia"],["Trazione",5,"Decide il tempo in uscita dalle curve lente"],["Degrado gomme",4,"Soprattutto termico, sulle posteriori"],["Difficoltà di sorpasso",4,"Il punto migliore è la frenata di curva 7"],["Super clipping",2,"Contenuto: rettilinei più corti che a Baku o Sepang"]],"notes":["Primo weekend sprint a Singapore: FP1 è l'unica sessione di libere prima della Sprint Qualifying.","FP1 (16:30 locali) e Sprint (17:00) si corrono con la luce del giorno; Sprint Qualifying, qualifica e gara di sera. I long run di FP1 vanno confrontati con la temperatura dell'asfalto serale prima di usarli sulla gara.","Il degrado è soprattutto termico: le posteriori si scaldano nelle ripartenze dalle curve lente.","Safety Car in ogni edizione dal 2008 al 2023, nessuna nel 2024 e nel 2025."],"history":[[2025,"RUS","RUS"],[2024,"NOR","NOR"],[2023,"SAI","SAI"],[2022,"PER","LEC"]],"historyNames":{"SAI":"Carlos Sainz","PER":"Sergio Pérez"},"records":"Vettel ha il record di vittorie (5). Vettel e Hamilton quello di pole (4).","note":"Valutazioni qualitative da verificare con i dati di FP1."},"predictions":{},"log":[],"telemetry":[{"id":"sepang-q3","label":"Sepang, qualifica Q3","gp":"GP del Bahrain a Sepang","simulated":true,"length":5543.0,"n":554,"sectors":[0.0,1780.0,4100.0,5543.0],"corners":[{"n":1,"d":640},{"n":2,"d":760},{"n":3,"d":1080},{"n":4,"d":1500},{"n":5,"d":1880},{"n":6,"d":2080},{"n":7,"d":2440},{"n":8,"d":2590},{"n":9,"d":2960},{"n":10,"d":3260},{"n":11,"d":3480},{"n":12,"d":3770},{"n":13,"d":3970},{"n":14,"d":4260},{"n":15,"d":5280}],"drivers":{"VER":{"lap":95.13,"v":[249.8,253.3,256.6,259.7,262.7,265.8,268.4,271.1,273.8,276.3,278.7,280.9,283.1,285.0,286.9,288.8,290.5,292.1,293.7,295.3,296.7,298.1,299.6,301.1,302.2,303.6,304.6,305.7,306.4,307.6,306.9,306.5,305.8,305.4,304.7,304.0,303.4,303.0,302.5,302.0,301.5,301.1,300.7,300.3,300.1,299.7,299.4,299.2,298.9,298.5,298.1,284.9,267.9,251.2,234.4,217.6,200.5,183.0,164.7,145.6,124.9,101.6,101.6,101.8,101.8,101.9,101.9,115.1,126.4,136.7,146.3,155.0,149.7,129.6,107.3,80.5,80.6,80.5,97.2,110.9,123.0,133.6,143.4,152.0,160.2,167.8,174.9,181.6,188.1,194.0,199.5,204.9,210.0,215.0,219.8,224.5,228.8,232.9,236.5,240.3,244.1,247.7,243.3,243.5,243.5,243.4,243.5,243.5,243.4,243.2,243.2,243.1,243.0,243.2,246.9,250.4,253.9,257.1,260.2,263.2,266.0,268.8,271.5,274.2,276.7,279.2,281.4,283.3,285.1,286.9,288.6,290.3,292.0,294.0,295.7,297.2,298.7,299.8,296.0,279.1,262.3,245.8,229.2,212.3,195.3,177.7,159.2,139.9,118.4,94.1,94.1,108.2,120.6,131.5,141.3,150.2,158.6,166.3,173.7,180.8,187.5,193.4,199.3,204.6,209.6,214.6,219.3,223.7,228.2,232.3,236.2,240.2,243.7,247.1,250.6,254.0,257.1,260.4,263.6,266.5,269.4,272.0,274.5,277.0,272.7,256.0,239.1,239.1,239.0,238.9,242.7,246.6,250.1,253.3,256.4,259.5,262.5,265.4,268.3,271.2,273.8,276.3,278.7,281.0,280.4,263.8,247.2,247.2,247.1,247.2,250.6,253.8,257.0,260.1,263.0,265.8,268.6,271.2,273.6,276.1,278.5,280.8,283.0,285.1,287.1,288.9,290.6,292.2,293.8,295.5,297.2,298.8,300.3,301.5,302.7,303.8,289.6,273.0,256.6,240.0,223.2,206.0,188.4,188.2,188.1,188.0,188.0,194.2,199.9,205.2,210.5,215.4,220.1,224.4,215.7,198.7,181.2,162.8,162.9,162.7,162.4,162.4,170.0,176.9,183.5,189.7,195.6,201.2,206.6,212.0,216.9,221.6,226.0,230.1,234.1,238.1,241.7,245.5,249.2,252.6,255.8,258.9,262.0,264.9,267.8,270.2,253.7,236.8,219.9,202.7,185.3,167.2,148.3,128.0,105.5,78.7,78.8,78.8,95.7,109.7,121.7,132.6,142.4,151.5,159.8,167.3,174.3,180.9,187.1,193.2,199.0,204.5,209.8,214.6,219.2,223.8,228.2,232.3,236.3,240.2,237.9,220.9,203.9,186.5,168.4,168.4,168.4,168.6,175.6,182.5,188.8,194.7,200.1,205.5,210.6,215.4,220.2,224.5,228.8,232.9,236.9,233.7,217.1,200.0,182.5,164.3,144.9,145.0,144.9,145.0,153.9,162.2,169.7,177.0,183.5,189.6,195.5,200.9,206.3,211.4,216.2,220.9,225.5,229.5,233.6,237.7,241.3,244.8,248.3,251.7,254.9,258.4,261.6,258.0,241.4,241.4,241.3,241.3,241.4,241.4,244.8,248.2,251.6,254.8,258.0,261.2,264.2,267.1,270.0,272.5,274.9,277.4,263.9,247.2,230.7,213.9,213.8,213.6,213.4,213.4,218.2,222.8,227.4,231.7,235.9,239.9,243.5,246.8,250.2,253.5,256.8,259.9,263.1,266.0,268.8,271.4,264.5,247.8,231.0,214.2,197.1,179.3,161.0,141.6,120.5,120.3,120.4,120.6,131.8,141.7,150.8,159.1,166.7,173.8,180.5,186.9,192.8,198.3,203.9,209.1,214.3,219.1,223.7,227.9,231.9,235.8,239.7,243.5,247.0,250.5,253.8,257.0,260.2,263.0,265.9,268.8,271.5,273.9,276.7,279.1,281.3,283.3,285.3,287.2,289.0,290.6,292.3,294.0,295.4,296.9,298.5,300.1,301.4,302.5,303.7,304.7,305.6,306.6,307.5,308.5,309.5,310.5,309.7,309.1,308.4,307.8,307.1,306.4,305.8,305.2,304.4,304.0,303.6,302.7,302.2,301.7,301.2,300.9,300.9,300.6,300.2,299.6,299.0,298.5,298.2,297.7,297.5,297.4,297.0,296.9,296.8,296.4,296.1,295.8,295.1,294.8,283.9,267.2,250.7,234.0,217.3,200.1,182.6,164.4,145.2,124.4,101.4,73.2,73.2,73.4,91.3,105.9,118.5,129.5,139.5,148.8,157.2,165.1,172.4,179.2,185.5,191.7,197.7,203.2,208.7,213.8,218.4,222.7,227.0,231.0,234.9,238.8,242.7,246.3],"th":[100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,0,0,0,0,0,0,0,0,0,0,100,100,100,100,16,18,34,51,67,84,100,0,0,0,23,21,23,38,54,69,85,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,84,87,90,92,97,95,85,86,87,90,92,89,97,93,96,98,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,0,0,0,0,0,0,0,0,0,0,0,28,19,35,51,67,84,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,0,0,84,84,87,90,93,97,100,100,100,100,100,100,100,100,100,100,100,100,0,0,100,91,87,93,94,96,97,99,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,0,0,0,0,0,0,50,55,58,66,55,83,92,82,91,100,100,100,0,0,0,54,63,59,82,91,83,92,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,0,0,0,0,0,0,0,0,0,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,0,0,0,0,55,64,73,60,91,76,84,92,100,100,100,100,100,100,100,100,100,0,0,0,0,0,100,52,56,57,65,74,83,91,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,0,100,100,93,83,86,90,93,97,100,100,100,100,100,100,100,100,100,100,0,0,0,100,92,90,92,94,96,98,100,100,100,100,100,100,100,100,100,100,100,100,100,100,0,0,0,0,0,0,0,0,26,41,23,21,85,53,69,84,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,0,0,0,0,0,0,0,0,0,0,0,26,19,36,52,68,84,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100],"br":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],"g":[7,7,7,7,7,7,7,7,7,7,7,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,7,7,6,6,6,5,5,4,3,3,3,3,3,3,3,3,4,4,4,4,4,4,3,2,2,2,3,3,3,4,4,4,5,5,5,5,5,5,6,6,6,6,6,6,6,6,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,8,8,8,8,8,8,8,8,8,8,8,8,8,7,7,7,6,6,6,5,4,4,3,2,2,3,3,4,4,4,4,5,5,5,5,5,6,6,6,6,6,6,6,6,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,8,8,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,7,7,7,6,6,5,5,5,5,5,5,6,6,6,6,6,6,6,6,5,5,5,5,5,5,5,5,5,5,6,6,6,6,6,6,6,6,6,7,7,7,7,7,7,7,7,7,7,7,7,7,6,6,5,5,4,4,3,2,2,2,3,3,3,4,4,4,4,5,5,5,5,5,6,6,6,6,6,6,6,6,7,7,7,6,6,5,5,5,5,5,5,5,5,5,6,6,6,6,6,6,6,6,7,6,6,6,5,5,4,4,4,4,4,5,5,5,5,5,6,6,6,6,6,6,6,6,6,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,6,6,6,6,6,6,6,6,6,6,7,7,7,7,7,7,7,7,7,7,7,7,7,7,6,6,6,5,5,4,3,3,3,3,4,4,4,4,5,5,5,5,5,6,6,6,6,6,6,6,6,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,7,7,6,6,6,5,5,4,3,3,2,2,2,2,3,3,4,4,4,4,5,5,5,5,5,6,6,6,6,6,6,6,6,6,7,7,7]},"HAM":{"lap":95.428,"v":[251.2,254.5,257.9,261.2,264.2,267.1,269.8,272.3,274.8,277.2,279.6,281.9,284.0,285.8,287.7,289.2,291.1,292.6,294.3,295.9,297.5,298.5,299.9,301.2,302.3,303.4,304.6,305.5,304.7,304.1,303.4,302.8,302.4,301.9,301.3,300.9,300.3,299.8,299.2,298.7,298.2,297.8,297.3,297.0,296.6,296.0,295.6,295.2,294.7,294.3,294.0,285.2,268.3,251.6,234.5,217.5,200.3,182.7,164.3,145.1,124.2,100.6,100.6,100.6,100.7,100.6,100.8,114.2,126.0,136.4,146.0,154.7,149.6,129.3,106.6,79.4,79.4,79.4,96.0,110.2,122.4,133.4,143.4,152.6,160.9,168.6,175.7,182.3,188.8,194.9,200.5,206.1,211.4,216.3,220.8,225.4,229.5,233.6,237.7,241.8,245.5,249.2,240.6,240.3,240.2,240.2,240.2,240.2,240.4,240.4,240.5,240.7,240.9,240.9,244.7,248.3,251.5,254.6,257.8,261.0,264.0,267.0,269.8,272.3,274.8,277.2,279.3,281.8,283.9,285.8,287.7,289.6,291.1,292.7,294.3,295.8,297.0,298.3,297.2,280.4,263.6,247.1,230.1,213.1,195.6,177.7,158.7,139.2,117.6,93.1,93.1,107.8,120.2,131.3,141.2,150.3,158.7,166.7,174.0,180.8,187.3,193.6,199.4,204.8,210.1,215.1,219.9,224.4,228.8,233.0,237.2,240.9,244.7,248.3,251.7,255.1,258.3,261.4,264.6,267.5,270.1,272.8,275.1,277.5,271.0,254.2,237.4,237.6,237.5,237.5,241.4,244.9,248.5,252.0,255.4,258.6,261.9,264.9,267.9,270.6,273.3,275.7,277.9,280.1,278.9,262.0,245.3,245.4,245.2,245.2,248.8,252.3,255.5,258.9,262.0,264.8,267.6,270.3,272.9,275.4,277.9,280.0,282.2,284.1,285.8,287.7,289.7,291.5,293.1,294.7,296.0,297.2,298.6,299.9,301.2,302.4,289.1,272.3,255.2,238.3,221.2,204.0,186.4,186.6,186.7,186.9,187.1,193.2,199.2,204.9,210.0,214.8,219.7,224.1,215.3,198.0,180.3,161.6,161.6,161.5,161.4,161.4,169.2,176.2,183.1,189.3,195.4,201.0,206.7,211.8,216.9,221.4,225.9,230.0,234.2,237.9,242.1,245.9,249.6,252.9,256.4,259.4,262.4,265.3,268.4,271.2,255.0,238.4,221.2,203.9,186.1,167.9,148.7,128.4,105.5,78.2,78.1,78.1,95.2,109.4,121.7,132.7,142.5,151.8,160.0,167.8,174.9,181.7,187.9,194.2,200.0,205.4,210.7,215.7,220.3,224.9,229.3,233.4,237.5,241.4,237.6,220.5,203.3,185.5,167.4,167.5,167.6,167.5,174.9,181.7,187.9,193.9,199.5,205.0,210.1,215.2,220.0,224.7,229.0,233.2,237.2,233.8,216.7,199.2,181.5,163.0,143.7,143.8,143.9,143.9,152.7,160.9,168.5,175.7,182.4,189.0,195.1,200.9,206.4,211.6,216.6,221.3,225.7,229.9,234.1,238.2,242.0,245.9,249.5,252.8,255.9,259.2,262.0,255.9,239.4,239.4,239.5,239.7,239.7,239.6,243.4,247.0,250.2,253.6,256.8,259.9,262.9,265.8,268.6,271.4,274.1,276.5,262.9,246.1,229.2,212.0,212.1,212.2,212.3,212.4,217.0,221.7,226.1,230.4,234.6,238.8,242.6,246.2,249.8,253.1,256.4,259.6,262.7,265.6,268.4,271.1,264.4,247.5,230.7,213.5,196.0,178.1,159.6,139.9,118.7,118.8,118.9,119.1,130.5,140.7,149.9,158.2,165.9,173.3,180.2,186.7,193.0,198.8,204.2,209.5,214.5,219.2,223.8,228.3,232.5,236.4,240.4,244.3,248.0,251.3,254.6,258.0,261.0,263.9,266.9,269.8,272.5,274.9,277.4,279.6,281.8,283.8,285.8,287.8,289.6,291.3,292.8,294.5,296.0,297.3,298.7,300.0,301.1,302.2,303.4,304.4,305.4,306.6,307.4,308.4,307.6,306.9,306.1,305.5,304.8,304.3,303.7,303.1,302.5,301.8,301.1,300.5,300.0,299.4,299.0,298.5,298.0,297.6,297.1,296.6,296.2,295.8,295.6,295.4,295.1,294.8,294.4,293.9,293.6,293.2,292.9,292.7,292.3,292.0,291.8,291.6,285.4,268.6,251.7,234.5,217.6,200.1,182.5,164.2,145.1,124.2,100.9,72.4,72.3,72.3,90.7,105.6,118.4,129.7,139.8,148.9,157.3,165.2,172.5,179.5,186.2,192.5,198.3,204.0,209.2,214.1,218.9,223.5,227.8,232.1,236.2,240.1,243.9,247.6],"th":[100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,0,0,0,0,0,0,0,0,0,0,100,100,100,17,34,18,67,83,67,84,100,0,0,0,26,21,20,36,52,68,84,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,83,87,90,93,97,83,87,88,90,93,95,98,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,0,0,0,0,0,0,0,0,0,0,0,28,24,39,54,70,85,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,0,0,85,90,82,91,93,95,96,98,100,100,100,100,100,100,100,100,100,100,0,0,86,89,90,93,97,96,97,99,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,0,0,0,0,0,0,100,100,61,56,65,73,82,91,100,100,100,100,0,0,0,50,50,52,50,52,62,71,81,90,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,0,0,0,0,0,0,0,0,0,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,0,0,0,0,60,53,62,53,81,91,81,91,100,100,100,100,100,100,100,100,100,0,0,0,0,0,100,100,59,58,67,75,83,92,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,0,86,88,89,91,93,95,98,100,100,100,100,100,100,100,100,100,100,100,0,0,0,91,84,91,83,87,90,93,97,100,100,100,100,100,100,100,100,100,100,100,100,100,0,0,0,0,0,0,0,0,100,23,27,42,56,71,85,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,0,0,0,0,0,0,0,0,0,0,0,100,100,18,34,51,67,84,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100],"br":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],"g":[7,7,7,7,7,7,7,7,7,7,7,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,7,7,6,6,6,5,5,4,3,3,3,3,3,3,3,3,4,4,4,4,4,4,3,2,2,2,3,3,3,4,4,4,5,5,5,5,5,5,6,6,6,6,6,6,6,6,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,8,8,8,8,8,8,8,8,8,8,8,8,8,7,7,6,6,6,5,4,4,3,2,2,3,3,4,4,4,4,5,5,5,5,5,6,6,6,6,6,6,6,6,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,8,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,7,7,7,6,6,5,5,5,5,5,5,6,6,6,6,6,6,6,6,5,5,5,5,5,5,5,5,5,5,6,6,6,6,6,6,6,6,6,7,7,7,7,7,7,7,7,7,7,7,7,7,6,6,5,5,4,4,3,2,2,2,3,3,3,4,4,4,5,5,5,5,5,5,6,6,6,6,6,6,6,6,7,7,7,6,6,5,5,5,5,5,5,5,5,5,6,6,6,6,6,6,6,6,7,6,6,6,5,5,4,4,4,4,4,5,5,5,5,5,6,6,6,6,6,6,6,6,6,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,6,6,6,6,6,6,6,6,6,6,6,7,7,7,7,7,7,7,7,7,7,7,7,7,6,6,6,5,4,4,3,3,3,3,4,4,4,4,5,5,5,5,5,6,6,6,6,6,6,6,6,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,7,7,6,6,6,5,5,4,3,3,2,2,2,2,3,3,4,4,4,4,5,5,5,5,5,6,6,6,6,6,6,6,6,7,7,7,7]},"HAD":{"lap":95.558,"v":[251.4,254.8,258.0,261.3,264.5,267.5,270.4,273.0,275.6,277.8,280.1,282.1,284.0,286.0,288.0,289.8,291.5,293.3,294.6,296.0,297.4,298.9,300.5,301.8,303.0,304.2,305.2,306.2,307.2,308.1,307.4,306.9,306.3,305.9,305.4,304.8,304.1,303.5,302.9,302.3,301.7,301.2,300.8,300.3,299.9,299.6,299.3,298.9,298.5,298.2,297.9,288.0,270.9,253.6,236.5,218.9,201.4,183.3,164.6,144.9,123.7,99.6,99.7,99.8,99.6,99.5,99.6,113.2,125.1,135.8,145.6,154.7,150.7,129.8,106.7,78.8,78.7,78.8,95.9,110.1,122.3,133.1,142.7,151.7,160.0,167.9,175.2,181.9,188.3,194.6,200.1,205.6,211.0,216.1,220.8,225.4,229.7,233.8,237.7,241.3,245.0,248.6,237.4,237.4,237.7,237.7,237.9,237.9,238.0,237.9,237.9,237.8,237.8,237.6,241.4,245.1,248.6,252.1,255.5,258.9,262.0,265.1,268.1,270.9,273.6,276.1,278.5,280.9,282.9,284.9,286.7,288.3,290.1,291.9,293.5,295.2,296.8,298.0,299.4,283.0,265.6,248.5,231.1,213.8,196.2,178.1,159.1,139.3,117.2,91.9,91.9,106.6,119.3,130.7,140.8,150.1,158.6,166.5,173.8,180.5,186.9,193.2,198.9,204.5,210.0,214.8,219.4,223.9,228.2,232.4,236.6,240.6,244.3,247.8,251.5,255.0,258.4,261.6,264.7,267.7,270.3,273.0,275.6,278.0,269.9,252.8,235.4,235.3,235.4,235.4,239.4,243.3,247.1,250.6,254.0,257.2,260.4,263.7,266.5,269.3,272.0,274.5,276.6,278.9,277.3,260.1,243.1,243.1,243.1,243.2,247.0,250.4,253.9,257.3,260.2,263.3,266.5,269.0,271.9,274.5,276.8,279.1,281.6,283.7,285.8,287.8,289.8,291.5,292.9,294.5,296.0,297.3,298.6,300.2,301.4,302.5,289.6,272.6,255.3,238.1,220.9,203.5,185.4,185.3,185.4,185.4,185.4,191.6,197.4,203.1,208.3,213.5,218.3,222.9,214.7,197.1,179.0,160.2,160.5,160.3,160.3,160.1,167.7,175.1,182.2,188.5,194.6,200.5,205.8,210.9,215.9,220.7,225.3,229.6,233.6,237.9,241.6,245.3,248.9,252.5,255.7,259.0,262.1,265.2,268.1,270.9,257.6,240.4,223.0,205.5,187.5,168.9,149.4,128.4,105.1,77.2,77.0,77.0,94.3,108.7,121.1,132.2,142.2,151.5,159.8,167.6,174.9,181.8,188.1,194.2,200.1,205.5,210.6,215.6,220.5,224.8,229.2,233.6,237.7,241.6,237.9,220.5,202.9,185.0,166.3,166.1,166.0,165.8,173.1,180.0,186.7,193.0,198.9,204.3,209.5,214.5,219.3,223.9,228.4,232.7,236.8,234.7,217.3,199.7,181.5,162.8,143.0,143.1,143.2,143.4,152.4,160.8,168.5,175.6,182.4,188.6,194.4,200.2,205.8,210.8,215.9,220.9,225.3,229.6,233.9,237.8,241.5,245.5,248.9,252.2,255.6,258.9,262.0,254.7,237.7,237.7,237.7,237.7,237.8,237.7,241.6,245.3,248.7,252.2,255.7,259.0,262.0,265.1,268.2,270.8,273.3,275.9,262.6,245.2,227.9,210.3,210.2,210.3,210.3,210.5,215.6,220.5,224.9,229.2,233.1,237.1,241.2,244.9,248.5,252.2,255.5,258.7,261.7,264.7,267.5,270.2,266.7,249.8,232.6,215.1,197.6,179.4,160.6,140.7,119.1,119.0,119.0,118.9,130.1,140.1,149.4,157.9,165.9,173.2,180.2,186.6,192.7,198.5,204.1,209.4,214.5,219.4,224.1,228.5,232.9,237.0,240.9,244.7,248.4,251.6,255.2,258.2,261.4,264.3,267.4,270.1,272.9,275.3,277.6,279.8,282.0,284.0,285.9,287.8,289.8,291.8,293.4,295.0,296.5,297.9,298.9,300.1,301.4,302.7,303.9,305.1,306.5,307.5,308.3,309.1,310.0,310.8,310.0,309.4,308.8,308.0,307.4,306.8,306.3,305.7,305.1,304.5,304.0,303.2,302.8,302.5,302.0,301.5,301.1,300.7,300.0,299.6,299.2,298.8,298.3,298.0,297.5,297.1,296.8,296.6,296.3,296.1,295.7,295.5,295.2,294.9,288.9,272.0,255.0,237.7,220.4,202.7,184.5,165.8,146.1,124.8,100.9,71.9,71.9,72.0,90.7,105.7,118.1,129.6,139.6,148.8,157.3,165.3,172.5,179.6,186.1,192.2,198.3,204.0,209.1,214.3,219.4,223.8,228.1,232.5,236.5,240.5,244.4,248.0],"th":[100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,0,0,0,0,0,0,0,0,0,0,27,20,21,21,37,22,68,84,69,84,100,0,0,0,100,19,35,52,68,84,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,84,93,90,94,95,90,86,92,85,88,91,94,97,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,0,0,0,0,0,0,0,0,0,0,28,21,36,52,68,84,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,0,0,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,0,0,100,100,100,87,90,92,95,97,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,0,0,0,0,0,0,57,53,54,53,49,59,70,80,90,100,100,100,0,0,0,56,56,53,53,63,72,81,91,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,0,0,0,0,0,0,0,0,0,16,33,50,67,83,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,0,0,0,0,53,58,55,64,73,82,91,100,100,100,100,100,100,100,100,100,100,0,0,0,0,0,51,51,60,70,80,90,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,0,88,88,88,89,86,87,89,92,95,97,100,100,100,100,100,100,100,100,0,0,0,100,100,100,100,86,89,92,94,97,100,100,100,100,100,100,100,100,100,100,100,100,0,0,0,0,0,0,0,0,100,100,100,23,39,54,69,85,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,0,0,0,0,0,0,0,0,0,0,0,16,24,26,41,55,70,85,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100],"br":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],"g":[7,7,7,7,7,7,7,7,7,7,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,7,7,7,6,6,5,5,4,3,3,3,3,3,3,3,3,4,4,4,4,4,4,3,2,2,2,3,3,3,4,4,4,5,5,5,5,5,5,6,6,6,6,6,6,6,6,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,8,8,8,8,8,8,8,8,8,8,8,8,8,7,7,6,6,6,5,4,4,3,2,2,3,3,4,4,4,4,5,5,5,5,5,6,6,6,6,6,6,6,6,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,7,7,7,6,6,5,5,5,5,5,5,6,6,6,6,6,6,6,6,5,5,5,5,5,5,5,5,5,5,5,6,6,6,6,6,6,6,6,7,7,7,7,7,7,7,7,7,7,7,7,7,6,6,5,5,4,4,3,2,2,2,2,3,3,4,4,4,4,5,5,5,5,5,6,6,6,6,6,6,6,6,7,7,7,6,6,5,5,5,5,5,5,5,5,5,6,6,6,6,6,6,6,6,7,6,6,6,5,5,4,4,4,4,4,5,5,5,5,5,5,6,6,6,6,6,6,6,6,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,6,6,6,6,6,6,6,6,6,6,6,7,7,7,7,7,7,7,7,7,7,7,7,7,6,6,6,5,5,4,3,3,3,3,4,4,4,4,5,5,5,5,5,6,6,6,6,6,6,6,6,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,7,7,7,6,6,5,5,4,3,3,2,2,2,2,3,3,4,4,4,4,5,5,5,5,5,6,6,6,6,6,6,6,6,7,7,7,7]},"ANT":{"lap":95.631,"v":[253.4,256.9,260.2,263.3,266.5,269.4,272.2,274.8,277.3,279.4,281.5,283.5,285.6,287.4,289.4,291.3,292.9,294.4,296.0,297.3,298.8,300.1,301.5,302.6,304.0,305.0,306.1,307.2,308.2,309.1,310.2,311.0,311.8,312.6,313.4,314.1,313.5,312.9,312.5,311.8,311.2,310.6,310.0,309.2,308.9,308.4,307.9,307.4,306.9,306.5,303.4,286.4,269.4,252.4,235.4,218.2,200.5,182.6,164.1,144.7,123.6,99.9,100.0,100.0,99.7,99.7,99.7,113.5,125.5,136.4,146.2,155.1,149.7,129.1,106.0,78.8,79.0,78.7,96.1,110.6,122.9,133.7,143.7,153.0,161.4,169.2,176.8,183.7,189.9,196.0,201.9,207.4,212.8,217.9,222.9,227.4,231.8,235.9,240.1,243.9,247.6,251.2,238.2,238.2,238.3,238.4,238.5,238.6,238.6,238.5,238.3,238.3,238.3,238.1,242.0,245.9,249.6,253.1,256.6,260.0,263.2,266.4,269.1,271.8,274.2,276.6,278.9,281.3,283.4,285.7,287.8,289.6,291.2,292.8,294.3,295.6,297.2,298.8,298.2,281.2,264.3,247.4,230.4,213.2,195.6,177.6,158.6,138.7,117.0,92.0,92.0,107.2,120.1,131.4,141.6,151.0,159.5,167.4,174.9,181.9,188.4,194.7,200.5,206.0,211.4,216.6,221.4,226.0,230.5,234.8,238.8,242.8,246.6,250.3,253.7,257.2,260.4,263.6,266.6,269.7,272.5,275.2,277.6,280.0,266.0,249.0,231.8,231.7,231.6,231.4,235.6,239.8,243.7,247.6,251.4,254.9,258.2,261.5,264.8,267.6,270.5,273.1,275.7,278.1,273.4,256.4,239.5,239.4,239.3,239.5,243.3,247.0,250.7,254.2,257.5,260.8,264.1,267.1,269.9,272.6,275.2,277.5,279.9,282.2,284.5,286.7,288.5,290.3,292.1,293.7,295.1,296.7,298.1,299.4,300.8,301.9,285.8,269.0,252.0,234.9,217.9,200.6,182.5,182.5,182.6,182.5,182.3,189.0,195.3,200.9,206.7,212.1,217.1,221.8,212.4,194.8,176.8,158.0,158.0,157.8,157.7,157.6,165.7,173.4,180.5,187.1,193.4,199.5,205.0,210.3,215.3,220.3,224.9,229.6,234.0,238.2,242.3,246.0,249.7,253.3,256.8,259.9,263.3,266.3,269.0,271.7,255.1,238.0,220.9,203.6,185.9,167.6,148.2,127.6,104.2,76.1,76.1,76.0,93.8,108.6,121.5,132.7,142.8,152.2,160.7,168.6,176.0,182.9,189.4,195.5,201.5,206.9,212.3,217.4,222.2,226.5,230.9,235.3,239.3,243.0,234.4,217.1,199.3,181.5,163.0,163.1,163.2,163.4,171.1,178.5,185.1,191.5,197.3,203.1,208.7,214.1,219.1,224.0,228.4,232.7,236.6,231.4,214.2,196.8,178.9,160.3,140.5,140.5,140.4,140.5,149.8,158.5,166.6,174.1,181.1,187.9,194.1,199.8,205.5,210.8,215.9,220.7,225.6,230.1,234.5,238.6,242.6,246.4,250.0,253.3,256.7,260.0,263.2,250.7,233.6,233.4,233.5,233.4,233.4,233.7,238.0,242.0,245.8,249.3,252.7,256.0,259.3,262.4,265.5,268.7,271.6,274.4,258.7,241.9,224.5,207.3,207.2,207.1,207.0,207.0,212.2,217.3,222.2,226.7,231.5,236.0,239.8,243.7,247.6,251.0,254.4,257.7,260.9,264.1,267.2,270.2,264.6,247.6,230.5,213.1,195.4,177.2,158.5,138.5,116.8,116.8,116.8,116.9,128.6,139.0,148.7,157.3,165.3,172.8,179.9,186.8,193.1,199.2,205.2,210.3,215.1,220.2,224.7,229.1,233.7,238.0,242.0,245.9,249.6,253.0,256.3,259.6,262.8,265.9,269.0,271.6,274.3,276.7,279.0,281.2,283.5,285.5,287.5,289.3,291.1,292.8,294.3,295.9,297.4,298.8,300.1,301.5,302.6,303.9,305.3,306.3,307.5,308.4,309.4,310.1,311.3,312.0,312.8,313.6,314.5,315.0,315.5,316.3,315.5,314.7,313.9,313.6,312.9,312.2,311.5,310.9,310.1,309.7,309.1,308.7,308.2,307.9,307.3,306.8,306.5,306.1,305.7,305.2,304.8,304.3,303.9,303.4,303.1,302.8,302.4,301.9,286.2,269.2,252.1,235.2,218.0,200.6,182.8,164.4,144.8,123.8,99.9,70.6,70.5,70.6,89.5,104.8,118.1,129.9,140.1,149.6,158.5,166.5,173.9,181.0,187.7,193.8,199.7,205.4,210.9,216.1,221.0,225.8,230.1,234.4,238.5,242.5,246.4,250.0],"th":[100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,0,0,0,0,0,0,0,0,0,0,0,24,21,21,37,53,68,84,100,100,100,100,0,0,0,24,39,20,69,85,68,84,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,89,83,87,89,92,95,97,100,92,84,90,91,92,94,96,98,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,0,0,0,0,0,0,0,0,0,0,0,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,0,0,91,82,86,89,93,96,100,100,100,100,100,100,100,100,100,100,100,100,0,0,92,85,84,83,87,90,93,97,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,0,0,0,0,0,0,56,58,66,57,60,92,76,84,92,100,100,100,0,0,0,100,100,54,50,53,62,72,81,91,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,0,0,0,0,0,0,0,0,0,18,25,25,40,55,70,85,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,0,0,0,0,100,100,55,52,62,71,81,90,100,100,100,100,100,100,100,100,100,0,0,0,0,0,54,57,51,55,64,73,82,91,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,0,85,88,91,94,97,91,93,95,96,98,100,100,100,100,100,100,100,100,0,0,0,88,88,88,86,92,94,95,97,98,100,100,100,100,100,100,100,100,100,100,100,100,0,0,0,0,0,0,0,0,16,19,20,18,35,51,67,84,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,0,0,0,0,0,0,0,0,0,0,0,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100],"br":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],"g":[7,7,7,7,7,7,7,7,7,7,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,7,7,7,6,6,5,5,4,3,3,3,3,3,3,3,3,4,4,4,4,4,4,3,2,2,2,3,3,3,4,4,4,5,5,5,5,5,6,6,6,6,6,6,6,6,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,8,8,8,8,8,8,8,8,8,8,8,8,8,7,7,6,6,6,5,4,4,3,2,2,3,3,4,4,4,4,5,5,5,5,5,6,6,6,6,6,6,6,6,7,7,7,7,7,7,7,7,7,7,7,7,7,8,7,7,6,6,6,6,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,8,8,8,8,8,8,8,8,8,8,8,8,8,8,7,7,6,6,6,5,5,5,5,5,5,6,6,6,6,6,6,6,5,5,4,4,4,4,4,5,5,5,5,5,6,6,6,6,6,6,6,6,7,7,7,7,7,7,7,7,7,7,7,7,7,6,6,5,5,4,4,3,2,2,2,2,3,3,4,4,4,5,5,5,5,5,6,6,6,6,6,6,6,6,7,7,7,6,6,6,5,5,5,5,5,5,5,5,5,6,6,6,6,6,6,6,6,7,6,6,6,5,5,4,4,4,4,4,4,5,5,5,5,5,6,6,6,6,6,6,6,6,7,7,7,7,7,7,7,7,7,6,6,6,6,6,6,7,7,7,7,7,7,7,7,7,7,7,7,7,7,6,6,6,6,6,6,6,6,6,6,6,7,7,7,7,7,7,7,7,7,7,7,7,7,6,6,6,5,4,4,3,3,3,3,4,4,4,4,5,5,5,5,5,6,6,6,6,6,6,6,6,7,7,7,7,7,7,7,7,7,7,7,7,7,7,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,7,7,7,6,6,5,5,4,3,3,2,2,2,2,3,3,4,4,4,4,5,5,5,5,5,6,6,6,6,6,6,6,6,7,7,7,7]},"LEC":{"lap":95.666,"v":[253.4,256.7,259.9,263.0,266.0,268.7,271.5,274.1,276.5,278.9,281.4,283.5,285.6,287.4,289.0,290.4,292.0,293.4,295.1,296.5,298.1,299.4,300.6,301.7,302.9,304.1,305.2,306.3,305.7,305.1,304.5,303.8,303.2,302.5,301.8,301.3,300.7,300.1,299.7,299.0,298.5,298.0,297.6,297.1,296.9,296.6,296.2,295.9,295.6,295.2,294.8,294.2,276.4,258.5,240.8,222.7,204.6,185.9,166.5,146.0,123.9,98.9,98.9,99.2,99.3,99.3,99.5,113.3,125.3,135.9,145.6,154.4,151.8,130.4,106.6,78.1,78.3,78.5,95.8,110.2,122.4,133.3,143.2,152.4,160.8,168.8,176.2,183.1,189.6,195.9,201.8,207.4,212.5,217.6,222.3,226.8,231.2,235.6,239.6,243.5,247.1,250.7,236.0,236.0,235.9,236.3,236.3,236.4,236.5,236.7,236.6,236.7,236.8,236.7,240.5,244.3,248.0,251.3,255.0,258.4,261.6,264.7,267.6,270.2,272.8,275.3,277.7,280.1,282.3,284.5,286.4,288.1,289.7,291.4,293.1,294.5,296.1,297.4,298.7,289.1,271.3,253.4,235.8,217.7,199.4,180.6,161.0,140.0,117.3,91.2,91.3,106.5,119.6,130.9,141.3,150.7,159.3,167.2,174.9,181.8,188.4,194.5,200.3,205.9,211.3,216.4,221.2,225.9,230.4,234.5,238.6,242.8,246.6,250.2,253.7,257.1,260.2,263.4,266.6,269.5,272.2,274.9,277.3,279.4,268.7,250.7,232.5,232.5,232.4,232.6,236.8,241.1,244.9,248.8,252.3,255.7,258.7,261.8,264.9,267.7,270.6,273.4,276.0,278.3,276.3,258.5,240.4,240.5,240.5,240.6,244.4,248.1,251.7,255.0,258.2,261.5,264.8,267.6,270.5,273.0,275.5,277.8,280.1,282.2,284.5,286.5,288.2,290.0,291.6,293.1,294.7,296.2,297.5,298.7,299.9,301.0,291.4,273.5,255.8,238.1,220.1,201.9,183.3,183.2,183.2,183.4,183.4,190.1,196.3,202.0,207.5,212.8,217.7,222.5,215.5,197.2,178.2,158.4,158.5,158.6,158.6,158.6,166.5,173.9,181.0,187.5,193.5,199.6,205.4,210.8,216.0,221.0,225.4,230.0,234.2,238.4,242.3,246.3,249.8,253.3,256.5,260.0,263.2,266.1,268.9,271.6,262.7,244.8,226.8,208.7,190.3,171.2,151.2,129.6,105.5,76.3,76.3,76.3,94.1,108.7,121.2,132.3,142.4,151.8,160.3,168.2,175.6,182.4,189.0,195.4,201.3,207.0,212.2,217.1,221.6,226.2,230.6,234.9,239.2,243.3,238.9,220.7,202.5,183.8,164.4,164.2,164.4,164.2,171.7,178.9,185.8,192.0,198.2,203.9,209.4,214.5,219.6,224.1,228.8,233.2,237.4,236.7,218.8,200.4,181.5,162.0,141.3,141.4,141.3,141.2,150.3,159.0,166.8,174.3,181.5,188.4,194.4,200.5,206.2,211.5,216.3,221.1,225.7,230.1,234.3,238.4,242.3,246.2,249.9,253.5,257.0,260.4,263.7,252.8,234.9,234.8,234.8,234.6,234.7,234.8,238.9,242.7,246.6,250.0,253.6,257.0,260.5,263.7,266.8,269.5,272.1,274.6,262.0,244.2,226.0,207.8,207.7,207.9,207.9,208.3,213.6,218.8,223.2,227.8,232.2,236.3,240.4,244.4,248.1,251.5,255.1,258.5,261.5,264.7,267.8,270.5,271.0,253.1,235.2,217.2,198.9,180.1,160.5,139.6,116.7,116.6,116.6,116.6,128.3,138.9,148.3,157.1,165.3,172.8,179.7,186.5,192.7,198.7,204.5,209.9,215.1,220.1,224.6,229.0,233.5,237.5,241.2,245.3,249.1,252.6,256.0,259.5,262.8,265.6,268.5,271.2,273.6,275.9,278.3,280.8,283.1,285.2,287.1,288.9,290.3,292.0,293.6,295.1,296.7,298.2,299.4,300.5,301.7,302.8,303.8,304.6,305.7,306.5,307.3,308.2,307.7,306.9,306.4,306.0,305.6,305.0,304.4,303.8,303.2,302.8,302.0,301.3,300.7,300.2,299.6,299.2,298.8,298.5,297.9,297.4,297.1,296.6,296.0,295.8,295.3,294.8,294.4,294.2,293.7,293.4,293.2,293.1,292.7,292.4,292.3,291.9,291.4,277.7,259.9,242.0,224.0,205.8,187.1,167.7,147.2,125.5,100.9,70.5,70.7,70.9,89.9,105.5,118.6,129.8,140.2,149.7,158.2,166.2,173.8,180.8,187.4,193.7,199.5,205.3,210.8,215.9,220.9,225.7,230.0,234.3,238.5,242.1,246.0,249.7],"th":[100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,0,0,0,0,0,0,0,0,0,100,100,27,27,41,56,71,85,100,100,100,0,0,0,20,18,34,51,67,84,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,87,82,89,91,86,96,98,94,97,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,0,0,0,0,0,0,0,0,0,0,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,0,0,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,0,0,82,93,87,92,94,95,97,98,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,0,0,0,0,0,0,56,54,52,58,51,61,71,81,90,100,100,100,0,0,0,60,59,56,58,66,75,83,92,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,0,0,0,0,0,0,0,0,0,19,22,25,40,55,70,85,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,0,0,0,0,100,52,62,54,81,90,81,91,100,100,100,100,100,100,100,100,100,0,0,0,0,0,60,54,50,53,62,72,81,91,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,0,85,82,94,95,87,87,99,92,95,97,100,100,100,100,100,100,100,100,0,0,0,100,100,100,82,86,89,93,96,100,100,100,100,100,100,100,100,100,100,100,100,100,0,0,0,0,0,0,0,0,20,17,17,23,38,54,69,85,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,0,0,0,0,0,0,0,0,0,0,27,19,35,51,68,84,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100],"br":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],"g":[7,7,7,7,7,7,7,7,7,7,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,7,7,7,6,6,5,5,4,3,3,3,3,3,3,3,3,4,4,4,4,4,4,3,2,2,2,3,3,3,4,4,4,5,5,5,5,5,6,6,6,6,6,6,6,6,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,8,8,8,8,8,8,8,8,8,8,8,8,8,7,7,7,6,6,5,5,4,3,2,2,3,3,4,4,4,4,5,5,5,5,5,6,6,6,6,6,6,6,6,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,6,6,6,6,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,7,7,7,6,6,5,5,5,5,5,5,6,6,6,6,6,6,6,6,5,4,4,4,4,4,5,5,5,5,5,6,6,6,6,6,6,6,6,7,7,7,7,7,7,7,7,7,7,7,7,7,6,6,5,5,4,4,3,2,2,2,2,3,3,4,4,4,5,5,5,5,5,6,6,6,6,6,6,6,6,6,7,7,7,6,6,5,5,5,5,5,5,5,5,5,6,6,6,6,6,6,6,6,7,7,6,6,5,5,4,4,4,4,4,4,5,5,5,5,5,6,6,6,6,6,6,6,6,7,7,7,7,7,7,7,7,7,6,6,6,6,6,6,7,7,7,7,7,7,7,7,7,7,7,7,7,7,6,6,6,6,6,6,6,6,6,6,6,7,7,7,7,7,7,7,7,7,7,7,7,7,7,6,6,5,5,4,3,3,3,3,4,4,4,4,5,5,5,5,5,6,6,6,6,6,6,6,6,7,7,7,7,7,7,7,7,7,7,7,7,7,7,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,7,7,7,6,6,5,5,4,4,3,2,2,2,2,3,3,4,4,4,4,5,5,5,5,5,6,6,6,6,6,6,6,6,7,7,7,7]},"NOR":{"lap":95.757,"v":[247.9,251.2,254.4,257.4,260.5,263.5,266.4,269.2,271.8,274.3,276.6,278.7,280.9,283.0,285.0,287.1,288.9,290.7,292.2,293.9,295.6,297.0,298.5,299.8,301.1,302.3,303.6,304.7,305.9,306.8,307.6,308.7,309.6,310.5,309.9,309.3,308.6,308.2,307.6,307.0,306.6,306.0,305.5,304.9,304.5,304.0,303.6,303.2,302.8,302.3,302.2,288.3,271.2,253.9,236.8,219.4,201.6,183.5,165.1,145.3,123.9,100.2,100.1,99.9,100.0,99.9,99.9,113.2,124.6,135.0,144.4,153.2,150.5,129.9,106.8,79.1,79.0,78.7,95.3,109.0,121.0,131.7,141.5,150.5,158.8,166.5,173.6,180.1,186.5,192.2,198.0,203.3,208.5,213.2,218.0,222.4,226.7,230.8,234.8,238.8,242.4,245.9,239.0,239.0,239.0,239.1,239.0,238.9,238.9,238.9,238.9,238.9,239.0,238.9,242.5,246.2,249.7,253.1,256.3,259.2,262.0,264.7,267.5,270.0,272.6,275.2,277.6,279.8,282.2,284.3,286.3,288.1,289.8,291.6,293.1,294.7,296.1,297.5,298.9,283.1,265.9,248.7,231.6,214.3,196.6,178.4,159.6,139.5,117.5,92.5,92.5,106.8,119.1,130.0,139.7,148.6,156.8,164.6,171.8,178.5,184.9,191.0,196.6,202.1,207.1,212.1,216.7,221.3,225.7,230.2,234.0,238.0,241.7,245.1,248.5,252.0,255.1,258.1,261.1,263.9,266.6,269.4,272.1,274.6,271.9,254.8,237.6,237.3,237.4,237.2,240.9,244.4,248.0,251.1,254.6,257.8,261.0,263.9,266.7,269.4,271.8,274.2,276.7,279.1,279.3,262.2,245.2,245.2,245.4,245.4,248.9,252.1,255.3,258.3,261.3,264.2,267.0,269.5,272.0,274.4,276.6,279.0,281.5,283.5,285.6,287.8,289.6,291.2,292.9,294.7,296.0,297.6,298.9,300.3,301.4,302.5,291.1,274.2,257.0,240.0,222.7,205.0,186.9,186.7,186.6,186.8,186.8,192.7,198.5,203.9,208.8,213.8,218.4,222.9,216.2,198.7,180.5,161.9,161.8,161.7,161.7,162.0,169.4,176.2,182.7,188.6,194.1,199.7,205.2,210.2,215.1,219.7,224.1,228.2,232.5,236.5,240.3,243.7,247.1,250.3,253.6,256.8,259.8,262.7,265.5,268.3,257.8,240.8,223.6,206.1,188.0,169.3,149.7,128.6,105.5,77.8,77.7,77.7,94.7,108.7,120.8,131.7,141.4,150.2,158.4,166.0,173.0,179.7,186.1,192.1,197.7,203.2,208.1,213.2,217.9,222.5,226.9,231.3,235.1,238.9,239.3,221.9,204.1,186.0,167.5,167.3,167.3,167.4,174.6,181.1,187.4,193.0,198.6,203.8,209.0,213.8,218.6,223.1,227.3,231.3,235.2,235.4,218.0,200.4,182.6,163.8,144.2,144.2,144.4,144.4,153.0,160.9,168.4,175.2,181.6,187.8,193.8,199.3,204.7,210.1,214.8,219.5,224.0,228.2,231.9,236.0,239.6,243.2,246.7,250.1,253.2,256.4,259.5,256.6,239.5,239.6,239.8,239.8,239.8,239.7,243.4,246.8,250.3,253.4,256.5,259.4,262.3,265.1,267.7,270.3,272.8,275.2,263.7,246.5,229.5,212.0,212.0,212.0,212.0,212.0,216.7,221.3,225.7,229.9,233.8,237.8,241.5,245.0,248.5,251.9,255.1,258.1,261.0,263.8,266.5,269.2,266.0,248.9,231.7,214.4,196.6,178.5,159.5,139.3,117.3,117.4,117.2,117.2,128.4,138.5,147.5,155.9,163.8,170.9,177.7,184.1,190.3,196.0,201.7,206.7,211.5,216.4,220.9,225.2,229.7,233.9,237.8,241.5,245.1,248.4,251.6,254.7,257.7,260.5,263.5,266.1,268.7,271.4,274.1,276.6,279.0,281.4,283.4,285.4,287.1,289.1,290.7,292.6,294.1,295.7,297.1,298.6,299.8,301.1,302.5,303.5,304.6,305.6,306.9,307.8,308.9,309.8,310.7,311.3,312.1,312.9,312.2,311.5,310.9,310.2,309.5,308.9,308.4,307.9,307.4,306.8,306.2,305.6,305.1,304.6,304.2,303.6,303.3,302.8,302.5,302.1,302.0,301.6,301.2,300.7,300.4,299.9,299.5,299.1,298.9,298.6,288.2,271.2,254.1,237.0,219.6,202.1,184.0,165.4,145.6,124.5,100.5,71.1,71.2,71.2,89.2,103.8,116.7,127.9,137.9,147.2,155.7,163.3,170.5,177.4,183.9,190.0,195.8,201.4,206.5,211.4,216.3,220.9,225.4,229.7,233.9,237.6,241.3,244.7],"th":[100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,0,0,0,0,0,0,0,0,0,0,17,25,40,55,70,85,100,100,100,100,100,0,0,0,19,22,38,53,69,84,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,90,92,88,90,88,84,86,88,87,89,94,83,87,90,93,97,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,0,0,0,0,0,0,0,0,0,0,22,16,33,50,66,83,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,0,0,83,87,85,93,97,94,97,100,100,100,100,100,100,100,100,100,100,100,0,0,93,92,82,86,89,93,96,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,0,0,0,0,0,0,58,50,60,55,54,90,72,81,91,100,100,100,0,0,0,100,100,59,55,64,73,82,91,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,0,0,0,0,0,0,0,0,0,25,25,27,42,56,71,85,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,0,0,0,0,57,57,53,55,64,73,82,91,100,100,100,100,100,100,100,100,100,0,0,0,0,0,51,58,67,75,83,92,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,0,82,86,89,93,96,100,100,100,100,100,100,100,100,100,100,100,100,100,0,0,0,83,87,87,94,90,92,94,96,98,100,100,100,100,100,100,100,100,100,100,100,100,0,0,0,0,0,0,0,0,21,27,28,23,38,54,69,85,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,0,0,0,0,0,0,0,0,0,0,0,19,21,27,42,56,71,85,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100],"br":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],"g":[7,7,7,7,7,7,7,7,7,7,7,7,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,7,7,7,6,6,5,5,4,3,3,3,3,3,3,3,3,3,4,4,4,4,4,3,2,2,2,3,3,3,4,4,4,4,5,5,5,5,5,6,6,6,6,6,6,6,6,6,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,8,8,8,8,8,8,8,8,8,8,8,8,7,7,6,6,6,5,4,4,3,2,2,3,3,4,4,4,4,5,5,5,5,5,6,6,6,6,6,6,6,6,6,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,7,7,7,6,6,5,5,5,5,5,5,6,6,6,6,6,6,6,6,5,5,5,5,5,5,5,5,5,5,5,6,6,6,6,6,6,6,6,7,7,7,7,7,7,7,7,7,7,7,7,7,6,6,5,5,4,4,3,2,2,2,2,3,3,4,4,4,4,5,5,5,5,5,6,6,6,6,6,6,6,6,7,7,7,6,6,5,5,5,5,5,5,5,5,5,6,6,6,6,6,6,6,6,7,7,6,6,5,5,4,4,4,4,4,5,5,5,5,5,5,6,6,6,6,6,6,6,6,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,6,6,6,6,6,6,6,6,6,6,6,7,7,7,7,7,7,7,7,7,7,7,7,7,6,6,6,5,4,4,3,3,3,3,4,4,4,4,5,5,5,5,5,6,6,6,6,6,6,6,6,6,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,7,7,7,6,6,5,5,4,3,3,2,2,2,2,3,3,4,4,4,4,5,5,5,5,5,6,6,6,6,6,6,6,6,6,7,7,7]},"PIA":{"lap":95.762,"v":[253.6,257.1,260.4,263.7,266.6,269.4,272.1,274.8,277.1,279.4,281.4,283.5,285.4,287.3,289.3,291.2,292.7,294.4,295.8,297.1,298.4,299.7,301.0,302.3,303.5,304.9,306.1,307.2,308.2,309.0,309.6,310.3,311.0,311.9,311.5,310.9,310.3,309.4,309.0,308.1,307.5,307.0,306.8,306.3,305.8,305.6,305.1,304.5,303.8,303.5,303.0,290.8,273.1,255.5,237.8,220.1,202.2,183.9,164.7,144.5,122.6,97.6,97.7,97.7,97.4,97.5,97.6,111.8,124.2,135.4,145.4,154.5,151.1,129.7,105.9,77.0,77.0,76.9,94.6,109.4,122.0,133.1,143.2,152.5,161.0,169.0,176.3,183.3,189.8,195.9,201.7,207.4,212.6,217.6,222.5,227.0,231.4,235.6,239.8,243.7,247.6,250.8,233.1,233.1,233.1,233.0,232.9,233.0,232.9,232.9,233.2,233.2,233.2,233.3,237.5,241.5,245.5,249.3,252.8,256.2,259.5,262.6,265.4,268.5,271.3,273.9,276.4,278.9,281.0,283.0,285.0,286.9,288.8,290.7,292.4,294.1,295.6,297.2,298.6,286.4,268.9,251.2,233.7,215.8,197.8,179.1,159.8,139.1,116.4,90.2,90.1,105.7,118.7,130.3,140.7,150.3,158.8,166.8,174.4,181.3,188.0,194.1,200.1,205.7,211.0,216.2,221.2,225.9,230.4,234.7,238.6,242.5,246.5,250.0,253.8,257.3,260.7,263.8,266.9,269.6,272.2,274.7,277.1,279.6,267.9,250.4,232.8,232.7,232.5,232.5,236.8,240.9,244.8,248.5,252.1,255.6,259.0,262.2,265.3,268.3,271.0,273.5,276.2,278.5,275.5,258.0,240.4,240.3,240.3,240.2,244.1,247.8,251.4,254.8,258.3,261.5,264.7,267.7,270.6,273.1,275.6,278.0,280.3,282.3,284.6,286.6,288.4,290.0,291.8,293.4,294.9,296.4,298.0,299.4,300.5,301.9,290.2,272.7,255.2,237.6,219.9,201.8,183.4,183.3,183.1,183.0,183.0,189.1,195.4,201.5,207.1,212.4,217.6,222.5,214.8,196.8,178.1,158.8,158.8,158.5,158.2,158.3,166.4,173.8,181.0,187.6,193.7,199.8,205.4,210.7,215.9,220.8,225.4,229.8,234.1,238.3,242.2,246.1,250.0,253.7,257.2,260.7,263.8,266.8,269.9,272.5,261.3,243.7,226.1,207.9,189.6,170.7,150.6,129.1,105.4,76.4,76.3,76.3,94.3,108.6,121.4,132.5,142.6,151.9,160.5,168.5,176.1,182.9,189.3,195.5,201.6,207.1,212.5,217.6,222.4,226.6,231.2,235.6,239.6,243.8,237.9,220.1,201.9,183.4,164.1,163.9,164.0,164.0,171.9,179.1,185.7,192.1,198.2,203.9,209.4,214.7,219.5,224.2,228.7,232.9,237.3,235.3,217.3,199.2,180.7,161.3,140.9,140.8,141.0,140.8,150.3,159.0,167.2,174.6,181.7,188.1,194.3,200.2,206.0,211.4,216.6,221.5,226.1,230.4,234.7,239.1,243.0,246.6,250.3,253.8,256.9,260.4,263.8,252.2,234.7,234.9,234.7,234.6,234.6,234.7,238.5,242.6,246.4,250.0,253.4,257.0,260.3,263.7,266.8,269.7,272.4,275.0,261.1,243.6,225.8,207.9,207.6,207.6,207.6,207.5,212.8,217.9,222.6,227.1,231.7,236.0,240.2,244.0,247.8,251.4,254.8,258.2,261.7,264.9,267.9,270.8,267.8,250.2,232.5,214.6,196.3,177.5,158.0,137.3,114.7,114.6,114.7,114.7,126.8,137.4,147.1,156.0,164.4,172.1,179.4,186.1,192.6,198.6,204.2,209.7,215.1,219.9,224.5,229.1,233.4,237.4,241.4,245.3,248.9,252.5,255.8,259.3,262.5,265.5,268.4,271.3,273.8,276.5,279.1,281.2,283.4,285.3,287.3,289.0,290.8,292.4,294.0,295.4,296.7,298.1,299.4,300.9,302.1,303.3,304.4,305.5,306.4,307.6,308.6,309.8,310.7,311.5,312.2,312.9,313.5,314.2,313.5,312.9,312.3,311.5,310.9,310.3,309.7,309.1,308.4,307.9,307.4,306.7,306.4,305.9,305.4,304.8,304.4,303.8,303.6,303.2,302.7,302.3,301.8,301.3,301.1,300.7,300.5,300.2,299.9,299.5,292.6,274.9,257.2,239.6,221.9,203.9,185.5,166.6,146.5,124.7,100.2,70.0,70.0,70.0,89.3,104.7,117.9,129.3,139.8,149.3,158.0,165.9,173.6,180.5,187.3,193.5,199.5,205.1,210.7,215.7,220.5,225.3,229.7,233.9,238.3,242.5,246.4,250.0],"th":[100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,0,0,0,0,0,0,0,0,0,0,26,20,24,39,54,23,85,54,69,85,100,0,0,0,27,26,41,56,70,85,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,91,82,87,90,87,83,84,87,90,82,88,91,93,95,98,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,0,0,0,0,0,0,0,0,0,0,21,17,34,50,67,83,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,0,0,91,90,93,91,92,94,96,98,100,100,100,100,100,100,100,100,100,100,0,0,100,92,91,86,88,91,94,97,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,0,0,0,0,0,0,100,100,56,58,57,66,74,83,91,100,100,100,0,0,0,100,100,100,51,58,66,75,83,92,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,0,0,0,0,0,0,0,0,0,28,22,24,39,55,70,85,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,0,0,0,0,51,52,59,52,62,71,81,90,100,100,100,100,100,100,100,100,100,0,0,0,0,0,100,100,54,64,73,82,91,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,0,100,100,84,89,88,89,92,94,96,98,100,100,100,100,100,100,100,100,0,0,0,86,89,91,94,97,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,0,0,0,0,0,0,0,0,22,17,26,21,37,53,69,84,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,0,0,0,0,0,0,0,0,0,0,0,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100],"br":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],"g":[7,7,7,7,7,7,7,7,7,7,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,7,7,7,6,6,5,5,4,3,3,3,3,3,3,3,3,3,4,4,4,4,4,3,2,2,2,2,3,3,4,4,4,5,5,5,5,5,6,6,6,6,6,6,6,6,7,7,7,7,7,6,6,6,6,6,6,6,6,6,6,6,6,7,7,7,7,7,7,7,7,7,7,7,7,7,7,8,8,8,8,8,8,8,8,8,8,8,8,7,7,6,6,6,5,4,4,3,2,2,3,3,4,4,4,4,5,5,5,5,5,6,6,6,6,6,6,6,6,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,6,6,6,6,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,7,7,7,6,6,5,5,5,5,5,5,6,6,6,6,6,6,6,6,5,4,4,4,4,4,5,5,5,5,5,6,6,6,6,6,6,6,6,7,7,7,7,7,7,7,7,7,7,7,7,7,6,6,5,5,4,4,3,2,2,2,2,3,3,4,4,4,5,5,5,5,5,6,6,6,6,6,6,6,6,7,7,7,7,6,6,5,5,5,5,5,5,5,5,5,6,6,6,6,6,6,6,6,7,7,6,6,5,5,4,4,4,4,4,4,5,5,5,5,5,6,6,6,6,6,6,6,6,7,7,7,7,7,7,7,7,7,6,6,6,6,6,6,7,7,7,7,7,7,7,7,7,7,7,7,7,7,6,6,6,6,6,6,6,6,6,6,6,7,7,7,7,7,7,7,7,7,7,7,7,7,6,6,6,5,4,4,3,3,3,3,4,4,4,4,5,5,5,5,5,6,6,6,6,6,6,6,6,7,7,7,7,7,7,7,7,7,7,7,7,7,7,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,7,7,7,6,6,5,5,4,3,3,2,2,2,2,3,3,4,4,4,4,5,5,5,5,5,6,6,6,6,6,6,6,6,7,7,7,7]},"RUS":{"lap":95.871,"v":[250.0,253.3,256.6,259.6,262.9,265.8,268.5,271.1,273.9,276.4,278.8,281.2,283.3,285.2,287.2,289.1,291.0,292.9,294.6,296.0,297.6,298.8,300.2,301.4,302.8,303.9,305.1,306.2,307.3,308.3,309.4,310.3,311.3,312.1,313.0,313.7,313.1,312.5,311.6,310.8,310.1,309.6,309.0,308.7,308.2,307.9,307.4,306.9,306.5,306.0,300.1,283.4,266.8,250.2,233.4,216.6,199.3,181.3,162.9,143.8,122.8,99.5,99.9,99.9,100.0,100.1,99.9,113.2,124.9,135.4,144.8,153.8,148.6,128.4,105.8,78.9,78.9,78.7,95.3,109.4,121.7,132.6,142.6,151.8,160.1,167.6,174.8,181.4,187.6,193.5,199.2,204.6,209.8,215.0,219.8,224.4,228.7,233.0,236.9,240.8,244.5,248.0,238.2,238.2,238.2,238.3,238.4,238.3,238.4,238.2,238.3,238.3,238.4,238.5,242.4,246.1,249.6,252.8,256.0,259.1,261.9,264.8,267.7,270.5,273.2,275.9,278.4,280.8,282.9,284.9,286.6,288.5,290.2,292.1,293.8,295.5,296.8,298.3,295.1,278.4,261.7,245.3,228.5,211.5,194.3,176.6,158.0,138.2,116.9,92.1,92.0,106.6,119.3,130.3,140.4,149.5,157.9,165.6,172.9,179.8,186.4,192.6,198.5,204.0,209.2,214.1,219.0,223.5,227.8,231.9,236.1,239.9,243.6,247.2,250.7,253.9,257.0,260.0,263.0,265.9,268.7,271.3,274.1,276.9,267.6,251.0,234.4,234.2,234.1,234.0,238.1,242.0,245.7,249.4,252.9,256.1,259.2,262.3,265.0,267.7,270.6,273.3,275.7,278.4,275.5,258.8,242.1,242.1,241.9,241.8,245.4,248.9,252.4,255.7,259.0,261.9,264.7,267.6,270.5,273.3,276.0,278.5,280.5,282.8,284.8,287.0,289.0,291.1,292.7,294.3,295.5,296.8,298.2,299.4,300.7,302.2,285.8,269.1,252.5,235.8,218.8,201.7,184.0,184.0,184.1,184.2,184.3,190.7,196.6,202.1,207.4,212.4,217.3,221.8,212.8,195.7,177.9,159.5,159.5,159.5,159.3,159.3,167.0,174.2,181.0,187.4,193.4,198.9,204.5,209.7,214.5,219.2,224.0,228.3,232.5,236.8,240.8,244.5,248.0,251.4,254.6,257.6,260.7,263.6,266.4,269.1,252.7,235.9,219.0,202.0,184.5,166.2,147.2,126.8,104.1,76.9,76.9,77.0,94.1,108.4,120.7,131.7,141.7,150.9,159.3,167.0,174.4,181.0,187.4,193.6,199.3,204.7,210.0,214.9,219.5,224.2,228.3,232.5,236.6,240.3,234.8,218.1,200.8,183.3,165.4,165.4,165.2,165.3,172.6,179.2,185.6,192.0,197.8,203.5,209.0,214.0,218.7,223.4,227.8,231.8,235.9,231.7,214.7,197.4,179.9,161.5,142.2,142.1,142.1,142.1,151.2,159.4,167.3,174.2,181.0,187.3,193.4,199.1,204.8,210.0,215.0,219.8,224.4,228.7,232.9,237.0,240.8,244.2,247.7,251.1,254.5,257.7,260.9,253.0,236.3,236.2,236.2,236.2,236.1,236.0,239.9,243.8,247.3,250.6,254.2,257.3,260.5,263.7,266.8,269.5,272.2,274.6,259.8,243.3,226.4,209.5,209.4,209.4,209.2,209.3,214.1,219.0,223.5,228.0,232.1,236.2,240.1,243.7,247.3,250.7,254.0,257.4,260.5,263.4,266.2,269.0,261.9,245.2,228.7,211.8,194.8,176.9,158.6,139.0,117.5,117.4,117.5,117.5,128.7,139.0,148.4,156.8,164.6,172.1,178.9,185.4,191.6,197.6,202.8,208.3,213.2,218.1,222.6,227.4,231.4,235.5,239.4,243.0,246.5,250.1,253.3,256.5,260.1,263.0,266.0,268.8,271.6,274.1,276.8,279.1,281.3,283.4,285.4,287.3,289.0,291.0,292.5,294.2,295.7,297.4,298.5,300.0,301.3,302.5,303.8,305.1,306.1,307.2,308.4,309.2,310.2,311.0,311.8,312.6,313.6,314.2,315.1,315.8,315.0,314.1,313.6,312.8,312.2,311.7,311.0,310.3,309.8,309.1,308.5,308.1,307.6,307.2,306.8,306.3,305.7,305.4,304.9,304.4,304.2,303.9,303.7,303.3,302.9,302.6,302.5,300.2,283.5,267.0,250.2,233.2,216.3,199.2,181.5,163.3,144.1,123.3,99.9,71.3,71.3,71.1,89.7,104.8,117.2,128.6,139.2,148.4,156.9,165.0,172.2,179.1,185.5,191.6,197.5,203.0,208.1,213.2,217.9,222.5,226.9,231.1,235.0,239.0,242.7,246.4],"th":[100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,0,0,0,0,0,0,0,0,0,0,0,100,19,16,25,20,22,38,53,69,84,100,0,0,0,18,25,21,37,53,69,84,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,88,92,94,83,85,93,89,90,89,86,91,93,94,96,98,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,0,0,0,0,0,0,0,0,0,0,0,24,39,55,70,85,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,0,0,90,87,90,92,95,97,100,100,100,100,100,100,100,100,100,100,100,100,0,0,100,100,86,90,92,94,96,98,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,0,0,0,0,0,0,100,100,100,57,60,68,76,84,92,100,100,100,0,0,0,51,61,58,52,54,63,73,82,91,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,0,0,0,0,0,0,0,0,0,20,27,20,36,52,68,84,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,0,0,0,0,100,100,52,54,63,72,81,91,100,100,100,100,100,100,100,100,100,0,0,0,0,0,52,57,60,58,66,75,83,92,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,0,93,84,87,85,92,93,95,97,98,100,100,100,100,100,100,100,100,100,0,0,0,100,86,85,88,92,93,95,97,98,100,100,100,100,100,100,100,100,100,100,100,100,0,0,0,0,0,0,0,0,17,20,20,18,34,51,67,84,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,0,0,0,0,0,0,0,0,0,0,0,0,19,21,36,52,68,84,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100],"br":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],"g":[7,7,7,7,7,7,7,7,7,7,7,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,7,7,6,6,6,5,5,4,3,3,3,3,3,3,3,3,3,4,4,4,4,4,3,2,2,2,3,3,3,4,4,4,5,5,5,5,5,5,6,6,6,6,6,6,6,6,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,8,8,8,8,8,8,8,8,8,8,8,8,7,7,7,6,6,5,5,4,4,3,2,2,3,3,4,4,4,4,5,5,5,5,5,6,6,6,6,6,6,6,6,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,6,6,6,6,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,7,7,7,6,6,5,5,5,5,5,5,6,6,6,6,6,6,6,6,5,4,4,4,4,4,5,5,5,5,5,6,6,6,6,6,6,6,6,7,7,7,7,7,7,7,7,7,7,7,7,7,6,6,5,5,4,4,3,2,2,2,2,3,3,4,4,4,4,5,5,5,5,5,6,6,6,6,6,6,6,6,7,7,6,6,6,5,5,5,5,5,5,5,5,5,6,6,6,6,6,6,6,6,7,6,6,6,5,5,4,4,4,4,4,4,5,5,5,5,5,6,6,6,6,6,6,6,6,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,6,6,6,6,6,6,6,6,6,6,6,7,7,7,7,7,7,7,7,7,7,7,7,7,6,6,5,5,4,4,3,3,3,3,4,4,4,4,5,5,5,5,5,6,6,6,6,6,6,6,6,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,7,7,6,6,6,5,5,4,3,3,2,2,2,2,3,3,4,4,4,4,5,5,5,5,5,6,6,6,6,6,6,6,6,7,7,7,7]}}}]}</script>
+<script>
+(function(){
+'use strict';
+var PWA=true;
+var $=function(s,r){return (r||document).querySelector(s);};
+var $$=function(s,r){return Array.prototype.slice.call((r||document).querySelectorAll(s));};
+function esc(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
+var nf2=new Intl.NumberFormat('it-IT',{minimumFractionDigits:2,maximumFractionDigits:2});
+function eur(n){return (n>0.004?'+':n<-0.004?'−':'')+nf2.format(Math.abs(n))+' €';}
+function odds(n){return nf2.format(n);}
+function pct(n,d){d=d||0;return (n*100).toLocaleString('it-IT',{minimumFractionDigits:d,maximumFractionDigits:d})+'%';}
+function lapf(s){var m=Math.floor(s/60);var r=(s-m*60).toFixed(3);return m+':'+(r.length<6?'0':'')+r;}
+function gapf(s){return (s>=0?'+':'−')+Math.abs(s).toFixed(3);}
+function num(v){if(v==null||v==='')return NaN;var x=parseFloat(String(v).replace(',','.'));return isFinite(x)?x:NaN;}
+function ink(hex){var h=hex.replace('#','');var r=parseInt(h.substr(0,2),16),g=parseInt(h.substr(2,2),16),b=parseInt(h.substr(4,2),16);return (0.2126*r+0.7152*g+0.0722*b)/255>0.55?'#14161A':'#FFFFFF';}
+var store={
+  get:function(k,d){try{var v=localStorage.getItem('muretto:'+k);return v==null?d:JSON.parse(v);}catch(e){return d;}},
+  set:function(k,v){try{localStorage.setItem('muretto:'+k,JSON.stringify(v));}catch(e){}}
+};
+var D=null;
+var VIEWS=['weekend','telemetria','circuito','pronostici','registro'];
+var current='weekend';
+
+var FALLBACK_TEAM={name:'',color:'#888888'};
+function team(code){var d=D.drivers[code];return (d&&D.teams[d.team])||FALLBACK_TEAM;}
+function dcol(code){return team(code).color;}
+function dfull(code){var d=D.drivers[code];return d?d.name:code;}
+function dname(code){var d=D.drivers[code];return d?d.short:code;}
+
+function loadData(){
+  var seed=JSON.parse(document.getElementById('seed').textContent);
+  if(!PWA)return Promise.resolve(seed);
+  var getJ=function(url){return new Promise(function(res){
+    var done=false,t=setTimeout(function(){if(!done){done=true;res(null);}},3000);
+    fetch(url,{cache:'no-cache'}).then(function(r){return r.ok?r.json():null;}).then(function(j){if(!done){done=true;clearTimeout(t);res(j);}})
+      .catch(function(){if(!done){done=true;clearTimeout(t);res(null);}});});};
+  return Promise.all([getJ('weekend.json'),getJ('telemetry.json')]).then(function(r){
+    var d=(r[0]&&r[0].weekend)?r[0]:seed;
+    if(r[1]&&r[1].sessions&&r[1].sessions.length)d.telemetry=r[1].sessions;
+    var inf=r[1]&&r[1].info;
+    if(inf)['weekend','standings','lastRace','circuit','teams','drivers'].forEach(function(k){if(inf[k])d[k]=inf[k];});
+    return d;
+  });
+}
+
+function show(v){
+  if(VIEWS.indexOf(v)<0)v='weekend';
+  current=v;
+  VIEWS.forEach(function(x){document.getElementById('v-'+x).hidden=(x!==v);});
+  $$('.tab').forEach(function(b){if(b.dataset.v===v)b.setAttribute('aria-current','page');else b.removeAttribute('aria-current');});
+  try{history.replaceState(null,'','#'+v);}catch(e){}
+  window.scrollTo(0,0);
+  if(v==='telemetria')Tele.render();
+}
+
+/* ---------- WEEKEND ---------- */
+var Weekend={
+  mode:'drivers',all:false,
+  render:function(){
+    var w=D.weekend;
+    $('#ctx').textContent=w.short+', round '+w.round;
+    $('#wk-title').textContent=w.short;
+    $('#wk-sub').textContent=(w.name||w.circuit)+' · round '+w.round+' di '+w.rounds+(w.format==='sprint'?' · weekend sprint':'')+' · '+w.dates;
+    var tz='';try{tz=Intl.DateTimeFormat().resolvedOptions().timeZone||'';}catch(e){}
+    $('#wk-tz').textContent='Orari nel fuso del telefono'+(tz?' ('+tz.replace('_',' ')+')':'')+'. Tocca una sessione per il pronostico.';
+    this.tick();
+    this.renderStandings();
+    this.renderLast();
+  },
+  tick:function(){
+    var w=D.weekend,now=Date.now(),picks=Pron.all();
+    var dayF=new Intl.DateTimeFormat('it-IT',{weekday:'short',day:'numeric'});
+    var timeF=new Intl.DateTimeFormat('it-IT',{hour:'2-digit',minute:'2-digit'});
+    var nextIdx=-1,nowIdx=-1;
+    w.sessions.forEach(function(s,i){var a=Date.parse(s.start),b=Date.parse(s.end);if(now>=a&&now<b)nowIdx=i;if(nextIdx<0&&now<a)nextIdx=i;});
+    var html=w.sessions.map(function(s,i){
+      var a=new Date(s.start),b=Date.parse(s.end);
+      var st=now>=b?'done':(i===nowIdx?'now':(i===nextIdx&&nowIdx<0?'upnext':''));
+      var p=(picks[s.id]||[])[0];
+      var pk=(p&&p.fav&&num(p.p)>0)?esc(p.fav.split(' ').pop())+' '+Math.round(num(p.p))+'%':'';
+      return '<li class="'+st+'"><button type="button" data-goto="'+s.id+'"><span class="dot">'+(st==='done'?'✓':'')+'</span>'+
+        '<span class="s-name">'+esc(s.short)+'</span><span class="s-when">'+esc(dayF.format(a))+'<br>'+esc(timeF.format(a))+'</span>'+
+        '<span class="s-pick">'+pk+'</span></button></li>';
+    }).join('');
+    $('#strip').innerHTML=html;
+    var el=$('#wk-next');
+    if(nowIdx>=0){el.innerHTML='<span>In corso:</span> <span class="cd">'+esc(w.sessions[nowIdx].name)+'</span>';}
+    else if(nextIdx>=0){
+      var ms=Date.parse(w.sessions[nextIdx].start)-now,m=Math.floor(ms/60000),d=Math.floor(m/1440),h=Math.floor((m%1440)/60),mi=m%60;
+      var txt=d>0?d+' g '+h+' h':(h>0?h+' h '+mi+' min':mi+' min');
+      el.innerHTML='<span>'+esc(w.sessions[nextIdx].short)+' tra</span> <span class="cd">'+txt+'</span>';
+    } else el.innerHTML='<span>Weekend concluso.</span>';
+  },
+  renderStandings:function(){
+    var self=this,rows;
+    if(this.mode==='drivers')rows=D.standings.drivers.map(function(r){var t=team(r[0]);return {nm:dfull(r[0]),tm:t.name,c:t.color,p:r[1]};});
+    else rows=D.standings.teams.map(function(r){var t=D.teams[r[0]]||{name:r[0],color:'#888888'};return {nm:t.name,tm:'',c:t.color,p:r[1]};});
+    var lead=rows[0].p||1,list=this.all?rows:rows.slice(0,8);
+    $('#st-after').textContent=D.standings.after;
+    $('#stand').innerHTML=list.map(function(r,i){
+      var gap=i===0?'leader':'−'+(lead-r.p);
+      return '<li style="--c:'+r.c+'"><span class="pos">'+(i+1)+'</span><div class="who"><div class="nm"><span class="sw"></span>'+esc(r.nm)+
+        (r.tm?' <span class="tm">'+esc(r.tm)+'</span>':'')+'</div><div class="bar"><i style="width:'+(100*r.p/lead).toFixed(1)+'%"></i></div></div>'+
+        '<div class="pts">'+r.p+'<small>'+gap+'</small></div></li>';
+    }).join('');
+    $('#st-more').textContent=this.all?'Mostra solo i primi 8':'Mostra la classifica completa';
+    $$('[data-st]').forEach(function(b){b.setAttribute('aria-pressed',String(b.dataset.st===self.mode));});
+  },
+  renderLast:function(){
+    var r=D.lastRace;
+    $('#lr-title').textContent='Ultimo GP: '+String(r.name||'').replace('GP del ','');
+    $('#lr-res').innerHTML=r.results.map(function(x,i){
+      var t=team(x[0]);
+      var gap=x[1]==null?'1°':(typeof x[1]==='number'?'+'+x[1].toFixed(3):esc(String(x[1])));
+      return '<li class="'+(i===0?'p1':'')+'" style="--c:'+t.color+'"><span class="pos">'+(i+1)+'</span><div class="who"><div class="nm"><span class="sw"></span>'+esc(dfull(x[0]))+' <span class="tm">'+esc(t.name)+'</span></div></div>'+
+        '<div class="pts" style="font-size:17px">'+gap+'</div></li>';
+    }).join('');
+    var f=[];
+    if(r.pole)f.push('<div><b>'+esc(dname(r.pole[0]))+' '+esc(r.pole[1])+'</b>pole position</div>');
+    if(r.fastest)f.push('<div><b>'+esc(dname(r.fastest[0]))+' '+esc(r.fastest[1])+'</b>giro più veloce</div>');
+    $('#lr-facts').innerHTML=f.join('');
+    $('#lr-notes').textContent=r.notes||'';
+  }
+};
+
+/* ---------- TELEMETRIA ---------- */
+var Tele={
+  A:null,B:null,zoom:'lap',cursor:null,S:null,sessions:[],si:0,ds:1,cache:{},order:[],ML:34,MR:8,
+  init:function(){
+    var self=this;
+    this.sessions=D.telemetry||[];
+    if(!this.sessions.length){$('#tl-note').textContent='Nessuna sessione caricata.';return;}
+    var sess=$('#sess');
+    sess.innerHTML=this.sessions.map(function(x,i){return '<button type="button" data-i="'+i+'" aria-pressed="false">'+esc(x.short||x.label)+'</button>';}).join('');
+    sess.hidden=this.sessions.length<2;
+    sess.addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;self.load(+b.dataset.i);self.render();});
+    var wrap=$('#charts');
+    var move=function(e){var r=wrap.getBoundingClientRect();self.setCursor(e.clientX-r.left,r.width);};
+    wrap.addEventListener('pointerdown',move);
+    wrap.addEventListener('pointermove',move);
+    $('#zoom').addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;self.zoom=b.dataset.z;self.cursor=null;
+      $$('#zoom button').forEach(function(x){x.setAttribute('aria-pressed',String(x===b));});self.render();});
+    var to=null;window.addEventListener('resize',function(){clearTimeout(to);to=setTimeout(function(){if(current==='telemetria')self.render();},150);});
+    this.load(this.sessions.length-1);
+  },
+  load:function(i){
+    var self=this,S=this.sessions[i];
+    this.si=i;this.S=S;this.ds=S.length/S.n;this.cache={};this.cursor=null;
+    this.order=Object.keys(S.drivers).sort(function(a,b){return S.drivers[a].lap-S.drivers[b].lap;});
+    if(!S.drivers[this.A])this.A=this.order[0];
+    if(!S.drivers[this.B]||this.B===this.A)this.B=this.order.filter(function(c){return c!==self.A;})[0];
+    this.order.forEach(function(c){self.cache[c]=self.prep(S.drivers[c]);});
+    $$('#sess button').forEach(function(b){b.setAttribute('aria-pressed',String(+b.dataset.i===i));});
+    $('#tl-title').textContent=S.label;
+    $('#tl-badge').hidden=!S.simulated;
+    $('#tl-note').textContent=S.simulated?'Tempi Q3 reali; velocità, gas e freno sono generati per mostrare il formato. Le tracce vere arrivano dopo ogni sessione.':
+      'Giro migliore di ogni pilota dei quattro top team'+(S.cornersAuto?'. Numeri delle curve stimati dalla telemetria':'')+'.';
+    var w=S.weather,c=$('#tl-cond');
+    if(w&&w.track){c.hidden=false;c.textContent='Asfalto '+Math.round(w.track[1])+' °C ('+Math.round(w.track[0])+'–'+Math.round(w.track[2])+')'+
+      (w.air!=null?', aria '+Math.round(w.air)+' °C':'')+(w.rain?', pioggia':'')+'.';}
+    else c.hidden=true;
+    this.renderPickers();
+  },
+  prep:function(dd){
+    var n=dd.v.length,ds=this.ds,t=new Float64Array(n+1),i;
+    if(dd.t&&dd.t.length===n+1){for(i=0;i<=n;i++)t[i]=dd.t[i];return {t:t,clip:this.clipZones(dd)};}
+    for(i=0;i<n;i++){var v0=dd.v[i]/3.6,v1=dd.v[(i+1)%n]/3.6;t[i+1]=t[i]+ds/Math.max((v0+v1)/2,1);}
+    var sc=this.S.sectors,sec=dd.sec;
+    if(sec&&sec.length===3&&sc&&sc.length===4){
+      /* Il tempo integrato dalla velocità ha un piccolo errore diverso per ogni pilota:
+         lo ancoro ai tempi di settore ufficiali, così il distacco ai confini dei settori è esatto. */
+      var i1=Math.round(sc[1]/ds),i2=Math.round(sc[2]/ds),T1=sec[0],T2=sec[0]+sec[1];
+      var a=t[i1],b=t[i2]-t[i1],c=t[n]-t[i2];
+      var u=new Float64Array(n+1);
+      for(i=0;i<=n;i++){
+        if(i<=i1)u[i]=t[i]*T1/a;
+        else if(i<=i2)u[i]=T1+(t[i]-t[i1])*sec[1]/b;
+        else u[i]=T2+(t[i]-t[i2])*sec[2]/c;
+      }
+      t=u;
+    }else{
+      var k=dd.lap/t[n];for(i=0;i<=n;i++)t[i]*=k;
+    }
+    return {t:t,clip:this.clipZones(dd)};
+  },
+  clipZones:function(dd){
+    var v=dd.v,th=dd.th,n=v.length,ds=this.ds,raw=[],zones=[],i,s=-1;
+    for(i=0;i<n;i++){var j=(i+1)%n;var c=th[i]>=98&&th[j]>=98&&v[i]>=230&&(v[j]-v[i])<=0.35;
+      if(c){if(s<0)s=i;}else if(s>=0){raw.push([s,i]);s=-1;}}
+    if(s>=0)raw.push([s,n-1]);
+    raw.forEach(function(z){var last=zones[zones.length-1];if(last&&z[0]-last[1]<=3)last[1]=z[1];else zones.push([z[0],z[1]]);});
+    return zones.map(function(z){var pk=0,q,run=0,k=z[0];for(q=z[0];q<=z[1];q++)pk=Math.max(pk,v[q]);
+        while(run<400&&th[(k-1+n)%n]>=98){k--;run+=ds;}
+        return {a:z[0],b:z[1],len:(z[1]-z[0])*ds,loss:pk-v[z[1]],run:run};})
+      .filter(function(z){return z.len>=40&&z.loss>=1.5&&z.run>=150;});
+  },
+  colA:function(){return dcol(this.A);},
+  colB:function(){return dcol(this.B);},
+  sameTeam:function(){var a=D.drivers[this.A],b=D.drivers[this.B];return !!(a&&b&&a.team===b.team);},
+  renderPickers:function(){
+    var self=this;
+    ['A','B'].forEach(function(w){
+      var el=document.getElementById('pick'+w);
+      el.innerHTML=self.order.map(function(c){
+        var col=dcol(c),on=self[w]===c;
+        return '<button type="button" class="chip" data-w="'+w+'" data-c="'+c+'" aria-pressed="'+on+'" style="--c:'+col+';--ink:'+ink(col)+'"><i></i>'+c+'</button>';
+      }).join('');
+      el.onclick=function(e){var b=e.target.closest('.chip');if(!b)return;var c=b.dataset.c,o=w==='A'?'B':'A';
+        if(self[o]===c){self[o]=self[w];}self[w]=c;self.renderPickers();self.render();};
+    });
+  },
+  range:function(){var S=this.S;if(this.zoom==='lap')return [0,S.length];var k=+this.zoom;return [S.sectors[k],S.sectors[k+1]];},
+  render:function(){
+    if(!this.S)return;
+    var S=this.S,ds=this.ds,n=S.n,self=this;
+    var W=Math.max(280,Math.round($('#charts').clientWidth||320));
+    var rg=this.range(),z0=rg[0],z1=rg[1];
+    var i0=Math.max(0,Math.floor(z0/ds)-1),i1=Math.min(n-1,Math.ceil(z1/ds)+1);
+    var ML=this.ML,MR=this.MR,X=function(d){return ML+(d-z0)/(z1-z0)*(W-ML-MR);};
+    var A=S.drivers[this.A],B=S.drivers[this.B],cA=this.colA(),cB=this.colB(),dashB=this.sameTeam()?' stroke-dasharray="5 3"':'';
+    var i,k,s;
+    /* velocità */
+    var vmin=1e9,vmax=-1e9;
+    for(i=i0;i<=i1;i++){vmin=Math.min(vmin,A.v[i],B.v[i]);vmax=Math.max(vmax,A.v[i],B.v[i]);}
+    vmin=Math.max(0,Math.floor((vmin-6)/25)*25);vmax=Math.ceil((vmax+6)/25)*25;
+    var H=210,T=14,Bt=24,Y=function(v){return T+(1-(v-vmin)/(vmax-vmin))*(H-T-Bt);};
+    var g='';
+    var step=(vmax-vmin)>150?50:25;
+    for(var gv=Math.ceil(vmin/step)*step;gv<=vmax;gv+=step){g+='<line class="gl" x1="'+ML+'" x2="'+(W-MR)+'" y1="'+Y(gv).toFixed(1)+'" y2="'+Y(gv).toFixed(1)+'"/><text class="ax" x="'+(ML-6)+'" y="'+(Y(gv)+3.5).toFixed(1)+'" text-anchor="end">'+gv+'</text>';}
+    S.sectors.slice(1,-1).forEach(function(sd){if(sd>z0&&sd<z1)g+='<line class="sb" x1="'+X(sd).toFixed(1)+'" x2="'+X(sd).toFixed(1)+'" y1="'+T+'" y2="'+(H-Bt)+'"/>';});
+    for(k=0;k<3;k++){var a=Math.max(S.sectors[k],z0),b=Math.min(S.sectors[k+1],z1);if(b-a>(z1-z0)*0.08)g+='<text class="axc" x="'+((X(a)+X(b))/2).toFixed(1)+'" y="10" text-anchor="middle">S'+(k+1)+'</text>';}
+    var lastX=-99;S.corners.forEach(function(c){if(c.d<z0||c.d>z1)return;var x=X(c.d);if(x-lastX<16)return;lastX=x;g+='<text class="axc" x="'+x.toFixed(1)+'" y="'+(H-6)+'" text-anchor="middle">'+c.n+'</text>';});
+    var line=function(dd,key,Yf,from,to){var p='';for(var q=from;q<=to;q++)p+=(q===from?'M':'L')+X(q*ds).toFixed(1)+' '+Yf(dd[key][q]).toFixed(1);return p;};
+    var clips='';
+    [[self.A,A],[self.B,B]].forEach(function(pair){self.cache[pair[0]].clip.forEach(function(z){var a=Math.max(z.a,i0),b=Math.min(z.b,i1);if(b>a)clips+='<path d="'+line(pair[1],'v',Y,a,b)+'" fill="none" stroke="var(--clip)" stroke-width="7" stroke-linecap="round"/>';});});
+    $('#c-speed').setAttribute('viewBox','0 0 '+W+' '+H);
+    $('#c-speed').innerHTML=g+clips+
+      '<path d="'+line(B,'v',Y,i0,i1)+'" fill="none" stroke="'+cB+'" stroke-width="1.8"'+dashB+'/>'+
+      '<path d="'+line(A,'v',Y,i0,i1)+'" fill="none" stroke="'+cA+'" stroke-width="1.8"/>';
+    /* distacco */
+    var tA=this.cache[this.A].t,tB=this.cache[this.B].t,dmax=0.05;
+    for(i=i0;i<=i1;i++)dmax=Math.max(dmax,Math.abs(tB[i]-tA[i]));
+    var nice=[0.05,0.1,0.2,0.25,0.5,1,2];for(k=0;k<nice.length;k++)if(nice[k]>=dmax){dmax=nice[k];break;}
+    var H2=104,mid=H2/2,Y2=function(dl){return mid-dl/dmax*(mid-10);};
+    var dp='';for(i=i0;i<=i1;i++)dp+=(i===i0?'M':'L')+X(i*ds).toFixed(1)+' '+Y2(tB[i]-tA[i]).toFixed(1);
+    var area=dp+'L'+X(i1*ds).toFixed(1)+' '+mid+'L'+X(i0*ds).toFixed(1)+' '+mid+'Z';
+    $('#cap-delta').textContent='Distacco di '+this.B+' da '+this.A+', s';
+    $('#c-delta').setAttribute('viewBox','0 0 '+W+' '+H2);
+    $('#c-delta').innerHTML='<defs><clipPath id="up"><rect x="0" y="0" width="'+W+'" height="'+mid+'"/></clipPath><clipPath id="dn"><rect x="0" y="'+mid+'" width="'+W+'" height="'+mid+'"/></clipPath></defs>'+
+      '<path d="'+area+'" fill="'+cA+'" opacity=".22" clip-path="url(#up)"/><path d="'+area+'" fill="'+cB+'" opacity=".22" clip-path="url(#dn)"/>'+
+      '<line class="gz" x1="'+ML+'" x2="'+(W-MR)+'" y1="'+mid+'" y2="'+mid+'"/>'+
+      '<text class="ax" x="'+(ML-6)+'" y="'+(Y2(dmax)+3.5)+'" text-anchor="end">+'+String(dmax).replace('.',',')+'</text>'+
+      '<text class="ax" x="'+(ML-6)+'" y="'+(Y2(-dmax)+3.5)+'" text-anchor="end">−'+String(dmax).replace('.',',')+'</text>'+
+      '<text class="axc" x="'+(ML+4)+'" y="12">'+this.A+' davanti</text><text class="axc" x="'+(ML+4)+'" y="'+(H2-4)+'">'+this.B+' davanti</text>'+
+      '<path d="'+dp+'" fill="none" stroke="var(--text)" stroke-width="1.6"/>';
+    /* gas e freno */
+    var H3=96,TH=58,Yt=function(v){return 6+(1-v/100)*(TH-6);};
+    var brk=function(dd,y,col){var out='',st=-1;for(var q=i0;q<=i1+1;q++){var on=q<=i1&&dd.br[q]===1;if(on&&st<0)st=q;if(!on&&st>=0){out+='<rect x="'+X(st*ds).toFixed(1)+'" y="'+y+'" width="'+Math.max(1.5,X(q*ds)-X(st*ds)).toFixed(1)+'" height="9" rx="2" fill="'+col+'"/>';st=-1;}}return out;};
+    $('#c-input').setAttribute('viewBox','0 0 '+W+' '+H3);
+    $('#c-input').innerHTML='<line class="gl" x1="'+ML+'" x2="'+(W-MR)+'" y1="'+Yt(100)+'" y2="'+Yt(100)+'"/><line class="gl" x1="'+ML+'" x2="'+(W-MR)+'" y1="'+Yt(0)+'" y2="'+Yt(0)+'"/>'+
+      '<text class="ax" x="'+(ML-6)+'" y="'+(Yt(100)+3.5)+'" text-anchor="end">100</text><text class="ax" x="'+(ML-6)+'" y="'+(Yt(0)+3.5)+'" text-anchor="end">0</text>'+
+      '<path d="'+line(B,'th',Yt,i0,i1)+'" fill="none" stroke="'+cB+'" stroke-width="1.5"'+dashB+'/><path d="'+line(A,'th',Yt,i0,i1)+'" fill="none" stroke="'+cA+'" stroke-width="1.5"/>'+
+      '<text class="axc" x="'+(ML-6)+'" y="'+(TH+15)+'" text-anchor="end">'+this.A+'</text>'+brk(A,TH+7,cA)+
+      '<text class="axc" x="'+(ML-6)+'" y="'+(TH+29)+'" text-anchor="end">'+this.B+'</text>'+brk(B,TH+21,cB);
+    this.W=W;
+    this.drawCursor();this.readout();this.renderMini();this.renderTable();this.renderClip();
+  },
+  setCursor:function(x,W){
+    var rg=this.range(),d=rg[0]+(x-this.ML)/(W-this.ML-this.MR)*(rg[1]-rg[0]);
+    d=Math.min(rg[1],Math.max(rg[0],d));
+    this.cursor=Math.min(this.S.n-1,Math.round(d/this.ds));
+    this.drawCursor();this.readout();
+  },
+  drawCursor:function(){
+    var c=$('#cursor');if(this.cursor==null){c.style.display='none';return;}
+    var rg=this.range(),W=$('#charts').clientWidth,x=this.ML+(this.cursor*this.ds-rg[0])/(rg[1]-rg[0])*(W-this.ML-this.MR);
+    c.style.left=x.toFixed(1)+'px';c.style.display='block';
+  },
+  where:function(d){
+    var cs=this.S.corners,L=this.S.length,best=null,bd=1e9,nxt=null,nd=1e9;
+    cs.forEach(function(c){var dd=Math.abs(c.d-d);if(dd<bd){bd=dd;best=c;}var ah=(c.d-d+L)%L;if(ah<nd){nd=ah;nxt=c;}});
+    return bd<=90?'curva '+best.n:'verso curva '+nxt.n;
+  },
+  readout:function(){
+    var S=this.S,A=S.drivers[this.A],B=S.drivers[this.B],el=$('#readout');
+    if(this.cursor==null){
+      el.innerHTML='<div class="ro-sum"><span class="ro-rows" style="display:inline-flex;margin:0"><span class="c" style="--c:'+this.colA()+'"><i></i>'+this.A+'</span></span><span class="lt">'+lapf(A.lap)+'</span>'+
+        '<span class="ro-rows" style="display:inline-flex;margin:0"><span class="c'+(this.sameTeam()?' hol':'')+'" style="--c:'+this.colB()+'"><i></i>'+this.B+'</span></span><span class="gp">'+gapf(B.lap-A.lap)+'</span></div>'+
+        '<div class="ro-hint">Trascina il dito sui grafici per leggere i valori punto per punto.</div>';
+      return;
+    }
+    var i=this.cursor,d=i*this.ds,dl=this.cache[this.B].t[i]-this.cache[this.A].t[i];
+    var hol=this.sameTeam();var row=function(code,dd,col,h){return '<span class="c'+(h?' hol':'')+'" style="--c:'+col+'"><i></i>'+code+'</span><span>'+Math.round(dd.v[i])+' <small>km/h</small></span><span>'+dd.g[i]+'ª <small>marcia</small></span><span>'+(dd.br[i]?'<small>freno</small>':dd.th[i]+' <small>% gas</small>')+'</span>';};
+    el.innerHTML='<div class="ro-top"><span><b>'+Math.round(d).toLocaleString('it-IT')+' m</b> '+this.where(d)+'</span><span>Δ <b>'+gapf(dl)+'</b> s</span></div>'+
+      '<div class="ro-rows">'+row(this.A,A,this.colA(),false)+row(this.B,B,this.colB(),hol)+'</div>';
+  },
+  renderMini:function(){
+    var n=this.S.n,K=25,tA=this.cache[this.A].t,tB=this.cache[this.B].t,cA=this.colA(),cB=this.colB(),wa=0,html='';
+    for(var k=0;k<K;k++){var a=Math.round(k*n/K),b=Math.round((k+1)*n/K);var da=tA[b]-tA[a],db=tB[b]-tB[a];var aw=da<=db;if(aw)wa++;
+      html+='<i style="--c:'+(aw?cA:cB)+(aw||!this.sameTeam()?'':';opacity:.55')+'" title="'+(aw?this.A:this.B)+'"></i>';}
+    $('#mini').innerHTML=html;
+    $('#mini-note').textContent=this.A+' più veloce in '+wa+' minisettori su 25, '+this.B+' in '+(K-wa)+'.';
+  },
+  sectorTimes:function(code){
+    var dd=this.S.drivers[code];if(dd.sec&&dd.sec.length===3)return dd.sec;
+    var t=this.cache[code].t,ds=this.ds,sc=this.S.sectors,n=this.S.n;
+    var i1=Math.round(sc[1]/ds),i2=Math.round(sc[2]/ds);
+    return [t[i1],t[i2]-t[i1],t[n]-t[i2]];
+  },
+  renderTable:function(){
+    var self=this,rows=this.order.map(function(c){return {c:c,s:self.sectorTimes(c),lap:self.S.drivers[c].lap,ty:self.S.drivers[c].tyre};});
+    var best=[0,1,2].map(function(k){return Math.min.apply(null,rows.map(function(r){return r.s[k];}));});
+    var bestLap=Math.min.apply(null,rows.map(function(r){return r.lap;}));
+    var h='<thead><tr><th>Pilota</th><th>S1</th><th>S2</th><th>S3</th><th>Giro</th></tr></thead><tbody>';
+    rows.forEach(function(r){
+      h+='<tr class="'+(r.c===self.A||r.c===self.B?'sel':'')+'"><td><span class="sw" style="--c:'+dcol(r.c)+'"></span>'+r.c+(r.ty?'<span class="ty">'+esc(r.ty)+'</span>':'')+'</td>'+
+        r.s.map(function(x,k){return '<td class="'+(Math.abs(x-best[k])<0.0005?'best':'')+'">'+x.toFixed(3)+'</td>';}).join('')+
+        '<td class="'+(r.lap===bestLap?'best':'')+'">'+lapf(r.lap)+'</td></tr>';
+    });
+    var ideal=best[0]+best[1]+best[2];
+    h+='<tr class="ideal"><td>Giro ideale</td><td></td><td></td><td></td><td>'+lapf(ideal)+'</td></tr></tbody>';
+    $('#tbl').innerHTML=h;
+  },
+  renderClip:function(){
+    var self=this;
+    $('#clip').innerHTML=[this.A,this.B].map(function(c){
+      var z=self.cache[c].clip,tot=z.reduce(function(s,x){return s+x.len;},0);
+      return '<div><h4 class="'+(c===self.B&&self.sameTeam()?'hol':'')+'" style="--c:'+dcol(c)+'"><i></i>'+c+'</h4><ul>'+(z.length?z.map(function(x){return '<li>'+self.where(x.b*self.ds)+': <b>'+Math.round(x.len)+' m</b>, −'+Math.round(x.loss)+' km/h</li>';}).join(''):'<li>Nessun tratto rilevato</li>')+
+        '</ul><div class="tot">Totale '+Math.round(tot)+' m nel giro</div></div>';
+    }).join('');
+  }
+};
+
+/* ---------- PRONOSTICI ---------- */
+var BOOKS=['Sisal','Betfair Sport','Altro'];
+var Pron={
+  opened:{},
+  all:function(){var st=store.get('picks',{}),w=D.weekend.id;return st[w]||(D.predictions&&D.predictions[w])||{};},
+  save:function(wp){var st=store.get('picks',{});st[D.weekend.id]=wp;store.set('picks',st);},
+  calc:function(p){
+    var pr=num(p.p)/100,o=num(p.odds);
+    var r={min:(pr>0&&pr<=1)?1/pr:NaN,o:o,pr:pr};
+    if(!(pr>0&&pr<=1)||!p.fav){r.cls='';r.html='<b>In attesa</b>Inserisci favorito e probabilità dopo l\'analisi della sessione.';return r;}
+    if(!(o>1)){r.cls='';r.html='<b>Manca la quota</b>Inserisci la quota offerta dal bookmaker per il confronto.';return r;}
+    var ev=pr*o-1;
+    if(o>=r.min-1e-9){r.cls='go';r.go=true;r.html='<b>Gioca</b>Quota sopra la minima: valore atteso '+(ev>=0?'+':'−')+pct(Math.abs(ev))+' sulla puntata, se la stima è giusta.';}
+    else {r.cls='no';r.html='<b>Non giocare</b>Quota sotto la minima: valore atteso −'+pct(Math.abs(ev))+' sulla puntata.';}
+    return r;
+  },
+  render:function(){
+    var w=D.weekend,wp=this.all(),self=this;
+    $('#pr-title').textContent='Pronostici '+w.short;
+    var dl='';Object.keys(D.drivers).forEach(function(c){dl+='<option value="'+esc(D.drivers[c].short)+'">';});
+    Object.keys(D.teams).forEach(function(t){dl+='<option value="'+esc(D.teams[t].name)+'">';});
+    $('#dl-sel').innerHTML=dl;
+    var ck=store.get('checks',{})[w.id]||{};
+    var items=[['temp','Temperatura dell\'asfalto della sessione da giocare confrontata con quella delle libere'],['merc','Passo Mercedes dei long run del venerdì corretto']];
+    $('#pr-checks').innerHTML='<summary>Controlli del metodo</summary>'+items.map(function(it){return '<label><input type="checkbox" data-ck="'+it[0]+'"'+(ck[it[0]]?' checked':'')+'><span>'+esc(it[1])+'</span></label>';}).join('');
+    $('#pr-checks').onchange=function(e){var k=e.target.dataset.ck;if(!k)return;var all=store.get('checks',{});all[w.id]=all[w.id]||{};all[w.id][k]=e.target.checked;store.set('checks',all);};
+    var tF=new Intl.DateTimeFormat('it-IT',{weekday:'long',hour:'2-digit',minute:'2-digit'});
+    var now=Date.now(),nx=w.sessions.filter(function(x){return Date.parse(x.end)>now;})[0],nextId=nx?nx.id:null;
+    $('#picks').innerHTML=w.sessions.map(function(s){
+      var list=wp[s.id]&&wp[s.id].length?wp[s.id]:[{market:s.market}];
+      var has=list.some(function(p){return p.fav||p.p||p.odds;});
+      return '<details class="pcard" id="pc-'+s.id+'"'+(has||s.id===nextId||self.opened[s.id]?' open':'')+'><summary><div class="ph"><h3>'+esc(s.name)+'</h3><span>'+esc(tF.format(new Date(s.start)))+'</span></div><div class="pstat">'+self.status(list)+'</div></summary>'+
+        list.map(function(p,k){return self.pickHtml(s,p,k,list.length);}).join('')+
+        '<button type="button" class="linkbtn" data-add="'+s.id+'">Aggiungi un altro mercato</button></details>';
+    }).join('');
+    $$('#picks details').forEach(function(d){d.addEventListener('toggle',function(){self.opened[d.id.slice(3)]=d.open;});});
+    var root=$('#picks');
+    root.oninput=function(e){var f=e.target.dataset.f;if(!f)return;var box=e.target.closest('.pick'),sid=box.dataset.s,k=+box.dataset.k;
+      var cur=self.all(),list=(cur[sid]&&cur[sid].length?cur[sid]:[{market:self.sess(sid).market}]).slice();
+      list[k]=Object.assign({},list[k]);list[k][f]=e.target.value;cur=Object.assign({},cur);cur[sid]=list;self.save(cur);self.refresh(box,list[k],list);Weekend.tick();};
+    root.onclick=function(e){
+      var b=e.target.closest('button');if(!b)return;
+      var cur=Object.assign({},self.all());
+      if(b.dataset.add){var sid=b.dataset.add,l=(cur[sid]&&cur[sid].length?cur[sid]:[{market:self.sess(sid).market}]).slice();l.push({market:''});cur[sid]=l;self.save(cur);self.render();return;}
+      var box=b.closest('.pick');if(!box)return;var s2=box.dataset.s,k=+box.dataset.k,l2=(cur[s2]||[{market:self.sess(s2).market}]).slice();
+      if(b.dataset.rm){l2.splice(k,1);cur[s2]=l2;self.save(cur);self.render();Weekend.tick();return;}
+      if(b.dataset.log){var p=l2[k]||{},r=self.calc(p);
+        Log.openForm({gp:D.weekend.short,session:self.sess(s2).short,market:p.market||'',selection:p.fav||'',book:p.book||'Sisal',odds:num(p.odds)||'',p:(r.pr>0?r.pr:null),stake:'',kind:r.go?'reale':'scartata',outcome:'aperta',note:''});}
+    };
+  },
+  sess:function(id){return D.weekend.sessions.filter(function(s){return s.id===id;})[0];},
+  pickHtml:function(s,p,k,count){
+    var r=this.calc(p);
+    return '<div class="pick" data-s="'+s.id+'" data-k="'+k+'">'+
+      '<div class="field"><label>Mercato</label><input data-f="market" value="'+esc(p.market||'')+'" placeholder="Es. pole, podio, scuderia della pole"></div>'+
+      '<div class="grid2"><div class="field"><label>Favorito</label><input data-f="fav" list="dl-sel" value="'+esc(p.fav||'')+'" placeholder="Pilota o squadra" autocomplete="off"></div>'+
+      '<div class="field"><label>Probabilità stimata, %</label><input data-f="p" inputmode="decimal" value="'+esc(p.p||'')+'" placeholder="es. 35"></div></div>'+
+      '<div class="minodds"><span>Quota minima</span><b class="mo">'+(isFinite(r.min)?odds(r.min):'—')+'</b></div>'+
+      '<div class="grid2"><div class="field"><label>Quota offerta</label><input data-f="odds" inputmode="decimal" value="'+esc(p.odds||'')+'" placeholder="es. 2,50"></div>'+
+      '<div class="field"><label>Bookmaker</label><select data-f="book">'+BOOKS.map(function(b){return '<option'+((p.book||'Sisal')===b?' selected':'')+'>'+b+'</option>';}).join('')+'</select></div></div>'+
+      '<div class="verdict '+r.cls+'">'+r.html+'</div>'+
+      '<div class="pick-actions"><button type="button" class="btn small" data-log="1">Registra</button>'+(count>1?'<button type="button" class="linkbtn" data-rm="1">Rimuovi</button>':'<span></span>')+'</div></div>';
+  },
+  status:function(list){
+    var p=list[0]||{},r=this.calc(p),out;
+    out=(p.fav&&isFinite(r.min))?esc(p.fav)+' '+Math.round(r.pr*100)+'%, quota minima '+odds(r.min):'In attesa dell\'analisi';
+    if(list.length>1)out+=', +'+(list.length-1)+(list.length===2?' mercato':' mercati');
+    if(r.cls==='go')out+='. <b class="go">Gioca</b>';else if(r.cls==='no')out+='. <b class="no">Non giocare</b>';
+    return out;
+  },
+  refresh:function(box,p,list){var r=this.calc(p);var card=box.closest('.pcard');if(card&&list)$('.pstat',card).innerHTML=this.status(list);$('.mo',box).textContent=isFinite(r.min)?odds(r.min):'—';var v=$('.verdict',box);v.className='verdict '+r.cls;v.innerHTML=r.html;}
+};
+
+/* ---------- REGISTRO ---------- */
+var Log={
+  get:function(){var l=store.get('log',null);if(!Array.isArray(l)){l=(D.log||[]).map(function(e,i){var x=Object.assign({},e);x.id='s'+i;return x;});store.set('log',l);}return l;},
+  set:function(l){store.set('log',l);},
+  pnl:function(e){if(e.kind==='scartata'||e.outcome==='aperta')return 0;var st=num(e.stake)||0,o=num(e.odds)||0;return e.outcome==='vinta'?st*(o-1):-st;},
+  render:function(){
+    var l=this.get(),self=this;
+    var agg=function(kind){var x={pl:0,st:0,n:0,w:0};l.forEach(function(e){if(e.kind!==kind||e.outcome==='aperta')return;x.pl+=self.pnl(e);x.st+=num(e.stake)||0;x.n++;if(e.outcome==='vinta')x.w++;});return x;};
+    var R=agg('reale'),V=agg('virtuale');
+    var chiuse=function(k){return k===1?'1 giocata chiusa':k+' giocate chiuse';};
+    var cls=function(v){return v>0.004?'gain':v<-0.004?'loss':'';};
+    $('#lg-money').innerHTML='<div><b class="'+cls(R.pl)+'">'+eur(R.pl)+'</b><span>Saldo reale, '+chiuse(R.n)+(R.st>0?', ROI '+(R.pl>=0?'+':'−')+pct(Math.abs(R.pl/R.st)):'')+'</span></div>'+
+      '<div><b class="'+cls(V.pl)+'">'+eur(V.pl)+'</b><span>Saldo virtuale, '+chiuse(V.n)+'</span></div>';
+    var cal=l.filter(function(e){return e.p!=null&&num(e.p)>0&&e.outcome!=='aperta';}),n=cal.length,target=30;
+    var ch='<b>Taratura delle stime:</b> '+(n===1?'1 caso':n+' casi')+' con probabilità registrata su '+target+'.';
+    if(n>=10){var br=0,sp=0,hit=0;cal.forEach(function(e){var p=num(e.p),y=e.outcome==='vinta'?1:0;br+=(p-y)*(p-y);sp+=p;hit+=y;});
+      ch+=' Probabilità media stimata '+pct(sp/n)+', frequenza reale '+pct(hit/n)+'. Brier '+(br/n).toFixed(3).replace('.',',')+' (più basso è meglio; 0,25 equivale a tirare a indovinare su eventi al 50%).';}
+    else ch+=' Servono almeno 10 casi per un primo confronto tra probabilità stimate e risultati; conta anche le giocate scartate.';
+    $('#lg-calib').innerHTML=ch+'<div class="prog"><i style="width:'+Math.min(100,100*n/target).toFixed(1)+'%"></i></div>';
+    var groups=[],idx={};
+    l.slice().reverse().forEach(function(e){if(!(e.gp in idx)){idx[e.gp]=groups.length;groups.push({gp:e.gp,items:[]});}groups[idx[e.gp]].items.push(e);});
+    $('#lg-list').innerHTML=groups.length?groups.map(function(g){
+      return '<div class="gp-h">'+esc(g.gp)+'</div><ul class="entries">'+g.items.map(function(e){
+        var pl=self.pnl(e),plc=e.kind==='scartata'||e.outcome==='aperta'?'zero':(pl>0?'gain':'loss');
+        var plt=e.kind==='scartata'?(e.outcome==='aperta'?'—':(e.outcome==='vinta'?'si sarebbe vinta':'si sarebbe persa')):(e.outcome==='aperta'?'aperta':eur(pl));
+        var meta=[e.session,e.book,'quota '+odds(num(e.odds)||0)];
+        if(e.kind!=='scartata')meta.push('puntata '+nf2.format(num(e.stake)||0)+' €');
+        if(e.p!=null&&num(e.p)>0)meta.push('stima '+pct(num(e.p)));
+        return '<li class="entry" data-id="'+esc(e.id)+'"><div class="e-top"><span class="e-sel"><span class="tag '+e.kind+'">'+esc(e.kind.charAt(0).toUpperCase()+e.kind.slice(1))+'</span>'+esc(e.selection)+', '+esc(e.market)+'</span><span class="e-pl '+plc+'">'+esc(plt)+'</span></div>'+
+          '<div class="e-meta">'+esc(meta.filter(Boolean).join(', '))+(e.note?'. '+esc(e.note):'')+'</div>'+
+          (e.outcome==='aperta'?'<div class="e-res"><button type="button" class="btn small" data-res="vinta">Vinta</button><button type="button" class="btn small" data-res="persa">Persa</button></div>':'')+'</li>';
+      }).join('')+'</ul>';
+    }).join(''):'<p class="note">Il registro è vuoto. Aggiungi la prima giocata, reale, virtuale o scartata.</p>';
+    $('#lg-list').onclick=function(e){
+      var li=e.target.closest('.entry');if(!li)return;var id=li.dataset.id,b=e.target.closest('button');
+      var all=self.get(),it=all.filter(function(x){return x.id===id;})[0];if(!it)return;
+      if(b&&b.dataset.res){it.outcome=b.dataset.res;self.set(all);self.render();return;}
+      self.openForm(it,id);
+    };
+  },
+  openForm:function(pre,id){
+    var self=this,e=Object.assign({gp:D.weekend.short,session:'',market:'',selection:'',book:'Sisal',odds:'',stake:'',p:null,kind:'reale',outcome:'aperta',note:''},pre||{});
+    var sel=function(name,opts,val){return '<select data-n="'+name+'">'+opts.map(function(o){return '<option value="'+o[0]+'"'+(o[0]===val?' selected':'')+'>'+o[1]+'</option>';}).join('')+'</select>';};
+    var f=function(label,name,val,extra){return '<div class="field"><label>'+label+'</label><input data-n="'+name+'" value="'+esc(val==null?'':val)+'"'+(extra||'')+'></div>';};
+    var pv=e.p!=null&&num(e.p)>0?String(Math.round(num(e.p)*1000)/10).replace('.',','):'';
+    $('#sheet-body').innerHTML='<h2 tabindex="-1" autofocus>'+(id?'Modifica giocata':'Nuova giocata')+'</h2>'+
+      '<div class="grid2">'+f('GP','gp',e.gp)+f('Sessione','session',e.session,' placeholder="Qualifica"')+'</div>'+
+      f('Mercato','market',e.market,' placeholder="Pole, vincitore, podio"')+
+      '<div class="grid2">'+f('Selezione','selection',e.selection,' list="dl-sel" autocomplete="off"')+
+      '<div class="field"><label>Bookmaker</label>'+sel('book',BOOKS.map(function(b){return [b,b];}).concat([['','—']]),e.book)+'</div></div>'+
+      '<div class="grid2">'+f('Quota','odds',e.odds===''?'':String(e.odds).replace('.',','),' inputmode="decimal"')+f('Puntata, €','stake',e.stake===''?'':String(e.stake).replace('.',','),' inputmode="decimal"')+'</div>'+
+      '<div class="grid2">'+f('Probabilità stimata, %','p',pv,' inputmode="decimal" placeholder="facoltativa"')+
+      '<div class="field"><label>Tipo</label>'+sel('kind',[['reale','Reale'],['virtuale','Virtuale'],['scartata','Scartata']],e.kind)+'</div></div>'+
+      '<div class="field"><label>Esito</label>'+sel('outcome',[['aperta','Aperta'],['vinta','Vinta'],['persa','Persa']],e.outcome)+'</div>'+
+      f('Nota','note',e.note,' placeholder="Facoltativa"')+
+      '<div class="actions">'+(id?'<button type="button" class="btn danger" data-act="del">Elimina</button>':'<span></span>')+
+      '<div class="row"><button type="button" class="btn" data-act="close">Annulla</button><button type="button" class="btn primary" data-act="save">Salva</button></div></div>';
+    var dlg=$('#sheet');
+    dlg.onclick=function(ev){
+      if(ev.target===dlg){var rc=dlg.getBoundingClientRect();if(ev.clientX<rc.left||ev.clientX>rc.right||ev.clientY<rc.top||ev.clientY>rc.bottom)dlg.close();return;}
+      var b=ev.target.closest('button');if(!b||!b.dataset.act)return;
+      if(b.dataset.act==='close'){dlg.close();return;}
+      var all=self.get();
+      if(b.dataset.act==='del'){all=all.filter(function(x){return x.id!==id;});self.set(all);dlg.close();self.render();return;}
+      var v={};$$('[data-n]',dlg).forEach(function(i){v[i.dataset.n]=i.value.trim();});
+      var o=num(v.odds);if(!(o>1)){alert('Inserisci una quota maggiore di 1.');return;}
+      var pp=num(v.p);
+      var rec={gp:v.gp||D.weekend.short,session:v.session,market:v.market,selection:v.selection,book:v.book,odds:o,stake:num(v.stake)||0,p:pp>0?pp/100:null,kind:v.kind,outcome:v.outcome,note:v.note};
+      if(id){all=all.map(function(x){return x.id===id?Object.assign({id:id},rec):x;});}
+      else{rec.id='u'+Date.now().toString(36);all.push(rec);}
+      self.set(all);dlg.close();self.render();
+      if(!id&&current!=='registro')show('registro');
+    };
+    this.showSheet();
+  },
+  openIO:function(){
+    var self=this;
+    $('#sheet-body').innerHTML='<h2 tabindex="-1" autofocus>Esporta o importa</h2><p class="note">Copia il testo per salvarlo o mandarlo in chat per l\'analisi della taratura. Per importare, incolla un registro esportato e premi Importa: sostituisce quello attuale.</p>'+
+      '<div class="field"><label>Registro in formato JSON</label><textarea id="io-txt" spellcheck="false">'+esc(JSON.stringify(this.get(),null,1))+'</textarea></div>'+
+      '<div class="actions"><button type="button" class="btn" data-act="copy">Copia</button><div class="row"><button type="button" class="btn" data-act="close">Chiudi</button><button type="button" class="btn primary" data-act="imp">Importa</button></div></div>';
+    var dlg=$('#sheet');
+    dlg.onclick=function(ev){
+      if(ev.target===dlg){var rc=dlg.getBoundingClientRect();if(ev.clientX<rc.left||ev.clientX>rc.right||ev.clientY<rc.top||ev.clientY>rc.bottom)dlg.close();return;}
+      var b=ev.target.closest('button');if(!b||!b.dataset.act)return;var ta=$('#io-txt');
+      if(b.dataset.act==='close'){dlg.close();return;}
+      if(b.dataset.act==='copy'){ta.focus();ta.select();var ok=false;try{ok=document.execCommand('copy');}catch(e){}
+        if(navigator.clipboard&&navigator.clipboard.writeText)navigator.clipboard.writeText(ta.value).then(function(){b.textContent='Copiato';},function(){b.textContent=ok?'Copiato':'Testo selezionato';});
+        else b.textContent=ok?'Copiato':'Testo selezionato';return;}
+      if(b.dataset.act==='imp'){try{var arr=JSON.parse(ta.value);if(!Array.isArray(arr))throw 0;
+          arr=arr.filter(function(x){return x&&typeof x==='object'&&x.odds;}).map(function(x,i){x.id=x.id||('i'+i+Date.now().toString(36));return x;});
+          self.set(arr);dlg.close();self.render();}catch(e){alert('Il testo non è un registro valido.');}}
+    };
+    this.showSheet();
+  },
+  showSheet:function(){var dlg=$('#sheet');try{if(dlg.open)dlg.close();dlg.showModal();}catch(e){dlg.setAttribute('open','');}}
+};
+
+/* ---------- CIRCUITO ---------- */
+var Circuit={
+  render:function(){
+    var c=D.circuit||{};
+    var show=function(id,on){var e=document.getElementById(id);if(e)e.hidden=!on;};
+    $('#ci-title').textContent=String(c.name||'').replace(' Street Circuit','');
+    $('#ci-sub').textContent=c.place?(c.name&&c.place.indexOf(c.name)<0&&!c.metrics?c.name+'. ':'')+c.place+'.':'';
+    $('#ci-stats').innerHTML=(c.stats||[]).map(function(s){return '<div class="stat"><b>'+esc(s[0])+(s[1]?'<small>'+esc(s[1])+'</small>':'')+'</b><span>'+esc(s[2])+'</span></div>';}).join('');
+    var ty=c.tyres||[];show('ci-sec-tyres',ty.length>0);
+    $('#ci-tyres').innerHTML=ty.map(function(t){return '<span class="tyre" style="--tc:'+t[2]+'"><i>'+t[0]+'</i>'+t[1]+'</span>';}).join('');
+    var tr=c.traits||[];show('ci-sec-traits',tr.length>0);
+    $('#ci-tnote').textContent=c.note||'';
+    $('#ci-traits').innerHTML=tr.map(function(t){var m='';for(var i=1;i<=5;i++)m+='<i class="'+(i<=t[1]?'on':'')+'"></i>';
+      return '<li><div class="tt"><span>'+esc(t[0])+'</span><span class="meter" aria-label="'+t[1]+' su 5">'+m+'</span></div><p>'+esc(t[2])+'</p></li>';}).join('');
+    var mt=c.metrics&&c.metrics.rows;show('ci-sec-metrics',!!(mt&&mt.length)&&!tr.length);
+    if(mt){$('#ci-mnote').textContent='Misurate sul giro della pole del '+c.metrics.year+'.';
+      $('#ci-metrics').innerHTML=mt.map(function(m){return '<li><div class="tt"><span>'+esc(m[0])+'</span><b>'+esc(m[1])+'</b></div></li>';}).join('');}
+    var nt=c.notes||[];show('ci-sec-notes',nt.length>0);
+    $('#ci-notes').innerHTML=nt.map(function(n){return '<li>'+esc(n)+'</li>';}).join('');
+    var nm=function(code){return (D.drivers[code]&&D.drivers[code].name)||(c.historyNames&&c.historyNames[code])||code||'—';};
+    var hs=c.history||[];show('ci-sec-hist',hs.length>0);
+    $('#ci-hist').innerHTML='<thead><tr><th>Anno</th><th>Vincitore</th><th>Pole</th></tr></thead><tbody>'+hs.map(function(h){return '<tr><td>'+h[0]+'</td><td>'+esc(nm(h[1]))+'</td><td>'+esc(nm(h[2]))+'</td></tr>';}).join('')+'</tbody>';
+    $('#ci-rec').textContent=c.records||'';
+  }
+};
+
+function boot(){
+  loadData().then(function(data){
+    D=data;
+    Weekend.render();Circuit.render();Tele.init();Pron.render();Log.render();
+    $$('.tab').forEach(function(b){b.addEventListener('click',function(){show(b.dataset.v);});});
+    $('#strip').addEventListener('click',function(e){var b=e.target.closest('[data-goto]');if(!b)return;show('pronostici');
+      var card=document.getElementById('pc-'+b.dataset.goto);if(card){card.open=true;card.scrollIntoView({block:'start'});}});
+    $$('[data-st]').forEach(function(b){b.addEventListener('click',function(){Weekend.mode=b.dataset.st;Weekend.all=false;Weekend.renderStandings();});});
+    $('#st-more').addEventListener('click',function(){Weekend.all=!Weekend.all;Weekend.renderStandings();});
+    $('#lg-add').addEventListener('click',function(){Log.openForm(null,null);});
+    $('#lg-io').addEventListener('click',function(){Log.openIO();});
+    var h=(location.hash||'').replace('#','');
+    show(VIEWS.indexOf(h)>=0?h:'weekend');
+    setInterval(function(){Weekend.tick();},30000);
+    if(PWA&&'serviceWorker' in navigator){try{if(window.top===window.self)navigator.serviceWorker.register('sw.js').catch(function(){});}catch(e){}}
+  });
+}
+boot();
+})();
+</script>
+</body>
+</html>
