@@ -4,6 +4,8 @@ on:
   schedule:
     # Ogni 30 minuti, solo domenica, lunedì, venerdì e sabato (orari UTC)
     - cron: "*/30 * * * 0,1,5,6"
+    # Ogni 2 ore da martedì a giovedì: notizie e passaggio al weekend successivo
+    - cron: "15 */2 * * 2,3,4"
   workflow_dispatch:
     inputs:
       session_key:
@@ -35,15 +37,20 @@ jobs:
           SESSION: ${{ github.event.inputs.session_key }}
         run: python openf1_fetch.py --out telemetry.json ${SESSION:+--session "$SESSION"}
 
+      - name: Scarica le notizie
+        continue-on-error: true
+        run: python news_fetch.py --out news.json
+
       - name: Salva se ci sono novità
         run: |
-          if [ -n "$(git status --porcelain telemetry.json)" ]; then
+          FILES="telemetry.json"
+          [ -f news.json ] && FILES="$FILES news.json"
+          if [ -n "$(git status --porcelain $FILES)" ]; then
             git config user.name "muretto-bot"
             git config user.email "muretto-bot@users.noreply.github.com"
-            git add telemetry.json
-            git commit -m "Telemetria aggiornata"
+            git add $FILES
+            git commit -m "Telemetria e notizie aggiornate"
             git push
           else
             echo "Nessuna novità."
           fi
-
