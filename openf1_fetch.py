@@ -669,7 +669,7 @@ def count_safety_cars(session_key):
     for r in rows:
         m = (r.get("message") or "").upper()
         if "DEPLOYED" in m:
-            if "VIRTUAL" in m:
+            if "VIRTUAL" in m or "VSC" in m:
                 vsc += 1
             else:
                 sc += 1
