@@ -1,0 +1,60 @@
+name: Storico
+
+on:
+  workflow_dispatch:
+    inputs:
+      anni:
+        description: "Stagioni complete da scaricare"
+        required: false
+        default: "2026"
+      circuito:
+        description: "Circuito di cui scaricare le edizioni passate (vuoto = nessuno)"
+        required: false
+        default: "Austin"
+      anni_circuito:
+        description: "Anni delle edizioni passate del circuito"
+        required: false
+        default: "2023,2024,2025"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: storico
+  cancel-in-progress: false
+
+jobs:
+  scarica:
+    runs-on: ubuntu-latest
+    timeout-minutes: 300
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Scarica l'archivio da OpenF1
+        timeout-minutes: 250
+        env:
+          ANNI: ${{ github.event.inputs.anni }}
+          CIRCUITO: ${{ github.event.inputs.circuito }}
+          ANNI_CIRCUITO: ${{ github.event.inputs.anni_circuito }}
+        run: python backfill_fetch.py --out-dir storico --anni "${ANNI:-2026}" --circuito "$CIRCUITO" --anni-circuito "${ANNI_CIRCUITO:-2023,2024,2025}" --max-minuti 230
+
+      - name: Salva l'archivio
+        if: always()
+        run: |
+          if [ -n "$(git status --porcelain storico)" ]; then
+            git config user.name "muretto-bot"
+            git config user.email "muretto-bot@users.noreply.github.com"
+            git add storico
+            git commit -m "Archivio OpenF1 per il modello"
+            for i in 1 2 3; do
+              git pull --rebase && git push && exit 0
+              sleep 15
+            done
+            exit 1
+          else
+            echo "Nessuna novità."
+          fi
