@@ -1,0 +1,387 @@
+{
+ "aggiornato": "2026-10-12T11:42:56Z",
+ "fermato": null,
+ "richieste": 1266,
+ "file": [
+  {
+   "file": "storico/2023/18-united-states-grand-prix.json.gz",
+   "anno": 2023,
+   "round": 18,
+   "gp": "United States Grand Prix",
+   "luogo": "Austin",
+   "sessioni": [
+    "Practice 1",
+    "Qualifying",
+    "Sprint Qualifying",
+    "Sprint",
+    "Race"
+   ],
+   "giri_gara": 1017,
+   "partenze": 0,
+   "errori": [],
+   "scaricato": "2026-10-12T11:38:45Z",
+   "kb": 99
+  },
+  {
+   "file": "storico/2024/19-united-states-grand-prix.json.gz",
+   "anno": 2024,
+   "round": 19,
+   "gp": "United States Grand Prix",
+   "luogo": "Austin",
+   "sessioni": [
+    "Practice 1",
+    "Sprint Qualifying",
+    "Sprint",
+    "Qualifying",
+    "Race"
+   ],
+   "giri_gara": 1059,
+   "partenze": 0,
+   "errori": [],
+   "scaricato": "2026-10-12T11:40:09Z",
+   "kb": 101
+  },
+  {
+   "file": "storico/2025/19-united-states-grand-prix.json.gz",
+   "anno": 2025,
+   "round": 19,
+   "gp": "United States Grand Prix",
+   "luogo": "Austin",
+   "sessioni": [
+    "Practice 1",
+    "Sprint Qualifying",
+    "Sprint",
+    "Qualifying",
+    "Race"
+   ],
+   "giri_gara": 1067,
+   "partenze": 0,
+   "errori": [],
+   "scaricato": "2026-10-12T11:41:33Z",
+   "kb": 100
+  },
+  {
+   "file": "storico/2026/01-australian-grand-prix.json.gz",
+   "anno": 2026,
+   "round": 1,
+   "gp": "Australian Grand Prix",
+   "luogo": "Melbourne",
+   "sessioni": [
+    "Practice 1",
+    "Practice 2",
+    "Practice 3",
+    "Qualifying",
+    "Race"
+   ],
+   "giri_gara": 1002,
+   "partenze": 1,
+   "errori": [],
+   "scaricato": "2026-10-12T10:58:47Z",
+   "kb": 334
+  },
+  {
+   "file": "storico/2026/02-chinese-grand-prix.json.gz",
+   "anno": 2026,
+   "round": 2,
+   "gp": "Chinese Grand Prix",
+   "luogo": "Shanghai",
+   "sessioni": [
+    "Practice 1",
+    "Sprint Qualifying",
+    "Sprint",
+    "Qualifying",
+    "Race"
+   ],
+   "giri_gara": 924,
+   "partenze": 2,
+   "errori": [],
+   "scaricato": "2026-10-12T11:00:49Z",
+   "kb": 460
+  },
+  {
+   "file": "storico/2026/03-japanese-grand-prix.json.gz",
+   "anno": 2026,
+   "round": 3,
+   "gp": "Japanese Grand Prix",
+   "luogo": "Suzuka",
+   "sessioni": [
+    "Practice 1",
+    "Practice 2",
+    "Practice 3",
+    "Qualifying",
+    "Race"
+   ],
+   "giri_gara": 1108,
+   "partenze": 1,
+   "errori": [],
+   "scaricato": "2026-10-12T11:03:45Z",
+   "kb": 306
+  },
+  {
+   "file": "storico/2026/04-miami-grand-prix.json.gz",
+   "anno": 2026,
+   "round": 4,
+   "gp": "Miami Grand Prix",
+   "luogo": "Miami Gardens",
+   "sessioni": [
+    "Practice 1",
+    "Sprint Qualifying",
+    "Sprint",
+    "Qualifying",
+    "Race"
+   ],
+   "giri_gara": 1042,
+   "partenze": 2,
+   "errori": [],
+   "scaricato": "2026-10-12T11:05:47Z",
+   "kb": 531
+  },
+  {
+   "file": "storico/2026/05-canadian-grand-prix.json.gz",
+   "anno": 2026,
+   "round": 5,
+   "gp": "Canadian Grand Prix",
+   "luogo": "Montréal",
+   "sessioni": [
+    "Practice 1",
+    "Sprint Qualifying",
+    "Sprint",
+    "Qualifying",
+    "Race"
+   ],
+   "giri_gara": 1212,
+   "partenze": 2,
+   "errori": [],
+   "scaricato": "2026-10-12T11:08:43Z",
+   "kb": 540
+  },
+  {
+   "file": "storico/2026/06-monaco-grand-prix.json.gz",
+   "anno": 2026,
+   "round": 6,
+   "gp": "Monaco Grand Prix",
+   "luogo": "Monte Carlo",
+   "sessioni": [
+    "Practice 1",
+    "Practice 2",
+    "Practice 3",
+    "Qualifying",
+    "Race"
+   ],
+   "giri_gara": 1452,
+   "partenze": 1,
+   "errori": [],
+   "scaricato": "2026-10-12T11:11:40Z",
+   "kb": 353
+  },
+  {
+   "file": "storico/2026/07-barcelona-grand-prix.json.gz",
+   "anno": 2026,
+   "round": 7,
+   "gp": "Barcelona Grand Prix",
+   "luogo": "Barcelona",
+   "sessioni": [
+    "Practice 1",
+    "Practice 2",
+    "Practice 3",
+    "Qualifying",
+    "Race"
+   ],
+   "giri_gara": 1241,
+   "partenze": 1,
+   "errori": [],
+   "scaricato": "2026-10-12T11:13:41Z",
+   "kb": 340
+  },
+  {
+   "file": "storico/2026/08-austrian-grand-prix.json.gz",
+   "anno": 2026,
+   "round": 8,
+   "gp": "Austrian Grand Prix",
+   "luogo": "Spielberg",
+   "sessioni": [
+    "Practice 1",
+    "Practice 2",
+    "Practice 3",
+    "Qualifying",
+    "Race"
+   ],
+   "giri_gara": 1342,
+   "partenze": 1,
+   "errori": [],
+   "scaricato": "2026-10-12T11:15:43Z",
+   "kb": 336
+  },
+  {
+   "file": "storico/2026/09-british-grand-prix.json.gz",
+   "anno": 2026,
+   "round": 9,
+   "gp": "British Grand Prix",
+   "luogo": "Silverstone",
+   "sessioni": [
+    "Practice 1",
+    "Sprint Qualifying",
+    "Sprint",
+    "Qualifying",
+    "Race"
+   ],
+   "giri_gara": 1114,
+   "partenze": 2,
+   "errori": [],
+   "scaricato": "2026-10-12T11:17:45Z",
+   "kb": 546
+  },
+  {
+   "file": "storico/2026/10-belgian-grand-prix.json.gz",
+   "anno": 2026,
+   "round": 10,
+   "gp": "Belgian Grand Prix",
+   "luogo": "Spa-Francorchamps",
+   "sessioni": [
+    "Practice 1",
+    "Practice 2",
+    "Practice 3",
+    "Qualifying",
+    "Race"
+   ],
+   "giri_gara": 875,
+   "partenze": 1,
+   "errori": [],
+   "scaricato": "2026-10-12T11:20:41Z",
+   "kb": 322
+  },
+  {
+   "file": "storico/2026/11-hungarian-grand-prix.json.gz",
+   "anno": 2026,
+   "round": 11,
+   "gp": "Hungarian Grand Prix",
+   "luogo": "Budapest",
+   "sessioni": [
+    "Practice 1",
+    "Practice 2",
+    "Practice 3",
+    "Qualifying",
+    "Race"
+   ],
+   "giri_gara": 1432,
+   "partenze": 1,
+   "errori": [],
+   "scaricato": "2026-10-12T11:22:43Z",
+   "kb": 340
+  },
+  {
+   "file": "storico/2026/12-dutch-grand-prix.json.gz",
+   "anno": 2026,
+   "round": 12,
+   "gp": "Dutch Grand Prix",
+   "luogo": "Zandvoort",
+   "sessioni": [
+    "Practice 1",
+    "Sprint Qualifying",
+    "Sprint",
+    "Qualifying",
+    "Race"
+   ],
+   "giri_gara": 1369,
+   "partenze": 2,
+   "errori": [],
+   "scaricato": "2026-10-12T11:24:45Z",
+   "kb": 559
+  },
+  {
+   "file": "storico/2026/13-italian-grand-prix.json.gz",
+   "anno": 2026,
+   "round": 13,
+   "gp": "Italian Grand Prix",
+   "luogo": "Monza",
+   "sessioni": [
+    "Practice 1",
+    "Practice 2",
+    "Practice 3",
+    "Qualifying",
+    "Race"
+   ],
+   "giri_gara": 1055,
+   "partenze": 1,
+   "errori": [],
+   "scaricato": "2026-10-12T11:27:42Z",
+   "kb": 337
+  },
+  {
+   "file": "storico/2026/14-spanish-grand-prix.json.gz",
+   "anno": 2026,
+   "round": 14,
+   "gp": "Spanish Grand Prix",
+   "luogo": "Madrid",
+   "sessioni": [
+    "Practice 1",
+    "Practice 2",
+    "Practice 3",
+    "Qualifying",
+    "Race"
+   ],
+   "giri_gara": 1109,
+   "partenze": 1,
+   "errori": [],
+   "scaricato": "2026-10-12T11:29:43Z",
+   "kb": 343
+  },
+  {
+   "file": "storico/2026/15-azerbaijan-grand-prix.json.gz",
+   "anno": 2026,
+   "round": 15,
+   "gp": "Azerbaijan Grand Prix",
+   "luogo": "Baku",
+   "sessioni": [
+    "Practice 1",
+    "Practice 2",
+    "Practice 3",
+    "Qualifying",
+    "Race"
+   ],
+   "giri_gara": 983,
+   "partenze": 1,
+   "errori": [],
+   "scaricato": "2026-10-12T11:31:45Z",
+   "kb": 337
+  },
+  {
+   "file": "storico/2026/16-bahrain-grand-prix.json.gz",
+   "anno": 2026,
+   "round": 16,
+   "gp": "Bahrain Grand Prix",
+   "luogo": "Kuala Lumpur",
+   "sessioni": [
+    "Practice 1",
+    "Practice 2",
+    "Practice 3",
+    "Qualifying",
+    "Race"
+   ],
+   "giri_gara": 1145,
+   "partenze": 1,
+   "errori": [],
+   "scaricato": "2026-10-12T11:33:47Z",
+   "kb": 292
+  },
+  {
+   "file": "storico/2026/17-singapore-grand-prix.json.gz",
+   "anno": 2026,
+   "round": 17,
+   "gp": "Singapore Grand Prix",
+   "luogo": "Marina Bay",
+   "sessioni": [
+    "Practice 1",
+    "Sprint Qualifying",
+    "Sprint",
+    "Qualifying",
+    "Race"
+   ],
+   "giri_gara": 1240,
+   "partenze": 2,
+   "errori": [],
+   "scaricato": "2026-10-12T11:35:49Z",
+   "kb": 574
+  }
+ ]
+}
