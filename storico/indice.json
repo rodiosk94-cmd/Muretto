@@ -1,7 +1,7 @@
 {
- "aggiornato": "2026-10-12T14:13:32Z",
+ "aggiornato": "2026-10-13T08:42:09Z",
  "fermato": null,
- "richieste": 568,
+ "richieste": 2921,
  "file": [
   {
    "file": "storico/2023/17-qatar-grand-prix.json.gz",
@@ -38,6 +38,8 @@
    ],
    "giri_gara": 1017,
    "partenze": 0,
+   "energia": 0,
+   "energia_errori": [],
    "errori": [],
    "scaricato": "2026-10-12T11:38:45Z",
    "parziale": false,
@@ -138,6 +140,8 @@
    ],
    "giri_gara": 1059,
    "partenze": 0,
+   "energia": 0,
+   "energia_errori": [],
    "errori": [],
    "scaricato": "2026-10-12T11:40:09Z",
    "parziale": false,
@@ -258,6 +262,8 @@
    ],
    "giri_gara": 1067,
    "partenze": 0,
+   "energia": 0,
+   "energia_errori": [],
    "errori": [],
    "scaricato": "2026-10-12T11:41:33Z",
    "parziale": false,
@@ -378,10 +384,12 @@
    ],
    "giri_gara": 1002,
    "partenze": 1,
+   "energia": 129,
+   "energia_errori": [],
    "errori": [],
    "scaricato": "2026-10-12T10:58:47Z",
    "parziale": false,
-   "kb": 334
+   "kb": 906
   },
   {
    "file": "storico/2026/02-chinese-grand-prix.json.gz",
@@ -398,10 +406,12 @@
    ],
    "giri_gara": 924,
    "partenze": 2,
+   "energia": 133,
+   "energia_errori": [],
    "errori": [],
    "scaricato": "2026-10-12T11:00:49Z",
    "parziale": false,
-   "kb": 460
+   "kb": 1145
   },
   {
    "file": "storico/2026/03-japanese-grand-prix.json.gz",
@@ -418,10 +428,12 @@
    ],
    "giri_gara": 1108,
    "partenze": 1,
+   "energia": 154,
+   "energia_errori": [],
    "errori": [],
    "scaricato": "2026-10-12T11:03:45Z",
    "parziale": false,
-   "kb": 306
+   "kb": 1130
   },
   {
    "file": "storico/2026/04-miami-grand-prix.json.gz",
@@ -438,10 +450,12 @@
    ],
    "giri_gara": 1042,
    "partenze": 2,
+   "energia": 141,
+   "energia_errori": [],
    "errori": [],
    "scaricato": "2026-10-12T11:05:47Z",
    "parziale": false,
-   "kb": 531
+   "kb": 1373
   },
   {
    "file": "storico/2026/05-canadian-grand-prix.json.gz",
@@ -458,10 +472,12 @@
    ],
    "giri_gara": 1212,
    "partenze": 2,
+   "energia": 137,
+   "energia_errori": [],
    "errori": [],
    "scaricato": "2026-10-12T11:08:43Z",
    "parziale": false,
-   "kb": 540
+   "kb": 1222
   },
   {
    "file": "storico/2026/06-monaco-grand-prix.json.gz",
@@ -478,10 +494,12 @@
    ],
    "giri_gara": 1452,
    "partenze": 1,
+   "energia": 135,
+   "energia_errori": [],
    "errori": [],
    "scaricato": "2026-10-12T11:11:40Z",
    "parziale": false,
-   "kb": 353
+   "kb": 912
   },
   {
    "file": "storico/2026/07-barcelona-grand-prix.json.gz",
@@ -498,10 +516,12 @@
    ],
    "giri_gara": 1241,
    "partenze": 1,
+   "energia": 151,
+   "energia_errori": [],
    "errori": [],
    "scaricato": "2026-10-12T11:13:41Z",
    "parziale": false,
-   "kb": 340
+   "kb": 1056
   },
   {
    "file": "storico/2026/08-austrian-grand-prix.json.gz",
@@ -518,10 +538,12 @@
    ],
    "giri_gara": 1342,
    "partenze": 1,
+   "energia": 152,
+   "energia_errori": [],
    "errori": [],
    "scaricato": "2026-10-12T11:15:43Z",
    "parziale": false,
-   "kb": 336
+   "kb": 961
   },
   {
    "file": "storico/2026/09-british-grand-prix.json.gz",
@@ -538,10 +560,12 @@
    ],
    "giri_gara": 1114,
    "partenze": 2,
+   "energia": 149,
+   "energia_errori": [],
    "errori": [],
    "scaricato": "2026-10-12T11:17:45Z",
    "parziale": false,
-   "kb": 546
+   "kb": 1471
   },
   {
    "file": "storico/2026/10-belgian-grand-prix.json.gz",
@@ -558,10 +582,12 @@
    ],
    "giri_gara": 875,
    "partenze": 1,
+   "energia": 141,
+   "energia_errori": [],
    "errori": [],
    "scaricato": "2026-10-12T11:20:41Z",
    "parziale": false,
-   "kb": 322
+   "kb": 1149
   },
   {
    "file": "storico/2026/11-hungarian-grand-prix.json.gz",
@@ -578,10 +604,12 @@
    ],
    "giri_gara": 1432,
    "partenze": 1,
+   "energia": 159,
+   "energia_errori": [],
    "errori": [],
    "scaricato": "2026-10-12T11:22:43Z",
    "parziale": false,
-   "kb": 340
+   "kb": 1042
   },
   {
    "file": "storico/2026/12-dutch-grand-prix.json.gz",
@@ -598,10 +626,12 @@
    ],
    "giri_gara": 1369,
    "partenze": 2,
+   "energia": 143,
+   "energia_errori": [],
    "errori": [],
    "scaricato": "2026-10-12T11:24:45Z",
    "parziale": false,
-   "kb": 559
+   "kb": 1301
   },
   {
    "file": "storico/2026/13-italian-grand-prix.json.gz",
@@ -618,10 +648,12 @@
    ],
    "giri_gara": 1055,
    "partenze": 1,
+   "energia": 157,
+   "energia_errori": [],
    "errori": [],
    "scaricato": "2026-10-12T11:27:42Z",
    "parziale": false,
-   "kb": 337
+   "kb": 1083
   },
   {
    "file": "storico/2026/14-spanish-grand-prix.json.gz",
@@ -638,10 +670,12 @@
    ],
    "giri_gara": 1109,
    "partenze": 1,
+   "energia": 142,
+   "energia_errori": [],
    "errori": [],
    "scaricato": "2026-10-12T11:29:43Z",
    "parziale": false,
-   "kb": 343
+   "kb": 1124
   },
   {
    "file": "storico/2026/15-azerbaijan-grand-prix.json.gz",
@@ -658,10 +692,12 @@
    ],
    "giri_gara": 983,
    "partenze": 1,
+   "energia": 147,
+   "energia_errori": [],
    "errori": [],
    "scaricato": "2026-10-12T11:31:45Z",
    "parziale": false,
-   "kb": 337
+   "kb": 1210
   },
   {
    "file": "storico/2026/16-bahrain-grand-prix.json.gz",
@@ -678,10 +714,12 @@
    ],
    "giri_gara": 1145,
    "partenze": 1,
+   "energia": 165,
+   "energia_errori": [],
    "errori": [],
    "scaricato": "2026-10-12T11:33:47Z",
    "parziale": false,
-   "kb": 292
+   "kb": 1338
   },
   {
    "file": "storico/2026/17-singapore-grand-prix.json.gz",
@@ -698,10 +736,350 @@
    ],
    "giri_gara": 1240,
    "partenze": 2,
+   "energia": 126,
+   "energia_errori": [],
    "errori": [],
    "scaricato": "2026-10-12T11:35:49Z",
    "parziale": false,
-   "kb": 574
+   "kb": 1382
+  }
+ ],
+ "circuiti": [
+  {
+   "file": "storico/circuiti/2024-austin.json.gz",
+   "anno": 2024,
+   "circuito": "Austin",
+   "circuit_key": 9,
+   "giri": 6,
+   "errori": []
+  },
+  {
+   "file": "storico/circuiti/2024-baku.json.gz",
+   "anno": 2024,
+   "circuito": "Baku",
+   "circuit_key": 144,
+   "giri": 6,
+   "errori": []
+  },
+  {
+   "file": "storico/circuiti/2024-catalunya.json.gz",
+   "anno": 2024,
+   "circuito": "Catalunya",
+   "circuit_key": 15,
+   "giri": 6,
+   "errori": []
+  },
+  {
+   "file": "storico/circuiti/2024-hungaroring.json.gz",
+   "anno": 2024,
+   "circuito": "Hungaroring",
+   "circuit_key": 4,
+   "giri": 6,
+   "errori": []
+  },
+  {
+   "file": "storico/circuiti/2024-interlagos.json.gz",
+   "anno": 2024,
+   "circuito": "Interlagos",
+   "circuit_key": 14,
+   "giri": 6,
+   "errori": []
+  },
+  {
+   "file": "storico/circuiti/2024-las-vegas.json.gz",
+   "anno": 2024,
+   "circuito": "Las Vegas",
+   "circuit_key": 152,
+   "giri": 6,
+   "errori": []
+  },
+  {
+   "file": "storico/circuiti/2024-lusail.json.gz",
+   "anno": 2024,
+   "circuito": "Lusail",
+   "circuit_key": 150,
+   "giri": 6,
+   "errori": []
+  },
+  {
+   "file": "storico/circuiti/2024-melbourne.json.gz",
+   "anno": 2024,
+   "circuito": "Melbourne",
+   "circuit_key": 10,
+   "giri": 6,
+   "errori": []
+  },
+  {
+   "file": "storico/circuiti/2024-mexico-city.json.gz",
+   "anno": 2024,
+   "circuito": "Mexico City",
+   "circuit_key": 65,
+   "giri": 6,
+   "errori": []
+  },
+  {
+   "file": "storico/circuiti/2024-miami.json.gz",
+   "anno": 2024,
+   "circuito": "Miami",
+   "circuit_key": 151,
+   "giri": 6,
+   "errori": []
+  },
+  {
+   "file": "storico/circuiti/2024-monte-carlo.json.gz",
+   "anno": 2024,
+   "circuito": "Monte Carlo",
+   "circuit_key": 22,
+   "giri": 6,
+   "errori": []
+  },
+  {
+   "file": "storico/circuiti/2024-montreal.json.gz",
+   "anno": 2024,
+   "circuito": "Montreal",
+   "circuit_key": 23,
+   "giri": 6,
+   "errori": []
+  },
+  {
+   "file": "storico/circuiti/2024-monza.json.gz",
+   "anno": 2024,
+   "circuito": "Monza",
+   "circuit_key": 39,
+   "giri": 6,
+   "errori": []
+  },
+  {
+   "file": "storico/circuiti/2024-shanghai.json.gz",
+   "anno": 2024,
+   "circuito": "Shanghai",
+   "circuit_key": 49,
+   "giri": 6,
+   "errori": []
+  },
+  {
+   "file": "storico/circuiti/2024-silverstone.json.gz",
+   "anno": 2024,
+   "circuito": "Silverstone",
+   "circuit_key": 2,
+   "giri": 6,
+   "errori": []
+  },
+  {
+   "file": "storico/circuiti/2024-singapore.json.gz",
+   "anno": 2024,
+   "circuito": "Singapore",
+   "circuit_key": 61,
+   "giri": 6,
+   "errori": []
+  },
+  {
+   "file": "storico/circuiti/2024-spa-francorchamps.json.gz",
+   "anno": 2024,
+   "circuito": "Spa-Francorchamps",
+   "circuit_key": 7,
+   "giri": 6,
+   "errori": []
+  },
+  {
+   "file": "storico/circuiti/2024-spielberg.json.gz",
+   "anno": 2024,
+   "circuito": "Spielberg",
+   "circuit_key": 19,
+   "giri": 6,
+   "errori": []
+  },
+  {
+   "file": "storico/circuiti/2024-suzuka.json.gz",
+   "anno": 2024,
+   "circuito": "Suzuka",
+   "circuit_key": 46,
+   "giri": 6,
+   "errori": []
+  },
+  {
+   "file": "storico/circuiti/2024-yas-marina-circuit.json.gz",
+   "anno": 2024,
+   "circuito": "Yas Marina Circuit",
+   "circuit_key": 70,
+   "giri": 6,
+   "errori": []
+  },
+  {
+   "file": "storico/circuiti/2024-zandvoort.json.gz",
+   "anno": 2024,
+   "circuito": "Zandvoort",
+   "circuit_key": 55,
+   "giri": 6,
+   "errori": []
+  },
+  {
+   "file": "storico/circuiti/2025-austin.json.gz",
+   "anno": 2025,
+   "circuito": "Austin",
+   "circuit_key": 9,
+   "giri": 6,
+   "errori": []
+  },
+  {
+   "file": "storico/circuiti/2025-baku.json.gz",
+   "anno": 2025,
+   "circuito": "Baku",
+   "circuit_key": 144,
+   "giri": 0,
+   "errori": []
+  },
+  {
+   "file": "storico/circuiti/2025-catalunya.json.gz",
+   "anno": 2025,
+   "circuito": "Catalunya",
+   "circuit_key": 15,
+   "giri": 6,
+   "errori": []
+  },
+  {
+   "file": "storico/circuiti/2025-hungaroring.json.gz",
+   "anno": 2025,
+   "circuito": "Hungaroring",
+   "circuit_key": 4,
+   "giri": 6,
+   "errori": []
+  },
+  {
+   "file": "storico/circuiti/2025-interlagos.json.gz",
+   "anno": 2025,
+   "circuito": "Interlagos",
+   "circuit_key": 14,
+   "giri": 6,
+   "errori": []
+  },
+  {
+   "file": "storico/circuiti/2025-las-vegas.json.gz",
+   "anno": 2025,
+   "circuito": "Las Vegas",
+   "circuit_key": 152,
+   "giri": 6,
+   "errori": []
+  },
+  {
+   "file": "storico/circuiti/2025-lusail.json.gz",
+   "anno": 2025,
+   "circuito": "Lusail",
+   "circuit_key": 150,
+   "giri": 6,
+   "errori": []
+  },
+  {
+   "file": "storico/circuiti/2025-melbourne.json.gz",
+   "anno": 2025,
+   "circuito": "Melbourne",
+   "circuit_key": 10,
+   "giri": 6,
+   "errori": []
+  },
+  {
+   "file": "storico/circuiti/2025-mexico-city.json.gz",
+   "anno": 2025,
+   "circuito": "Mexico City",
+   "circuit_key": 65,
+   "giri": 6,
+   "errori": []
+  },
+  {
+   "file": "storico/circuiti/2025-miami.json.gz",
+   "anno": 2025,
+   "circuito": "Miami",
+   "circuit_key": 151,
+   "giri": 6,
+   "errori": []
+  },
+  {
+   "file": "storico/circuiti/2025-monte-carlo.json.gz",
+   "anno": 2025,
+   "circuito": "Monte Carlo",
+   "circuit_key": 22,
+   "giri": 6,
+   "errori": []
+  },
+  {
+   "file": "storico/circuiti/2025-montreal.json.gz",
+   "anno": 2025,
+   "circuito": "Montreal",
+   "circuit_key": 23,
+   "giri": 6,
+   "errori": []
+  },
+  {
+   "file": "storico/circuiti/2025-monza.json.gz",
+   "anno": 2025,
+   "circuito": "Monza",
+   "circuit_key": 39,
+   "giri": 6,
+   "errori": []
+  },
+  {
+   "file": "storico/circuiti/2025-shanghai.json.gz",
+   "anno": 2025,
+   "circuito": "Shanghai",
+   "circuit_key": 49,
+   "giri": 6,
+   "errori": []
+  },
+  {
+   "file": "storico/circuiti/2025-silverstone.json.gz",
+   "anno": 2025,
+   "circuito": "Silverstone",
+   "circuit_key": 2,
+   "giri": 6,
+   "errori": []
+  },
+  {
+   "file": "storico/circuiti/2025-singapore.json.gz",
+   "anno": 2025,
+   "circuito": "Singapore",
+   "circuit_key": 61,
+   "giri": 6,
+   "errori": []
+  },
+  {
+   "file": "storico/circuiti/2025-spa-francorchamps.json.gz",
+   "anno": 2025,
+   "circuito": "Spa-Francorchamps",
+   "circuit_key": 7,
+   "giri": 6,
+   "errori": []
+  },
+  {
+   "file": "storico/circuiti/2025-spielberg.json.gz",
+   "anno": 2025,
+   "circuito": "Spielberg",
+   "circuit_key": 19,
+   "giri": 6,
+   "errori": []
+  },
+  {
+   "file": "storico/circuiti/2025-suzuka.json.gz",
+   "anno": 2025,
+   "circuito": "Suzuka",
+   "circuit_key": 46,
+   "giri": 6,
+   "errori": []
+  },
+  {
+   "file": "storico/circuiti/2025-yas-marina-circuit.json.gz",
+   "anno": 2025,
+   "circuito": "Yas Marina Circuit",
+   "circuit_key": 70,
+   "giri": 6,
+   "errori": []
+  },
+  {
+   "file": "storico/circuiti/2025-zandvoort.json.gz",
+   "anno": 2025,
+   "circuito": "Zandvoort",
+   "circuit_key": 55,
+   "giri": 6,
+   "errori": []
   }
  ]
 }
