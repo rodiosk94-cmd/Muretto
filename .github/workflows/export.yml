@@ -1,0 +1,73 @@
+name: Export sessioni
+
+# Pacchetto di analisi di ogni sessione (ex notebook Colab F1_export_v3) salvato in export/.
+# Automatico: ogni 30 minuti nel weekend scarica le sessioni finite da almeno 35 minuti.
+# A mano: Actions → Export sessioni → Run workflow (gara e sessione facoltative).
+
+on:
+  schedule:
+    # Ogni 30 minuti (al minuto 10 e 40), solo domenica, lunedì, venerdì e sabato (orari UTC)
+    - cron: "10,40 * * * 0,1,5,6"
+  workflow_dispatch:
+    inputs:
+      gara:
+        description: "Gara, es. Austin (vuoto = weekend in corso)"
+        required: false
+        default: ""
+      sessione:
+        description: "FP1 FP2 FP3 SQ S Q R (vuoto = tutte quelle finite)"
+        required: false
+        default: ""
+      forza:
+        description: "Riscarica anche le sessioni già presenti (si/no)"
+        required: false
+        default: "no"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: export
+  cancel-in-progress: false
+
+jobs:
+  export:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Installa le librerie
+        run: pip install numpy pandas requests
+
+      - name: Scarica le sessioni da OpenF1
+        env:
+          GARA: ${{ github.event.inputs.gara }}
+          SESSIONE: ${{ github.event.inputs.sessione }}
+          FORZA: ${{ github.event.inputs.forza }}
+        run: |
+          ARGS=(--out-dir export)
+          if [ -n "$GARA" ]; then ARGS+=(--gara "$GARA"); fi
+          if [ -n "$SESSIONE" ]; then ARGS+=(--sessione "$SESSIONE"); fi
+          if [ "$FORZA" = "si" ]; then ARGS+=(--forza); fi
+          python export_fetch.py "${ARGS[@]}"
+
+      - name: Salva se ci sono novità
+        run: |
+          if [ -n "$(git status --porcelain export)" ]; then
+            git config user.name "muretto-bot"
+            git config user.email "muretto-bot@users.noreply.github.com"
+            git add export
+            git commit -m "Export sessioni aggiornato"
+            for i in 1 2 3; do
+              git pull --rebase && git push && exit 0
+              sleep 15
+            done
+            exit 1
+          else
+            echo "Nessuna novità."
+          fi
