@@ -412,6 +412,7 @@ dialog.sheet::backdrop{background:rgba(10,12,16,.5)}
     </div>
     <div class="money" id="lg-money"></div>
     <div class="calib" id="lg-calib"></div>
+    <div class="calib" id="lg-clv"></div>
     <div id="lg-list"></div>
     <div class="row" style="margin-top:18px">
       <button type="button" class="linkbtn" id="lg-io">Esporta o importa il registro</button>
@@ -834,6 +835,7 @@ var Pron={
 var Log={
   get:function(){var l=store.get('log',null);if(!Array.isArray(l)){l=(D.log||[]).map(function(e,i){var x=Object.assign({},e);x.id='s'+i;return x;});store.set('log',l);}return l;},
   set:function(l){store.set('log',l);},
+  clv:function(e){var o=num(e.odds),c=num(e.close);return (o>1&&c>1)?o/c-1:null;},
   pnl:function(e){if(e.kind==='scartata'||e.outcome==='aperta')return 0;var st=num(e.stake)||0,o=num(e.odds)||0;return e.outcome==='vinta'?st*(o-1):-st;},
   render:function(){
     var l=this.get(),self=this;
@@ -849,6 +851,12 @@ var Log={
       ch+=' Probabilità media stimata '+pct(sp/n)+', frequenza reale '+pct(hit/n)+'. Brier '+(br/n).toFixed(3).replace('.',',')+' (più basso è meglio; 0,25 equivale a tirare a indovinare su eventi al 50%).';}
     else ch+=' Servono almeno 10 casi per un primo confronto tra probabilità stimate e risultati; conta anche le giocate scartate.';
     $('#lg-calib').innerHTML=ch+'<div class="prog"><i style="width:'+Math.min(100,100*n/target).toFixed(1)+'%"></i></div>';
+    var cl=l.filter(function(e){return self.clv(e)!=null;}),m=cl.length,clh='<b>Quota di chiusura:</b> ';
+    if(m){var sum=0,beat=0,eq=0,sr=0,nr=0;cl.forEach(function(e){var v=self.clv(e);sum+=v;if(v>0.0005)beat++;else if(v>-0.0005)eq++;if(e.kind==='reale'){sr+=v;nr++;}});
+      var sg=function(v){return (v>=0?'+':'−')+pct(Math.abs(v),1);};
+      clh+='CLV medio '+sg(sum/m)+' su '+(m===1?'1 giocata':m+' giocate')+(nr&&nr<m?' ('+sg(sr/nr)+' sulle reali)':'')+'. Quota migliore della chiusura in '+beat+', pari in '+eq+', peggiore in '+(m-beat-eq)+'. Un CLV positivo nel tempo indica che giochi prima che il mercato si sposti verso la tua scelta.';}
+    else clh+='nessuna registrata. Annotala nella giocata pochi minuti prima del via per misurare il CLV.';
+    $('#lg-clv').innerHTML=clh;
     var groups=[],idx={};
     l.slice().reverse().forEach(function(e){if(!(e.gp in idx)){idx[e.gp]=groups.length;groups.push({gp:e.gp,items:[]});}groups[idx[e.gp]].items.push(e);});
     $('#lg-list').innerHTML=groups.length?groups.map(function(g){
@@ -858,6 +866,7 @@ var Log={
         var meta=[e.session,e.book,'quota '+odds(num(e.odds)||0)];
         if(e.kind!=='scartata')meta.push('puntata '+nf2.format(num(e.stake)||0)+' €');
         if(e.p!=null&&num(e.p)>0)meta.push('stima '+pct(num(e.p)));
+        var cv=self.clv(e);if(cv!=null)meta.push('chiusura '+odds(num(e.close))+', CLV '+(cv>=0?'+':'−')+pct(Math.abs(cv),1));
         return '<li class="entry" data-id="'+esc(e.id)+'"><div class="e-top"><span class="e-sel"><span class="tag '+e.kind+'">'+esc(e.kind.charAt(0).toUpperCase()+e.kind.slice(1))+'</span>'+esc(e.selection)+', '+esc(e.market)+'</span><span class="e-pl '+plc+'">'+esc(plt)+'</span></div>'+
           '<div class="e-meta">'+esc(meta.filter(Boolean).join(', '))+(e.note?'. '+esc(e.note):'')+'</div>'+
           (e.outcome==='aperta'?'<div class="e-res"><button type="button" class="btn small" data-res="vinta">Vinta</button><button type="button" class="btn small" data-res="persa">Persa</button></div>':'')+'</li>';
@@ -871,7 +880,7 @@ var Log={
     };
   },
   openForm:function(pre,id){
-    var self=this,e=Object.assign({gp:D.weekend.short,session:'',market:'',selection:'',book:'Sisal',odds:'',stake:'',p:null,kind:'reale',outcome:'aperta',note:''},pre||{});
+    var self=this,e=Object.assign({gp:D.weekend.short,session:'',market:'',selection:'',book:'Sisal',odds:'',stake:'',p:null,kind:'reale',outcome:'aperta',close:null,note:''},pre||{});
     var sel=function(name,opts,val){return '<select data-n="'+name+'">'+opts.map(function(o){return '<option value="'+o[0]+'"'+(o[0]===val?' selected':'')+'>'+o[1]+'</option>';}).join('')+'</select>';};
     var f=function(label,name,val,extra){return '<div class="field"><label>'+label+'</label><input data-n="'+name+'" value="'+esc(val==null?'':val)+'"'+(extra||'')+'></div>';};
     var pv=e.p!=null&&num(e.p)>0?String(Math.round(num(e.p)*1000)/10).replace('.',','):'';
@@ -883,7 +892,8 @@ var Log={
       '<div class="grid2">'+f('Quota','odds',e.odds===''?'':String(e.odds).replace('.',','),' inputmode="decimal"')+f('Puntata, €','stake',e.stake===''?'':String(e.stake).replace('.',','),' inputmode="decimal"')+'</div>'+
       '<div class="grid2">'+f('Probabilità stimata, %','p',pv,' inputmode="decimal" placeholder="facoltativa"')+
       '<div class="field"><label>Tipo</label>'+sel('kind',[['reale','Reale'],['virtuale','Virtuale'],['scartata','Scartata']],e.kind)+'</div></div>'+
-      '<div class="field"><label>Esito</label>'+sel('outcome',[['aperta','Aperta'],['vinta','Vinta'],['persa','Persa']],e.outcome)+'</div>'+
+      '<div class="grid2"><div class="field"><label>Esito</label>'+sel('outcome',[['aperta','Aperta'],['vinta','Vinta'],['persa','Persa']],e.outcome)+'</div>'+
+      f('Quota chiusura','close',num(e.close)>1?String(e.close).replace('.',','):'',' inputmode="decimal" placeholder="prima del via"')+'</div>'+
       f('Nota','note',e.note,' placeholder="Facoltativa"')+
       '<div class="actions">'+(id?'<button type="button" class="btn danger" data-act="del">Elimina</button>':'<span></span>')+
       '<div class="row"><button type="button" class="btn" data-act="close">Annulla</button><button type="button" class="btn primary" data-act="save">Salva</button></div></div>';
@@ -896,8 +906,8 @@ var Log={
       if(b.dataset.act==='del'){all=all.filter(function(x){return x.id!==id;});self.set(all);dlg.close();self.render();return;}
       var v={};$$('[data-n]',dlg).forEach(function(i){v[i.dataset.n]=i.value.trim();});
       var o=num(v.odds);if(!(o>1)){alert('Inserisci una quota maggiore di 1.');return;}
-      var pp=num(v.p);
-      var rec={gp:v.gp||D.weekend.short,session:v.session,market:v.market,selection:v.selection,book:v.book,odds:o,stake:num(v.stake)||0,p:pp>0?pp/100:null,kind:v.kind,outcome:v.outcome,note:v.note};
+      var pp=num(v.p),cc=num(v.close);if(v.close&&!(cc>1)){alert('La quota di chiusura deve essere maggiore di 1, o lascia il campo vuoto.');return;}
+      var rec={gp:v.gp||D.weekend.short,session:v.session,market:v.market,selection:v.selection,book:v.book,odds:o,stake:num(v.stake)||0,p:pp>0?pp/100:null,kind:v.kind,outcome:v.outcome,close:cc>1?cc:null,note:v.note};
       if(id){all=all.map(function(x){return x.id===id?Object.assign({id:id},rec):x;});}
       else{rec.id='u'+Date.now().toString(36);all.push(rec);}
       self.set(all);dlg.close();self.render();
