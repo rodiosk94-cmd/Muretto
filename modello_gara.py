@@ -77,7 +77,7 @@ CITTADINI = {'Melbourne', 'Miami Gardens', 'Montréal', 'Monte Carlo', 'Madrid',
 
 # Parametri strutturali (a priori; vedi documento dei risultati)
 P = dict(
-    n_sim=6000,
+    n_sim=8000,               # simulazioni per corsa (quelle della prova nel documento dei risultati)
     # passo
     emivita_forma=4.0,        # gare: peso 1/2 dopo 4 eventi
     shrink_pilota=2.0,        # peso (eventi recenti) che serve per metà fiducia nello scarto dal compagno
@@ -522,6 +522,8 @@ def estrai_eventi(storico_dir, anni=(2026,), futuri=False):
     ev = []
     for f in files:
         d = carica_weekend(f)
+        if 'sessioni' not in d:  # storico/circuiti: solo il giro di riferimento, non un weekend
+            continue
         if d['anno'] not in anni:
             continue
         for tipo in ('S', 'R'):
