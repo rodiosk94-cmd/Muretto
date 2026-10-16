@@ -450,7 +450,8 @@ def scarica_circuito(m, year, out_dir, scadenza=None, primi=6):
             with gzip.open(path, "rt", encoding="utf-8") as f:
                 old = json.load(f)
             e = old.get("energia") or {}
-            if not old.get("errori") and e.get("v") == ENERGIA_V and not e.get("errori"):
+            # senza nessun giro (OpenF1 non aveva i giri al primo scaricamento) si riprova
+            if not old.get("errori") and e.get("v") == ENERGIA_V and not e.get("errori") and e.get("blocchi"):
                 return path, None
             vecchi = e
         except Exception:  # noqa: BLE001

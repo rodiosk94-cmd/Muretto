@@ -899,9 +899,11 @@ def carica_archivio(storico):
     W = []
     for f in sorted(glob.glob(os.path.join(storico, '*', '*.json.gz'))):
         try:
-            W.append(carica_weekend(f))
+            d = carica_weekend(f)
         except Exception:  # noqa: BLE001
-            pass
+            continue
+        if 'sessioni' in d:  # storico/circuiti: solo il giro di riferimento, non un weekend
+            W.append(d)
     return W
 
 

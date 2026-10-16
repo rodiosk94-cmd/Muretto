@@ -1234,6 +1234,31 @@ def update_info(data, now, tele_meeting=None, tele_length=None):
     return True
 
 
+# Le stesse chiavi che l'app prende da telemetry.json (info) e che sostituisce in weekend.json
+WEEKEND_KEYS = ("weekend", "standings", "lastRace", "circuit", "teams", "drivers")
+
+
+def sync_weekend_file(info, path):
+    """Copia le informazioni del weekend in weekend.json, la base che l'app usa se telemetry.json non
+    arriva in tempo. Scrive solo se qualcosa è cambiato; restituisce True se ha scritto."""
+    if not info or not os.path.exists(path):
+        return False
+    with open(path, encoding="utf-8") as f:
+        base = json.load(f)
+    new = dict(base)
+    for k in WEEKEND_KEYS:
+        if info.get(k):
+            new[k] = info[k]
+    if new == base:
+        return False
+    new["updated"] = (info.get("updated") or "")[:10] or base.get("updated")
+    tmp = path + ".tmp"
+    with open(tmp, "w", encoding="utf-8") as f:
+        json.dump(new, f, separators=(",", ":"), ensure_ascii=False)
+    os.replace(tmp, path)
+    return True
+
+
 
 def main():
     ap = argparse.ArgumentParser()
@@ -1322,6 +1347,15 @@ def main():
         data["summary"] = build_summary(data["sessions"])
         data["summaryV"] = SUMMARY_V
         changed = True
+
+    # --- weekend.json (accanto a telemetry.json) allineato alle informazioni del weekend ---
+    try:
+        wk_path = os.path.join(os.path.dirname(os.path.abspath(a.out)), "weekend.json")
+        if sync_weekend_file(data.get("info"), wk_path):
+            log("Aggiornato weekend.json con le informazioni del weekend.")
+    except Exception as e:  # noqa: BLE001
+        warn(f"weekend.json: {type(e).__name__}: {e}")
+
     if not changed:
         return
     data["updated"] = datetime.fromtimestamp(now, UTC).strftime("%Y-%m-%dT%H:%M:%SZ")

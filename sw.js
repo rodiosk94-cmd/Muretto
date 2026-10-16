@@ -1,6 +1,6 @@
 // Muretto: service worker. Rete prima (aggiornamenti immediati), cache come riserva per l'uso offline.
-const VERSION = 'muretto-v2';
-const SHELL = ['./', './index.html', './manifest.webmanifest', './weekend.json',
+const VERSION = 'muretto-v3';
+const SHELL = ['./', './index.html', './manifest.json', './weekend.json',
   './icon-192.png', './icon-512.png', './apple-touch-icon.png'];
 
 self.addEventListener('install', (e) => {

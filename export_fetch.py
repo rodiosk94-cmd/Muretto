@@ -398,14 +398,18 @@ def main():
     os.makedirs(a.out_dir, exist_ok=True)
     now = datetime.now(timezone.utc)
 
-    if a.gara:
-        meeting = find_meeting(a.anno or now.year, a.gara)
-    else:
-        meeting = current_meeting(now)
-        if meeting is None:
-            print("Nessun weekend in corso.")
-            return
-    sessions = get("sessions", f"meeting_key={meeting['meeting_key']}")
+    try:  # durante una sessione in diretta OpenF1 nega l'accesso anche a meetings e sessions
+        if a.gara:
+            meeting = find_meeting(a.anno or now.year, a.gara)
+        else:
+            meeting = current_meeting(now)
+            if meeting is None:
+                print("Nessun weekend in corso.")
+                return
+        sessions = get("sessions", f"meeting_key={meeting['meeting_key']}")
+    except NonPronto as e:
+        print(f"{e} Riprovo al prossimo giro.")
+        return
     if sessions.empty:
         print("Nessuna sessione trovata.")
         return
