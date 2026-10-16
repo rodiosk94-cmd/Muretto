@@ -705,7 +705,7 @@ def prova(base, anno=2026, dal=None, out=None):
             corto(t), a2['per'].get('lenta', a2['tutto']), a2['per'].get('altre', a2['tutto']), a3['tutto']))
     print('\nTemperature attuali: ' + ', '.join('%s %.2f' % (k, S['tau'][k]) for k in LIBERE) +
           '. Pesi compagni (bilancio, ultima libera, penultima): ' + ', '.join('%.2f' % b for b in S['beta']))
-    print('Errore dei segnali di passo (scarto quadratico medio sulla qualifica, %%): ' +
+    print('Errore dei segnali di passo (scarto quadratico medio sulla qualifica, %): ' +
           ', '.join('%s %.2f' % (k, math.sqrt(v)) for k, v in S['var'].items()))
     if out:
         os.makedirs(out, exist_ok=True)
