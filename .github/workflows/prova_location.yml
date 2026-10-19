@@ -1,0 +1,59 @@
+name: Prova location
+
+on:
+  workflow_dispatch:
+    inputs:
+      file:
+        description: "Weekend dello Storico da usare"
+        required: false
+        default: "storico/2026/17-singapore-grand-prix.json.gz"
+      uscita:
+        description: "File di uscita"
+        required: false
+        default: "storico/prove/location-singapore.json.gz"
+      primi:
+        description: "Piloti della qualifica da scaricare"
+        required: false
+        default: "4"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: storico
+  cancel-in-progress: false
+
+jobs:
+  scarica:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Scarica le posizioni da OpenF1
+        env:
+          FILE: ${{ github.event.inputs.file }}
+          USCITA: ${{ github.event.inputs.uscita }}
+          PRIMI: ${{ github.event.inputs.primi }}
+        run: python prova_location.py --file "${FILE:-storico/2026/17-singapore-grand-prix.json.gz}" --out "${USCITA:-storico/prove/location-singapore.json.gz}" --primi "${PRIMI:-4}"
+
+      - name: Salva il file
+        if: always()
+        run: |
+          if [ -n "$(git status --porcelain storico/prove)" ]; then
+            git config user.name "muretto-bot"
+            git config user.email "muretto-bot@users.noreply.github.com"
+            git add storico/prove
+            git commit -m "Prova dati location OpenF1"
+            for i in 1 2 3; do
+              git pull --rebase && git push && exit 0
+              sleep 15
+            done
+            exit 1
+          else
+            echo "Nessuna novità."
+          fi
