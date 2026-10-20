@@ -1,0 +1,44 @@
+name: Risultati
+
+on:
+  workflow_dispatch:
+    inputs:
+      anni:
+        description: "Stagioni da scaricare"
+        required: false
+        default: "2023,2024,2025,2026"
+
+permissions:
+  contents: write
+
+jobs:
+  scarica:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Scarica i risultati da OpenF1
+        env:
+          ANNI: ${{ github.event.inputs.anni }}
+        run: python risultati_fetch.py --anni "${ANNI:-2023,2024,2025,2026}"
+
+      - name: Salva
+        run: |
+          if [ -n "$(git status --porcelain storico)" ]; then
+            git config user.name "muretto-bot"
+            git config user.email "muretto-bot@users.noreply.github.com"
+            git add storico/risultati_sessioni.json
+            git commit -m "Risultati sessioni OpenF1"
+            for i in 1 2 3; do
+              git pull --rebase && git push && exit 0
+              sleep 15
+            done
+            exit 1
+          else
+            echo "Nessuna novità."
+          fi
