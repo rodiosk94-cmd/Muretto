@@ -16,9 +16,13 @@ Per ogni circuito del calendario, il giro migliore dei primi 6 nella qualifica d
 Uso:
     python backfill_fetch.py                                  # 2026 + Austin 2023-2025
     python backfill_fetch.py --anni 2026 --circuito "Austin,Mexico,Brazil" --anni-circuito 2024,2025
+    python backfill_fetch.py --anni 2023,2024,2025 --anni-energia 2025   # telemetria dei giri solo nel 2025
 
 Riprende da dove si era fermato: i weekend già scaricati senza errori vengono saltati
 (quelli parziali no); a quelli senza telemetria dei giri si aggiunge solo quella.
+--anni-energia limita la telemetria dei giri alle stagioni indicate (vuoto = tutte quelle di --anni).
+Le edizioni passate scaricate con --circuito non hanno la telemetria delle partenze: quando la loro
+stagione viene chiesta intera con --anni si riscaricano complete.
 Solo libreria standard. I dati storici di OpenF1 sono gratuiti e senza chiave.
 """
 import argparse
@@ -504,11 +508,24 @@ def done_ok(path):
         return False
 
 
+def senza_partenze(path):
+    """Weekend scaricato come edizione passata di un circuito (--circuito): gara e Sprint senza la
+    telemetria delle partenze. Quando la sua stagione viene chiesta intera (--anni) si riscarica."""
+    try:
+        with gzip.open(path, "rt", encoding="utf-8") as f:
+            d = json.load(f)
+    except Exception:  # noqa: BLE001
+        return False
+    return any(s["session"]["session_name"] in RACES and not s.get("partenza") for s in d.get("sessioni", []))
+
+
 def fetch_meeting(m, rnd, year, out_dir, with_car, parziale=False, now=None, energia=True, scadenza=None):
     name = m.get("meeting_name") or m.get("location") or "gp"
     path = os.path.join(out_dir, str(year), f"{rnd:02d}-{slug(name)}.json.gz")
     energia = energia and with_car   # edizioni passate: niente telemetria dei giri (c'è storico/circuiti)
-    if os.path.exists(path) and done_ok(path):
+    if with_car and os.path.exists(path) and done_ok(path) and senza_partenze(path):
+        log(f"{year} {rnd:02d} {name}: edizione passata senza partenze, la riscarico intera")
+    elif os.path.exists(path) and done_ok(path):
         if energia:
             with gzip.open(path, "rt", encoding="utf-8") as f:
                 data = json.load(f)
@@ -594,6 +611,8 @@ def main():
                          "(es. Austin,Mexico,Brazil,Las Vegas,Qatar,Abu Dhabi)")
     ap.add_argument("--senza-in-corso", action="store_true", help="non scaricare il weekend in corso")
     ap.add_argument("--senza-energia", action="store_true", help="non scaricare la telemetria dei giri")
+    ap.add_argument("--anni-energia", default="",
+                    help="stagioni (fra quelle di --anni) con la telemetria dei giri, es. 2025,2026; vuoto = tutte")
     ap.add_argument("--anni-circuito", default="2023,2024,2025")
     ap.add_argument("--anni-riferimento", default="2024,2025",
                     help="edizioni dei circuiti del calendario di cui scaricare il giro migliore dei primi 6 "
@@ -616,6 +635,12 @@ def main():
 
     jobs = []  # (meeting, round, anno, telemetria partenze, weekend in corso)
     rif = []   # (meeting, anno): circuiti del calendario, edizioni di riferimento
+    anni_en = {int(x) for x in (a.anni_energia or "").split(",") if x.strip()}
+
+    def con_energia(y):
+        """telemetria dei giri per la stagione y"""
+        return not a.senza_energia and (not anni_en or y in anni_en)
+
     try:
         anni = [int(x) for x in a.anni.split(",") if x.strip()]
         for y in anni:
@@ -634,8 +659,8 @@ def main():
                                                                    "meeting_name", "country_name")).lower()
                     if any(c in names for c in circs) and ts(m["date_end"]) + 10 * 3600 < now:
                         jobs.append((m, i, y, False, False))
-        if not a.senza_energia:
-            chiavi = {m.get("circuit_key") for y in anni for m in meetings_cached(y)} - {None}
+        if any(con_energia(y) for y in anni):
+            chiavi = {m.get("circuit_key") for y in anni if con_energia(y) for m in meetings_cached(y)} - {None}
             for y in [int(x) for x in (a.anni_riferimento or "").split(",") if x.strip()]:
                 for m in meetings_cached(y):
                     if m.get("circuit_key") in chiavi and ts(m["date_end"]) + 10 * 3600 < now:
@@ -676,7 +701,7 @@ def main():
             break
         try:
             path, data = fetch_meeting(m, rnd, y, a.out_dir, with_car, parziale, now,
-                                       energia=not a.senza_energia, scadenza=scadenza)
+                                       energia=con_energia(y), scadenza=scadenza)
             if path is None:
                 continue
         except Denied as e:

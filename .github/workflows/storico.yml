@@ -15,6 +15,10 @@ on:
         description: "Anni delle edizioni passate del circuito"
         required: false
         default: "2023,2024,2025"
+      anni_energia:
+        description: "Stagioni con la telemetria dei giri (modello energia)"
+        required: false
+        default: "2025,2026"
 
 permissions:
   contents: write
@@ -40,7 +44,8 @@ jobs:
           ANNI: ${{ github.event.inputs.anni }}
           CIRCUITO: ${{ github.event.inputs.circuito }}
           ANNI_CIRCUITO: ${{ github.event.inputs.anni_circuito }}
-        run: python backfill_fetch.py --out-dir storico --anni "${ANNI:-2026}" --circuito "$CIRCUITO" --anni-circuito "${ANNI_CIRCUITO:-2023,2024,2025}" --max-minuti 230
+          ANNI_ENERGIA: ${{ github.event.inputs.anni_energia }}
+        run: python backfill_fetch.py --out-dir storico --anni "${ANNI:-2026}" --circuito "$CIRCUITO" --anni-circuito "${ANNI_CIRCUITO:-2023,2024,2025}" --anni-energia "${ANNI_ENERGIA:-2025,2026}" --max-minuti 230
 
       - name: Salva l'archivio
         if: always()
