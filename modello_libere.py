@@ -576,8 +576,8 @@ def probabilita(w, k, form, S, abit=True, prev_fp1=None):
             pp[tit[0][1]] = pt[t] * (1 - P['quota_rookie'] * len(roo))
             for _, s in roo:
                 pp[s] = pt[t] * P['quota_rookie']
-        else:
-            for _, s in lst:
+        else:  # nessun titolare in pista (due terzi piloti, come nelle FP1 dei giovani)
+            for _, s, _ in lst:
                 pp[s] = pt[t] / len(lst)
     return pp, pt, pt_base, g, det, tau
 
