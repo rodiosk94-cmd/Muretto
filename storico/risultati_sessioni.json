@@ -1,0 +1,5873 @@
+{
+ "aggiornato": "2026-10-20T07:10:33Z",
+ "weekend": [
+  {
+   "anno": 2023,
+   "meeting_key": 1141,
+   "luogo": "Sakhir",
+   "sprint": false,
+   "sessioni": {
+    "Practice 2": [
+     {
+      "pos": 1,
+      "num": 14,
+      "pilota": "ALO"
+     },
+     {
+      "pos": 2,
+      "num": 1,
+      "pilota": "VER"
+     },
+     {
+      "pos": 3,
+      "num": 11,
+      "pilota": "PER"
+     }
+    ],
+    "Practice 3": [
+     {
+      "pos": 1,
+      "num": 14,
+      "pilota": "ALO"
+     },
+     {
+      "pos": 2,
+      "num": 1,
+      "pilota": "VER"
+     },
+     {
+      "pos": 3,
+      "num": 11,
+      "pilota": "PER"
+     }
+    ],
+    "Qualifying": [
+     {
+      "pos": 1,
+      "num": 1,
+      "pilota": "VER"
+     },
+     {
+      "pos": 2,
+      "num": 11,
+      "pilota": "PER"
+     },
+     {
+      "pos": 3,
+      "num": 16,
+      "pilota": "LEC"
+     }
+    ],
+    "Race": [
+     {
+      "pos": 1,
+      "num": 1,
+      "pilota": "VER"
+     },
+     {
+      "pos": 2,
+      "num": 11,
+      "pilota": "PER"
+     },
+     {
+      "pos": 3,
+      "num": 14,
+      "pilota": "ALO"
+     }
+    ]
+   }
+  },
+  {
+   "anno": 2023,
+   "meeting_key": 1142,
+   "luogo": "Jeddah",
+   "sprint": false,
+   "sessioni": {
+    "Practice 2": [
+     {
+      "pos": 1,
+      "num": 1,
+      "pilota": "VER"
+     },
+     {
+      "pos": 2,
+      "num": 14,
+      "pilota": "ALO"
+     },
+     {
+      "pos": 3,
+      "num": 11,
+      "pilota": "PER"
+     }
+    ],
+    "Practice 3": [
+     {
+      "pos": 1,
+      "num": 1,
+      "pilota": "VER"
+     },
+     {
+      "pos": 2,
+      "num": 11,
+      "pilota": "PER"
+     },
+     {
+      "pos": 3,
+      "num": 14,
+      "pilota": "ALO"
+     }
+    ],
+    "Qualifying": [
+     {
+      "pos": 1,
+      "num": 11,
+      "pilota": "PER"
+     },
+     {
+      "pos": 2,
+      "num": 16,
+      "pilota": "LEC"
+     },
+     {
+      "pos": 3,
+      "num": 14,
+      "pilota": "ALO"
+     }
+    ],
+    "Race": [
+     {
+      "pos": 1,
+      "num": 11,
+      "pilota": "PER"
+     },
+     {
+      "pos": 2,
+      "num": 1,
+      "pilota": "VER"
+     },
+     {
+      "pos": 3,
+      "num": 14,
+      "pilota": "ALO"
+     }
+    ]
+   }
+  },
+  {
+   "anno": 2023,
+   "meeting_key": 1143,
+   "luogo": "Melbourne",
+   "sprint": false,
+   "sessioni": {
+    "Practice 2": [
+     {
+      "pos": 1,
+      "num": 14,
+      "pilota": "ALO"
+     },
+     {
+      "pos": 2,
+      "num": 16,
+      "pilota": "LEC"
+     },
+     {
+      "pos": 3,
+      "num": 1,
+      "pilota": "VER"
+     }
+    ],
+    "Practice 3": [
+     {
+      "pos": 1,
+      "num": 1,
+      "pilota": "VER"
+     },
+     {
+      "pos": 2,
+      "num": 14,
+      "pilota": "ALO"
+     },
+     {
+      "pos": 3,
+      "num": 31,
+      "pilota": "OCO"
+     }
+    ],
+    "Qualifying": [
+     {
+      "pos": 1,
+      "num": 1,
+      "pilota": "VER"
+     },
+     {
+      "pos": 2,
+      "num": 63,
+      "pilota": "RUS"
+     },
+     {
+      "pos": 3,
+      "num": 44,
+      "pilota": "HAM"
+     }
+    ],
+    "Race": [
+     {
+      "pos": 1,
+      "num": 1,
+      "pilota": "VER"
+     },
+     {
+      "pos": 2,
+      "num": 44,
+      "pilota": "HAM"
+     },
+     {
+      "pos": 3,
+      "num": 14,
+      "pilota": "ALO"
+     }
+    ]
+   }
+  },
+  {
+   "anno": 2023,
+   "meeting_key": 1207,
+   "luogo": "Baku",
+   "sprint": true,
+   "sessioni": {
+    "Qualifying": [
+     {
+      "pos": 1,
+      "num": 16,
+      "pilota": "LEC"
+     },
+     {
+      "pos": 2,
+      "num": 1,
+      "pilota": "VER"
+     },
+     {
+      "pos": 3,
+      "num": 11,
+      "pilota": "PER"
+     }
+    ],
+    "Race": [
+     {
+      "pos": 1,
+      "num": 11,
+      "pilota": "PER"
+     },
+     {
+      "pos": 2,
+      "num": 1,
+      "pilota": "VER"
+     },
+     {
+      "pos": 3,
+      "num": 16,
+      "pilota": "LEC"
+     }
+    ]
+   }
+  },
+  {
+   "anno": 2023,
+   "meeting_key": 1208,
+   "luogo": "Miami",
+   "sprint": false,
+   "sessioni": {
+    "Practice 2": [
+     {
+      "pos": 1,
+      "num": 1,
+      "pilota": "VER"
+     },
+     {
+      "pos": 2,
+      "num": 55,
+      "pilota": "SAI"
+     },
+     {
+      "pos": 3,
+      "num": 16,
+      "pilota": "LEC"
+     }
+    ],
+    "Practice 3": [
+     {
+      "pos": 1,
+      "num": 1,
+      "pilota": "VER"
+     },
+     {
+      "pos": 2,
+      "num": 16,
+      "pilota": "LEC"
+     },
+     {
+      "pos": 3,
+      "num": 11,
+      "pilota": "PER"
+     }
+    ],
+    "Qualifying": [
+     {
+      "pos": 1,
+      "num": 11,
+      "pilota": "PER"
+     },
+     {
+      "pos": 2,
+      "num": 14,
+      "pilota": "ALO"
+     },
+     {
+      "pos": 3,
+      "num": 55,
+      "pilota": "SAI"
+     }
+    ],
+    "Race": [
+     {
+      "pos": 1,
+      "num": 1,
+      "pilota": "VER"
+     },
+     {
+      "pos": 2,
+      "num": 11,
+      "pilota": "PER"
+     },
+     {
+      "pos": 3,
+      "num": 14,
+      "pilota": "ALO"
+     }
+    ]
+   }
+  },
+  {
+   "anno": 2023,
+   "meeting_key": 1210,
+   "luogo": "Monaco",
+   "sprint": false,
+   "sessioni": {
+    "Practice 2": [
+     {
+      "pos": 1,
+      "num": 1,
+      "pilota": "VER"
+     },
+     {
+      "pos": 2,
+      "num": 16,
+      "pilota": "LEC"
+     },
+     {
+      "pos": 3,
+      "num": 55,
+      "pilota": "SAI"
+     }
+    ],
+    "Practice 3": [
+     {
+      "pos": 1,
+      "num": 1,
+      "pilota": "VER"
+     },
+     {
+      "pos": 2,
+      "num": 11,
+      "pilota": "PER"
+     },
+     {
+      "pos": 3,
+      "num": 18,
+      "pilota": "STR"
+     }
+    ],
+    "Qualifying": [
+     {
+      "pos": 1,
+      "num": 1,
+      "pilota": "VER"
+     },
+     {
+      "pos": 2,
+      "num": 14,
+      "pilota": "ALO"
+     },
+     {
+      "pos": 3,
+      "num": 16,
+      "pilota": "LEC"
+     }
+    ],
+    "Race": [
+     {
+      "pos": 1,
+      "num": 1,
+      "pilota": "VER"
+     },
+     {
+      "pos": 2,
+      "num": 14,
+      "pilota": "ALO"
+     },
+     {
+      "pos": 3,
+      "num": 31,
+      "pilota": "OCO"
+     }
+    ]
+   }
+  },
+  {
+   "anno": 2023,
+   "meeting_key": 1211,
+   "luogo": "Barcelona",
+   "sprint": false,
+   "sessioni": {
+    "Practice 2": [
+     {
+      "pos": 1,
+      "num": 1,
+      "pilota": "VER"
+     },
+     {
+      "pos": 2,
+      "num": 14,
+      "pilota": "ALO"
+     },
+     {
+      "pos": 3,
+      "num": 27,
+      "pilota": "HUL"
+     }
+    ],
+    "Practice 3": [
+     {
+      "pos": 1,
+      "num": 1,
+      "pilota": "VER"
+     },
+     {
+      "pos": 2,
+      "num": 11,
+      "pilota": "PER"
+     },
+     {
+      "pos": 3,
+      "num": 44,
+      "pilota": "HAM"
+     }
+    ],
+    "Qualifying": [
+     {
+      "pos": 1,
+      "num": 1,
+      "pilota": "VER"
+     },
+     {
+      "pos": 2,
+      "num": 55,
+      "pilota": "SAI"
+     },
+     {
+      "pos": 3,
+      "num": 4,
+      "pilota": "NOR"
+     }
+    ],
+    "Race": [
+     {
+      "pos": 1,
+      "num": 1,
+      "pilota": "VER"
+     },
+     {
+      "pos": 2,
+      "num": 44,
+      "pilota": "HAM"
+     },
+     {
+      "pos": 3,
+      "num": 63,
+      "pilota": "RUS"
+     }
+    ]
+   }
+  },
+  {
+   "anno": 2023,
+   "meeting_key": 1212,
+   "luogo": "Montréal",
+   "sprint": false,
+   "sessioni": {
+    "Practice 2": [
+     {
+      "pos": 1,
+      "num": 44,
+      "pilota": "HAM"
+     },
+     {
+      "pos": 2,
+      "num": 63,
+      "pilota": "RUS"
+     },
+     {
+      "pos": 3,
+      "num": 55,
+      "pilota": "SAI"
+     }
+    ],
+    "Practice 3": [
+     {
+      "pos": 1,
+      "num": 1,
+      "pilota": "VER"
+     },
+     {
+      "pos": 2,
+      "num": 16,
+      "pilota": "LEC"
+     },
+     {
+      "pos": 3,
+      "num": 14,
+      "pilota": "ALO"
+     }
+    ],
+    "Qualifying": [
+     {
+      "pos": 1,
+      "num": 1,
+      "pilota": "VER"
+     },
+     {
+      "pos": 2,
+      "num": 27,
+      "pilota": "HUL"
+     },
+     {
+      "pos": 3,
+      "num": 14,
+      "pilota": "ALO"
+     }
+    ],
+    "Race": [
+     {
+      "pos": 1,
+      "num": 1,
+      "pilota": "VER"
+     },
+     {
+      "pos": 2,
+      "num": 14,
+      "pilota": "ALO"
+     },
+     {
+      "pos": 3,
+      "num": 44,
+      "pilota": "HAM"
+     }
+    ]
+   }
+  },
+  {
+   "anno": 2023,
+   "meeting_key": 1213,
+   "luogo": "Spielberg",
+   "sprint": true,
+   "sessioni": {
+    "Qualifying": [
+     {
+      "pos": 1,
+      "num": 1,
+      "pilota": "VER"
+     },
+     {
+      "pos": 2,
+      "num": 16,
+      "pilota": "LEC"
+     },
+     {
+      "pos": 3,
+      "num": 55,
+      "pilota": "SAI"
+     }
+    ],
+    "Race": [
+     {
+      "pos": 1,
+      "num": 1,
+      "pilota": "VER"
+     },
+     {
+      "pos": 2,
+      "num": 16,
+      "pilota": "LEC"
+     },
+     {
+      "pos": 3,
+      "num": 11,
+      "pilota": "PER"
+     }
+    ]
+   }
+  },
+  {
+   "anno": 2023,
+   "meeting_key": 1214,
+   "luogo": "Silverstone",
+   "sprint": false,
+   "sessioni": {
+    "Practice 2": [
+     {
+      "pos": 1,
+      "num": 1,
+      "pilota": "VER"
+     },
+     {
+      "pos": 2,
+      "num": 55,
+      "pilota": "SAI"
+     },
+     {
+      "pos": 3,
+      "num": 23,
+      "pilota": "ALB"
+     }
+    ],
+    "Practice 3": [
+     {
+      "pos": 1,
+      "num": 16,
+      "pilota": "LEC"
+     },
+     {
+      "pos": 2,
+      "num": 23,
+      "pilota": "ALB"
+     },
+     {
+      "pos": 3,
+      "num": 14,
+      "pilota": "ALO"
+     }
+    ],
+    "Qualifying": [
+     {
+      "pos": 1,
+      "num": 1,
+      "pilota": "VER"
+     },
+     {
+      "pos": 2,
+      "num": 4,
+      "pilota": "NOR"
+     },
+     {
+      "pos": 3,
+      "num": 81,
+      "pilota": "PIA"
+     }
+    ],
+    "Race": [
+     {
+      "pos": 1,
+      "num": 1,
+      "pilota": "VER"
+     },
+     {
+      "pos": 2,
+      "num": 4,
+      "pilota": "NOR"
+     },
+     {
+      "pos": 3,
+      "num": 44,
+      "pilota": "HAM"
+     }
+    ]
+   }
+  },
+  {
+   "anno": 2023,
+   "meeting_key": 1215,
+   "luogo": "Budapest",
+   "sprint": false,
+   "sessioni": {
+    "Practice 2": [
+     {
+      "pos": 1,
+      "num": 16,
+      "pilota": "BRO"
+     },
+     {
+      "pos": 2,
+      "num": 4,
+      "pilota": "FOR"
+     },
+     {
+      "pos": 3,
+      "num": 10,
+      "pilota": "FCO"
+     }
+    ],
+    "Practice 3": [
+     {
+      "pos": 1,
+      "num": 44,
+      "pilota": "HAM"
+     },
+     {
+      "pos": 2,
+      "num": 1,
+      "pilota": "ARO"
+     },
+     {
+      "pos": 3,
+      "num": 11,
+      "pilota": "BOY"
+     }
+    ],
+    "Qualifying": [
+     {
+      "pos": 1,
+      "num": 44,
+      "pilota": "HAM"
+     },
+     {
+      "pos": 2,
+      "num": 1,
+      "pilota": "ARO"
+     },
+     {
+      "pos": 3,
+      "num": 4,
+      "pilota": "FOR"
+     }
+    ],
+    "Race": [
+     {
+      "pos": 1,
+      "num": 1,
+      "pilota": "ARO"
+     },
+     {
+      "pos": 2,
+      "num": 4,
+      "pilota": "FOR"
+     },
+     {
+      "pos": 3,
+      "num": 11,
+      "pilota": "BOY"
+     }
+    ]
+   }
+  },
+  {
+   "anno": 2023,
+   "meeting_key": 1216,
+   "luogo": "Spa-Francorchamps",
+   "sprint": true,
+   "sessioni": {
+    "Qualifying": [
+     {
+      "pos": 1,
+      "num": 1,
+      "pilota": "VER"
+     },
+     {
+      "pos": 2,
+      "num": 16,
+      "pilota": "LEC"
+     },
+     {
+      "pos": 3,
+      "num": 11,
+      "pilota": "PER"
+     }
+    ],
+    "Race": [
+     {
+      "pos": 1,
+      "num": 1,
+      "pilota": "VER"
+     },
+     {
+      "pos": 2,
+      "num": 11,
+      "pilota": "PER"
+     },
+     {
+      "pos": 3,
+      "num": 16,
+      "pilota": "LEC"
+     }
+    ]
+   }
+  },
+  {
+   "anno": 2023,
+   "meeting_key": 1217,
+   "luogo": "Zandvoort",
+   "sprint": false,
+   "sessioni": {
+    "Practice 2": [
+     {
+      "pos": 1,
+      "num": 4,
+      "pilota": "NOR"
+     },
+     {
+      "pos": 2,
+      "num": 1,
+      "pilota": "VER"
+     },
+     {
+      "pos": 3,
+      "num": 23,
+      "pilota": "ALB"
+     }
+    ],
+    "Practice 3": [
+     {
+      "pos": 1,
+      "num": 1,
+      "pilota": "VER"
+     },
+     {
+      "pos": 2,
+      "num": 63,
+      "pilota": "RUS"
+     },
+     {
+      "pos": 3,
+      "num": 11,
+      "pilota": "PER"
+     }
+    ],
+    "Qualifying": [
+     {
+      "pos": 1,
+      "num": 1,
+      "pilota": "VER"
+     },
+     {
+      "pos": 2,
+      "num": 4,
+      "pilota": "NOR"
+     },
+     {
+      "pos": 3,
+      "num": 63,
+      "pilota": "RUS"
+     }
+    ],
+    "Race": [
+     {
+      "pos": 1,
+      "num": 1,
+      "pilota": "VER"
+     },
+     {
+      "pos": 2,
+      "num": 14,
+      "pilota": "ALO"
+     },
+     {
+      "pos": 3,
+      "num": 10,
+      "pilota": "GAS"
+     }
+    ]
+   }
+  },
+  {
+   "anno": 2023,
+   "meeting_key": 1218,
+   "luogo": "Monza",
+   "sprint": false,
+   "sessioni": {
+    "Practice 2": [
+     {
+      "pos": 1,
+      "num": 55,
+      "pilota": "SAI"
+     },
+     {
+      "pos": 2,
+      "num": 4,
+      "pilota": "NOR"
+     },
+     {
+      "pos": 3,
+      "num": 11,
+      "pilota": "PER"
+     }
+    ],
+    "Practice 3": [
+     {
+      "pos": 1,
+      "num": 55,
+      "pilota": "SAI"
+     },
+     {
+      "pos": 2,
+      "num": 1,
+      "pilota": "VER"
+     },
+     {
+      "pos": 3,
+      "num": 44,
+      "pilota": "HAM"
+     }
+    ],
+    "Qualifying": [
+     {
+      "pos": 1,
+      "num": 55,
+      "pilota": "SAI"
+     },
+     {
+      "pos": 2,
+      "num": 1,
+      "pilota": "VER"
+     },
+     {
+      "pos": 3,
+      "num": 16,
+      "pilota": "LEC"
+     }
+    ],
+    "Race": [
+     {
+      "pos": 1,
+      "num": 1,
+      "pilota": "VER"
+     },
+     {
+      "pos": 2,
+      "num": 11,
+      "pilota": "PER"
+     },
+     {
+      "pos": 3,
+      "num": 55,
+      "pilota": "SAI"
+     }
+    ]
+   }
+  },
+  {
+   "anno": 2023,
+   "meeting_key": 1219,
+   "luogo": "Marina Bay",
+   "sprint": false,
+   "sessioni": {
+    "Practice 2": [
+     {
+      "pos": 1,
+      "num": 55,
+      "pilota": "SAI"
+     },
+     {
+      "pos": 2,
+      "num": 16,
+      "pilota": "LEC"
+     },
+     {
+      "pos": 3,
+      "num": 63,
+      "pilota": "RUS"
+     }
+    ],
+    "Practice 3": [
+     {
+      "pos": 1,
+      "num": 55,
+      "pilota": "SAI"
+     },
+     {
+      "pos": 2,
+      "num": 63,
+      "pilota": "RUS"
+     },
+     {
+      "pos": 3,
+      "num": 4,
+      "pilota": "NOR"
+     }
+    ],
+    "Qualifying": [
+     {
+      "pos": 1,
+      "num": 55,
+      "pilota": "SAI"
+     },
+     {
+      "pos": 2,
+      "num": 63,
+      "pilota": "RUS"
+     },
+     {
+      "pos": 3,
+      "num": 16,
+      "pilota": "LEC"
+     }
+    ],
+    "Race": [
+     {
+      "pos": 1,
+      "num": 55,
+      "pilota": "SAI"
+     },
+     {
+      "pos": 2,
+      "num": 4,
+      "pilota": "NOR"
+     },
+     {
+      "pos": 3,
+      "num": 44,
+      "pilota": "HAM"
+     }
+    ]
+   }
+  },
+  {
+   "anno": 2023,
+   "meeting_key": 1220,
+   "luogo": "Suzuka",
+   "sprint": false,
+   "sessioni": {
+    "Practice 2": [
+     {
+      "pos": 1,
+      "num": 1,
+      "pilota": "VER"
+     },
+     {
+      "pos": 2,
+      "num": 16,
+      "pilota": "LEC"
+     },
+     {
+      "pos": 3,
+      "num": 4,
+      "pilota": "NOR"
+     }
+    ],
+    "Practice 3": [
+     {
+      "pos": 1,
+      "num": 1,
+      "pilota": "VER"
+     },
+     {
+      "pos": 2,
+      "num": 4,
+      "pilota": "NOR"
+     },
+     {
+      "pos": 3,
+      "num": 81,
+      "pilota": "PIA"
+     }
+    ],
+    "Qualifying": [
+     {
+      "pos": 1,
+      "num": 1,
+      "pilota": "VER"
+     },
+     {
+      "pos": 2,
+      "num": 81,
+      "pilota": "PIA"
+     },
+     {
+      "pos": 3,
+      "num": 4,
+      "pilota": "NOR"
+     }
+    ],
+    "Race": [
+     {
+      "pos": 1,
+      "num": 1,
+      "pilota": "VER"
+     },
+     {
+      "pos": 2,
+      "num": 4,
+      "pilota": "NOR"
+     },
+     {
+      "pos": 3,
+      "num": 81,
+      "pilota": "PIA"
+     }
+    ]
+   }
+  },
+  {
+   "anno": 2023,
+   "meeting_key": 1221,
+   "luogo": "Lusail",
+   "sprint": true,
+   "sessioni": {
+    "Qualifying": [
+     {
+      "pos": 1,
+      "num": 1,
+      "pilota": "VER"
+     },
+     {
+      "pos": 2,
+      "num": 63,
+      "pilota": "RUS"
+     },
+     {
+      "pos": 3,
+      "num": 44,
+      "pilota": "HAM"
+     }
+    ],
+    "Race": [
+     {
+      "pos": 1,
+      "num": 1,
+      "pilota": "VER"
+     },
+     {
+      "pos": 2,
+      "num": 81,
+      "pilota": "PIA"
+     },
+     {
+      "pos": 3,
+      "num": 4,
+      "pilota": "NOR"
+     }
+    ]
+   }
+  },
+  {
+   "anno": 2023,
+   "meeting_key": 1222,
+   "luogo": "Austin",
+   "sprint": true,
+   "sessioni": {
+    "Qualifying": [
+     {
+      "pos": 1,
+      "num": 16,
+      "pilota": "LEC"
+     },
+     {
+      "pos": 2,
+      "num": 4,
+      "pilota": "NOR"
+     },
+     {
+      "pos": 3,
+      "num": 44,
+      "pilota": "HAM"
+     }
+    ],
+    "Race": [
+     {
+      "pos": 1,
+      "num": 1,
+      "pilota": "VER"
+     },
+     {
+      "pos": 2,
+      "num": 4,
+      "pilota": "NOR"
+     },
+     {
+      "pos": 3,
+      "num": 55,
+      "pilota": "SAI"
+     }
+    ]
+   }
+  },
+  {
+   "anno": 2023,
+   "meeting_key": 1223,
+   "luogo": "Mexico City",
+   "sprint": false,
+   "sessioni": {
+    "Practice 2": [
+     {
+      "pos": 1,
+      "num": 1,
+      "pilota": "VER"
+     },
+     {
+      "pos": 2,
+      "num": 4,
+      "pilota": "NOR"
+     },
+     {
+      "pos": 3,
+      "num": 16,
+      "pilota": "LEC"
+     }
+    ],
+    "Practice 3": [
+     {
+      "pos": 1,
+      "num": 1,
+      "pilota": "VER"
+     },
+     {
+      "pos": 2,
+      "num": 23,
+      "pilota": "ALB"
+     },
+     {
+      "pos": 3,
+      "num": 11,
+      "pilota": "PER"
+     }
+    ],
+    "Qualifying": [
+     {
+      "pos": 1,
+      "num": 16,
+      "pilota": "LEC"
+     },
+     {
+      "pos": 2,
+      "num": 55,
+      "pilota": "SAI"
+     },
+     {
+      "pos": 3,
+      "num": 1,
+      "pilota": "VER"
+     }
+    ],
+    "Race": [
+     {
+      "pos": 1,
+      "num": 1,
+      "pilota": "VER"
+     },
+     {
+      "pos": 2,
+      "num": 44,
+      "pilota": "HAM"
+     },
+     {
+      "pos": 3,
+      "num": 16,
+      "pilota": "LEC"
+     }
+    ]
+   }
+  },
+  {
+   "anno": 2023,
+   "meeting_key": 1224,
+   "luogo": "São Paulo",
+   "sprint": true,
+   "sessioni": {
+    "Qualifying": [
+     {
+      "pos": 1,
+      "num": 1,
+      "pilota": "VER"
+     },
+     {
+      "pos": 2,
+      "num": 16,
+      "pilota": "LEC"
+     },
+     {
+      "pos": 3,
+      "num": 18,
+      "pilota": "STR"
+     }
+    ],
+    "Race": [
+     {
+      "pos": 1,
+      "num": 1,
+      "pilota": "VER"
+     },
+     {
+      "pos": 2,
+      "num": 4,
+      "pilota": "NOR"
+     },
+     {
+      "pos": 3,
+      "num": 14,
+      "pilota": "ALO"
+     }
+    ]
+   }
+  },
+  {
+   "anno": 2023,
+   "meeting_key": 1225,
+   "luogo": "Las Vegas",
+   "sprint": false,
+   "sessioni": {
+    "Practice 2": [
+     {
+      "pos": 1,
+      "num": 16,
+      "pilota": "LEC"
+     },
+     {
+      "pos": 2,
+      "num": 55,
+      "pilota": "SAI"
+     },
+     {
+      "pos": 3,
+      "num": 14,
+      "pilota": "ALO"
+     }
+    ],
+    "Practice 3": [
+     {
+      "pos": 1,
+      "num": 63,
+      "pilota": "RUS"
+     },
+     {
+      "pos": 2,
+      "num": 81,
+      "pilota": "PIA"
+     },
+     {
+      "pos": 3,
+      "num": 2,
+      "pilota": "SAR"
+     }
+    ],
+    "Qualifying": [
+     {
+      "pos": 1,
+      "num": 16,
+      "pilota": "LEC"
+     },
+     {
+      "pos": 2,
+      "num": 55,
+      "pilota": "SAI"
+     },
+     {
+      "pos": 3,
+      "num": 1,
+      "pilota": "VER"
+     }
+    ],
+    "Race": [
+     {
+      "pos": 1,
+      "num": 1,
+      "pilota": "VER"
+     },
+     {
+      "pos": 2,
+      "num": 16,
+      "pilota": "LEC"
+     },
+     {
+      "pos": 3,
+      "num": 11,
+      "pilota": "PER"
+     }
+    ]
+   }
+  },
+  {
+   "anno": 2023,
+   "meeting_key": 1226,
+   "luogo": "Yas Island",
+   "sprint": false,
+   "sessioni": {
+    "Practice 2": [
+     {
+      "pos": 1,
+      "num": 16,
+      "pilota": "LEC"
+     },
+     {
+      "pos": 2,
+      "num": 4,
+      "pilota": "NOR"
+     },
+     {
+      "pos": 3,
+      "num": 1,
+      "pilota": "VER"
+     }
+    ],
+    "Practice 3": [
+     {
+      "pos": 1,
+      "num": 63,
+      "pilota": "RUS"
+     },
+     {
+      "pos": 2,
+      "num": 4,
+      "pilota": "NOR"
+     },
+     {
+      "pos": 3,
+      "num": 81,
+      "pilota": "PIA"
+     }
+    ],
+    "Qualifying": [
+     {
+      "pos": 1,
+      "num": 1,
+      "pilota": "VER"
+     },
+     {
+      "pos": 2,
+      "num": 16,
+      "pilota": "LEC"
+     },
+     {
+      "pos": 3,
+      "num": 81,
+      "pilota": "PIA"
+     }
+    ],
+    "Race": [
+     {
+      "pos": 1,
+      "num": 1,
+      "pilota": "VER"
+     },
+     {
+      "pos": 2,
+      "num": 16,
+      "pilota": "LEC"
+     },
+     {
+      "pos": 3,
+      "num": 63,
+      "pilota": "RUS"
+     }
+    ]
+   }
+  },
+  {
+   "anno": 2024,
+   "meeting_key": 1229,
+   "luogo": "Sakhir",
+   "sprint": false,
+   "sessioni": {
+    "Practice 2": [
+     {
+      "pos": 1,
+      "num": 44,
+      "pilota": "HAM"
+     },
+     {
+      "pos": 2,
+      "num": 63,
+      "pilota": "RUS"
+     },
+     {
+      "pos": 3,
+      "num": 14,
+      "pilota": "ALO"
+     }
+    ],
+    "Practice 3": [
+     {
+      "pos": 1,
+      "num": 55,
+      "pilota": "SAI"
+     },
+     {
+      "pos": 2,
+      "num": 14,
+      "pilota": "ALO"
+     },
+     {
+      "pos": 3,
+      "num": 1,
+      "pilota": "VER"
+     }
+    ],
+    "Qualifying": [
+     {
+      "pos": 1,
+      "num": 1,
+      "pilota": "VER"
+     },
+     {
+      "pos": 2,
+      "num": 16,
+      "pilota": "LEC"
+     },
+     {
+      "pos": 3,
+      "num": 63,
+      "pilota": "RUS"
+     }
+    ],
+    "Race": [
+     {
+      "pos": 1,
+      "num": 1,
+      "pilota": "VER"
+     },
+     {
+      "pos": 2,
+      "num": 11,
+      "pilota": "PER"
+     },
+     {
+      "pos": 3,
+      "num": 55,
+      "pilota": "SAI"
+     }
+    ]
+   }
+  },
+  {
+   "anno": 2024,
+   "meeting_key": 1230,
+   "luogo": "Jeddah",
+   "sprint": false,
+   "sessioni": {
+    "Practice 2": [
+     {
+      "pos": 1,
+      "num": 14,
+      "pilota": "ALO"
+     },
+     {
+      "pos": 2,
+      "num": 63,
+      "pilota": "RUS"
+     },
+     {
+      "pos": 3,
+      "num": 1,
+      "pilota": "VER"
+     }
+    ],
+    "Practice 3": [
+     {
+      "pos": 1,
+      "num": 1,
+      "pilota": "VER"
+     },
+     {
+      "pos": 2,
+      "num": 16,
+      "pilota": "LEC"
+     },
+     {
+      "pos": 3,
+      "num": 11,
+      "pilota": "PER"
+     }
+    ],
+    "Qualifying": [
+     {
+      "pos": 1,
+      "num": 1,
+      "pilota": "VER"
+     },
+     {
+      "pos": 2,
+      "num": 16,
+      "pilota": "LEC"
+     },
+     {
+      "pos": 3,
+      "num": 11,
+      "pilota": "PER"
+     }
+    ],
+    "Race": [
+     {
+      "pos": 1,
+      "num": 1,
+      "pilota": "VER"
+     },
+     {
+      "pos": 2,
+      "num": 11,
+      "pilota": "PER"
+     },
+     {
+      "pos": 3,
+      "num": 16,
+      "pilota": "LEC"
+     }
+    ]
+   }
+  },
+  {
+   "anno": 2024,
+   "meeting_key": 1231,
+   "luogo": "Melbourne",
+   "sprint": false,
+   "sessioni": {
+    "Practice 2": [
+     {
+      "pos": 1,
+      "num": 16,
+      "pilota": "LEC"
+     },
+     {
+      "pos": 2,
+      "num": 1,
+      "pilota": "VER"
+     },
+     {
+      "pos": 3,
+      "num": 55,
+      "pilota": "SAI"
+     }
+    ],
+    "Practice 3": [
+     {
+      "pos": 1,
+      "num": 16,
+      "pilota": "LEC"
+     },
+     {
+      "pos": 2,
+      "num": 1,
+      "pilota": "VER"
+     },
+     {
+      "pos": 3,
+      "num": 55,
+      "pilota": "SAI"
+     }
+    ],
+    "Qualifying": [
+     {
+      "pos": 1,
+      "num": 1,
+      "pilota": "VER"
+     },
+     {
+      "pos": 2,
+      "num": 55,
+      "pilota": "SAI"
+     },
+     {
+      "pos": 3,
+      "num": 11,
+      "pilota": "PER"
+     }
+    ],
+    "Race": [
+     {
+      "pos": 1,
+      "num": 55,
+      "pilota": "SAI"
+     },
+     {
+      "pos": 2,
+      "num": 16,
+      "pilota": "LEC"
+     },
+     {
+      "pos": 3,
+      "num": 4,
+      "pilota": "NOR"
+     }
+    ]
+   }
+  },
+  {
+   "anno": 2024,
+   "meeting_key": 1232,
+   "luogo": "Suzuka",
+   "sprint": false,
+   "sessioni": {
+    "Practice 2": [
+     {
+      "pos": 1,
+      "num": 81,
+      "pilota": "PIA"
+     },
+     {
+      "pos": 2,
+      "num": 44,
+      "pilota": "HAM"
+     },
+     {
+      "pos": 3,
+      "num": 16,
+      "pilota": "LEC"
+     }
+    ],
+    "Practice 3": [
+     {
+      "pos": 1,
+      "num": 1,
+      "pilota": "VER"
+     },
+     {
+      "pos": 2,
+      "num": 11,
+      "pilota": "PER"
+     },
+     {
+      "pos": 3,
+      "num": 63,
+      "pilota": "RUS"
+     }
+    ],
+    "Qualifying": [
+     {
+      "pos": 1,
+      "num": 1,
+      "pilota": "VER"
+     },
+     {
+      "pos": 2,
+      "num": 11,
+      "pilota": "PER"
+     },
+     {
+      "pos": 3,
+      "num": 4,
+      "pilota": "NOR"
+     }
+    ],
+    "Race": [
+     {
+      "pos": 1,
+      "num": 1,
+      "pilota": "VER"
+     },
+     {
+      "pos": 2,
+      "num": 11,
+      "pilota": "PER"
+     },
+     {
+      "pos": 3,
+      "num": 55,
+      "pilota": "SAI"
+     }
+    ]
+   }
+  },
+  {
+   "anno": 2024,
+   "meeting_key": 1233,
+   "luogo": "Shanghai",
+   "sprint": true,
+   "sessioni": {
+    "Qualifying": [
+     {
+      "pos": 1,
+      "num": 1,
+      "pilota": "VER"
+     },
+     {
+      "pos": 2,
+      "num": 11,
+      "pilota": "PER"
+     },
+     {
+      "pos": 3,
+      "num": 14,
+      "pilota": "ALO"
+     }
+    ],
+    "Race": [
+     {
+      "pos": 1,
+      "num": 1,
+      "pilota": "VER"
+     },
+     {
+      "pos": 2,
+      "num": 4,
+      "pilota": "NOR"
+     },
+     {
+      "pos": 3,
+      "num": 11,
+      "pilota": "PER"
+     }
+    ]
+   }
+  },
+  {
+   "anno": 2024,
+   "meeting_key": 1234,
+   "luogo": "Miami",
+   "sprint": true,
+   "sessioni": {
+    "Qualifying": [
+     {
+      "pos": 1,
+      "num": 1,
+      "pilota": "VER"
+     },
+     {
+      "pos": 2,
+      "num": 16,
+      "pilota": "LEC"
+     },
+     {
+      "pos": 3,
+      "num": 55,
+      "pilota": "SAI"
+     }
+    ],
+    "Race": [
+     {
+      "pos": 1,
+      "num": 4,
+      "pilota": "NOR"
+     },
+     {
+      "pos": 2,
+      "num": 1,
+      "pilota": "VER"
+     },
+     {
+      "pos": 3,
+      "num": 16,
+      "pilota": "LEC"
+     }
+    ]
+   }
+  },
+  {
+   "anno": 2024,
+   "meeting_key": 1235,
+   "luogo": "Imola",
+   "sprint": false,
+   "sessioni": {
+    "Practice 2": [
+     {
+      "pos": 1,
+      "num": 16,
+      "pilota": "LEC"
+     },
+     {
+      "pos": 2,
+      "num": 81,
+      "pilota": "PIA"
+     },
+     {
+      "pos": 3,
+      "num": 22,
+      "pilota": "TSU"
+     }
+    ],
+    "Practice 3": [
+     {
+      "pos": 1,
+      "num": 81,
+      "pilota": "PIA"
+     },
+     {
+      "pos": 2,
+      "num": 4,
+      "pilota": "NOR"
+     },
+     {
+      "pos": 3,
+      "num": 55,
+      "pilota": "SAI"
+     }
+    ],
+    "Qualifying": [
+     {
+      "pos": 1,
+      "num": 1,
+      "pilota": "VER"
+     },
+     {
+      "pos": 2,
+      "num": 81,
+      "pilota": "PIA"
+     },
+     {
+      "pos": 3,
+      "num": 4,
+      "pilota": "NOR"
+     }
+    ],
+    "Race": [
+     {
+      "pos": 1,
+      "num": 1,
+      "pilota": "VER"
+     },
+     {
+      "pos": 2,
+      "num": 4,
+      "pilota": "NOR"
+     },
+     {
+      "pos": 3,
+      "num": 16,
+      "pilota": "LEC"
+     }
+    ]
+   }
+  },
+  {
+   "anno": 2024,
+   "meeting_key": 1236,
+   "luogo": "Monaco",
+   "sprint": false,
+   "sessioni": {
+    "Practice 2": [
+     {
+      "pos": 1,
+      "num": 16,
+      "pilota": "LEC"
+     },
+     {
+      "pos": 2,
+      "num": 44,
+      "pilota": "HAM"
+     },
+     {
+      "pos": 3,
+      "num": 14,
+      "pilota": "ALO"
+     }
+    ],
+    "Practice 3": [
+     {
+      "pos": 1,
+      "num": 16,
+      "pilota": "LEC"
+     },
+     {
+      "pos": 2,
+      "num": 1,
+      "pilota": "VER"
+     },
+     {
+      "pos": 3,
+      "num": 44,
+      "pilota": "HAM"
+     }
+    ],
+    "Qualifying": [
+     {
+      "pos": 1,
+      "num": 16,
+      "pilota": "LEC"
+     },
+     {
+      "pos": 2,
+      "num": 81,
+      "pilota": "PIA"
+     },
+     {
+      "pos": 3,
+      "num": 55,
+      "pilota": "SAI"
+     }
+    ],
+    "Race": [
+     {
+      "pos": 1,
+      "num": 16,
+      "pilota": "LEC"
+     },
+     {
+      "pos": 2,
+      "num": 81,
+      "pilota": "PIA"
+     },
+     {
+      "pos": 3,
+      "num": 55,
+      "pilota": "SAI"
+     }
+    ]
+   }
+  },
+  {
+   "anno": 2024,
+   "meeting_key": 1237,
+   "luogo": "Montréal",
+   "sprint": false,
+   "sessioni": {
+    "Practice 2": [
+     {
+      "pos": 1,
+      "num": 14,
+      "pilota": "ALO"
+     },
+     {
+      "pos": 2,
+      "num": 63,
+      "pilota": "RUS"
+     },
+     {
+      "pos": 3,
+      "num": 18,
+      "pilota": "STR"
+     }
+    ],
+    "Practice 3": [
+     {
+      "pos": 1,
+      "num": 44,
+      "pilota": "HAM"
+     },
+     {
+      "pos": 2,
+      "num": 1,
+      "pilota": "VER"
+     },
+     {
+      "pos": 3,
+      "num": 63,
+      "pilota": "RUS"
+     }
+    ],
+    "Qualifying": [
+     {
+      "pos": 1,
+      "num": 63,
+      "pilota": "RUS"
+     },
+     {
+      "pos": 2,
+      "num": 1,
+      "pilota": "VER"
+     },
+     {
+      "pos": 3,
+      "num": 4,
+      "pilota": "NOR"
+     }
+    ],
+    "Race": [
+     {
+      "pos": 1,
+      "num": 1,
+      "pilota": "VER"
+     },
+     {
+      "pos": 2,
+      "num": 4,
+      "pilota": "NOR"
+     },
+     {
+      "pos": 3,
+      "num": 63,
+      "pilota": "RUS"
+     }
+    ]
+   }
+  },
+  {
+   "anno": 2024,
+   "meeting_key": 1238,
+   "luogo": "Barcelona",
+   "sprint": false,
+   "sessioni": {
+    "Practice 2": [
+     {
+      "pos": 1,
+      "num": 44,
+      "pilota": "HAM"
+     },
+     {
+      "pos": 2,
+      "num": 55,
+      "pilota": "SAI"
+     },
+     {
+      "pos": 3,
+      "num": 4,
+      "pilota": "NOR"
+     }
+    ],
+    "Practice 3": [
+     {
+      "pos": 1,
+      "num": 55,
+      "pilota": "SAI"
+     },
+     {
+      "pos": 2,
+      "num": 4,
+      "pilota": "NOR"
+     },
+     {
+      "pos": 3,
+      "num": 16,
+      "pilota": "LEC"
+     }
+    ],
+    "Qualifying": [
+     {
+      "pos": 1,
+      "num": 4,
+      "pilota": "NOR"
+     },
+     {
+      "pos": 2,
+      "num": 1,
+      "pilota": "VER"
+     },
+     {
+      "pos": 3,
+      "num": 44,
+      "pilota": "HAM"
+     }
+    ],
+    "Race": [
+     {
+      "pos": 1,
+      "num": 1,
+      "pilota": "VER"
+     },
+     {
+      "pos": 2,
+      "num": 4,
+      "pilota": "NOR"
+     },
+     {
+      "pos": 3,
+      "num": 44,
+      "pilota": "HAM"
+     }
+    ]
+   }
+  },
+  {
+   "anno": 2024,
+   "meeting_key": 1239,
+   "luogo": "Spielberg",
+   "sprint": true,
+   "sessioni": {
+    "Qualifying": [
+     {
+      "pos": 1,
+      "num": 1,
+      "pilota": "VER"
+     },
+     {
+      "pos": 2,
+      "num": 4,
+      "pilota": "NOR"
+     },
+     {
+      "pos": 3,
+      "num": 63,
+      "pilota": "RUS"
+     }
+    ],
+    "Race": [
+     {
+      "pos": 1,
+      "num": 63,
+      "pilota": "RUS"
+     },
+     {
+      "pos": 2,
+      "num": 81,
+      "pilota": "PIA"
+     },
+     {
+      "pos": 3,
+      "num": 55,
+      "pilota": "SAI"
+     }
+    ]
+   }
+  },
+  {
+   "anno": 2024,
+   "meeting_key": 1240,
+   "luogo": "Silverstone",
+   "sprint": false,
+   "sessioni": {
+    "Practice 2": [
+     {
+      "pos": 1,
+      "num": 4,
+      "pilota": "NOR"
+     },
+     {
+      "pos": 2,
+      "num": 81,
+      "pilota": "PIA"
+     },
+     {
+      "pos": 3,
+      "num": 11,
+      "pilota": "PER"
+     }
+    ],
+    "Practice 3": [
+     {
+      "pos": 1,
+      "num": 63,
+      "pilota": "RUS"
+     },
+     {
+      "pos": 2,
+      "num": 44,
+      "pilota": "HAM"
+     },
+     {
+      "pos": 3,
+      "num": 4,
+      "pilota": "NOR"
+     }
+    ],
+    "Qualifying": [
+     {
+      "pos": 1,
+      "num": 63,
+      "pilota": "RUS"
+     },
+     {
+      "pos": 2,
+      "num": 44,
+      "pilota": "HAM"
+     },
+     {
+      "pos": 3,
+      "num": 4,
+      "pilota": "NOR"
+     }
+    ],
+    "Race": [
+     {
+      "pos": 1,
+      "num": 44,
+      "pilota": "HAM"
+     },
+     {
+      "pos": 2,
+      "num": 1,
+      "pilota": "VER"
+     },
+     {
+      "pos": 3,
+      "num": 4,
+      "pilota": "NOR"
+     }
+    ]
+   }
+  },
+  {
+   "anno": 2024,
+   "meeting_key": 1241,
+   "luogo": "Budapest",
+   "sprint": false,
+   "sessioni": {
+    "Practice 2": [
+     {
+      "pos": 1,
+      "num": 4,
+      "pilota": "NOR"
+     },
+     {
+      "pos": 2,
+      "num": 1,
+      "pilota": "VER"
+     },
+     {
+      "pos": 3,
+      "num": 55,
+      "pilota": "SAI"
+     }
+    ],
+    "Practice 3": [
+     {
+      "pos": 1,
+      "num": 4,
+      "pilota": "NOR"
+     },
+     {
+      "pos": 2,
+      "num": 81,
+      "pilota": "PIA"
+     },
+     {
+      "pos": 3,
+      "num": 1,
+      "pilota": "VER"
+     }
+    ],
+    "Qualifying": [
+     {
+      "pos": 1,
+      "num": 4,
+      "pilota": "NOR"
+     },
+     {
+      "pos": 2,
+      "num": 81,
+      "pilota": "PIA"
+     },
+     {
+      "pos": 3,
+      "num": 1,
+      "pilota": "VER"
+     }
+    ],
+    "Race": [
+     {
+      "pos": 1,
+      "num": 81,
+      "pilota": "PIA"
+     },
+     {
+      "pos": 2,
+      "num": 4,
+      "pilota": "NOR"
+     },
+     {
+      "pos": 3,
+      "num": 44,
+      "pilota": "HAM"
+     }
+    ]
+   }
+  },
+  {
+   "anno": 2024,
+   "meeting_key": 1242,
+   "luogo": "Spa-Francorchamps",
+   "sprint": false,
+   "sessioni": {
+    "Practice 2": [
+     {
+      "pos": 1,
+      "num": 4,
+      "pilota": "NOR"
+     },
+     {
+      "pos": 2,
+      "num": 81,
+      "pilota": "PIA"
+     },
+     {
+      "pos": 3,
+      "num": 1,
+      "pilota": "VER"
+     }
+    ],
+    "Practice 3": [
+     {
+      "pos": 1,
+      "num": 1,
+      "pilota": "VER"
+     },
+     {
+      "pos": 2,
+      "num": 81,
+      "pilota": "PIA"
+     },
+     {
+      "pos": 3,
+      "num": 10,
+      "pilota": "GAS"
+     }
+    ],
+    "Qualifying": [
+     {
+      "pos": 1,
+      "num": 1,
+      "pilota": "VER"
+     },
+     {
+      "pos": 2,
+      "num": 16,
+      "pilota": "LEC"
+     },
+     {
+      "pos": 3,
+      "num": 11,
+      "pilota": "PER"
+     }
+    ],
+    "Race": [
+     {
+      "pos": 1,
+      "num": 44,
+      "pilota": "HAM"
+     },
+     {
+      "pos": 2,
+      "num": 81,
+      "pilota": "PIA"
+     },
+     {
+      "pos": 3,
+      "num": 16,
+      "pilota": "LEC"
+     }
+    ]
+   }
+  },
+  {
+   "anno": 2024,
+   "meeting_key": 1243,
+   "luogo": "Zandvoort",
+   "sprint": false,
+   "sessioni": {
+    "Practice 2": [
+     {
+      "pos": 1,
+      "num": 63,
+      "pilota": "RUS"
+     },
+     {
+      "pos": 2,
+      "num": 81,
+      "pilota": "PIA"
+     },
+     {
+      "pos": 3,
+      "num": 44,
+      "pilota": "HAM"
+     }
+    ],
+    "Practice 3": [
+     {
+      "pos": 1,
+      "num": 10,
+      "pilota": "GAS"
+     },
+     {
+      "pos": 2,
+      "num": 20,
+      "pilota": "MAG"
+     },
+     {
+      "pos": 3,
+      "num": 77,
+      "pilota": "BOT"
+     }
+    ],
+    "Qualifying": [
+     {
+      "pos": 1,
+      "num": 4,
+      "pilota": "NOR"
+     },
+     {
+      "pos": 2,
+      "num": 1,
+      "pilota": "VER"
+     },
+     {
+      "pos": 3,
+      "num": 81,
+      "pilota": "PIA"
+     }
+    ],
+    "Race": [
+     {
+      "pos": 1,
+      "num": 4,
+      "pilota": "NOR"
+     },
+     {
+      "pos": 2,
+      "num": 1,
+      "pilota": "VER"
+     },
+     {
+      "pos": 3,
+      "num": 16,
+      "pilota": "LEC"
+     }
+    ]
+   }
+  },
+  {
+   "anno": 2024,
+   "meeting_key": 1244,
+   "luogo": "Monza",
+   "sprint": false,
+   "sessioni": {
+    "Practice 2": [
+     {
+      "pos": 1,
+      "num": 44,
+      "pilota": "HAM"
+     },
+     {
+      "pos": 2,
+      "num": 4,
+      "pilota": "NOR"
+     },
+     {
+      "pos": 3,
+      "num": 55,
+      "pilota": "SAI"
+     }
+    ],
+    "Practice 3": [
+     {
+      "pos": 1,
+      "num": 44,
+      "pilota": "HAM"
+     },
+     {
+      "pos": 2,
+      "num": 63,
+      "pilota": "RUS"
+     },
+     {
+      "pos": 3,
+      "num": 16,
+      "pilota": "LEC"
+     }
+    ],
+    "Qualifying": [
+     {
+      "pos": 1,
+      "num": 4,
+      "pilota": "NOR"
+     },
+     {
+      "pos": 2,
+      "num": 81,
+      "pilota": "PIA"
+     },
+     {
+      "pos": 3,
+      "num": 63,
+      "pilota": "RUS"
+     }
+    ],
+    "Race": [
+     {
+      "pos": 1,
+      "num": 16,
+      "pilota": "LEC"
+     },
+     {
+      "pos": 2,
+      "num": 81,
+      "pilota": "PIA"
+     },
+     {
+      "pos": 3,
+      "num": 4,
+      "pilota": "NOR"
+     }
+    ]
+   }
+  },
+  {
+   "anno": 2024,
+   "meeting_key": 1245,
+   "luogo": "Baku",
+   "sprint": false,
+   "sessioni": {
+    "Practice 2": [
+     {
+      "pos": 1,
+      "num": 16,
+      "pilota": "LEC"
+     },
+     {
+      "pos": 2,
+      "num": 11,
+      "pilota": "PER"
+     },
+     {
+      "pos": 3,
+      "num": 44,
+      "pilota": "HAM"
+     }
+    ],
+    "Practice 3": [
+     {
+      "pos": 1,
+      "num": 63,
+      "pilota": "RUS"
+     },
+     {
+      "pos": 2,
+      "num": 16,
+      "pilota": "LEC"
+     },
+     {
+      "pos": 3,
+      "num": 4,
+      "pilota": "NOR"
+     }
+    ],
+    "Qualifying": [
+     {
+      "pos": 1,
+      "num": 16,
+      "pilota": "LEC"
+     },
+     {
+      "pos": 2,
+      "num": 81,
+      "pilota": "PIA"
+     },
+     {
+      "pos": 3,
+      "num": 55,
+      "pilota": "SAI"
+     }
+    ],
+    "Race": [
+     {
+      "pos": 1,
+      "num": 81,
+      "pilota": "PIA"
+     },
+     {
+      "pos": 2,
+      "num": 16,
+      "pilota": "LEC"
+     },
+     {
+      "pos": 3,
+      "num": 63,
+      "pilota": "RUS"
+     }
+    ]
+   }
+  },
+  {
+   "anno": 2024,
+   "meeting_key": 1246,
+   "luogo": "Marina Bay",
+   "sprint": false,
+   "sessioni": {
+    "Practice 2": [
+     {
+      "pos": 1,
+      "num": 4,
+      "pilota": "NOR"
+     },
+     {
+      "pos": 2,
+      "num": 16,
+      "pilota": "LEC"
+     },
+     {
+      "pos": 3,
+      "num": 55,
+      "pilota": "SAI"
+     }
+    ],
+    "Practice 3": [
+     {
+      "pos": 1,
+      "num": 4,
+      "pilota": "NOR"
+     },
+     {
+      "pos": 2,
+      "num": 63,
+      "pilota": "RUS"
+     },
+     {
+      "pos": 3,
+      "num": 81,
+      "pilota": "PIA"
+     }
+    ],
+    "Qualifying": [
+     {
+      "pos": 1,
+      "num": 4,
+      "pilota": "NOR"
+     },
+     {
+      "pos": 2,
+      "num": 1,
+      "pilota": "VER"
+     },
+     {
+      "pos": 3,
+      "num": 44,
+      "pilota": "HAM"
+     }
+    ],
+    "Race": [
+     {
+      "pos": 1,
+      "num": 4,
+      "pilota": "NOR"
+     },
+     {
+      "pos": 2,
+      "num": 1,
+      "pilota": "VER"
+     },
+     {
+      "pos": 3,
+      "num": 81,
+      "pilota": "PIA"
+     }
+    ]
+   }
+  },
+  {
+   "anno": 2024,
+   "meeting_key": 1247,
+   "luogo": "Austin",
+   "sprint": true,
+   "sessioni": {
+    "Qualifying": [
+     {
+      "pos": 1,
+      "num": 4,
+      "pilota": "NOR"
+     },
+     {
+      "pos": 2,
+      "num": 1,
+      "pilota": "VER"
+     },
+     {
+      "pos": 3,
+      "num": 55,
+      "pilota": "SAI"
+     }
+    ],
+    "Race": [
+     {
+      "pos": 1,
+      "num": 16,
+      "pilota": "LEC"
+     },
+     {
+      "pos": 2,
+      "num": 55,
+      "pilota": "SAI"
+     },
+     {
+      "pos": 3,
+      "num": 1,
+      "pilota": "VER"
+     }
+    ]
+   }
+  },
+  {
+   "anno": 2024,
+   "meeting_key": 1248,
+   "luogo": "Mexico City",
+   "sprint": false,
+   "sessioni": {
+    "Practice 2": [
+     {
+      "pos": 1,
+      "num": 55,
+      "pilota": "SAI"
+     },
+     {
+      "pos": 2,
+      "num": 81,
+      "pilota": "PIA"
+     },
+     {
+      "pos": 3,
+      "num": 22,
+      "pilota": "TSU"
+     }
+    ],
+    "Practice 3": [
+     {
+      "pos": 1,
+      "num": 81,
+      "pilota": "PIA"
+     },
+     {
+      "pos": 2,
+      "num": 4,
+      "pilota": "NOR"
+     },
+     {
+      "pos": 3,
+      "num": 55,
+      "pilota": "SAI"
+     }
+    ],
+    "Qualifying": [
+     {
+      "pos": 1,
+      "num": 55,
+      "pilota": "SAI"
+     },
+     {
+      "pos": 2,
+      "num": 1,
+      "pilota": "VER"
+     },
+     {
+      "pos": 3,
+      "num": 4,
+      "pilota": "NOR"
+     }
+    ],
+    "Race": [
+     {
+      "pos": 1,
+      "num": 55,
+      "pilota": "SAI"
+     },
+     {
+      "pos": 2,
+      "num": 4,
+      "pilota": "NOR"
+     },
+     {
+      "pos": 3,
+      "num": 16,
+      "pilota": "LEC"
+     }
+    ]
+   }
+  },
+  {
+   "anno": 2024,
+   "meeting_key": 1249,
+   "luogo": "São Paulo",
+   "sprint": true,
+   "sessioni": {
+    "Qualifying": [
+     {
+      "pos": 1,
+      "num": 4,
+      "pilota": "NOR"
+     },
+     {
+      "pos": 2,
+      "num": 63,
+      "pilota": "RUS"
+     },
+     {
+      "pos": 3,
+      "num": 22,
+      "pilota": "TSU"
+     }
+    ],
+    "Race": [
+     {
+      "pos": 1,
+      "num": 1,
+      "pilota": "VER"
+     },
+     {
+      "pos": 2,
+      "num": 31,
+      "pilota": "OCO"
+     },
+     {
+      "pos": 3,
+      "num": 10,
+      "pilota": "GAS"
+     }
+    ]
+   }
+  },
+  {
+   "anno": 2024,
+   "meeting_key": 1250,
+   "luogo": "Las Vegas",
+   "sprint": false,
+   "sessioni": {
+    "Practice 2": [
+     {
+      "pos": 1,
+      "num": 44,
+      "pilota": "HAM"
+     },
+     {
+      "pos": 2,
+      "num": 4,
+      "pilota": "NOR"
+     },
+     {
+      "pos": 3,
+      "num": 63,
+      "pilota": "RUS"
+     }
+    ],
+    "Practice 3": [
+     {
+      "pos": 1,
+      "num": 63,
+      "pilota": "RUS"
+     },
+     {
+      "pos": 2,
+      "num": 81,
+      "pilota": "PIA"
+     },
+     {
+      "pos": 3,
+      "num": 55,
+      "pilota": "SAI"
+     }
+    ],
+    "Qualifying": [
+     {
+      "pos": 1,
+      "num": 63,
+      "pilota": "RUS"
+     },
+     {
+      "pos": 2,
+      "num": 55,
+      "pilota": "SAI"
+     },
+     {
+      "pos": 3,
+      "num": 10,
+      "pilota": "GAS"
+     }
+    ],
+    "Race": [
+     {
+      "pos": 1,
+      "num": 63,
+      "pilota": "RUS"
+     },
+     {
+      "pos": 2,
+      "num": 44,
+      "pilota": "HAM"
+     },
+     {
+      "pos": 3,
+      "num": 55,
+      "pilota": "SAI"
+     }
+    ]
+   }
+  },
+  {
+   "anno": 2024,
+   "meeting_key": 1251,
+   "luogo": "Lusail",
+   "sprint": true,
+   "sessioni": {
+    "Qualifying": [
+     {
+      "pos": 1,
+      "num": 1,
+      "pilota": "VER"
+     },
+     {
+      "pos": 2,
+      "num": 63,
+      "pilota": "RUS"
+     },
+     {
+      "pos": 3,
+      "num": 4,
+      "pilota": "NOR"
+     }
+    ],
+    "Race": [
+     {
+      "pos": 1,
+      "num": 1,
+      "pilota": "VER"
+     },
+     {
+      "pos": 2,
+      "num": 16,
+      "pilota": "LEC"
+     },
+     {
+      "pos": 3,
+      "num": 81,
+      "pilota": "PIA"
+     }
+    ]
+   }
+  },
+  {
+   "anno": 2024,
+   "meeting_key": 1252,
+   "luogo": "Yas Island",
+   "sprint": false,
+   "sessioni": {
+    "Practice 2": [
+     {
+      "pos": 1,
+      "num": 4,
+      "pilota": "NOR"
+     },
+     {
+      "pos": 2,
+      "num": 81,
+      "pilota": "PIA"
+     },
+     {
+      "pos": 3,
+      "num": 27,
+      "pilota": "HUL"
+     }
+    ],
+    "Practice 3": [
+     {
+      "pos": 1,
+      "num": 81,
+      "pilota": "PIA"
+     },
+     {
+      "pos": 2,
+      "num": 4,
+      "pilota": "NOR"
+     },
+     {
+      "pos": 3,
+      "num": 44,
+      "pilota": "HAM"
+     }
+    ],
+    "Qualifying": [
+     {
+      "pos": 1,
+      "num": 4,
+      "pilota": "NOR"
+     },
+     {
+      "pos": 2,
+      "num": 81,
+      "pilota": "PIA"
+     },
+     {
+      "pos": 3,
+      "num": 55,
+      "pilota": "SAI"
+     }
+    ],
+    "Race": [
+     {
+      "pos": 1,
+      "num": 4,
+      "pilota": "NOR"
+     },
+     {
+      "pos": 2,
+      "num": 55,
+      "pilota": "SAI"
+     },
+     {
+      "pos": 3,
+      "num": 16,
+      "pilota": "LEC"
+     }
+    ]
+   }
+  },
+  {
+   "anno": 2025,
+   "meeting_key": 1254,
+   "luogo": "Melbourne",
+   "sprint": false,
+   "sessioni": {
+    "Practice 2": [
+     {
+      "pos": 1,
+      "num": 16,
+      "pilota": "LEC"
+     },
+     {
+      "pos": 2,
+      "num": 81,
+      "pilota": "PIA"
+     },
+     {
+      "pos": 3,
+      "num": 4,
+      "pilota": "NOR"
+     }
+    ],
+    "Practice 3": [
+     {
+      "pos": 1,
+      "num": 81,
+      "pilota": "PIA"
+     },
+     {
+      "pos": 2,
+      "num": 63,
+      "pilota": "RUS"
+     },
+     {
+      "pos": 3,
+      "num": 1,
+      "pilota": "VER"
+     }
+    ],
+    "Qualifying": [
+     {
+      "pos": 1,
+      "num": 4,
+      "pilota": "NOR"
+     },
+     {
+      "pos": 2,
+      "num": 81,
+      "pilota": "PIA"
+     },
+     {
+      "pos": 3,
+      "num": 1,
+      "pilota": "VER"
+     }
+    ],
+    "Race": [
+     {
+      "pos": 1,
+      "num": 4,
+      "pilota": "NOR"
+     },
+     {
+      "pos": 2,
+      "num": 1,
+      "pilota": "VER"
+     },
+     {
+      "pos": 3,
+      "num": 63,
+      "pilota": "RUS"
+     }
+    ]
+   }
+  },
+  {
+   "anno": 2025,
+   "meeting_key": 1255,
+   "luogo": "Shanghai",
+   "sprint": true,
+   "sessioni": {
+    "Qualifying": [
+     {
+      "pos": 1,
+      "num": 81,
+      "pilota": "PIA"
+     },
+     {
+      "pos": 2,
+      "num": 63,
+      "pilota": "RUS"
+     },
+     {
+      "pos": 3,
+      "num": 4,
+      "pilota": "NOR"
+     }
+    ],
+    "Race": [
+     {
+      "pos": 1,
+      "num": 81,
+      "pilota": "PIA"
+     },
+     {
+      "pos": 2,
+      "num": 4,
+      "pilota": "NOR"
+     },
+     {
+      "pos": 3,
+      "num": 63,
+      "pilota": "RUS"
+     }
+    ]
+   }
+  },
+  {
+   "anno": 2025,
+   "meeting_key": 1256,
+   "luogo": "Suzuka",
+   "sprint": false,
+   "sessioni": {
+    "Practice 2": [
+     {
+      "pos": 1,
+      "num": 81,
+      "pilota": "PIA"
+     },
+     {
+      "pos": 2,
+      "num": 4,
+      "pilota": "NOR"
+     },
+     {
+      "pos": 3,
+      "num": 6,
+      "pilota": "HAD"
+     }
+    ],
+    "Practice 3": [
+     {
+      "pos": 1,
+      "num": 4,
+      "pilota": "NOR"
+     },
+     {
+      "pos": 2,
+      "num": 81,
+      "pilota": "PIA"
+     },
+     {
+      "pos": 3,
+      "num": 63,
+      "pilota": "RUS"
+     }
+    ],
+    "Qualifying": [
+     {
+      "pos": 1,
+      "num": 1,
+      "pilota": "VER"
+     },
+     {
+      "pos": 2,
+      "num": 4,
+      "pilota": "NOR"
+     },
+     {
+      "pos": 3,
+      "num": 81,
+      "pilota": "PIA"
+     }
+    ],
+    "Race": [
+     {
+      "pos": 1,
+      "num": 1,
+      "pilota": "VER"
+     },
+     {
+      "pos": 2,
+      "num": 4,
+      "pilota": "NOR"
+     },
+     {
+      "pos": 3,
+      "num": 81,
+      "pilota": "PIA"
+     }
+    ]
+   }
+  },
+  {
+   "anno": 2025,
+   "meeting_key": 1257,
+   "luogo": "Sakhir",
+   "sprint": false,
+   "sessioni": {
+    "Practice 2": [
+     {
+      "pos": 1,
+      "num": 81,
+      "pilota": "PIA"
+     },
+     {
+      "pos": 2,
+      "num": 4,
+      "pilota": "NOR"
+     },
+     {
+      "pos": 3,
+      "num": 63,
+      "pilota": "RUS"
+     }
+    ],
+    "Practice 3": [
+     {
+      "pos": 1,
+      "num": 81,
+      "pilota": "PIA"
+     },
+     {
+      "pos": 2,
+      "num": 4,
+      "pilota": "NOR"
+     },
+     {
+      "pos": 3,
+      "num": 16,
+      "pilota": "LEC"
+     }
+    ],
+    "Qualifying": [
+     {
+      "pos": 1,
+      "num": 81,
+      "pilota": "PIA"
+     },
+     {
+      "pos": 2,
+      "num": 63,
+      "pilota": "RUS"
+     },
+     {
+      "pos": 3,
+      "num": 16,
+      "pilota": "LEC"
+     }
+    ],
+    "Race": [
+     {
+      "pos": 1,
+      "num": 81,
+      "pilota": "PIA"
+     },
+     {
+      "pos": 2,
+      "num": 63,
+      "pilota": "RUS"
+     },
+     {
+      "pos": 3,
+      "num": 4,
+      "pilota": "NOR"
+     }
+    ]
+   }
+  },
+  {
+   "anno": 2025,
+   "meeting_key": 1258,
+   "luogo": "Jeddah",
+   "sprint": false,
+   "sessioni": {
+    "Practice 2": [
+     {
+      "pos": 1,
+      "num": 4,
+      "pilota": "NOR"
+     },
+     {
+      "pos": 2,
+      "num": 81,
+      "pilota": "PIA"
+     },
+     {
+      "pos": 3,
+      "num": 1,
+      "pilota": "VER"
+     }
+    ],
+    "Practice 3": [
+     {
+      "pos": 1,
+      "num": 4,
+      "pilota": "NOR"
+     },
+     {
+      "pos": 2,
+      "num": 81,
+      "pilota": "PIA"
+     },
+     {
+      "pos": 3,
+      "num": 63,
+      "pilota": "RUS"
+     }
+    ],
+    "Qualifying": [
+     {
+      "pos": 1,
+      "num": 1,
+      "pilota": "VER"
+     },
+     {
+      "pos": 2,
+      "num": 81,
+      "pilota": "PIA"
+     },
+     {
+      "pos": 3,
+      "num": 63,
+      "pilota": "RUS"
+     }
+    ],
+    "Race": [
+     {
+      "pos": 1,
+      "num": 81,
+      "pilota": "PIA"
+     },
+     {
+      "pos": 2,
+      "num": 1,
+      "pilota": "VER"
+     },
+     {
+      "pos": 3,
+      "num": 16,
+      "pilota": "LEC"
+     }
+    ]
+   }
+  },
+  {
+   "anno": 2025,
+   "meeting_key": 1259,
+   "luogo": "Miami Gardens",
+   "sprint": true,
+   "sessioni": {
+    "Qualifying": [
+     {
+      "pos": 1,
+      "num": 1,
+      "pilota": "VER"
+     },
+     {
+      "pos": 2,
+      "num": 4,
+      "pilota": "NOR"
+     },
+     {
+      "pos": 3,
+      "num": 12,
+      "pilota": "ANT"
+     }
+    ],
+    "Race": [
+     {
+      "pos": 1,
+      "num": 81,
+      "pilota": "PIA"
+     },
+     {
+      "pos": 2,
+      "num": 4,
+      "pilota": "NOR"
+     },
+     {
+      "pos": 3,
+      "num": 63,
+      "pilota": "RUS"
+     }
+    ]
+   }
+  },
+  {
+   "anno": 2025,
+   "meeting_key": 1260,
+   "luogo": "Imola",
+   "sprint": false,
+   "sessioni": {
+    "Practice 2": [
+     {
+      "pos": 1,
+      "num": 81,
+      "pilota": "PIA"
+     },
+     {
+      "pos": 2,
+      "num": 4,
+      "pilota": "NOR"
+     },
+     {
+      "pos": 3,
+      "num": 10,
+      "pilota": "GAS"
+     }
+    ],
+    "Practice 3": [
+     {
+      "pos": 1,
+      "num": 4,
+      "pilota": "NOR"
+     },
+     {
+      "pos": 2,
+      "num": 81,
+      "pilota": "PIA"
+     },
+     {
+      "pos": 3,
+      "num": 1,
+      "pilota": "VER"
+     }
+    ],
+    "Qualifying": [
+     {
+      "pos": 1,
+      "num": 81,
+      "pilota": "PIA"
+     },
+     {
+      "pos": 2,
+      "num": 1,
+      "pilota": "VER"
+     },
+     {
+      "pos": 3,
+      "num": 63,
+      "pilota": "RUS"
+     }
+    ],
+    "Race": [
+     {
+      "pos": 1,
+      "num": 1,
+      "pilota": "VER"
+     },
+     {
+      "pos": 2,
+      "num": 4,
+      "pilota": "NOR"
+     },
+     {
+      "pos": 3,
+      "num": 81,
+      "pilota": "PIA"
+     }
+    ]
+   }
+  },
+  {
+   "anno": 2025,
+   "meeting_key": 1261,
+   "luogo": "Monaco",
+   "sprint": false,
+   "sessioni": {
+    "Practice 2": [
+     {
+      "pos": 1,
+      "num": 16,
+      "pilota": "LEC"
+     },
+     {
+      "pos": 2,
+      "num": 81,
+      "pilota": "PIA"
+     },
+     {
+      "pos": 3,
+      "num": 44,
+      "pilota": "HAM"
+     }
+    ],
+    "Practice 3": [
+     {
+      "pos": 1,
+      "num": 16,
+      "pilota": "LEC"
+     },
+     {
+      "pos": 2,
+      "num": 1,
+      "pilota": "VER"
+     },
+     {
+      "pos": 3,
+      "num": 4,
+      "pilota": "NOR"
+     }
+    ],
+    "Qualifying": [
+     {
+      "pos": 1,
+      "num": 4,
+      "pilota": "NOR"
+     },
+     {
+      "pos": 2,
+      "num": 16,
+      "pilota": "LEC"
+     },
+     {
+      "pos": 3,
+      "num": 81,
+      "pilota": "PIA"
+     }
+    ],
+    "Race": [
+     {
+      "pos": 1,
+      "num": 4,
+      "pilota": "NOR"
+     },
+     {
+      "pos": 2,
+      "num": 16,
+      "pilota": "LEC"
+     },
+     {
+      "pos": 3,
+      "num": 81,
+      "pilota": "PIA"
+     }
+    ]
+   }
+  },
+  {
+   "anno": 2025,
+   "meeting_key": 1262,
+   "luogo": "Barcelona",
+   "sprint": false,
+   "sessioni": {
+    "Practice 2": [
+     {
+      "pos": 1,
+      "num": 81,
+      "pilota": "PIA"
+     },
+     {
+      "pos": 2,
+      "num": 63,
+      "pilota": "RUS"
+     },
+     {
+      "pos": 3,
+      "num": 1,
+      "pilota": "VER"
+     }
+    ],
+    "Practice 3": [
+     {
+      "pos": 1,
+      "num": 81,
+      "pilota": "PIA"
+     },
+     {
+      "pos": 2,
+      "num": 4,
+      "pilota": "NOR"
+     },
+     {
+      "pos": 3,
+      "num": 16,
+      "pilota": "LEC"
+     }
+    ],
+    "Qualifying": [
+     {
+      "pos": 1,
+      "num": 81,
+      "pilota": "PIA"
+     },
+     {
+      "pos": 2,
+      "num": 4,
+      "pilota": "NOR"
+     },
+     {
+      "pos": 3,
+      "num": 1,
+      "pilota": "VER"
+     }
+    ],
+    "Race": [
+     {
+      "pos": 1,
+      "num": 81,
+      "pilota": "PIA"
+     },
+     {
+      "pos": 2,
+      "num": 4,
+      "pilota": "NOR"
+     },
+     {
+      "pos": 3,
+      "num": 16,
+      "pilota": "LEC"
+     }
+    ]
+   }
+  },
+  {
+   "anno": 2025,
+   "meeting_key": 1263,
+   "luogo": "Montréal",
+   "sprint": false,
+   "sessioni": {
+    "Practice 2": [
+     {
+      "pos": 1,
+      "num": 63,
+      "pilota": "RUS"
+     },
+     {
+      "pos": 2,
+      "num": 4,
+      "pilota": "NOR"
+     },
+     {
+      "pos": 3,
+      "num": 12,
+      "pilota": "ANT"
+     }
+    ],
+    "Practice 3": [
+     {
+      "pos": 1,
+      "num": 4,
+      "pilota": "NOR"
+     },
+     {
+      "pos": 2,
+      "num": 16,
+      "pilota": "LEC"
+     },
+     {
+      "pos": 3,
+      "num": 63,
+      "pilota": "RUS"
+     }
+    ],
+    "Qualifying": [
+     {
+      "pos": 1,
+      "num": 63,
+      "pilota": "RUS"
+     },
+     {
+      "pos": 2,
+      "num": 1,
+      "pilota": "VER"
+     },
+     {
+      "pos": 3,
+      "num": 81,
+      "pilota": "PIA"
+     }
+    ],
+    "Race": [
+     {
+      "pos": 1,
+      "num": 63,
+      "pilota": "RUS"
+     },
+     {
+      "pos": 2,
+      "num": 1,
+      "pilota": "VER"
+     },
+     {
+      "pos": 3,
+      "num": 12,
+      "pilota": "ANT"
+     }
+    ]
+   }
+  },
+  {
+   "anno": 2025,
+   "meeting_key": 1264,
+   "luogo": "Spielberg",
+   "sprint": false,
+   "sessioni": {
+    "Practice 2": [
+     {
+      "pos": 1,
+      "num": 4,
+      "pilota": "NOR"
+     },
+     {
+      "pos": 2,
+      "num": 81,
+      "pilota": "PIA"
+     },
+     {
+      "pos": 3,
+      "num": 1,
+      "pilota": "VER"
+     }
+    ],
+    "Practice 3": [
+     {
+      "pos": 1,
+      "num": 4,
+      "pilota": "NOR"
+     },
+     {
+      "pos": 2,
+      "num": 81,
+      "pilota": "PIA"
+     },
+     {
+      "pos": 3,
+      "num": 1,
+      "pilota": "VER"
+     }
+    ],
+    "Qualifying": [
+     {
+      "pos": 1,
+      "num": 4,
+      "pilota": "NOR"
+     },
+     {
+      "pos": 2,
+      "num": 16,
+      "pilota": "LEC"
+     },
+     {
+      "pos": 3,
+      "num": 81,
+      "pilota": "PIA"
+     }
+    ],
+    "Race": [
+     {
+      "pos": 1,
+      "num": 4,
+      "pilota": "NOR"
+     },
+     {
+      "pos": 2,
+      "num": 81,
+      "pilota": "PIA"
+     },
+     {
+      "pos": 3,
+      "num": 16,
+      "pilota": "LEC"
+     }
+    ]
+   }
+  },
+  {
+   "anno": 2025,
+   "meeting_key": 1277,
+   "luogo": "Silverstone",
+   "sprint": false,
+   "sessioni": {
+    "Practice 2": [
+     {
+      "pos": 1,
+      "num": 4,
+      "pilota": "NOR"
+     },
+     {
+      "pos": 2,
+      "num": 16,
+      "pilota": "LEC"
+     },
+     {
+      "pos": 3,
+      "num": 44,
+      "pilota": "HAM"
+     }
+    ],
+    "Practice 3": [
+     {
+      "pos": 1,
+      "num": 16,
+      "pilota": "LEC"
+     },
+     {
+      "pos": 2,
+      "num": 81,
+      "pilota": "PIA"
+     },
+     {
+      "pos": 3,
+      "num": 1,
+      "pilota": "VER"
+     }
+    ],
+    "Qualifying": [
+     {
+      "pos": 1,
+      "num": 1,
+      "pilota": "VER"
+     },
+     {
+      "pos": 2,
+      "num": 81,
+      "pilota": "PIA"
+     },
+     {
+      "pos": 3,
+      "num": 4,
+      "pilota": "NOR"
+     }
+    ],
+    "Race": [
+     {
+      "pos": 1,
+      "num": 4,
+      "pilota": "NOR"
+     },
+     {
+      "pos": 2,
+      "num": 81,
+      "pilota": "PIA"
+     },
+     {
+      "pos": 3,
+      "num": 27,
+      "pilota": "HUL"
+     }
+    ]
+   }
+  },
+  {
+   "anno": 2025,
+   "meeting_key": 1265,
+   "luogo": "Spa-Francorchamps",
+   "sprint": true,
+   "sessioni": {
+    "Qualifying": [
+     {
+      "pos": 1,
+      "num": 4,
+      "pilota": "NOR"
+     },
+     {
+      "pos": 2,
+      "num": 81,
+      "pilota": "PIA"
+     },
+     {
+      "pos": 3,
+      "num": 16,
+      "pilota": "LEC"
+     }
+    ],
+    "Race": [
+     {
+      "pos": 1,
+      "num": 81,
+      "pilota": "PIA"
+     },
+     {
+      "pos": 2,
+      "num": 4,
+      "pilota": "NOR"
+     },
+     {
+      "pos": 3,
+      "num": 16,
+      "pilota": "LEC"
+     }
+    ]
+   }
+  },
+  {
+   "anno": 2025,
+   "meeting_key": 1266,
+   "luogo": "Budapest",
+   "sprint": false,
+   "sessioni": {
+    "Practice 2": [
+     {
+      "pos": 1,
+      "num": 4,
+      "pilota": "NOR"
+     },
+     {
+      "pos": 2,
+      "num": 81,
+      "pilota": "PIA"
+     },
+     {
+      "pos": 3,
+      "num": 16,
+      "pilota": "LEC"
+     }
+    ],
+    "Practice 3": [
+     {
+      "pos": 1,
+      "num": 81,
+      "pilota": "PIA"
+     },
+     {
+      "pos": 2,
+      "num": 4,
+      "pilota": "NOR"
+     },
+     {
+      "pos": 3,
+      "num": 16,
+      "pilota": "LEC"
+     }
+    ],
+    "Qualifying": [
+     {
+      "pos": 1,
+      "num": 16,
+      "pilota": "LEC"
+     },
+     {
+      "pos": 2,
+      "num": 81,
+      "pilota": "PIA"
+     },
+     {
+      "pos": 3,
+      "num": 4,
+      "pilota": "NOR"
+     }
+    ],
+    "Race": [
+     {
+      "pos": 1,
+      "num": 4,
+      "pilota": "NOR"
+     },
+     {
+      "pos": 2,
+      "num": 81,
+      "pilota": "PIA"
+     },
+     {
+      "pos": 3,
+      "num": 63,
+      "pilota": "RUS"
+     }
+    ]
+   }
+  },
+  {
+   "anno": 2025,
+   "meeting_key": 1267,
+   "luogo": "Zandvoort",
+   "sprint": false,
+   "sessioni": {
+    "Practice 2": [
+     {
+      "pos": 1,
+      "num": 4,
+      "pilota": "NOR"
+     },
+     {
+      "pos": 2,
+      "num": 14,
+      "pilota": "ALO"
+     },
+     {
+      "pos": 3,
+      "num": 81,
+      "pilota": "PIA"
+     }
+    ],
+    "Practice 3": [
+     {
+      "pos": 1,
+      "num": 4,
+      "pilota": "NOR"
+     },
+     {
+      "pos": 2,
+      "num": 81,
+      "pilota": "PIA"
+     },
+     {
+      "pos": 3,
+      "num": 63,
+      "pilota": "RUS"
+     }
+    ],
+    "Qualifying": [
+     {
+      "pos": 1,
+      "num": 81,
+      "pilota": "PIA"
+     },
+     {
+      "pos": 2,
+      "num": 4,
+      "pilota": "NOR"
+     },
+     {
+      "pos": 3,
+      "num": 1,
+      "pilota": "VER"
+     }
+    ],
+    "Race": [
+     {
+      "pos": 1,
+      "num": 81,
+      "pilota": "PIA"
+     },
+     {
+      "pos": 2,
+      "num": 1,
+      "pilota": "VER"
+     },
+     {
+      "pos": 3,
+      "num": 6,
+      "pilota": "HAD"
+     }
+    ]
+   }
+  },
+  {
+   "anno": 2025,
+   "meeting_key": 1268,
+   "luogo": "Monza",
+   "sprint": false,
+   "sessioni": {
+    "Practice 2": [
+     {
+      "pos": 1,
+      "num": 4,
+      "pilota": "NOR"
+     },
+     {
+      "pos": 2,
+      "num": 16,
+      "pilota": "LEC"
+     },
+     {
+      "pos": 3,
+      "num": 55,
+      "pilota": "SAI"
+     }
+    ],
+    "Practice 3": [
+     {
+      "pos": 1,
+      "num": 4,
+      "pilota": "NOR"
+     },
+     {
+      "pos": 2,
+      "num": 16,
+      "pilota": "LEC"
+     },
+     {
+      "pos": 3,
+      "num": 81,
+      "pilota": "PIA"
+     }
+    ],
+    "Qualifying": [
+     {
+      "pos": 1,
+      "num": 1,
+      "pilota": "VER"
+     },
+     {
+      "pos": 2,
+      "num": 4,
+      "pilota": "NOR"
+     },
+     {
+      "pos": 3,
+      "num": 81,
+      "pilota": "PIA"
+     }
+    ],
+    "Race": [
+     {
+      "pos": 1,
+      "num": 1,
+      "pilota": "VER"
+     },
+     {
+      "pos": 2,
+      "num": 4,
+      "pilota": "NOR"
+     },
+     {
+      "pos": 3,
+      "num": 81,
+      "pilota": "PIA"
+     }
+    ]
+   }
+  },
+  {
+   "anno": 2025,
+   "meeting_key": 1269,
+   "luogo": "Baku",
+   "sprint": false,
+   "sessioni": {
+    "Practice 2": [
+     {
+      "pos": 1,
+      "num": 44,
+      "pilota": "HAM"
+     },
+     {
+      "pos": 2,
+      "num": 16,
+      "pilota": "LEC"
+     },
+     {
+      "pos": 3,
+      "num": 63,
+      "pilota": "RUS"
+     }
+    ],
+    "Practice 3": [
+     {
+      "pos": 1,
+      "num": 4,
+      "pilota": "NOR"
+     },
+     {
+      "pos": 2,
+      "num": 1,
+      "pilota": "VER"
+     },
+     {
+      "pos": 3,
+      "num": 81,
+      "pilota": "PIA"
+     }
+    ],
+    "Qualifying": [
+     {
+      "pos": 1,
+      "num": 1,
+      "pilota": "VER"
+     },
+     {
+      "pos": 2,
+      "num": 55,
+      "pilota": "SAI"
+     },
+     {
+      "pos": 3,
+      "num": 30,
+      "pilota": "LAW"
+     }
+    ],
+    "Race": [
+     {
+      "pos": 1,
+      "num": 1,
+      "pilota": "VER"
+     },
+     {
+      "pos": 2,
+      "num": 63,
+      "pilota": "RUS"
+     },
+     {
+      "pos": 3,
+      "num": 55,
+      "pilota": "SAI"
+     }
+    ]
+   }
+  },
+  {
+   "anno": 2025,
+   "meeting_key": 1270,
+   "luogo": "Marina Bay",
+   "sprint": false,
+   "sessioni": {
+    "Practice 2": [
+     {
+      "pos": 1,
+      "num": 81,
+      "pilota": "PIA"
+     },
+     {
+      "pos": 2,
+      "num": 6,
+      "pilota": "HAD"
+     },
+     {
+      "pos": 3,
+      "num": 1,
+      "pilota": "VER"
+     }
+    ],
+    "Practice 3": [
+     {
+      "pos": 1,
+      "num": 1,
+      "pilota": "VER"
+     },
+     {
+      "pos": 2,
+      "num": 81,
+      "pilota": "PIA"
+     },
+     {
+      "pos": 3,
+      "num": 63,
+      "pilota": "RUS"
+     }
+    ],
+    "Qualifying": [
+     {
+      "pos": 1,
+      "num": 63,
+      "pilota": "RUS"
+     },
+     {
+      "pos": 2,
+      "num": 1,
+      "pilota": "VER"
+     },
+     {
+      "pos": 3,
+      "num": 81,
+      "pilota": "PIA"
+     }
+    ],
+    "Race": [
+     {
+      "pos": 1,
+      "num": 63,
+      "pilota": "RUS"
+     },
+     {
+      "pos": 2,
+      "num": 1,
+      "pilota": "VER"
+     },
+     {
+      "pos": 3,
+      "num": 4,
+      "pilota": "NOR"
+     }
+    ]
+   }
+  },
+  {
+   "anno": 2025,
+   "meeting_key": 1271,
+   "luogo": "Austin",
+   "sprint": true,
+   "sessioni": {
+    "Qualifying": [
+     {
+      "pos": 1,
+      "num": 1,
+      "pilota": "VER"
+     },
+     {
+      "pos": 2,
+      "num": 4,
+      "pilota": "NOR"
+     },
+     {
+      "pos": 3,
+      "num": 16,
+      "pilota": "LEC"
+     }
+    ],
+    "Race": [
+     {
+      "pos": 1,
+      "num": 1,
+      "pilota": "VER"
+     },
+     {
+      "pos": 2,
+      "num": 4,
+      "pilota": "NOR"
+     },
+     {
+      "pos": 3,
+      "num": 16,
+      "pilota": "LEC"
+     }
+    ]
+   }
+  },
+  {
+   "anno": 2025,
+   "meeting_key": 1272,
+   "luogo": "Mexico City",
+   "sprint": false,
+   "sessioni": {
+    "Practice 2": [
+     {
+      "pos": 1,
+      "num": 1,
+      "pilota": "VER"
+     },
+     {
+      "pos": 2,
+      "num": 16,
+      "pilota": "LEC"
+     },
+     {
+      "pos": 3,
+      "num": 12,
+      "pilota": "ANT"
+     }
+    ],
+    "Practice 3": [
+     {
+      "pos": 1,
+      "num": 4,
+      "pilota": "NOR"
+     },
+     {
+      "pos": 2,
+      "num": 44,
+      "pilota": "HAM"
+     },
+     {
+      "pos": 3,
+      "num": 63,
+      "pilota": "RUS"
+     }
+    ],
+    "Qualifying": [
+     {
+      "pos": 1,
+      "num": 4,
+      "pilota": "NOR"
+     },
+     {
+      "pos": 2,
+      "num": 16,
+      "pilota": "LEC"
+     },
+     {
+      "pos": 3,
+      "num": 44,
+      "pilota": "HAM"
+     }
+    ],
+    "Race": [
+     {
+      "pos": 1,
+      "num": 4,
+      "pilota": "NOR"
+     },
+     {
+      "pos": 2,
+      "num": 16,
+      "pilota": "LEC"
+     },
+     {
+      "pos": 3,
+      "num": 1,
+      "pilota": "VER"
+     }
+    ]
+   }
+  },
+  {
+   "anno": 2025,
+   "meeting_key": 1273,
+   "luogo": "São Paulo",
+   "sprint": true,
+   "sessioni": {
+    "Qualifying": [
+     {
+      "pos": 1,
+      "num": 4,
+      "pilota": "NOR"
+     },
+     {
+      "pos": 2,
+      "num": 12,
+      "pilota": "ANT"
+     },
+     {
+      "pos": 3,
+      "num": 16,
+      "pilota": "LEC"
+     }
+    ],
+    "Race": [
+     {
+      "pos": 1,
+      "num": 4,
+      "pilota": "NOR"
+     },
+     {
+      "pos": 2,
+      "num": 12,
+      "pilota": "ANT"
+     },
+     {
+      "pos": 3,
+      "num": 1,
+      "pilota": "VER"
+     }
+    ]
+   }
+  },
+  {
+   "anno": 2025,
+   "meeting_key": 1274,
+   "luogo": "Las Vegas",
+   "sprint": false,
+   "sessioni": {
+    "Practice 2": [
+     {
+      "pos": 1,
+      "num": 4,
+      "pilota": "NOR"
+     },
+     {
+      "pos": 2,
+      "num": 12,
+      "pilota": "ANT"
+     },
+     {
+      "pos": 3,
+      "num": 16,
+      "pilota": "LEC"
+     }
+    ],
+    "Practice 3": [
+     {
+      "pos": 1,
+      "num": 63,
+      "pilota": "RUS"
+     },
+     {
+      "pos": 2,
+      "num": 1,
+      "pilota": "VER"
+     },
+     {
+      "pos": 3,
+      "num": 23,
+      "pilota": "ALB"
+     }
+    ],
+    "Qualifying": [
+     {
+      "pos": 1,
+      "num": 4,
+      "pilota": "NOR"
+     },
+     {
+      "pos": 2,
+      "num": 1,
+      "pilota": "VER"
+     },
+     {
+      "pos": 3,
+      "num": 55,
+      "pilota": "SAI"
+     }
+    ],
+    "Race": [
+     {
+      "pos": 1,
+      "num": 1,
+      "pilota": "VER"
+     },
+     {
+      "pos": 2,
+      "num": 63,
+      "pilota": "RUS"
+     },
+     {
+      "pos": 3,
+      "num": 12,
+      "pilota": "ANT"
+     }
+    ]
+   }
+  },
+  {
+   "anno": 2025,
+   "meeting_key": 1275,
+   "luogo": "Lusail",
+   "sprint": true,
+   "sessioni": {
+    "Qualifying": [
+     {
+      "pos": 1,
+      "num": 81,
+      "pilota": "PIA"
+     },
+     {
+      "pos": 2,
+      "num": 4,
+      "pilota": "NOR"
+     },
+     {
+      "pos": 3,
+      "num": 1,
+      "pilota": "VER"
+     }
+    ],
+    "Race": [
+     {
+      "pos": 1,
+      "num": 1,
+      "pilota": "VER"
+     },
+     {
+      "pos": 2,
+      "num": 81,
+      "pilota": "PIA"
+     },
+     {
+      "pos": 3,
+      "num": 55,
+      "pilota": "SAI"
+     }
+    ]
+   }
+  },
+  {
+   "anno": 2025,
+   "meeting_key": 1276,
+   "luogo": "Yas Island",
+   "sprint": false,
+   "sessioni": {
+    "Practice 2": [
+     {
+      "pos": 1,
+      "num": 4,
+      "pilota": "NOR"
+     },
+     {
+      "pos": 2,
+      "num": 1,
+      "pilota": "VER"
+     },
+     {
+      "pos": 3,
+      "num": 63,
+      "pilota": "RUS"
+     }
+    ],
+    "Practice 3": [
+     {
+      "pos": 1,
+      "num": 63,
+      "pilota": "RUS"
+     },
+     {
+      "pos": 2,
+      "num": 4,
+      "pilota": "NOR"
+     },
+     {
+      "pos": 3,
+      "num": 1,
+      "pilota": "VER"
+     }
+    ],
+    "Qualifying": [
+     {
+      "pos": 1,
+      "num": 1,
+      "pilota": "VER"
+     },
+     {
+      "pos": 2,
+      "num": 4,
+      "pilota": "NOR"
+     },
+     {
+      "pos": 3,
+      "num": 81,
+      "pilota": "PIA"
+     }
+    ],
+    "Race": [
+     {
+      "pos": 1,
+      "num": 1,
+      "pilota": "VER"
+     },
+     {
+      "pos": 2,
+      "num": 81,
+      "pilota": "PIA"
+     },
+     {
+      "pos": 3,
+      "num": 4,
+      "pilota": "NOR"
+     }
+    ]
+   }
+  },
+  {
+   "anno": 2026,
+   "meeting_key": 1279,
+   "luogo": "Melbourne",
+   "sprint": false,
+   "sessioni": {
+    "Practice 2": [
+     {
+      "pos": 1,
+      "num": 81,
+      "pilota": "PIA"
+     },
+     {
+      "pos": 2,
+      "num": 12,
+      "pilota": "ANT"
+     },
+     {
+      "pos": 3,
+      "num": 63,
+      "pilota": "RUS"
+     }
+    ],
+    "Practice 3": [
+     {
+      "pos": 1,
+      "num": 63,
+      "pilota": "RUS"
+     },
+     {
+      "pos": 2,
+      "num": 44,
+      "pilota": "HAM"
+     },
+     {
+      "pos": 3,
+      "num": 16,
+      "pilota": "LEC"
+     }
+    ],
+    "Qualifying": [
+     {
+      "pos": 1,
+      "num": 63,
+      "pilota": "RUS"
+     },
+     {
+      "pos": 2,
+      "num": 12,
+      "pilota": "ANT"
+     },
+     {
+      "pos": 3,
+      "num": 6,
+      "pilota": "HAD"
+     }
+    ],
+    "Race": [
+     {
+      "pos": 1,
+      "num": 63,
+      "pilota": "RUS"
+     },
+     {
+      "pos": 2,
+      "num": 12,
+      "pilota": "ANT"
+     },
+     {
+      "pos": 3,
+      "num": 16,
+      "pilota": "LEC"
+     }
+    ]
+   }
+  },
+  {
+   "anno": 2026,
+   "meeting_key": 1280,
+   "luogo": "Shanghai",
+   "sprint": true,
+   "sessioni": {
+    "Qualifying": [
+     {
+      "pos": 1,
+      "num": 12,
+      "pilota": "ANT"
+     },
+     {
+      "pos": 2,
+      "num": 63,
+      "pilota": "RUS"
+     },
+     {
+      "pos": 3,
+      "num": 44,
+      "pilota": "HAM"
+     }
+    ],
+    "Race": [
+     {
+      "pos": 1,
+      "num": 12,
+      "pilota": "ANT"
+     },
+     {
+      "pos": 2,
+      "num": 63,
+      "pilota": "RUS"
+     },
+     {
+      "pos": 3,
+      "num": 44,
+      "pilota": "HAM"
+     }
+    ]
+   }
+  },
+  {
+   "anno": 2026,
+   "meeting_key": 1281,
+   "luogo": "Suzuka",
+   "sprint": false,
+   "sessioni": {
+    "Practice 2": [
+     {
+      "pos": 1,
+      "num": 81,
+      "pilota": "PIA"
+     },
+     {
+      "pos": 2,
+      "num": 12,
+      "pilota": "ANT"
+     },
+     {
+      "pos": 3,
+      "num": 63,
+      "pilota": "RUS"
+     }
+    ],
+    "Practice 3": [
+     {
+      "pos": 1,
+      "num": 12,
+      "pilota": "ANT"
+     },
+     {
+      "pos": 2,
+      "num": 63,
+      "pilota": "RUS"
+     },
+     {
+      "pos": 3,
+      "num": 16,
+      "pilota": "LEC"
+     }
+    ],
+    "Qualifying": [
+     {
+      "pos": 1,
+      "num": 12,
+      "pilota": "ANT"
+     },
+     {
+      "pos": 2,
+      "num": 63,
+      "pilota": "RUS"
+     },
+     {
+      "pos": 3,
+      "num": 81,
+      "pilota": "PIA"
+     }
+    ],
+    "Race": [
+     {
+      "pos": 1,
+      "num": 12,
+      "pilota": "ANT"
+     },
+     {
+      "pos": 2,
+      "num": 81,
+      "pilota": "PIA"
+     },
+     {
+      "pos": 3,
+      "num": 16,
+      "pilota": "LEC"
+     }
+    ]
+   }
+  },
+  {
+   "anno": 2026,
+   "meeting_key": 1284,
+   "luogo": "Miami Gardens",
+   "sprint": true,
+   "sessioni": {
+    "Qualifying": [
+     {
+      "pos": 1,
+      "num": 12,
+      "pilota": "ANT"
+     },
+     {
+      "pos": 2,
+      "num": 3,
+      "pilota": "VER"
+     },
+     {
+      "pos": 3,
+      "num": 16,
+      "pilota": "LEC"
+     }
+    ],
+    "Race": [
+     {
+      "pos": 1,
+      "num": 12,
+      "pilota": "ANT"
+     },
+     {
+      "pos": 2,
+      "num": 1,
+      "pilota": "NOR"
+     },
+     {
+      "pos": 3,
+      "num": 81,
+      "pilota": "PIA"
+     }
+    ]
+   }
+  },
+  {
+   "anno": 2026,
+   "meeting_key": 1285,
+   "luogo": "Montréal",
+   "sprint": true,
+   "sessioni": {
+    "Qualifying": [
+     {
+      "pos": 1,
+      "num": 63,
+      "pilota": "RUS"
+     },
+     {
+      "pos": 2,
+      "num": 12,
+      "pilota": "ANT"
+     },
+     {
+      "pos": 3,
+      "num": 1,
+      "pilota": "NOR"
+     }
+    ],
+    "Race": [
+     {
+      "pos": 1,
+      "num": 12,
+      "pilota": "ANT"
+     },
+     {
+      "pos": 2,
+      "num": 44,
+      "pilota": "HAM"
+     },
+     {
+      "pos": 3,
+      "num": 3,
+      "pilota": "VER"
+     }
+    ]
+   }
+  },
+  {
+   "anno": 2026,
+   "meeting_key": 1286,
+   "luogo": "Monte Carlo",
+   "sprint": false,
+   "sessioni": {
+    "Practice 2": [
+     {
+      "pos": 1,
+      "num": 44,
+      "pilota": "HAM"
+     },
+     {
+      "pos": 2,
+      "num": 16,
+      "pilota": "LEC"
+     },
+     {
+      "pos": 3,
+      "num": 3,
+      "pilota": "VER"
+     }
+    ],
+    "Practice 3": [
+     {
+      "pos": 1,
+      "num": 12,
+      "pilota": "ANT"
+     },
+     {
+      "pos": 2,
+      "num": 16,
+      "pilota": "LEC"
+     },
+     {
+      "pos": 3,
+      "num": 44,
+      "pilota": "HAM"
+     }
+    ],
+    "Qualifying": [
+     {
+      "pos": 1,
+      "num": 12,
+      "pilota": "ANT"
+     },
+     {
+      "pos": 2,
+      "num": 3,
+      "pilota": "VER"
+     },
+     {
+      "pos": 3,
+      "num": 44,
+      "pilota": "HAM"
+     }
+    ],
+    "Race": [
+     {
+      "pos": 1,
+      "num": 12,
+      "pilota": "ANT"
+     },
+     {
+      "pos": 2,
+      "num": 44,
+      "pilota": "HAM"
+     },
+     {
+      "pos": 3,
+      "num": 6,
+      "pilota": "HAD"
+     }
+    ]
+   }
+  },
+  {
+   "anno": 2026,
+   "meeting_key": 1287,
+   "luogo": "Barcelona",
+   "sprint": false,
+   "sessioni": {
+    "Practice 2": [
+     {
+      "pos": 1,
+      "num": 1,
+      "pilota": "NOR"
+     },
+     {
+      "pos": 2,
+      "num": 63,
+      "pilota": "RUS"
+     },
+     {
+      "pos": 3,
+      "num": 81,
+      "pilota": "PIA"
+     }
+    ],
+    "Practice 3": [
+     {
+      "pos": 1,
+      "num": 63,
+      "pilota": "RUS"
+     },
+     {
+      "pos": 2,
+      "num": 81,
+      "pilota": "PIA"
+     },
+     {
+      "pos": 3,
+      "num": 16,
+      "pilota": "LEC"
+     }
+    ],
+    "Qualifying": [
+     {
+      "pos": 1,
+      "num": 63,
+      "pilota": "RUS"
+     },
+     {
+      "pos": 2,
+      "num": 44,
+      "pilota": "HAM"
+     },
+     {
+      "pos": 3,
+      "num": 12,
+      "pilota": "ANT"
+     }
+    ],
+    "Race": [
+     {
+      "pos": 1,
+      "num": 44,
+      "pilota": "HAM"
+     },
+     {
+      "pos": 2,
+      "num": 63,
+      "pilota": "RUS"
+     },
+     {
+      "pos": 3,
+      "num": 1,
+      "pilota": "NOR"
+     }
+    ]
+   }
+  },
+  {
+   "anno": 2026,
+   "meeting_key": 1288,
+   "luogo": "Spielberg",
+   "sprint": false,
+   "sessioni": {
+    "Practice 2": [
+     {
+      "pos": 1,
+      "num": 12,
+      "pilota": "ANT"
+     },
+     {
+      "pos": 2,
+      "num": 81,
+      "pilota": "PIA"
+     },
+     {
+      "pos": 3,
+      "num": 1,
+      "pilota": "NOR"
+     }
+    ],
+    "Practice 3": [
+     {
+      "pos": 1,
+      "num": 63,
+      "pilota": "RUS"
+     },
+     {
+      "pos": 2,
+      "num": 12,
+      "pilota": "ANT"
+     },
+     {
+      "pos": 3,
+      "num": 44,
+      "pilota": "HAM"
+     }
+    ],
+    "Qualifying": [
+     {
+      "pos": 1,
+      "num": 63,
+      "pilota": "RUS"
+     },
+     {
+      "pos": 2,
+      "num": 16,
+      "pilota": "LEC"
+     },
+     {
+      "pos": 3,
+      "num": 44,
+      "pilota": "HAM"
+     }
+    ],
+    "Race": [
+     {
+      "pos": 1,
+      "num": 63,
+      "pilota": "RUS"
+     },
+     {
+      "pos": 2,
+      "num": 3,
+      "pilota": "VER"
+     },
+     {
+      "pos": 3,
+      "num": 12,
+      "pilota": "ANT"
+     }
+    ]
+   }
+  },
+  {
+   "anno": 2026,
+   "meeting_key": 1289,
+   "luogo": "Silverstone",
+   "sprint": true,
+   "sessioni": {
+    "Qualifying": [
+     {
+      "pos": 1,
+      "num": 12,
+      "pilota": "ANT"
+     },
+     {
+      "pos": 2,
+      "num": 16,
+      "pilota": "LEC"
+     },
+     {
+      "pos": 3,
+      "num": 44,
+      "pilota": "HAM"
+     }
+    ],
+    "Race": [
+     {
+      "pos": 1,
+      "num": 16,
+      "pilota": "LEC"
+     },
+     {
+      "pos": 2,
+      "num": 63,
+      "pilota": "RUS"
+     },
+     {
+      "pos": 3,
+      "num": 44,
+      "pilota": "HAM"
+     }
+    ]
+   }
+  },
+  {
+   "anno": 2026,
+   "meeting_key": 1290,
+   "luogo": "Spa-Francorchamps",
+   "sprint": false,
+   "sessioni": {
+    "Practice 2": [
+     {
+      "pos": 1,
+      "num": 12,
+      "pilota": "ANT"
+     },
+     {
+      "pos": 2,
+      "num": 1,
+      "pilota": "NOR"
+     },
+     {
+      "pos": 3,
+      "num": 3,
+      "pilota": "VER"
+     }
+    ],
+    "Practice 3": [
+     {
+      "pos": 1,
+      "num": 12,
+      "pilota": "ANT"
+     },
+     {
+      "pos": 2,
+      "num": 1,
+      "pilota": "NOR"
+     },
+     {
+      "pos": 3,
+      "num": 3,
+      "pilota": "VER"
+     }
+    ],
+    "Qualifying": [
+     {
+      "pos": 1,
+      "num": 12,
+      "pilota": "ANT"
+     },
+     {
+      "pos": 2,
+      "num": 3,
+      "pilota": "VER"
+     },
+     {
+      "pos": 3,
+      "num": 1,
+      "pilota": "NOR"
+     }
+    ],
+    "Race": [
+     {
+      "pos": 1,
+      "num": 12,
+      "pilota": "ANT"
+     },
+     {
+      "pos": 2,
+      "num": 16,
+      "pilota": "LEC"
+     },
+     {
+      "pos": 3,
+      "num": 3,
+      "pilota": "VER"
+     }
+    ]
+   }
+  },
+  {
+   "anno": 2026,
+   "meeting_key": 1291,
+   "luogo": "Budapest",
+   "sprint": false,
+   "sessioni": {
+    "Practice 2": [
+     {
+      "pos": 1,
+      "num": 44,
+      "pilota": "HAM"
+     },
+     {
+      "pos": 2,
+      "num": 16,
+      "pilota": "LEC"
+     },
+     {
+      "pos": 3,
+      "num": 1,
+      "pilota": "NOR"
+     }
+    ],
+    "Practice 3": [
+     {
+      "pos": 1,
+      "num": 1,
+      "pilota": "NOR"
+     },
+     {
+      "pos": 2,
+      "num": 44,
+      "pilota": "HAM"
+     },
+     {
+      "pos": 3,
+      "num": 12,
+      "pilota": "ANT"
+     }
+    ],
+    "Qualifying": [
+     {
+      "pos": 1,
+      "num": 1,
+      "pilota": "NOR"
+     },
+     {
+      "pos": 2,
+      "num": 44,
+      "pilota": "HAM"
+     },
+     {
+      "pos": 3,
+      "num": 16,
+      "pilota": "LEC"
+     }
+    ],
+    "Race": [
+     {
+      "pos": 1,
+      "num": 1,
+      "pilota": "NOR"
+     },
+     {
+      "pos": 2,
+      "num": 3,
+      "pilota": "VER"
+     },
+     {
+      "pos": 3,
+      "num": 12,
+      "pilota": "ANT"
+     }
+    ]
+   }
+  },
+  {
+   "anno": 2026,
+   "meeting_key": 1292,
+   "luogo": "Zandvoort",
+   "sprint": true,
+   "sessioni": {
+    "Qualifying": [
+     {
+      "pos": 1,
+      "num": 1,
+      "pilota": "NOR"
+     },
+     {
+      "pos": 2,
+      "num": 63,
+      "pilota": "RUS"
+     },
+     {
+      "pos": 3,
+      "num": 12,
+      "pilota": "ANT"
+     }
+    ],
+    "Race": [
+     {
+      "pos": 1,
+      "num": 1,
+      "pilota": "NOR"
+     },
+     {
+      "pos": 2,
+      "num": 12,
+      "pilota": "ANT"
+     },
+     {
+      "pos": 3,
+      "num": 63,
+      "pilota": "RUS"
+     }
+    ]
+   }
+  },
+  {
+   "anno": 2026,
+   "meeting_key": 1293,
+   "luogo": "Monza",
+   "sprint": false,
+   "sessioni": {
+    "Practice 2": [
+     {
+      "pos": 1,
+      "num": 63,
+      "pilota": "RUS"
+     },
+     {
+      "pos": 2,
+      "num": 16,
+      "pilota": "LEC"
+     },
+     {
+      "pos": 3,
+      "num": 12,
+      "pilota": "ANT"
+     }
+    ],
+    "Practice 3": [
+     {
+      "pos": 1,
+      "num": 63,
+      "pilota": "RUS"
+     },
+     {
+      "pos": 2,
+      "num": 44,
+      "pilota": "HAM"
+     },
+     {
+      "pos": 3,
+      "num": 3,
+      "pilota": "VER"
+     }
+    ],
+    "Qualifying": [
+     {
+      "pos": 1,
+      "num": 10,
+      "pilota": "GAS"
+     },
+     {
+      "pos": 2,
+      "num": 63,
+      "pilota": "RUS"
+     },
+     {
+      "pos": 3,
+      "num": 81,
+      "pilota": "PIA"
+     }
+    ],
+    "Race": [
+     {
+      "pos": 1,
+      "num": 12,
+      "pilota": "ANT"
+     },
+     {
+      "pos": 2,
+      "num": 63,
+      "pilota": "RUS"
+     },
+     {
+      "pos": 3,
+      "num": 3,
+      "pilota": "VER"
+     }
+    ]
+   }
+  },
+  {
+   "anno": 2026,
+   "meeting_key": 1294,
+   "luogo": "Madrid",
+   "sprint": false,
+   "sessioni": {
+    "Practice 2": [
+     {
+      "pos": 1,
+      "num": 12,
+      "pilota": "ANT"
+     },
+     {
+      "pos": 2,
+      "num": 16,
+      "pilota": "LEC"
+     },
+     {
+      "pos": 3,
+      "num": 44,
+      "pilota": "HAM"
+     }
+    ],
+    "Practice 3": [
+     {
+      "pos": 1,
+      "num": 12,
+      "pilota": "ANT"
+     },
+     {
+      "pos": 2,
+      "num": 16,
+      "pilota": "LEC"
+     },
+     {
+      "pos": 3,
+      "num": 81,
+      "pilota": "PIA"
+     }
+    ],
+    "Qualifying": [
+     {
+      "pos": 1,
+      "num": 1,
+      "pilota": "NOR"
+     },
+     {
+      "pos": 2,
+      "num": 12,
+      "pilota": "ANT"
+     },
+     {
+      "pos": 3,
+      "num": 3,
+      "pilota": "VER"
+     }
+    ],
+    "Race": [
+     {
+      "pos": 1,
+      "num": 12,
+      "pilota": "ANT"
+     },
+     {
+      "pos": 2,
+      "num": 3,
+      "pilota": "VER"
+     },
+     {
+      "pos": 3,
+      "num": 1,
+      "pilota": "NOR"
+     }
+    ]
+   }
+  },
+  {
+   "anno": 2026,
+   "meeting_key": 1295,
+   "luogo": "Baku",
+   "sprint": false,
+   "sessioni": {
+    "Practice 2": [
+     {
+      "pos": 1,
+      "num": 63,
+      "pilota": "RUS"
+     },
+     {
+      "pos": 2,
+      "num": 12,
+      "pilota": "ANT"
+     },
+     {
+      "pos": 3,
+      "num": 3,
+      "pilota": "VER"
+     }
+    ],
+    "Practice 3": [
+     {
+      "pos": 1,
+      "num": 3,
+      "pilota": "VER"
+     },
+     {
+      "pos": 2,
+      "num": 63,
+      "pilota": "RUS"
+     },
+     {
+      "pos": 3,
+      "num": 44,
+      "pilota": "HAM"
+     }
+    ],
+    "Qualifying": [
+     {
+      "pos": 1,
+      "num": 63,
+      "pilota": "RUS"
+     },
+     {
+      "pos": 2,
+      "num": 16,
+      "pilota": "LEC"
+     },
+     {
+      "pos": 3,
+      "num": 81,
+      "pilota": "PIA"
+     }
+    ],
+    "Race": [
+     {
+      "pos": 1,
+      "num": 63,
+      "pilota": "RUS"
+     },
+     {
+      "pos": 2,
+      "num": 3,
+      "pilota": "VER"
+     },
+     {
+      "pos": 3,
+      "num": 6,
+      "pilota": "HAD"
+     }
+    ]
+   }
+  },
+  {
+   "anno": 2026,
+   "meeting_key": 1308,
+   "luogo": "Kuala Lumpur",
+   "sprint": false,
+   "sessioni": {
+    "Practice 2": [
+     {
+      "pos": 1,
+      "num": 16,
+      "pilota": "LEC"
+     },
+     {
+      "pos": 2,
+      "num": 6,
+      "pilota": "HAD"
+     },
+     {
+      "pos": 3,
+      "num": 1,
+      "pilota": "NOR"
+     }
+    ],
+    "Practice 3": [
+     {
+      "pos": 1,
+      "num": 12,
+      "pilota": "ANT"
+     },
+     {
+      "pos": 2,
+      "num": 3,
+      "pilota": "VER"
+     },
+     {
+      "pos": 3,
+      "num": 6,
+      "pilota": "HAD"
+     }
+    ],
+    "Qualifying": [
+     {
+      "pos": 1,
+      "num": 3,
+      "pilota": "VER"
+     },
+     {
+      "pos": 2,
+      "num": 44,
+      "pilota": "HAM"
+     },
+     {
+      "pos": 3,
+      "num": 6,
+      "pilota": "HAD"
+     }
+    ],
+    "Race": [
+     {
+      "pos": 1,
+      "num": 3,
+      "pilota": "VER"
+     },
+     {
+      "pos": 2,
+      "num": 12,
+      "pilota": "ANT"
+     },
+     {
+      "pos": 3,
+      "num": 44,
+      "pilota": "HAM"
+     }
+    ]
+   }
+  },
+  {
+   "anno": 2026,
+   "meeting_key": 1296,
+   "luogo": "Marina Bay",
+   "sprint": true,
+   "sessioni": {
+    "Qualifying": [
+     {
+      "pos": 1,
+      "num": 3,
+      "pilota": "VER"
+     },
+     {
+      "pos": 2,
+      "num": 16,
+      "pilota": "LEC"
+     },
+     {
+      "pos": 3,
+      "num": 44,
+      "pilota": "HAM"
+     }
+    ],
+    "Race": [
+     {
+      "pos": 1,
+      "num": 3,
+      "pilota": "VER"
+     },
+     {
+      "pos": 2,
+      "num": 16,
+      "pilota": "LEC"
+     },
+     {
+      "pos": 3,
+      "num": 12,
+      "pilota": "ANT"
+     }
+    ]
+   }
+  },
+  {
+   "anno": 2026,
+   "meeting_key": 1297,
+   "luogo": "Austin",
+   "sprint": false,
+   "sessioni": {
+    "Practice 2": [],
+    "Practice 3": [],
+    "Qualifying": [],
+    "Race": []
+   }
+  },
+  {
+   "anno": 2026,
+   "meeting_key": 1298,
+   "luogo": "Mexico City",
+   "sprint": false,
+   "sessioni": {
+    "Practice 2": [],
+    "Practice 3": [],
+    "Qualifying": [],
+    "Race": []
+   }
+  },
+  {
+   "anno": 2026,
+   "meeting_key": 1299,
+   "luogo": "São Paulo",
+   "sprint": false,
+   "sessioni": {
+    "Practice 2": [],
+    "Practice 3": [],
+    "Qualifying": [],
+    "Race": []
+   }
+  },
+  {
+   "anno": 2026,
+   "meeting_key": 1300,
+   "luogo": "Las Vegas",
+   "sprint": false,
+   "sessioni": {
+    "Practice 2": [],
+    "Practice 3": [],
+    "Qualifying": [],
+    "Race": []
+   }
+  },
+  {
+   "anno": 2026,
+   "meeting_key": 1301,
+   "luogo": "Lusail",
+   "sprint": false,
+   "sessioni": {
+    "Practice 2": [],
+    "Practice 3": [],
+    "Qualifying": [],
+    "Race": []
+   }
+  },
+  {
+   "anno": 2026,
+   "meeting_key": 1302,
+   "luogo": "Yas Marina",
+   "sprint": false,
+   "sessioni": {
+    "Practice 2": [],
+    "Practice 3": [],
+    "Qualifying": [],
+    "Race": []
+   }
+  }
+ ]
+}
