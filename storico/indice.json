@@ -1,7 +1,7 @@
 {
- "aggiornato": "2026-10-20T12:13:01Z",
- "fermato": "tempo massimo raggiunto: rilancia il workflow per finire",
- "richieste": 6596,
+ "aggiornato": "2026-10-20T13:43:24Z",
+ "fermato": null,
+ "richieste": 1141,
  "file": [
   {
    "file": "storico/2023/01-bahrain-grand-prix.json.gz",
@@ -1145,7 +1145,7 @@
    "errori": [
     "Race: car_data partenza: giro 2 non trovato"
    ],
-   "scaricato": "2026-10-20T10:38:51Z",
+   "scaricato": "2026-10-20T13:03:41Z",
    "parziale": false,
    "kb": 856
   },
@@ -1428,15 +1428,12 @@
    ],
    "giri_gara": 1067,
    "partenze": 2,
-   "energia": 72,
-   "energia_errori": [
-    "Qualifying: tempo massimo raggiunto: 19 blocchi da scaricare",
-    "Race: tempo massimo raggiunto: 38 blocchi da scaricare"
-   ],
+   "energia": 129,
+   "energia_errori": [],
    "errori": [],
    "scaricato": "2026-10-20T12:07:43Z",
    "parziale": false,
-   "kb": 910
+   "kb": 1341
   },
   {
    "file": "storico/2025/20-mexico-city-grand-prix.json.gz",
@@ -1452,11 +1449,13 @@
     "Race"
    ],
    "giri_gara": 1266,
-   "partenze": 0,
+   "partenze": 1,
+   "energia": 150,
+   "energia_errori": [],
    "errori": [],
-   "scaricato": "2026-10-12T14:06:59Z",
+   "scaricato": "2026-10-20T13:07:51Z",
    "parziale": false,
-   "kb": 123
+   "kb": 970
   },
   {
    "file": "storico/2025/21-s-o-paulo-grand-prix.json.gz",
@@ -1472,11 +1471,13 @@
     "Race"
    ],
    "giri_gara": 1252,
-   "partenze": 0,
+   "partenze": 2,
+   "energia": 132,
+   "energia_errori": [],
    "errori": [],
-   "scaricato": "2026-10-12T14:08:14Z",
+   "scaricato": "2026-10-20T13:15:03Z",
    "parziale": false,
-   "kb": 117
+   "kb": 1160
   },
   {
    "file": "storico/2025/22-las-vegas-grand-prix.json.gz",
@@ -1492,11 +1493,13 @@
     "Race"
    ],
    "giri_gara": 888,
-   "partenze": 0,
+   "partenze": 1,
+   "energia": 121,
+   "energia_errori": [],
    "errori": [],
-   "scaricato": "2026-10-12T14:09:38Z",
+   "scaricato": "2026-10-20T13:22:28Z",
    "parziale": false,
-   "kb": 102
+   "kb": 898
   },
   {
    "file": "storico/2025/23-qatar-grand-prix.json.gz",
@@ -1512,11 +1515,13 @@
     "Race"
    ],
    "giri_gara": 1070,
-   "partenze": 0,
+   "partenze": 2,
+   "energia": 131,
+   "energia_errori": [],
    "errori": [],
-   "scaricato": "2026-10-12T14:10:54Z",
+   "scaricato": "2026-10-20T13:28:40Z",
    "parziale": false,
-   "kb": 107
+   "kb": 1225
   },
   {
    "file": "storico/2025/24-abu-dhabi-grand-prix.json.gz",
@@ -1532,11 +1537,13 @@
     "Race"
    ],
    "giri_gara": 1156,
-   "partenze": 0,
+   "partenze": 1,
+   "energia": 154,
+   "energia_errori": [],
    "errori": [],
-   "scaricato": "2026-10-12T14:12:18Z",
+   "scaricato": "2026-10-20T13:36:03Z",
    "parziale": false,
-   "kb": 116
+   "kb": 1142
   },
   {
    "file": "storico/2026/01-australian-grand-prix.json.gz",
