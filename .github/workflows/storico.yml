@@ -32,7 +32,11 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 300
     steps:
+      # l'archivio più recente del ramo, non quello del momento del lancio: un lancio rimasto in coda
+      # deve ripartire da quello che ha salvato il lancio precedente
       - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
 
       - uses: actions/setup-python@v5
         with:
