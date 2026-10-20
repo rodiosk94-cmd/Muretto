@@ -1,8 +1,360 @@
 {
- "aggiornato": "2026-10-16T12:18:27Z",
- "fermato": null,
- "richieste": 9,
+ "aggiornato": "2026-10-20T12:13:01Z",
+ "fermato": "tempo massimo raggiunto: rilancia il workflow per finire",
+ "richieste": 6596,
  "file": [
+  {
+   "file": "storico/2023/01-bahrain-grand-prix.json.gz",
+   "anno": 2023,
+   "round": 1,
+   "gp": "Bahrain Grand Prix",
+   "luogo": "Sakhir",
+   "sessioni": [
+    "Practice 1",
+    "Practice 2",
+    "Practice 3",
+    "Qualifying",
+    "Race"
+   ],
+   "giri_gara": 1058,
+   "partenze": 1,
+   "energia": 0,
+   "energia_errori": [],
+   "errori": [],
+   "scaricato": "2026-10-20T08:24:26Z",
+   "parziale": false,
+   "kb": 310
+  },
+  {
+   "file": "storico/2023/02-saudi-arabian-grand-prix.json.gz",
+   "anno": 2023,
+   "round": 2,
+   "gp": "Saudi Arabian Grand Prix",
+   "luogo": "Jeddah",
+   "sessioni": [
+    "Practice 1",
+    "Practice 2",
+    "Practice 3",
+    "Qualifying",
+    "Race"
+   ],
+   "giri_gara": 945,
+   "partenze": 1,
+   "energia": 0,
+   "energia_errori": [],
+   "errori": [],
+   "scaricato": "2026-10-20T08:26:24Z",
+   "parziale": false,
+   "kb": 306
+  },
+  {
+   "file": "storico/2023/03-australian-grand-prix.json.gz",
+   "anno": 2023,
+   "round": 3,
+   "gp": "Australian Grand Prix",
+   "luogo": "Melbourne",
+   "sessioni": [
+    "Practice 1",
+    "Practice 2",
+    "Practice 3",
+    "Qualifying",
+    "Race"
+   ],
+   "giri_gara": 1006,
+   "partenze": 1,
+   "energia": 0,
+   "energia_errori": [],
+   "errori": [],
+   "scaricato": "2026-10-20T08:28:21Z",
+   "parziale": false,
+   "kb": 299
+  },
+  {
+   "file": "storico/2023/04-azerbaijan-grand-prix.json.gz",
+   "anno": 2023,
+   "round": 4,
+   "gp": "Azerbaijan Grand Prix",
+   "luogo": "Baku",
+   "sessioni": [
+    "Practice 1",
+    "Qualifying",
+    "Sprint Qualifying",
+    "Sprint",
+    "Race"
+   ],
+   "giri_gara": 963,
+   "partenze": 2,
+   "energia": 0,
+   "energia_errori": [],
+   "errori": [],
+   "scaricato": "2026-10-20T08:30:19Z",
+   "parziale": false,
+   "kb": 492
+  },
+  {
+   "file": "storico/2023/05-miami-grand-prix.json.gz",
+   "anno": 2023,
+   "round": 5,
+   "gp": "Miami Grand Prix",
+   "luogo": "Miami",
+   "sessioni": [
+    "Practice 1",
+    "Practice 2",
+    "Practice 3",
+    "Qualifying",
+    "Race"
+   ],
+   "giri_gara": 1139,
+   "partenze": 1,
+   "energia": 0,
+   "energia_errori": [],
+   "errori": [],
+   "scaricato": "2026-10-20T08:33:05Z",
+   "parziale": false,
+   "kb": 310
+  },
+  {
+   "file": "storico/2023/06-monaco-grand-prix.json.gz",
+   "anno": 2023,
+   "round": 6,
+   "gp": "Monaco Grand Prix",
+   "luogo": "Monaco",
+   "sessioni": [
+    "Practice 1",
+    "Practice 2",
+    "Practice 3",
+    "Qualifying",
+    "Race"
+   ],
+   "giri_gara": 1516,
+   "partenze": 1,
+   "energia": 0,
+   "energia_errori": [],
+   "errori": [],
+   "scaricato": "2026-10-20T08:35:02Z",
+   "parziale": false,
+   "kb": 321
+  },
+  {
+   "file": "storico/2023/07-spanish-grand-prix.json.gz",
+   "anno": 2023,
+   "round": 7,
+   "gp": "Spanish Grand Prix",
+   "luogo": "Barcelona",
+   "sessioni": [
+    "Practice 1",
+    "Practice 2",
+    "Practice 3",
+    "Qualifying",
+    "Race"
+   ],
+   "giri_gara": 1312,
+   "partenze": 1,
+   "energia": 0,
+   "energia_errori": [],
+   "errori": [],
+   "scaricato": "2026-10-20T08:37:00Z",
+   "parziale": false,
+   "kb": 314
+  },
+  {
+   "file": "storico/2023/08-canadian-grand-prix.json.gz",
+   "anno": 2023,
+   "round": 8,
+   "gp": "Canadian Grand Prix",
+   "luogo": "Montréal",
+   "sessioni": [
+    "Practice 1",
+    "Practice 2",
+    "Practice 3",
+    "Qualifying",
+    "Race"
+   ],
+   "giri_gara": 1318,
+   "partenze": 1,
+   "energia": 0,
+   "energia_errori": [],
+   "errori": [],
+   "scaricato": "2026-10-20T08:38:58Z",
+   "parziale": false,
+   "kb": 304
+  },
+  {
+   "file": "storico/2023/09-austrian-grand-prix.json.gz",
+   "anno": 2023,
+   "round": 9,
+   "gp": "Austrian Grand Prix",
+   "luogo": "Spielberg",
+   "sessioni": [
+    "Practice 1",
+    "Qualifying",
+    "Sprint Qualifying",
+    "Sprint",
+    "Race"
+   ],
+   "giri_gara": 1355,
+   "partenze": 2,
+   "energia": 0,
+   "energia_errori": [],
+   "errori": [],
+   "scaricato": "2026-10-20T08:40:55Z",
+   "parziale": false,
+   "kb": 492
+  },
+  {
+   "file": "storico/2023/10-british-grand-prix.json.gz",
+   "anno": 2023,
+   "round": 10,
+   "gp": "British Grand Prix",
+   "luogo": "Silverstone",
+   "sessioni": [
+    "Practice 1",
+    "Practice 2",
+    "Practice 3",
+    "Qualifying",
+    "Race"
+   ],
+   "giri_gara": 974,
+   "partenze": 1,
+   "energia": 0,
+   "energia_errori": [],
+   "errori": [],
+   "scaricato": "2026-10-20T08:43:43Z",
+   "parziale": false,
+   "kb": 303
+  },
+  {
+   "file": "storico/2023/11-hungarian-grand-prix.json.gz",
+   "anno": 2023,
+   "round": 11,
+   "gp": "Hungarian Grand Prix",
+   "luogo": "Budapest",
+   "sessioni": [
+    "Practice 1",
+    "Practice 2",
+    "Practice 3",
+    "Qualifying",
+    "Race"
+   ],
+   "giri_gara": 1255,
+   "partenze": 1,
+   "energia": 0,
+   "energia_errori": [],
+   "errori": [],
+   "scaricato": "2026-10-20T08:45:41Z",
+   "parziale": false,
+   "kb": 303
+  },
+  {
+   "file": "storico/2023/12-belgian-grand-prix.json.gz",
+   "anno": 2023,
+   "round": 12,
+   "gp": "Belgian Grand Prix",
+   "luogo": "Spa-Francorchamps",
+   "sessioni": [
+    "Practice 1",
+    "Qualifying",
+    "Sprint Qualifying",
+    "Sprint",
+    "Race"
+   ],
+   "giri_gara": 817,
+   "partenze": 2,
+   "energia": 0,
+   "energia_errori": [],
+   "errori": [],
+   "scaricato": "2026-10-20T08:47:39Z",
+   "parziale": false,
+   "kb": 499
+  },
+  {
+   "file": "storico/2023/13-dutch-grand-prix.json.gz",
+   "anno": 2023,
+   "round": 13,
+   "gp": "Dutch Grand Prix",
+   "luogo": "Zandvoort",
+   "sessioni": [
+    "Practice 1",
+    "Practice 2",
+    "Practice 3",
+    "Qualifying",
+    "Race"
+   ],
+   "giri_gara": 1344,
+   "partenze": 1,
+   "energia": 0,
+   "energia_errori": [],
+   "errori": [],
+   "scaricato": "2026-10-20T08:50:27Z",
+   "parziale": false,
+   "kb": 325
+  },
+  {
+   "file": "storico/2023/14-italian-grand-prix.json.gz",
+   "anno": 2023,
+   "round": 14,
+   "gp": "Italian Grand Prix",
+   "luogo": "Monza",
+   "sessioni": [
+    "Practice 1",
+    "Practice 2",
+    "Practice 3",
+    "Qualifying",
+    "Race"
+   ],
+   "giri_gara": 968,
+   "partenze": 1,
+   "energia": 0,
+   "energia_errori": [],
+   "errori": [],
+   "scaricato": "2026-10-20T08:52:24Z",
+   "parziale": false,
+   "kb": 296
+  },
+  {
+   "file": "storico/2023/15-singapore-grand-prix.json.gz",
+   "anno": 2023,
+   "round": 15,
+   "gp": "Singapore Grand Prix",
+   "luogo": "Marina Bay",
+   "sessioni": [
+    "Practice 1",
+    "Practice 2",
+    "Practice 3",
+    "Qualifying",
+    "Race"
+   ],
+   "giri_gara": 1091,
+   "partenze": 1,
+   "energia": 0,
+   "energia_errori": [],
+   "errori": [],
+   "scaricato": "2026-10-20T08:54:22Z",
+   "parziale": false,
+   "kb": 299
+  },
+  {
+   "file": "storico/2023/16-japanese-grand-prix.json.gz",
+   "anno": 2023,
+   "round": 16,
+   "gp": "Japanese Grand Prix",
+   "luogo": "Suzuka",
+   "sessioni": [
+    "Practice 1",
+    "Practice 2",
+    "Practice 3",
+    "Qualifying",
+    "Race"
+   ],
+   "giri_gara": 886,
+   "partenze": 1,
+   "energia": 0,
+   "energia_errori": [],
+   "errori": [],
+   "scaricato": "2026-10-20T08:56:18Z",
+   "parziale": false,
+   "kb": 301
+  },
   {
    "file": "storico/2023/17-qatar-grand-prix.json.gz",
    "anno": 2023,
@@ -17,11 +369,13 @@
     "Race"
    ],
    "giri_gara": 1009,
-   "partenze": 0,
+   "partenze": 2,
+   "energia": 0,
+   "energia_errori": [],
    "errori": [],
-   "scaricato": "2026-10-12T13:53:49Z",
+   "scaricato": "2026-10-20T08:58:15Z",
    "parziale": false,
-   "kb": 113
+   "kb": 509
   },
   {
    "file": "storico/2023/18-united-states-grand-prix.json.gz",
@@ -37,13 +391,13 @@
     "Race"
    ],
    "giri_gara": 1017,
-   "partenze": 0,
+   "partenze": 2,
    "energia": 0,
    "energia_errori": [],
    "errori": [],
-   "scaricato": "2026-10-12T11:38:45Z",
+   "scaricato": "2026-10-20T09:01:03Z",
    "parziale": false,
-   "kb": 99
+   "kb": 496
   },
   {
    "file": "storico/2023/19-mexico-city-grand-prix.json.gz",
@@ -59,11 +413,13 @@
     "Race"
    ],
    "giri_gara": 1286,
-   "partenze": 0,
+   "partenze": 1,
+   "energia": 0,
+   "energia_errori": [],
    "errori": [],
-   "scaricato": "2026-10-12T13:55:13Z",
+   "scaricato": "2026-10-20T09:03:51Z",
    "parziale": false,
-   "kb": 121
+   "kb": 310
   },
   {
    "file": "storico/2023/20-s-o-paulo-grand-prix.json.gz",
@@ -79,11 +435,13 @@
     "Race"
    ],
    "giri_gara": 1112,
-   "partenze": 0,
+   "partenze": 2,
+   "energia": 0,
+   "energia_errori": [],
    "errori": [],
-   "scaricato": "2026-10-12T13:56:29Z",
+   "scaricato": "2026-10-20T09:05:49Z",
    "parziale": false,
-   "kb": 107
+   "kb": 494
   },
   {
    "file": "storico/2023/21-las-vegas-grand-prix.json.gz",
@@ -99,11 +457,13 @@
     "Race"
    ],
    "giri_gara": 949,
-   "partenze": 0,
+   "partenze": 1,
+   "energia": 0,
+   "energia_errori": [],
    "errori": [],
-   "scaricato": "2026-10-12T13:57:53Z",
+   "scaricato": "2026-10-20T09:08:37Z",
    "parziale": false,
-   "kb": 104
+   "kb": 311
   },
   {
    "file": "storico/2023/22-abu-dhabi-grand-prix.json.gz",
@@ -119,11 +479,409 @@
     "Race"
    ],
    "giri_gara": 1159,
-   "partenze": 0,
+   "partenze": 1,
+   "energia": 0,
+   "energia_errori": [],
    "errori": [],
-   "scaricato": "2026-10-12T13:59:08Z",
+   "scaricato": "2026-10-20T09:10:35Z",
    "parziale": false,
-   "kb": 108
+   "kb": 305
+  },
+  {
+   "file": "storico/2024/01-bahrain-grand-prix.json.gz",
+   "anno": 2024,
+   "round": 1,
+   "gp": "Bahrain Grand Prix",
+   "luogo": "Sakhir",
+   "sessioni": [
+    "Practice 1",
+    "Practice 2",
+    "Practice 3",
+    "Qualifying",
+    "Race"
+   ],
+   "giri_gara": 1129,
+   "partenze": 1,
+   "energia": 0,
+   "energia_errori": [],
+   "errori": [],
+   "scaricato": "2026-10-20T09:12:33Z",
+   "parziale": false,
+   "kb": 310
+  },
+  {
+   "file": "storico/2024/02-saudi-arabian-grand-prix.json.gz",
+   "anno": 2024,
+   "round": 2,
+   "gp": "Saudi Arabian Grand Prix",
+   "luogo": "Jeddah",
+   "sessioni": [
+    "Practice 1",
+    "Practice 2",
+    "Practice 3",
+    "Qualifying",
+    "Race"
+   ],
+   "giri_gara": 902,
+   "partenze": 1,
+   "energia": 0,
+   "energia_errori": [],
+   "errori": [],
+   "scaricato": "2026-10-20T09:14:31Z",
+   "parziale": false,
+   "kb": 305
+  },
+  {
+   "file": "storico/2024/03-australian-grand-prix.json.gz",
+   "anno": 2024,
+   "round": 3,
+   "gp": "Australian Grand Prix",
+   "luogo": "Melbourne",
+   "sessioni": [
+    "Practice 1",
+    "Practice 2",
+    "Practice 3",
+    "Qualifying",
+    "Race"
+   ],
+   "giri_gara": 998,
+   "partenze": 1,
+   "energia": 0,
+   "energia_errori": [],
+   "errori": [],
+   "scaricato": "2026-10-20T09:16:29Z",
+   "parziale": false,
+   "kb": 287
+  },
+  {
+   "file": "storico/2024/04-japanese-grand-prix.json.gz",
+   "anno": 2024,
+   "round": 4,
+   "gp": "Japanese Grand Prix",
+   "luogo": "Suzuka",
+   "sessioni": [
+    "Practice 1",
+    "Practice 2",
+    "Practice 3",
+    "Qualifying",
+    "Race"
+   ],
+   "giri_gara": 908,
+   "partenze": 1,
+   "energia": 0,
+   "energia_errori": [],
+   "errori": [],
+   "scaricato": "2026-10-20T09:18:24Z",
+   "parziale": false,
+   "kb": 293
+  },
+  {
+   "file": "storico/2024/05-chinese-grand-prix.json.gz",
+   "anno": 2024,
+   "round": 5,
+   "gp": "Chinese Grand Prix",
+   "luogo": "Shanghai",
+   "sessioni": [
+    "Practice 1",
+    "Sprint Qualifying",
+    "Sprint",
+    "Qualifying",
+    "Race"
+   ],
+   "giri_gara": 1033,
+   "partenze": 2,
+   "energia": 0,
+   "energia_errori": [],
+   "errori": [],
+   "scaricato": "2026-10-20T09:20:22Z",
+   "parziale": false,
+   "kb": 504
+  },
+  {
+   "file": "storico/2024/06-miami-grand-prix.json.gz",
+   "anno": 2024,
+   "round": 6,
+   "gp": "Miami Grand Prix",
+   "luogo": "Miami",
+   "sessioni": [
+    "Practice 1",
+    "Sprint Qualifying",
+    "Sprint",
+    "Qualifying",
+    "Race"
+   ],
+   "giri_gara": 1112,
+   "partenze": 2,
+   "energia": 0,
+   "energia_errori": [],
+   "errori": [],
+   "scaricato": "2026-10-20T09:23:10Z",
+   "parziale": false,
+   "kb": 497
+  },
+  {
+   "file": "storico/2024/07-emilia-romagna-grand-prix.json.gz",
+   "anno": 2024,
+   "round": 7,
+   "gp": "Emilia Romagna Grand Prix",
+   "luogo": "Imola",
+   "sessioni": [
+    "Practice 1",
+    "Practice 2",
+    "Practice 3",
+    "Qualifying",
+    "Race"
+   ],
+   "giri_gara": 1239,
+   "partenze": 1,
+   "energia": 0,
+   "energia_errori": [],
+   "errori": [],
+   "scaricato": "2026-10-20T09:25:58Z",
+   "parziale": false,
+   "kb": 302
+  },
+  {
+   "file": "storico/2024/08-monaco-grand-prix.json.gz",
+   "anno": 2024,
+   "round": 8,
+   "gp": "Monaco Grand Prix",
+   "luogo": "Monaco",
+   "sessioni": [
+    "Practice 1",
+    "Practice 2",
+    "Practice 3",
+    "Qualifying",
+    "Race"
+   ],
+   "giri_gara": 1237,
+   "partenze": 1,
+   "energia": 0,
+   "energia_errori": [],
+   "errori": [],
+   "scaricato": "2026-10-20T09:27:56Z",
+   "parziale": false,
+   "kb": 227
+  },
+  {
+   "file": "storico/2024/09-canadian-grand-prix.json.gz",
+   "anno": 2024,
+   "round": 9,
+   "gp": "Canadian Grand Prix",
+   "luogo": "Montréal",
+   "sessioni": [
+    "Practice 1",
+    "Practice 2",
+    "Practice 3",
+    "Qualifying",
+    "Race"
+   ],
+   "giri_gara": 1272,
+   "partenze": 1,
+   "energia": 0,
+   "energia_errori": [],
+   "errori": [],
+   "scaricato": "2026-10-20T09:29:54Z",
+   "parziale": false,
+   "kb": 307
+  },
+  {
+   "file": "storico/2024/10-spanish-grand-prix.json.gz",
+   "anno": 2024,
+   "round": 10,
+   "gp": "Spanish Grand Prix",
+   "luogo": "Barcelona",
+   "sessioni": [
+    "Practice 1",
+    "Practice 2",
+    "Practice 3",
+    "Qualifying",
+    "Race"
+   ],
+   "giri_gara": 1310,
+   "partenze": 1,
+   "energia": 0,
+   "energia_errori": [],
+   "errori": [],
+   "scaricato": "2026-10-20T09:31:51Z",
+   "parziale": false,
+   "kb": 310
+  },
+  {
+   "file": "storico/2024/11-austrian-grand-prix.json.gz",
+   "anno": 2024,
+   "round": 11,
+   "gp": "Austrian Grand Prix",
+   "luogo": "Spielberg",
+   "sessioni": [
+    "Practice 1",
+    "Sprint Qualifying",
+    "Sprint",
+    "Qualifying",
+    "Race"
+   ],
+   "giri_gara": 1407,
+   "partenze": 2,
+   "energia": 0,
+   "energia_errori": [],
+   "errori": [],
+   "scaricato": "2026-10-20T09:33:50Z",
+   "parziale": false,
+   "kb": 494
+  },
+  {
+   "file": "storico/2024/12-british-grand-prix.json.gz",
+   "anno": 2024,
+   "round": 12,
+   "gp": "British Grand Prix",
+   "luogo": "Silverstone",
+   "sessioni": [
+    "Practice 1",
+    "Practice 2",
+    "Practice 3",
+    "Qualifying",
+    "Race"
+   ],
+   "giri_gara": 962,
+   "partenze": 1,
+   "energia": 0,
+   "energia_errori": [],
+   "errori": [],
+   "scaricato": "2026-10-20T09:36:38Z",
+   "parziale": false,
+   "kb": 298
+  },
+  {
+   "file": "storico/2024/13-hungarian-grand-prix.json.gz",
+   "anno": 2024,
+   "round": 13,
+   "gp": "Hungarian Grand Prix",
+   "luogo": "Budapest",
+   "sessioni": [
+    "Practice 1",
+    "Practice 2",
+    "Practice 3",
+    "Qualifying",
+    "Race"
+   ],
+   "giri_gara": 1356,
+   "partenze": 1,
+   "energia": 0,
+   "energia_errori": [],
+   "errori": [],
+   "scaricato": "2026-10-20T09:38:36Z",
+   "parziale": false,
+   "kb": 305
+  },
+  {
+   "file": "storico/2024/14-belgian-grand-prix.json.gz",
+   "anno": 2024,
+   "round": 14,
+   "gp": "Belgian Grand Prix",
+   "luogo": "Spa-Francorchamps",
+   "sessioni": [
+    "Practice 1",
+    "Practice 2",
+    "Practice 3",
+    "Qualifying",
+    "Race"
+   ],
+   "giri_gara": 842,
+   "partenze": 1,
+   "energia": 0,
+   "energia_errori": [],
+   "errori": [],
+   "scaricato": "2026-10-20T09:40:34Z",
+   "parziale": false,
+   "kb": 291
+  },
+  {
+   "file": "storico/2024/15-dutch-grand-prix.json.gz",
+   "anno": 2024,
+   "round": 15,
+   "gp": "Dutch Grand Prix",
+   "luogo": "Zandvoort",
+   "sessioni": [
+    "Practice 1",
+    "Practice 2",
+    "Practice 3",
+    "Qualifying",
+    "Race"
+   ],
+   "giri_gara": 1426,
+   "partenze": 1,
+   "energia": 0,
+   "energia_errori": [],
+   "errori": [],
+   "scaricato": "2026-10-20T09:42:32Z",
+   "parziale": false,
+   "kb": 295
+  },
+  {
+   "file": "storico/2024/16-italian-grand-prix.json.gz",
+   "anno": 2024,
+   "round": 16,
+   "gp": "Italian Grand Prix",
+   "luogo": "Monza",
+   "sessioni": [
+    "Practice 1",
+    "Practice 2",
+    "Practice 3",
+    "Qualifying",
+    "Race"
+   ],
+   "giri_gara": 1009,
+   "partenze": 1,
+   "energia": 0,
+   "energia_errori": [],
+   "errori": [],
+   "scaricato": "2026-10-20T09:44:29Z",
+   "parziale": false,
+   "kb": 298
+  },
+  {
+   "file": "storico/2024/17-azerbaijan-grand-prix.json.gz",
+   "anno": 2024,
+   "round": 17,
+   "gp": "Azerbaijan Grand Prix",
+   "luogo": "Baku",
+   "sessioni": [
+    "Practice 1",
+    "Practice 2",
+    "Practice 3",
+    "Qualifying",
+    "Race"
+   ],
+   "giri_gara": 975,
+   "partenze": 1,
+   "energia": 0,
+   "energia_errori": [],
+   "errori": [],
+   "scaricato": "2026-10-20T09:46:29Z",
+   "parziale": false,
+   "kb": 299
+  },
+  {
+   "file": "storico/2024/18-singapore-grand-prix.json.gz",
+   "anno": 2024,
+   "round": 18,
+   "gp": "Singapore Grand Prix",
+   "luogo": "Marina Bay",
+   "sessioni": [
+    "Practice 1",
+    "Practice 2",
+    "Practice 3",
+    "Qualifying",
+    "Race"
+   ],
+   "giri_gara": 1179,
+   "partenze": 1,
+   "energia": 0,
+   "energia_errori": [],
+   "errori": [],
+   "scaricato": "2026-10-20T09:48:27Z",
+   "parziale": false,
+   "kb": 312
   },
   {
    "file": "storico/2024/19-united-states-grand-prix.json.gz",
@@ -139,13 +897,13 @@
     "Race"
    ],
    "giri_gara": 1059,
-   "partenze": 0,
+   "partenze": 2,
    "energia": 0,
    "energia_errori": [],
    "errori": [],
-   "scaricato": "2026-10-12T11:40:09Z",
+   "scaricato": "2026-10-20T09:50:24Z",
    "parziale": false,
-   "kb": 101
+   "kb": 504
   },
   {
    "file": "storico/2024/20-mexico-city-grand-prix.json.gz",
@@ -161,11 +919,13 @@
     "Race"
    ],
    "giri_gara": 1216,
-   "partenze": 0,
+   "partenze": 1,
+   "energia": 0,
+   "energia_errori": [],
    "errori": [],
-   "scaricato": "2026-10-12T14:00:24Z",
+   "scaricato": "2026-10-20T09:53:12Z",
    "parziale": false,
-   "kb": 114
+   "kb": 307
   },
   {
    "file": "storico/2024/21-s-o-paulo-grand-prix.json.gz",
@@ -181,11 +941,13 @@
     "Race"
    ],
    "giri_gara": 1137,
-   "partenze": 0,
+   "partenze": 2,
+   "energia": 0,
+   "energia_errori": [],
    "errori": [],
-   "scaricato": "2026-10-12T14:01:39Z",
+   "scaricato": "2026-10-20T09:55:10Z",
    "parziale": false,
-   "kb": 114
+   "kb": 471
   },
   {
    "file": "storico/2024/22-las-vegas-grand-prix.json.gz",
@@ -201,11 +963,13 @@
     "Race"
    ],
    "giri_gara": 940,
-   "partenze": 0,
+   "partenze": 1,
+   "energia": 0,
+   "energia_errori": [],
    "errori": [],
-   "scaricato": "2026-10-12T14:03:04Z",
+   "scaricato": "2026-10-20T09:57:58Z",
    "parziale": false,
-   "kb": 109
+   "kb": 308
   },
   {
    "file": "storico/2024/23-qatar-grand-prix.json.gz",
@@ -221,11 +985,13 @@
     "Race"
    ],
    "giri_gara": 944,
-   "partenze": 0,
+   "partenze": 2,
+   "energia": 0,
+   "energia_errori": [],
    "errori": [],
-   "scaricato": "2026-10-12T14:04:19Z",
+   "scaricato": "2026-10-20T09:59:56Z",
    "parziale": false,
-   "kb": 106
+   "kb": 499
   },
   {
    "file": "storico/2024/24-abu-dhabi-grand-prix.json.gz",
@@ -241,11 +1007,411 @@
     "Race"
    ],
    "giri_gara": 1037,
-   "partenze": 0,
+   "partenze": 1,
+   "energia": 0,
+   "energia_errori": [],
    "errori": [],
-   "scaricato": "2026-10-12T14:05:43Z",
+   "scaricato": "2026-10-20T10:02:44Z",
    "parziale": false,
-   "kb": 108
+   "kb": 305
+  },
+  {
+   "file": "storico/2025/01-australian-grand-prix.json.gz",
+   "anno": 2025,
+   "round": 1,
+   "gp": "Australian Grand Prix",
+   "luogo": "Melbourne",
+   "sessioni": [
+    "Practice 1",
+    "Practice 2",
+    "Practice 3",
+    "Qualifying",
+    "Race"
+   ],
+   "giri_gara": 928,
+   "partenze": 1,
+   "energia": 133,
+   "energia_errori": [],
+   "errori": [],
+   "scaricato": "2026-10-20T10:04:41Z",
+   "parziale": false,
+   "kb": 955
+  },
+  {
+   "file": "storico/2025/02-chinese-grand-prix.json.gz",
+   "anno": 2025,
+   "round": 2,
+   "gp": "Chinese Grand Prix",
+   "luogo": "Shanghai",
+   "sessioni": [
+    "Practice 1",
+    "Sprint Qualifying",
+    "Sprint",
+    "Qualifying",
+    "Race"
+   ],
+   "giri_gara": 1066,
+   "partenze": 2,
+   "energia": 130,
+   "energia_errori": [],
+   "errori": [],
+   "scaricato": "2026-10-20T10:11:18Z",
+   "parziale": false,
+   "kb": 1340
+  },
+  {
+   "file": "storico/2025/03-japanese-grand-prix.json.gz",
+   "anno": 2025,
+   "round": 3,
+   "gp": "Japanese Grand Prix",
+   "luogo": "Suzuka",
+   "sessioni": [
+    "Practice 1",
+    "Practice 2",
+    "Practice 3",
+    "Qualifying",
+    "Race"
+   ],
+   "giri_gara": 1059,
+   "partenze": 1,
+   "energia": 135,
+   "energia_errori": [],
+   "errori": [],
+   "scaricato": "2026-10-20T10:18:39Z",
+   "parziale": false,
+   "kb": 982
+  },
+  {
+   "file": "storico/2025/04-bahrain-grand-prix.json.gz",
+   "anno": 2025,
+   "round": 4,
+   "gp": "Bahrain Grand Prix",
+   "luogo": "Sakhir",
+   "sessioni": [
+    "Practice 1",
+    "Practice 2",
+    "Practice 3",
+    "Qualifying",
+    "Race"
+   ],
+   "giri_gara": 1129,
+   "partenze": 1,
+   "energia": 146,
+   "energia_errori": [],
+   "errori": [],
+   "scaricato": "2026-10-20T10:25:20Z",
+   "parziale": false,
+   "kb": 1172
+  },
+  {
+   "file": "storico/2025/05-saudi-arabian-grand-prix.json.gz",
+   "anno": 2025,
+   "round": 5,
+   "gp": "Saudi Arabian Grand Prix",
+   "luogo": "Jeddah",
+   "sessioni": [
+    "Practice 1",
+    "Practice 2",
+    "Practice 3",
+    "Qualifying",
+    "Race"
+   ],
+   "giri_gara": 899,
+   "partenze": 1,
+   "energia": 128,
+   "energia_errori": [],
+   "errori": [],
+   "scaricato": "2026-10-20T10:32:24Z",
+   "parziale": false,
+   "kb": 940
+  },
+  {
+   "file": "storico/2025/06-miami-grand-prix.json.gz",
+   "anno": 2025,
+   "round": 6,
+   "gp": "Miami Grand Prix",
+   "luogo": "Miami Gardens",
+   "sessioni": [
+    "Practice 1",
+    "Sprint Qualifying",
+    "Sprint",
+    "Qualifying",
+    "Race"
+   ],
+   "giri_gara": 559,
+   "partenze": 1,
+   "energia": 110,
+   "energia_errori": [],
+   "errori": [
+    "Race: car_data partenza: giro 2 non trovato"
+   ],
+   "scaricato": "2026-10-20T10:38:51Z",
+   "parziale": false,
+   "kb": 856
+  },
+  {
+   "file": "storico/2025/07-emilia-romagna-grand-prix.json.gz",
+   "anno": 2025,
+   "round": 7,
+   "gp": "Emilia Romagna Grand Prix",
+   "luogo": "Imola",
+   "sessioni": [
+    "Practice 1",
+    "Practice 2",
+    "Practice 3",
+    "Qualifying",
+    "Race"
+   ],
+   "giri_gara": 1207,
+   "partenze": 1,
+   "energia": 140,
+   "energia_errori": [],
+   "errori": [],
+   "scaricato": "2026-10-20T10:44:48Z",
+   "parziale": false,
+   "kb": 950
+  },
+  {
+   "file": "storico/2025/08-monaco-grand-prix.json.gz",
+   "anno": 2025,
+   "round": 8,
+   "gp": "Monaco Grand Prix",
+   "luogo": "Monaco",
+   "sessioni": [
+    "Practice 1",
+    "Practice 2",
+    "Practice 3",
+    "Qualifying",
+    "Race"
+   ],
+   "giri_gara": 1425,
+   "partenze": 1,
+   "energia": 138,
+   "energia_errori": [],
+   "errori": [],
+   "scaricato": "2026-10-20T10:51:43Z",
+   "parziale": false,
+   "kb": 938
+  },
+  {
+   "file": "storico/2025/09-spanish-grand-prix.json.gz",
+   "anno": 2025,
+   "round": 9,
+   "gp": "Spanish Grand Prix",
+   "luogo": "Barcelona",
+   "sessioni": [
+    "Practice 1",
+    "Practice 2",
+    "Practice 3",
+    "Qualifying",
+    "Race"
+   ],
+   "giri_gara": 1204,
+   "partenze": 1,
+   "energia": 148,
+   "energia_errori": [],
+   "errori": [],
+   "scaricato": "2026-10-20T10:58:34Z",
+   "parziale": false,
+   "kb": 1004
+  },
+  {
+   "file": "storico/2025/10-canadian-grand-prix.json.gz",
+   "anno": 2025,
+   "round": 10,
+   "gp": "Canadian Grand Prix",
+   "luogo": "Montréal",
+   "sessioni": [
+    "Practice 1",
+    "Practice 2",
+    "Practice 3",
+    "Qualifying",
+    "Race"
+   ],
+   "giri_gara": 1349,
+   "partenze": 1,
+   "energia": 145,
+   "energia_errori": [],
+   "errori": [],
+   "scaricato": "2026-10-20T11:05:41Z",
+   "parziale": false,
+   "kb": 971
+  },
+  {
+   "file": "storico/2025/11-austrian-grand-prix.json.gz",
+   "anno": 2025,
+   "round": 11,
+   "gp": "Austrian Grand Prix",
+   "luogo": "Spielberg",
+   "sessioni": [
+    "Practice 1",
+    "Practice 2",
+    "Practice 3",
+    "Qualifying",
+    "Race"
+   ],
+   "giri_gara": 1128,
+   "partenze": 1,
+   "energia": 149,
+   "energia_errori": [],
+   "errori": [],
+   "scaricato": "2026-10-20T11:12:43Z",
+   "parziale": false,
+   "kb": 916
+  },
+  {
+   "file": "storico/2025/12-british-grand-prix.json.gz",
+   "anno": 2025,
+   "round": 12,
+   "gp": "British Grand Prix",
+   "luogo": "Silverstone",
+   "sessioni": [
+    "Practice 1",
+    "Practice 2",
+    "Practice 3",
+    "Qualifying",
+    "Race"
+   ],
+   "giri_gara": 827,
+   "partenze": 1,
+   "energia": 143,
+   "energia_errori": [],
+   "errori": [],
+   "scaricato": "2026-10-20T11:19:54Z",
+   "parziale": false,
+   "kb": 1108
+  },
+  {
+   "file": "storico/2025/13-belgian-grand-prix.json.gz",
+   "anno": 2025,
+   "round": 13,
+   "gp": "Belgian Grand Prix",
+   "luogo": "Spa-Francorchamps",
+   "sessioni": [
+    "Practice 1",
+    "Sprint Qualifying",
+    "Sprint",
+    "Qualifying",
+    "Race"
+   ],
+   "giri_gara": 879,
+   "partenze": 2,
+   "energia": 128,
+   "energia_errori": [],
+   "errori": [],
+   "scaricato": "2026-10-20T11:26:52Z",
+   "parziale": false,
+   "kb": 1340
+  },
+  {
+   "file": "storico/2025/14-hungarian-grand-prix.json.gz",
+   "anno": 2025,
+   "round": 14,
+   "gp": "Hungarian Grand Prix",
+   "luogo": "Budapest",
+   "sessioni": [
+    "Practice 1",
+    "Practice 2",
+    "Practice 3",
+    "Qualifying",
+    "Race"
+   ],
+   "giri_gara": 1369,
+   "partenze": 1,
+   "energia": 152,
+   "energia_errori": [],
+   "errori": [],
+   "scaricato": "2026-10-20T11:34:10Z",
+   "parziale": false,
+   "kb": 1078
+  },
+  {
+   "file": "storico/2025/15-dutch-grand-prix.json.gz",
+   "anno": 2025,
+   "round": 15,
+   "gp": "Dutch Grand Prix",
+   "luogo": "Zandvoort",
+   "sessioni": [
+    "Practice 1",
+    "Practice 2",
+    "Practice 3",
+    "Qualifying",
+    "Race"
+   ],
+   "giri_gara": 1365,
+   "partenze": 1,
+   "energia": 148,
+   "energia_errori": [],
+   "errori": [],
+   "scaricato": "2026-10-20T11:41:29Z",
+   "parziale": false,
+   "kb": 988
+  },
+  {
+   "file": "storico/2025/16-italian-grand-prix.json.gz",
+   "anno": 2025,
+   "round": 16,
+   "gp": "Italian Grand Prix",
+   "luogo": "Monza",
+   "sessioni": [
+    "Practice 1",
+    "Practice 2",
+    "Practice 3",
+    "Qualifying",
+    "Race"
+   ],
+   "giri_gara": 976,
+   "partenze": 1,
+   "energia": 138,
+   "energia_errori": [],
+   "errori": [],
+   "scaricato": "2026-10-20T11:48:37Z",
+   "parziale": false,
+   "kb": 905
+  },
+  {
+   "file": "storico/2025/17-azerbaijan-grand-prix.json.gz",
+   "anno": 2025,
+   "round": 17,
+   "gp": "Azerbaijan Grand Prix",
+   "luogo": "Baku",
+   "sessioni": [
+    "Practice 1",
+    "Practice 2",
+    "Practice 3",
+    "Qualifying",
+    "Race"
+   ],
+   "giri_gara": 968,
+   "partenze": 1,
+   "energia": 113,
+   "energia_errori": [],
+   "errori": [],
+   "scaricato": "2026-10-20T11:55:25Z",
+   "parziale": false,
+   "kb": 1035
+  },
+  {
+   "file": "storico/2025/18-singapore-grand-prix.json.gz",
+   "anno": 2025,
+   "round": 18,
+   "gp": "Singapore Grand Prix",
+   "luogo": "Marina Bay",
+   "sessioni": [
+    "Practice 1",
+    "Practice 2",
+    "Practice 3",
+    "Qualifying",
+    "Race"
+   ],
+   "giri_gara": 1229,
+   "partenze": 1,
+   "energia": 126,
+   "energia_errori": [],
+   "errori": [],
+   "scaricato": "2026-10-20T12:01:20Z",
+   "parziale": false,
+   "kb": 979
   },
   {
    "file": "storico/2025/19-united-states-grand-prix.json.gz",
@@ -261,13 +1427,16 @@
     "Race"
    ],
    "giri_gara": 1067,
-   "partenze": 0,
-   "energia": 0,
-   "energia_errori": [],
+   "partenze": 2,
+   "energia": 72,
+   "energia_errori": [
+    "Qualifying: tempo massimo raggiunto: 19 blocchi da scaricare",
+    "Race: tempo massimo raggiunto: 38 blocchi da scaricare"
+   ],
    "errori": [],
-   "scaricato": "2026-10-12T11:41:33Z",
+   "scaricato": "2026-10-20T12:07:43Z",
    "parziale": false,
-   "kb": 100
+   "kb": 910
   },
   {
    "file": "storico/2025/20-mexico-city-grand-prix.json.gz",
@@ -778,10 +1947,26 @@
    "errori": []
   },
   {
+   "file": "storico/circuiti/2024-imola.json.gz",
+   "anno": 2024,
+   "circuito": "Imola",
+   "circuit_key": 6,
+   "giri": 6,
+   "errori": []
+  },
+  {
    "file": "storico/circuiti/2024-interlagos.json.gz",
    "anno": 2024,
    "circuito": "Interlagos",
    "circuit_key": 14,
+   "giri": 6,
+   "errori": []
+  },
+  {
+   "file": "storico/circuiti/2024-jeddah.json.gz",
+   "anno": 2024,
+   "circuito": "Jeddah",
+   "circuit_key": 149,
    "giri": 6,
    "errori": []
   },
@@ -846,6 +2031,14 @@
    "anno": 2024,
    "circuito": "Monza",
    "circuit_key": 39,
+   "giri": 6,
+   "errori": []
+  },
+  {
+   "file": "storico/circuiti/2024-sakhir.json.gz",
+   "anno": 2024,
+   "circuito": "Sakhir",
+   "circuit_key": 63,
    "giri": 6,
    "errori": []
   },
@@ -946,10 +2139,26 @@
    "errori": []
   },
   {
+   "file": "storico/circuiti/2025-imola.json.gz",
+   "anno": 2025,
+   "circuito": "Imola",
+   "circuit_key": 6,
+   "giri": 6,
+   "errori": []
+  },
+  {
    "file": "storico/circuiti/2025-interlagos.json.gz",
    "anno": 2025,
    "circuito": "Interlagos",
    "circuit_key": 14,
+   "giri": 6,
+   "errori": []
+  },
+  {
+   "file": "storico/circuiti/2025-jeddah.json.gz",
+   "anno": 2025,
+   "circuito": "Jeddah",
+   "circuit_key": 149,
    "giri": 6,
    "errori": []
   },
@@ -1014,6 +2223,14 @@
    "anno": 2025,
    "circuito": "Monza",
    "circuit_key": 39,
+   "giri": 6,
+   "errori": []
+  },
+  {
+   "file": "storico/circuiti/2025-sakhir.json.gz",
+   "anno": 2025,
+   "circuito": "Sakhir",
+   "circuit_key": 63,
    "giri": 6,
    "errori": []
   },
