@@ -1,7 +1,7 @@
 {
- "aggiornato": "2026-10-23T19:02:58Z",
+ "aggiornato": "2026-10-23T22:33:25Z",
  "fermato": null,
- "richieste": 50,
+ "richieste": 65,
  "file": [
   {
    "file": "storico/2023/01-bahrain-grand-prix.json.gz",
@@ -1926,16 +1926,17 @@
    "gp": "United States Grand Prix",
    "luogo": "Austin",
    "sessioni": [
-    "Practice 1"
+    "Practice 1",
+    "Practice 2"
    ],
    "giri_gara": 0,
    "partenze": 0,
-   "energia": 34,
+   "energia": 78,
    "energia_errori": [],
    "errori": [],
-   "scaricato": "2026-10-23T19:01:33Z",
+   "scaricato": "2026-10-23T22:31:26Z",
    "parziale": true,
-   "kb": 205
+   "kb": 519
   }
  ],
  "circuiti": [
