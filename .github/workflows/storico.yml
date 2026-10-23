@@ -1,28 +1,25 @@
 name: Storico
 
 on:
-  # Lanci programmati del GP di Austin 2026, in UTC: 25, 29 e 34 minuti dopo la fine prevista di ogni
-  # sessione (OpenF1 libera i dati circa 30 minuti dopo: il primo lancio che li trova li salva, gli
-  # altri aggiornano il file del weekend). Massimo 35 minuti, per avere i dati il prima possibile.
-  # 29 e 34 invece di 30 e 35: niente lanci al minuto 00, quando GitHub è più carico e può saltarli.
-  # FP1 e FP3 finiscono alle 18:30 UTC, FP2 e qualifica alle 22:00 UTC, la gara verso le 20:40 UTC.
-  # Tra parentesi l'ora italiana. Lo scheduler di GitHub può partire con qualche minuto di ritardo.
+  # Lanci programmati del GP di Austin 2026 (orari UTC). GitHub ritarda o salta spesso i lanci
+  # programmati (il 23/10 sera anche di 25-35 minuti), quindi ogni sessione ha tre lanci PRIMA della
+  # fine: il primo che parte aspetta fino a 25 minuti dopo la fine prevista e poi riprova ogni 2 minuti
+  # finché OpenF1 non dà i dati della sessione (di solito circa 30 minuti dopo la fine). I lanci
+  # successivi trovano la sessione già in archivio e si chiudono subito.
+  # FP3 finisce alle 18:30 UTC, FP2 e qualifica alle 22:00 UTC, la gara verso le 20:40 UTC.
   schedule:
-    - cron: "55 18 23 10 *"   # FP1 +25 (ven 20:55)
-    - cron: "59 18 23 10 *"   # FP1 +29 (ven 20:59)
-    - cron: "4 19 23 10 *"    # FP1 +34 (ven 21:04)
-    - cron: "25 22 23 10 *"   # FP2 +25 (sab 00:25)
-    - cron: "29 22 23 10 *"   # FP2 +29 (sab 00:29)
-    - cron: "34 22 23 10 *"   # FP2 +34 (sab 00:34)
-    - cron: "55 18 24 10 *"   # FP3 +25 (sab 20:55)
-    - cron: "59 18 24 10 *"   # FP3 +29 (sab 20:59)
-    - cron: "4 19 24 10 *"    # FP3 +34 (sab 21:04)
-    - cron: "25 22 24 10 *"   # qualifica +25 (dom 00:25)
-    - cron: "29 22 24 10 *"   # qualifica +29 (dom 00:29)
-    - cron: "34 22 24 10 *"   # qualifica +34 (dom 00:34)
-    - cron: "5 21 25 10 *"    # gara, circa +25 (dom 22:05, ora solare)
-    - cron: "9 21 25 10 *"    # gara, circa +29 (dom 22:09)
-    - cron: "14 21 25 10 *"   # gara, circa +34 (dom 22:14)
+    - cron: "32 21 23 10 *"   # FP2: fine ven 22:00 UTC (sab 00:00 in Italia), dati da sab 00:25
+    - cron: "41 21 23 10 *"
+    - cron: "51 21 23 10 *"
+    - cron: "2 18 24 10 *"    # FP3: fine sab 18:30 UTC (20:30 in Italia), dati da 20:55
+    - cron: "11 18 24 10 *"
+    - cron: "21 18 24 10 *"
+    - cron: "32 21 24 10 *"   # qualifica: fine sab 22:00 UTC (dom 00:00 in Italia), dati da dom 00:25
+    - cron: "41 21 24 10 *"
+    - cron: "51 21 24 10 *"
+    - cron: "12 20 25 10 *"   # gara: fine prevista dom 20:40 UTC (21:40 in Italia), dati da 22:05
+    - cron: "22 20 25 10 *"
+    - cron: "33 20 25 10 *"
   workflow_dispatch:
     inputs:
       anni:
@@ -41,6 +38,14 @@ on:
         description: "Stagioni con la telemetria dei giri (modello energia)"
         required: false
         default: "2025,2026"
+      sessione:
+        description: "Sessione da aspettare (Practice 1, Practice 2, Practice 3, Qualifying, Race); vuoto = un solo scaricamento"
+        required: false
+        default: ""
+      fine:
+        description: "Fine prevista della sessione da aspettare, in UTC (es. 2026-10-24T18:30:00Z)"
+        required: false
+        default: ""
 
 permissions:
   contents: write
@@ -71,7 +76,55 @@ jobs:
           CIRCUITO: ${{ github.event.inputs.circuito }}
           ANNI_CIRCUITO: ${{ github.event.inputs.anni_circuito }}
           ANNI_ENERGIA: ${{ github.event.inputs.anni_energia }}
-        run: python backfill_fetch.py --out-dir storico --anni "${ANNI:-2026}" --circuito "$CIRCUITO" --anni-circuito "${ANNI_CIRCUITO:-2023,2024,2025}" --anni-energia "${ANNI_ENERGIA:-2025,2026}" --max-minuti 230
+          SESSIONE: ${{ github.event.inputs.sessione }}
+          FINE_IN: ${{ github.event.inputs.fine }}
+          CRON: ${{ github.event.schedule }}
+        run: |
+          scarica() {
+            python backfill_fetch.py --out-dir storico --anni "${ANNI:-2026}" --circuito "$CIRCUITO" \
+              --anni-circuito "${ANNI_CIRCUITO:-2023,2024,2025}" --anni-energia "${ANNI_ENERGIA:-2025,2026}" \
+              --max-minuti 230 || echo "::warning::scaricamento non riuscito"
+          }
+          # la sessione è nell'archivio del weekend più recente, con giri e classifica?
+          presente() {
+            python -c 'import glob,gzip,json,sys; f=sorted(glob.glob("storico/2026/*.json.gz")); d=json.load(gzip.open(f[-1])) if f else {}; sys.exit(0 if any(s["session"]["session_name"]==sys.argv[1] and len(s.get("laps") or [])>0 and len(s.get("session_result") or [])>=20 for s in d.get("sessioni") or []) else 1)' "$1"
+          }
+          SESS="$SESSIONE"; FINE="$FINE_IN"; MAXMIN=60
+          case "$CRON" in
+            "32 21 23 10 *"|"41 21 23 10 *"|"51 21 23 10 *") SESS="Practice 2"; FINE="2026-10-23T22:00:00Z" ;;
+            "2 18 24 10 *"|"11 18 24 10 *"|"21 18 24 10 *") SESS="Practice 3"; FINE="2026-10-24T18:30:00Z" ;;
+            "32 21 24 10 *"|"41 21 24 10 *"|"51 21 24 10 *") SESS="Qualifying"; FINE="2026-10-24T22:00:00Z" ;;
+            "12 20 25 10 *"|"22 20 25 10 *"|"33 20 25 10 *") SESS="Race"; FINE="2026-10-25T20:40:00Z"; MAXMIN=120 ;;
+          esac
+          if [ -z "$SESS" ] || [ -z "$FINE" ]; then
+            scarica
+            exit 0
+          fi
+          if presente "$SESS"; then
+            echo "$SESS già in archivio: niente da fare."
+            exit 0
+          fi
+          fine=$(date -u -d "$FINE" +%s)
+          inizio=$(( fine + 25 * 60 ))
+          limite=$(( fine + MAXMIN * 60 ))
+          ora=$(date -u +%s)
+          if [ "$ora" -lt "$inizio" ]; then
+            echo "Attesa fino alle $(date -u -d @$inizio +%H:%M) UTC, 25 minuti dopo la fine prevista di $SESS."
+            sleep $(( inizio - ora ))
+          fi
+          while true; do
+            scarica
+            if presente "$SESS"; then
+              echo "$SESS in archivio alle $(date -u +%H:%M) UTC."
+              exit 0
+            fi
+            if [ "$(date -u +%s)" -ge "$limite" ]; then
+              echo "::warning::$SESS non ancora disponibile su OpenF1: rilanciare a mano."
+              exit 0
+            fi
+            echo "$SESS non ancora disponibile: nuovo tentativo tra 2 minuti."
+            sleep 120
+          done
 
       - name: Salva l'archivio
         if: always()
