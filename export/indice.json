@@ -1,5 +1,5 @@
 {
- "aggiornato": "2026-10-15T08:31:29Z",
+ "aggiornato": "2026-10-23T19:39:06Z",
  "sessioni": [
   {
    "evento": "Singapore Grand Prix",
@@ -25,6 +25,31 @@
    ],
    "scaricato": "2026-10-15T08:31:29Z",
    "cartella": "2026-marina-bay/Q"
+  },
+  {
+   "evento": "United States Grand Prix",
+   "luogo": "Austin",
+   "sessione": "Practice 1",
+   "session_key": 11389,
+   "inizio": "2026-10-23T17:30:00+00:00",
+   "fine": "2026-10-23T18:30:00+00:00",
+   "piloti_top": [
+    "NOR",
+    "VER",
+    "HAD",
+    "ANT",
+    "LEC",
+    "HAM",
+    "RUS",
+    "PIA"
+   ],
+   "giri": 485,
+   "giri_telemetria_valida": [
+    155,
+    185
+   ],
+   "scaricato": "2026-10-23T19:39:06Z",
+   "cartella": "2026-austin/FP1"
   }
  ]
 }
