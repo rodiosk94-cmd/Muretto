@@ -1,0 +1,24 @@
+{
+ "evento": "United States Grand Prix",
+ "luogo": "Austin",
+ "sessione": "Practice 2",
+ "session_key": 11390,
+ "inizio": "2026-10-23T21:00:00+00:00",
+ "fine": "2026-10-23T22:00:00+00:00",
+ "piloti_top": [
+  "NOR",
+  "VER",
+  "HAD",
+  "ANT",
+  "LEC",
+  "HAM",
+  "RUS",
+  "PIA"
+ ],
+ "giri": 567,
+ "giri_telemetria_valida": [
+  172,
+  202
+ ],
+ "scaricato": "2026-10-23T22:41:01Z"
+}
