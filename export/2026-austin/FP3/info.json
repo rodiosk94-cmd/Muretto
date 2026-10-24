@@ -1,0 +1,24 @@
+{
+ "evento": "United States Grand Prix",
+ "luogo": "Austin",
+ "sessione": "Practice 3",
+ "session_key": 11391,
+ "inizio": "2026-10-24T17:30:00+00:00",
+ "fine": "2026-10-24T18:30:00+00:00",
+ "piloti_top": [
+  "NOR",
+  "VER",
+  "HAD",
+  "ANT",
+  "LEC",
+  "HAM",
+  "RUS",
+  "PIA"
+ ],
+ "giri": 401,
+ "giri_telemetria_valida": [
+  107,
+  136
+ ],
+ "scaricato": "2026-10-24T19:10:09Z"
+}
