@@ -35,6 +35,10 @@ Regola di decisione. Per ogni variante:
   completo (scarto appaiato evento per evento con intervallo sopra zero). Nella gara il Brier migliora
   togliendo partenza, ritiri e safety car, ma il favorito sale di 2-6 punti mentre nel completo è già giusto.
 
+Decisioni di Francesco del 26/10/2026 dopo la prima prova: tolte la correzione Ferrari (logit_pole_venerdi.py,
+qui resta come pezzo in prova «+correzione Ferrari») e l'aria sporca e scia del modello di gara; il resto resta.
+Risultati in claude/backtest-sottrazione-2026-10-26.md nel progetto.
+
 Uso, dalla radice di Muretto (servono i modelli nella stessa cartella):
   python backtest_sottrazione.py --storico storico --out risultati
   python backtest_sottrazione.py --solo pole,h2h --anni 2025,2026
@@ -160,11 +164,6 @@ def _senza_sorpassi(inp, M):
     inp['sorpasso'] = M.livello_sorpasso(2, M.P['sorpasso_shift'])
 
 
-def _senza_scia(inp, M):
-    M.P['aria_sporca'] = 0.0
-    M.P['usura_scia'] = 1.0
-
-
 def _senza_pioggia(inp, M):
     inp['p_bagnato'] = 0.0
 
@@ -183,12 +182,12 @@ VAR_GARA = [
     ('-safety car e VSC', _senza_sc),
     ('-soste', _senza_soste),
     ('-sorpassi per circuito', _senza_sorpassi),
-    ('-aria sporca e scia', _senza_scia),
     ('-pioggia', _senza_pioggia),
+    # «-aria sporca e scia» non c'è più: tolte da modello_gara.py il 26/10/2026 dopo questa prova
+    # (Brier -0,013, intervallo da -0,025 a -0,001, su 73 corse 2024-2026)
     # versioni snelle (scelte sugli stessi dati: la verifica vera è dal Messico in poi)
-    ('snello: via aria sporca, partenza, ritiri e safety car', _insieme(_senza_scia, _senza_partenza, _senza_ritiri,
-                                                                      _senza_sc)),
-    ('snello: solo passo e griglia', _insieme(_senza_scia, _senza_partenza, _senza_ritiri, _senza_sc, _senza_soste,
+    ('snello: via partenza, ritiri e safety car', _insieme(_senza_partenza, _senza_ritiri, _senza_sc)),
+    ('snello: solo passo e griglia', _insieme(_senza_partenza, _senza_ritiri, _senza_sc, _senza_soste,
                                               _senza_sorpassi, _senza_pioggia)),
 ]
 

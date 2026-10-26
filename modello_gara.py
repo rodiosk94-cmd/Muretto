@@ -34,7 +34,8 @@ Componenti (parametri stimati solo con eventi precedenti al via):
   soste          piano comune (una o due soste) con scarti individuali, copertura
                  dell'undercut, degrado effettivo, giro di uscita, perdita ai box del circuito
   sorpassi       difficoltà per circuito (tabella a priori, spostabile con --shift-sorpassi),
-                 vantaggio di passo, aria sporca
+                 vantaggio di passo. Aria sporca e scia tolte il 26/10/2026: nella prova di
+                 sottrazione 2024-2026 peggioravano la previsione (backtest_sottrazione.py)
   pioggia        rischio pioggia dal messaggio FIA prima del via (o da --pioggia)
   gomme          (solo con --gomme) mescole, degrado con crollo e piani di sosta da modello_gomme.py
   ricalibrazione temperatura sulle probabilità di vittoria e logistica sul podio, stimate
@@ -91,8 +92,6 @@ P = dict(
     # gomme e soste
     quota_degrado=0.45,       # frazione del degrado lordo che separa gomma nuova e usata
     giro_uscita=1.0,          # s persi nel giro di uscita (gomme fredde)
-    aria_sporca=0.15,         # s/giro persi a meno di 1 s da chi precede (Singapore 2026)
-    usura_scia=1.6,           # la gomma invecchia 1,6 volte più in fretta in scia
     rumore_box=0.4,           # s, variabilità della sosta
     p_due_soste=0.25,
     p_altra_strategia=0.10,   # quota di piloti che sceglie l'altro piano (una/due soste)
@@ -1337,7 +1336,6 @@ def simula(inp, n=None, seed=0, dettagli=False):
         s2 = np.full((n, D), L + 10)
     fatte = np.zeros((n, D), int)
     uscita = np.zeros((n, D), bool)
-    scia = np.zeros((n, D), bool)
     if piani:
         eta = np.where(mesc[..., 0] == 0, ETA_SOFT, 0).astype(float)
     else:
@@ -1385,8 +1383,7 @@ def simula(inp, n=None, seed=0, dettagli=False):
             gomma = off_c[c_now] + ef_g * (deg_c[c_now] * eta + curv_c[c_now] * np.maximum(0.0, eta - gin) ** 2)
         else:
             gomma = inp['degrado'] * eta
-        t_sis = passo + gomma + gu_loss * g_on + P['giro_uscita'] * uscita \
-            + P['aria_sporca'] * scia
+        t_sis = passo + gomma + gu_loss * g_on + P['giro_uscita'] * uscita
         uscita = np.zeros((n, D), bool)
         err_g = (rng.random((n, D)) < P['errore_giro_p']) * rng.uniform(1.5, 5.0, (n, D))
         t_giro = t_sis + rumore * rng.standard_normal((n, D)) + err_g
@@ -1488,15 +1485,7 @@ def simula(inp, n=None, seed=0, dettagli=False):
             new = np.where(r_now, 1e9 + (L - lap) * 1000 + rng.random((n, D)), new)
         cum = new
         ordine = np.argsort(cum, 1, kind='stable')
-        # chi è a meno di 1 s da chi lo precede: passo e gomme peggiori il giro dopo
-        cs = cum[ar[:, None], ordine]
-        dgap = np.diff(cs, axis=1)
-        scia_o = np.zeros((n, D), bool)
-        scia_o[:, 1:] = (dgap < 1.0) & (cs[:, 1:] < big)
-        scia = np.zeros((n, D), bool)
-        scia[ar[:, None], ordine] = scia_o
-        scia &= verde[:, None]
-        eta += np.where(scia, P['usura_scia'], 1.0)
+        eta += 1.0
 
     fin = ordine
     win = np.bincount(fin[:, 0], minlength=D) / n
