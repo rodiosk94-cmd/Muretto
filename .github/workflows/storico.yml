@@ -1,25 +1,27 @@
 name: Storico
 
 on:
-  # Lanci programmati del GP di Austin 2026 (orari UTC). GitHub ritarda o salta spesso i lanci
-  # programmati (il 23/10 sera anche di 25-35 minuti), quindi ogni sessione ha tre lanci PRIMA della
+  # Lanci programmati del GP del Messico 2026 (orari UTC; Città del Messico UTC-6, Italia UTC+1).
+  # GitHub ritarda o salta spesso i lanci programmati, quindi ogni sessione ha tre lanci PRIMA della
   # fine: il primo che parte aspetta fino a 25 minuti dopo la fine prevista e poi riprova ogni 2 minuti
   # finché OpenF1 non dà i dati della sessione (di solito circa 30 minuti dopo la fine). I lanci
   # successivi trovano la sessione già in archivio e si chiudono subito.
-  # FP3 finisce alle 18:30 UTC, FP2 e qualifica alle 22:00 UTC, la gara verso le 20:40 UTC.
   schedule:
-    - cron: "32 21 23 10 *"   # FP2: fine ven 22:00 UTC (sab 00:00 in Italia), dati da sab 00:25
-    - cron: "41 21 23 10 *"
-    - cron: "51 21 23 10 *"
-    - cron: "2 18 24 10 *"    # FP3: fine sab 18:30 UTC (20:30 in Italia), dati da 20:55
-    - cron: "11 18 24 10 *"
-    - cron: "21 18 24 10 *"
-    - cron: "32 21 24 10 *"   # qualifica: fine sab 22:00 UTC (dom 00:00 in Italia), dati da dom 00:25
-    - cron: "41 21 24 10 *"
-    - cron: "51 21 24 10 *"
-    - cron: "12 20 25 10 *"   # gara: fine prevista dom 20:40 UTC (21:40 in Italia), dati da 22:05
-    - cron: "22 20 25 10 *"
-    - cron: "33 20 25 10 *"
+    - cron: "2 19 30 10 *"    # FP1: fine ven 19:30 UTC (20:30 in Italia), dati da 20:55
+    - cron: "11 19 30 10 *"
+    - cron: "21 19 30 10 *"
+    - cron: "32 22 30 10 *"   # FP2: fine ven 23:00 UTC (sab 00:00 in Italia), dati da sab 00:25
+    - cron: "41 22 30 10 *"
+    - cron: "51 22 30 10 *"
+    - cron: "2 18 31 10 *"    # FP3: fine sab 18:30 UTC (19:30 in Italia), dati da 19:55
+    - cron: "11 18 31 10 *"
+    - cron: "21 18 31 10 *"
+    - cron: "32 21 31 10 *"   # qualifica: fine sab 22:00 UTC (23:00 in Italia), dati da 23:25
+    - cron: "41 21 31 10 *"
+    - cron: "51 21 31 10 *"
+    - cron: "12 21 1 11 *"    # gara: fine prevista dom 21:40 UTC (22:40 in Italia), dati da 23:05
+    - cron: "22 21 1 11 *"
+    - cron: "33 21 1 11 *"
   workflow_dispatch:
     inputs:
       anni:
@@ -29,7 +31,7 @@ on:
       circuito:
         description: "Circuito di cui scaricare le edizioni passate (vuoto = nessuno)"
         required: false
-        default: "Austin"
+        default: "Mexico"
       anni_circuito:
         description: "Anni delle edizioni passate del circuito"
         required: false
@@ -43,7 +45,7 @@ on:
         required: false
         default: ""
       fine:
-        description: "Fine prevista della sessione da aspettare, in UTC (es. 2026-10-24T18:30:00Z)"
+        description: "Fine prevista della sessione da aspettare, in UTC (es. 2026-10-31T18:30:00Z)"
         required: false
         default: ""
 
@@ -91,10 +93,11 @@ jobs:
           }
           SESS="$SESSIONE"; FINE="$FINE_IN"; MAXMIN=60
           case "$CRON" in
-            "32 21 23 10 *"|"41 21 23 10 *"|"51 21 23 10 *") SESS="Practice 2"; FINE="2026-10-23T22:00:00Z" ;;
-            "2 18 24 10 *"|"11 18 24 10 *"|"21 18 24 10 *") SESS="Practice 3"; FINE="2026-10-24T18:30:00Z" ;;
-            "32 21 24 10 *"|"41 21 24 10 *"|"51 21 24 10 *") SESS="Qualifying"; FINE="2026-10-24T22:00:00Z" ;;
-            "12 20 25 10 *"|"22 20 25 10 *"|"33 20 25 10 *") SESS="Race"; FINE="2026-10-25T20:40:00Z"; MAXMIN=120 ;;
+            "2 19 30 10 *"|"11 19 30 10 *"|"21 19 30 10 *") SESS="Practice 1"; FINE="2026-10-30T19:30:00Z" ;;
+            "32 22 30 10 *"|"41 22 30 10 *"|"51 22 30 10 *") SESS="Practice 2"; FINE="2026-10-30T23:00:00Z" ;;
+            "2 18 31 10 *"|"11 18 31 10 *"|"21 18 31 10 *") SESS="Practice 3"; FINE="2026-10-31T18:30:00Z" ;;
+            "32 21 31 10 *"|"41 21 31 10 *"|"51 21 31 10 *") SESS="Qualifying"; FINE="2026-10-31T22:00:00Z" ;;
+            "12 21 1 11 *"|"22 21 1 11 *"|"33 21 1 11 *") SESS="Race"; FINE="2026-11-01T21:40:00Z"; MAXMIN=120 ;;
           esac
           if [ -z "$SESS" ] || [ -z "$FINE" ]; then
             scarica
