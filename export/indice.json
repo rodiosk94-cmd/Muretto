@@ -1,5 +1,5 @@
 {
- "aggiornato": "2026-10-30T23:34:06Z",
+ "aggiornato": "2026-10-30T23:36:18Z",
  "sessioni": [
   {
    "evento": "Singapore Grand Prix",
@@ -175,6 +175,31 @@
    ],
    "scaricato": "2026-10-30T20:08:35Z",
    "cartella": "2026-mexico-city/FP1"
+  },
+  {
+   "evento": "Mexico City Grand Prix",
+   "luogo": "Mexico City",
+   "sessione": "Practice 2",
+   "session_key": 11398,
+   "inizio": "2026-10-30T22:00:00+00:00",
+   "fine": "2026-10-30T23:00:00+00:00",
+   "piloti_top": [
+    "NOR",
+    "VER",
+    "HAD",
+    "ANT",
+    "LEC",
+    "HAM",
+    "RUS",
+    "PIA"
+   ],
+   "giri": 615,
+   "giri_telemetria_valida": [
+    188,
+    217
+   ],
+   "scaricato": "2026-10-30T23:36:18Z",
+   "cartella": "2026-mexico-city/FP2"
   }
  ]
 }
