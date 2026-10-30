@@ -1,7 +1,7 @@
 {
- "aggiornato": "2026-10-30T20:17:38Z",
+ "aggiornato": "2026-10-30T23:33:18Z",
  "fermato": null,
- "richieste": 105,
+ "richieste": 62,
  "file": [
   {
    "file": "storico/2023/01-bahrain-grand-prix.json.gz",
@@ -1948,16 +1948,17 @@
    "gp": "Mexico City Grand Prix",
    "luogo": "Mexico City",
    "sessioni": [
-    "Practice 1"
+    "Practice 1",
+    "Practice 2"
    ],
    "giri_gara": 0,
    "partenze": 0,
-   "energia": 31,
+   "energia": 71,
    "energia_errori": [],
    "errori": [],
-   "scaricato": "2026-10-30T20:16:20Z",
+   "scaricato": "2026-10-30T23:31:27Z",
    "parziale": true,
-   "kb": 149
+   "kb": 377
   }
  ],
  "circuiti": [
