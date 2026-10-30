@@ -6,6 +6,13 @@ on:
     - cron: "*/30 * * * 0,1,5,6"
     # Ogni 2 ore da martedì a giovedì: notizie e passaggio al weekend successivo
     - cron: "15 */2 * * 2,3,4"
+  # Subito dopo ogni lancio dello Storico (30/10, Messico): GitHub salta gran parte dei lanci ogni 30 minuti
+  # (venerdì 30/10 ne sono partiti 4 in tutto) e quelli partiti durante una sessione o nei primi minuti dopo
+  # la fine ricevono 401 da OpenF1. Lo Storico finisce solo quando OpenF1 ha pubblicato la sessione, quindi
+  # la Telemetria lanciata dopo di lui trova i dati.
+  workflow_run:
+    workflows: ["Storico"]
+    types: [completed]
   workflow_dispatch:
     inputs:
       session_key:
