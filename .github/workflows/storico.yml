@@ -87,9 +87,20 @@ jobs:
               --anni-circuito "${ANNI_CIRCUITO:-2023,2024,2025}" --anni-energia "${ANNI_ENERGIA:-2025,2026}" \
               --max-minuti 230 || echo "::warning::scaricamento non riuscito"
           }
-          # la sessione è nell'archivio del weekend più recente, con giri e classifica?
+          # la sessione è in archivio, con giri e classifica? Si cerca in tutti i file della stagione la
+          # sessione con quel nome che finisce entro 6 ore dalla fine prevista: il file più recente può
+          # essere ancora quello del weekend prima (Messico, 30/10: la FP1 di Austin bloccava lo scaricamento)
           presente() {
-            python -c 'import glob,gzip,json,sys; f=sorted(glob.glob("storico/2026/*.json.gz")); d=json.load(gzip.open(f[-1])) if f else {}; sys.exit(0 if any(s["session"]["session_name"]==sys.argv[1] and len(s.get("laps") or [])>0 and len(s.get("session_result") or [])>=20 for s in d.get("sessioni") or []) else 1)' "$1"
+            python -c 'import glob,gzip,json,sys,datetime as dt
+          fine=dt.datetime.fromisoformat(sys.argv[2].replace("Z","+00:00"))
+          ok=False
+          for f in sorted(glob.glob("storico/2026/*.json.gz"))[-3:]:
+              d=json.load(gzip.open(f))
+              for s in d.get("sessioni") or []:
+                  de=s["session"].get("date_end")
+                  if s["session"]["session_name"]==sys.argv[1] and de and abs((dt.datetime.fromisoformat(de)-fine).total_seconds())<6*3600 and len(s.get("laps") or [])>0 and len(s.get("session_result") or [])>=20:
+                      ok=True
+          sys.exit(0 if ok else 1)' "$1" "$2"
           }
           SESS="$SESSIONE"; FINE="$FINE_IN"; MAXMIN=60
           case "$CRON" in
@@ -103,7 +114,7 @@ jobs:
             scarica
             exit 0
           fi
-          if presente "$SESS"; then
+          if presente "$SESS" "$FINE"; then
             echo "$SESS già in archivio: niente da fare."
             exit 0
           fi
@@ -117,7 +128,7 @@ jobs:
           fi
           while true; do
             scarica
-            if presente "$SESS"; then
+            if presente "$SESS" "$FINE"; then
               echo "$SESS in archivio alle $(date -u +%H:%M) UTC."
               exit 0
             fi
