@@ -1,5 +1,5 @@
 {
- "aggiornato": "2026-10-31T19:30:16Z",
+ "aggiornato": "2026-10-31T20:06:01Z",
  "fermato": null,
  "richieste": 28,
  "file": [
@@ -1957,7 +1957,7 @@
    "energia": 71,
    "energia_errori": [],
    "errori": [],
-   "scaricato": "2026-10-31T19:29:37Z",
+   "scaricato": "2026-10-31T20:05:22Z",
    "parziale": true,
    "kb": 380
   }
