@@ -1,0 +1,24 @@
+{
+ "evento": "Mexico City Grand Prix",
+ "luogo": "Mexico City",
+ "sessione": "Practice 3",
+ "session_key": 11399,
+ "inizio": "2026-10-31T17:30:00+00:00",
+ "fine": "2026-10-31T18:30:00+00:00",
+ "piloti_top": [
+  "NOR",
+  "VER",
+  "HAD",
+  "ANT",
+  "LEC",
+  "HAM",
+  "RUS",
+  "PIA"
+ ],
+ "giri": 451,
+ "giri_telemetria_valida": [
+  142,
+  168
+ ],
+ "scaricato": "2026-10-31T22:49:51Z"
+}
