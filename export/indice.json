@@ -1,5 +1,5 @@
 {
- "aggiornato": "2026-11-01T16:21:48Z",
+ "aggiornato": "2026-11-01T23:37:56Z",
  "sessioni": [
   {
    "evento": "Singapore Grand Prix",
@@ -250,6 +250,31 @@
    ],
    "scaricato": "2026-10-31T22:50:37Z",
    "cartella": "2026-mexico-city/Q"
+  },
+  {
+   "evento": "Mexico City Grand Prix",
+   "luogo": "Mexico City",
+   "sessione": "Race",
+   "session_key": 11404,
+   "inizio": "2026-11-01T20:00:00+00:00",
+   "fine": "2026-11-01T23:00:00+00:00",
+   "piloti_top": [
+    "NOR",
+    "VER",
+    "HAD",
+    "ANT",
+    "LEC",
+    "HAM",
+    "RUS",
+    "PIA"
+   ],
+   "giri": 1355,
+   "giri_telemetria_valida": [
+    551,
+    561
+   ],
+   "scaricato": "2026-11-01T23:37:56Z",
+   "cartella": "2026-mexico-city/R"
   }
  ]
 }
