@@ -440,6 +440,11 @@ def costruisci_evento(d, tipo):
     e['circuito'] = chiave_circuito(e['luogo'], e['gp'])
     info = _driver_info(s) if s else {}
     info.update({k: v for k, v in _driver_info(q).items() if k not in info})
+    # squadra mancante in una sessione (Messico 2026: Hirakawa senza team_name in gara): dalle altre del weekend
+    for ss in d['sessioni']:
+        for k, v in _driver_info(ss).items():
+            if k in info and not info[k][1] and v[1]:
+                info[k] = (info[k][0] or v[0], v[1])
     e['piloti'] = info
     lap1 = [l for l in s['laps'] if l['lap_number'] == 1 and l.get('date_start')] if not futuro else []
     if lap1:
