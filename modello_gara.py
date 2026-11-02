@@ -81,7 +81,7 @@ P = dict(
     n_sim=8000,               # simulazioni per corsa (quelle della prova nel documento dei risultati)
     # passo
     emivita_forma=4.0,        # gare: peso 1/2 dopo 4 eventi
-    shrink_pilota=2.0,        # peso (eventi recenti) che serve per metà fiducia nello scarto dal compagno
+    shrink_pilota=0.5,        # peso (eventi recenti) per metà fiducia nello scarto dal compagno (2,0 fino al 2/11/2026: prova 2026 podio Brier −0,016, vittoria −0,004; verifica-modello-gara-2026-11-02)
     sigma_pace_min=0.12,      # % minimo di errore della stima di passo
     rumore_giro=0.30,         # s, rumore giro per giro
     errore_giro_p=0.010,      # probabilità di errore (perdita 1.5-5 s) per giro
