@@ -1,0 +1,48 @@
+{
+ "evento": "British Grand Prix",
+ "luogo": "Silverstone",
+ "sessione": "Race",
+ "session_key": 11326,
+ "inizio": "2026-07-05T14:00:00+00:00",
+ "fine": "2026-07-05T16:00:00+00:00",
+ "piloti_top": [
+  "NOR",
+  "VER",
+  "HAD",
+  "ANT",
+  "LEC",
+  "HAM",
+  "RUS",
+  "PIA"
+ ],
+ "piloti_telemetria": [
+  "NOR",
+  "VER",
+  "BOR",
+  "HAD",
+  "GAS",
+  "PER",
+  "ANT",
+  "ALO",
+  "LEC",
+  "STR",
+  "ALB",
+  "HUL",
+  "LAW",
+  "OCO",
+  "LIN",
+  "COL",
+  "HAM",
+  "SAI",
+  "RUS",
+  "BOT",
+  "PIA",
+  "BEA"
+ ],
+ "giri": 1111,
+ "giri_telemetria_valida": [
+  1099,
+  1111
+ ],
+ "scaricato": "2026-11-05T17:39:21Z"
+}
