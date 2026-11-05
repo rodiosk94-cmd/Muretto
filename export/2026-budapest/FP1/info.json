@@ -1,0 +1,48 @@
+{
+ "evento": "Hungarian Grand Prix",
+ "luogo": "Budapest",
+ "sessione": "Practice 1",
+ "session_key": 11335,
+ "inizio": "2026-07-24T11:30:00+00:00",
+ "fine": "2026-07-24T12:30:00+00:00",
+ "piloti_top": [
+  "NOR",
+  "VER",
+  "HAD",
+  "LEC",
+  "HAM",
+  "RUS",
+  "FOR",
+  "VES"
+ ],
+ "piloti_telemetria": [
+  "NOR",
+  "VER",
+  "BOR",
+  "HAD",
+  "GAS",
+  "PER",
+  "ALO",
+  "LEC",
+  "STR",
+  "ALB",
+  "HER",
+  "HUL",
+  "LAW",
+  "OCO",
+  "LIN",
+  "HAM",
+  "HIR",
+  "SAI",
+  "ARO",
+  "RUS",
+  "FOR",
+  "VES"
+ ],
+ "giri": 505,
+ "giri_telemetria_valida": [
+  423,
+  505
+ ],
+ "scaricato": "2026-11-05T17:48:11Z"
+}
