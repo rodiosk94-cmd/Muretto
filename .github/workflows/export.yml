@@ -67,8 +67,13 @@ jobs:
           ARGS=(--out-dir export)
           if [ -n "$SESSIONE" ]; then ARGS+=(--sessione "$SESSIONE"); fi
           if [ "$FORZA" = "si" ]; then ARGS+=(--forza); fi
+          integrita() {   # completezza dell'Export di tutta la stagione (verifica_integrita.py, 5/11/2026)
+            python verifica_integrita.py --anni "$(date -u +%Y)" --export --out "export/integrita-$(date -u +%Y).json" \
+              --github --solo-problemi | grep -E "Export|^Sessioni" | tail -40 || true
+          }
           if [ -z "$GARA" ]; then
             python export_fetch.py "${ARGS[@]}"
+            integrita
             salva
             exit 0
           fi
@@ -81,3 +86,5 @@ jobs:
             python export_fetch.py "${ARGS[@]}" --gara "$g" || echo "::warning::$g non riuscita"
             salva "$g"
           done
+          integrita
+          salva "controllo di integrità"
