@@ -1,0 +1,48 @@
+{
+ "evento": "Spanish Grand Prix",
+ "luogo": "Madrid",
+ "sessione": "Race",
+ "session_key": 11369,
+ "inizio": "2026-09-13T13:00:00+00:00",
+ "fine": "2026-09-13T15:00:00+00:00",
+ "piloti_top": [
+  "NOR",
+  "VER",
+  "ANT",
+  "LEC",
+  "LAW",
+  "HAM",
+  "RUS",
+  "PIA"
+ ],
+ "piloti_telemetria": [
+  "NOR",
+  "VER",
+  "BOR",
+  "GAS",
+  "PER",
+  "ANT",
+  "ALO",
+  "LEC",
+  "STR",
+  "TSU",
+  "ALB",
+  "HUL",
+  "LAW",
+  "OCO",
+  "LIN",
+  "COL",
+  "HAM",
+  "SAI",
+  "RUS",
+  "BOT",
+  "PIA",
+  "BEA"
+ ],
+ "giri": 1105,
+ "giri_telemetria_valida": [
+  1097,
+  1105
+ ],
+ "scaricato": "2026-11-05T17:46:46Z"
+}

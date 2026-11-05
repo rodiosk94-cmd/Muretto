@@ -1,0 +1,48 @@
+{
+ "evento": "Spanish Grand Prix",
+ "luogo": "Madrid",
+ "sessione": "Practice 3",
+ "session_key": 11364,
+ "inizio": "2026-09-12T10:30:00+00:00",
+ "fine": "2026-09-12T11:30:00+00:00",
+ "piloti_top": [
+  "NOR",
+  "VER",
+  "ANT",
+  "LEC",
+  "LAW",
+  "HAM",
+  "RUS",
+  "PIA"
+ ],
+ "piloti_telemetria": [
+  "NOR",
+  "VER",
+  "BOR",
+  "GAS",
+  "PER",
+  "ANT",
+  "ALO",
+  "LEC",
+  "STR",
+  "TSU",
+  "ALB",
+  "HUL",
+  "LAW",
+  "OCO",
+  "LIN",
+  "COL",
+  "HAM",
+  "SAI",
+  "RUS",
+  "BOT",
+  "PIA",
+  "BEA"
+ ],
+ "giri": 204,
+ "giri_telemetria_valida": [
+  164,
+  204
+ ],
+ "scaricato": "2026-11-05T17:43:32Z"
+}
