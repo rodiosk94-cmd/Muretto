@@ -1,0 +1,47 @@
+{
+ "evento": "Barcelona Grand Prix",
+ "luogo": "Barcelona",
+ "sessione": "Practice 1",
+ "session_key": 11300,
+ "inizio": "2026-06-12T11:30:00+00:00",
+ "fine": "2026-06-12T12:30:00+00:00",
+ "piloti_top": [
+  "PIA",
+  "RUS",
+  "BEG",
+  "LEC",
+  "VES",
+  "IWA",
+  "VER",
+  "FOR"
+ ],
+ "piloti_telemetria": [
+  "VER",
+  "BOR",
+  "GAS",
+  "ALO",
+  "LEC",
+  "STR",
+  "HER",
+  "LAW",
+  "OCO",
+  "IWA",
+  "BEG",
+  "LIN",
+  "COL",
+  "SAI",
+  "RUS",
+  "FOR",
+  "VES",
+  "BOT",
+  "PIA",
+  "BEA",
+  "ARO"
+ ],
+ "giri": 523,
+ "giri_telemetria_valida": [
+  436,
+  523
+ ],
+ "scaricato": "2026-11-05T17:19:01Z"
+}
