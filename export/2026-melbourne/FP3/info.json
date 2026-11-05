@@ -1,0 +1,48 @@
+{
+ "evento": "Australian Grand Prix",
+ "luogo": "Melbourne",
+ "sessione": "Practice 3",
+ "session_key": 11229,
+ "inizio": "2026-03-07T01:30:00+00:00",
+ "fine": "2026-03-07T02:30:00+00:00",
+ "piloti_top": [
+  "NOR",
+  "ANT",
+  "LEC",
+  "VER",
+  "HAM",
+  "HAD",
+  "RUS",
+  "PIA"
+ ],
+ "piloti_telemetria": [
+  "NOR",
+  "VER",
+  "BOR",
+  "HAD",
+  "GAS",
+  "PER",
+  "ANT",
+  "ALO",
+  "LEC",
+  "STR",
+  "ALB",
+  "HUL",
+  "LAW",
+  "OCO",
+  "LIN",
+  "COL",
+  "HAM",
+  "SAI",
+  "RUS",
+  "BOT",
+  "PIA",
+  "BEA"
+ ],
+ "giri": 354,
+ "giri_telemetria_valida": [
+  310,
+  354
+ ],
+ "scaricato": "2026-11-05T16:38:35Z"
+}

@@ -1,0 +1,48 @@
+{
+ "evento": "Australian Grand Prix",
+ "luogo": "Melbourne",
+ "sessione": "Race",
+ "session_key": 11234,
+ "inizio": "2026-03-08T04:00:00+00:00",
+ "fine": "2026-03-08T06:00:00+00:00",
+ "piloti_top": [
+  "NOR",
+  "VER",
+  "HAD",
+  "ANT",
+  "LEC",
+  "HAM",
+  "RUS",
+  "PIA"
+ ],
+ "piloti_telemetria": [
+  "NOR",
+  "VER",
+  "BOR",
+  "HAD",
+  "GAS",
+  "PER",
+  "ANT",
+  "ALO",
+  "LEC",
+  "STR",
+  "ALB",
+  "HUL",
+  "LAW",
+  "OCO",
+  "LIN",
+  "COL",
+  "HAM",
+  "SAI",
+  "RUS",
+  "BOT",
+  "PIA",
+  "BEA"
+ ],
+ "giri": 1003,
+ "giri_telemetria_valida": [
+  942,
+  1003
+ ],
+ "scaricato": "2026-11-05T16:41:40Z"
+}
