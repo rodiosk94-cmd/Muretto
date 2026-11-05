@@ -1,0 +1,48 @@
+{
+ "evento": "Austrian Grand Prix",
+ "luogo": "Spielberg",
+ "sessione": "Race",
+ "session_key": 11315,
+ "inizio": "2026-06-28T13:00:00+00:00",
+ "fine": "2026-06-28T15:00:00+00:00",
+ "piloti_top": [
+  "NOR",
+  "VER",
+  "HAD",
+  "ANT",
+  "LEC",
+  "HAM",
+  "RUS",
+  "PIA"
+ ],
+ "piloti_telemetria": [
+  "NOR",
+  "VER",
+  "BOR",
+  "HAD",
+  "GAS",
+  "PER",
+  "ANT",
+  "ALO",
+  "LEC",
+  "STR",
+  "ALB",
+  "HUL",
+  "LAW",
+  "OCO",
+  "LIN",
+  "COL",
+  "HAM",
+  "SAI",
+  "RUS",
+  "BOT",
+  "PIA",
+  "BEA"
+ ],
+ "giri": 1338,
+ "giri_telemetria_valida": [
+  1308,
+  1338
+ ],
+ "scaricato": "2026-11-05T17:32:02Z"
+}
