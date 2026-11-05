@@ -1,0 +1,48 @@
+{
+ "evento": "Azerbaijan Grand Prix",
+ "luogo": "Baku",
+ "sessione": "Qualifying",
+ "session_key": 11373,
+ "inizio": "2026-09-25T12:00:00+00:00",
+ "fine": "2026-09-25T13:00:00+00:00",
+ "piloti_top": [
+  "NOR",
+  "VER",
+  "HAD",
+  "ANT",
+  "LEC",
+  "HAM",
+  "RUS",
+  "PIA"
+ ],
+ "piloti_telemetria": [
+  "NOR",
+  "VER",
+  "BOR",
+  "HAD",
+  "GAS",
+  "PER",
+  "ANT",
+  "ALO",
+  "LEC",
+  "STR",
+  "ALB",
+  "HUL",
+  "LAW",
+  "OCO",
+  "LIN",
+  "COL",
+  "HAM",
+  "SAI",
+  "RUS",
+  "BOT",
+  "PIA",
+  "BEA"
+ ],
+ "giri": 343,
+ "giri_telemetria_valida": [
+  335,
+  343
+ ],
+ "scaricato": "2026-11-05T18:22:13Z"
+}

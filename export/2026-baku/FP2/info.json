@@ -1,0 +1,48 @@
+{
+ "evento": "Azerbaijan Grand Prix",
+ "luogo": "Baku",
+ "sessione": "Practice 2",
+ "session_key": 11371,
+ "inizio": "2026-09-24T12:00:00+00:00",
+ "fine": "2026-09-24T13:00:00+00:00",
+ "piloti_top": [
+  "NOR",
+  "VER",
+  "HAD",
+  "ANT",
+  "LEC",
+  "HAM",
+  "RUS",
+  "PIA"
+ ],
+ "piloti_telemetria": [
+  "NOR",
+  "VER",
+  "BOR",
+  "HAD",
+  "GAS",
+  "PER",
+  "ANT",
+  "ALO",
+  "LEC",
+  "STR",
+  "ALB",
+  "HUL",
+  "LAW",
+  "OCO",
+  "LIN",
+  "COL",
+  "HAM",
+  "SAI",
+  "RUS",
+  "BOT",
+  "PIA",
+  "BEA"
+ ],
+ "giri": 423,
+ "giri_telemetria_valida": [
+  418,
+  423
+ ],
+ "scaricato": "2026-11-05T18:19:30Z"
+}
