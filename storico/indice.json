@@ -1,7 +1,7 @@
 {
- "aggiornato": "2026-11-05T16:38:23Z",
+ "aggiornato": "2026-11-05T16:46:05Z",
  "fermato": null,
- "richieste": 98,
+ "richieste": 150,
  "file": [
   {
    "file": "storico/2023/01-bahrain-grand-prix.json.gz",
@@ -23,7 +23,7 @@
    "errori": [],
    "scaricato": "2026-10-20T08:24:26Z",
    "parziale": false,
-   "kb": 310
+   "kb": 536
   },
   {
    "file": "storico/2023/02-saudi-arabian-grand-prix.json.gz",
@@ -45,7 +45,7 @@
    "errori": [],
    "scaricato": "2026-10-20T08:26:24Z",
    "parziale": false,
-   "kb": 306
+   "kb": 488
   },
   {
    "file": "storico/2023/03-australian-grand-prix.json.gz",
@@ -67,7 +67,7 @@
    "errori": [],
    "scaricato": "2026-10-20T08:28:21Z",
    "parziale": false,
-   "kb": 299
+   "kb": 465
   },
   {
    "file": "storico/2023/04-azerbaijan-grand-prix.json.gz",
@@ -89,7 +89,7 @@
    "errori": [],
    "scaricato": "2026-10-20T08:30:19Z",
    "parziale": false,
-   "kb": 492
+   "kb": 735
   },
   {
    "file": "storico/2023/05-miami-grand-prix.json.gz",
@@ -111,7 +111,7 @@
    "errori": [],
    "scaricato": "2026-10-20T08:33:05Z",
    "parziale": false,
-   "kb": 310
+   "kb": 530
   },
   {
    "file": "storico/2023/06-monaco-grand-prix.json.gz",
@@ -133,7 +133,7 @@
    "errori": [],
    "scaricato": "2026-10-20T08:35:02Z",
    "parziale": false,
-   "kb": 321
+   "kb": 552
   },
   {
    "file": "storico/2023/07-spanish-grand-prix.json.gz",
@@ -155,7 +155,7 @@
    "errori": [],
    "scaricato": "2026-10-20T08:37:00Z",
    "parziale": false,
-   "kb": 314
+   "kb": 520
   },
   {
    "file": "storico/2023/08-canadian-grand-prix.json.gz",
@@ -177,7 +177,7 @@
    "errori": [],
    "scaricato": "2026-10-20T08:38:58Z",
    "parziale": false,
-   "kb": 304
+   "kb": 484
   },
   {
    "file": "storico/2023/09-austrian-grand-prix.json.gz",
@@ -199,7 +199,7 @@
    "errori": [],
    "scaricato": "2026-10-20T08:40:55Z",
    "parziale": false,
-   "kb": 492
+   "kb": 761
   },
   {
    "file": "storico/2023/10-british-grand-prix.json.gz",
@@ -221,7 +221,7 @@
    "errori": [],
    "scaricato": "2026-10-20T08:43:43Z",
    "parziale": false,
-   "kb": 303
+   "kb": 487
   },
   {
    "file": "storico/2023/11-hungarian-grand-prix.json.gz",
@@ -243,7 +243,7 @@
    "errori": [],
    "scaricato": "2026-10-20T08:45:41Z",
    "parziale": false,
-   "kb": 303
+   "kb": 490
   },
   {
    "file": "storico/2023/12-belgian-grand-prix.json.gz",
@@ -265,7 +265,7 @@
    "errori": [],
    "scaricato": "2026-10-20T08:47:39Z",
    "parziale": false,
-   "kb": 499
+   "kb": 716
   },
   {
    "file": "storico/2023/13-dutch-grand-prix.json.gz",
@@ -287,7 +287,7 @@
    "errori": [],
    "scaricato": "2026-10-20T08:50:27Z",
    "parziale": false,
-   "kb": 325
+   "kb": 567
   },
   {
    "file": "storico/2023/14-italian-grand-prix.json.gz",
@@ -309,7 +309,7 @@
    "errori": [],
    "scaricato": "2026-10-20T08:52:24Z",
    "parziale": false,
-   "kb": 296
+   "kb": 472
   },
   {
    "file": "storico/2023/15-singapore-grand-prix.json.gz",
@@ -331,7 +331,7 @@
    "errori": [],
    "scaricato": "2026-10-20T08:54:22Z",
    "parziale": false,
-   "kb": 299
+   "kb": 496
   },
   {
    "file": "storico/2023/16-japanese-grand-prix.json.gz",
@@ -353,7 +353,7 @@
    "errori": [],
    "scaricato": "2026-10-20T08:56:18Z",
    "parziale": false,
-   "kb": 301
+   "kb": 472
   },
   {
    "file": "storico/2023/17-qatar-grand-prix.json.gz",
@@ -375,7 +375,7 @@
    "errori": [],
    "scaricato": "2026-10-20T08:58:15Z",
    "parziale": false,
-   "kb": 509
+   "kb": 740
   },
   {
    "file": "storico/2023/18-united-states-grand-prix.json.gz",
@@ -397,7 +397,7 @@
    "errori": [],
    "scaricato": "2026-10-20T09:01:03Z",
    "parziale": false,
-   "kb": 496
+   "kb": 723
   },
   {
    "file": "storico/2023/19-mexico-city-grand-prix.json.gz",
@@ -419,7 +419,7 @@
    "errori": [],
    "scaricato": "2026-10-20T09:03:51Z",
    "parziale": false,
-   "kb": 310
+   "kb": 519
   },
   {
    "file": "storico/2023/20-s-o-paulo-grand-prix.json.gz",
@@ -463,7 +463,7 @@
    "errori": [],
    "scaricato": "2026-10-20T09:08:37Z",
    "parziale": false,
-   "kb": 311
+   "kb": 464
   },
   {
    "file": "storico/2023/22-abu-dhabi-grand-prix.json.gz",
@@ -485,7 +485,7 @@
    "errori": [],
    "scaricato": "2026-10-20T09:10:35Z",
    "parziale": false,
-   "kb": 305
+   "kb": 518
   },
   {
    "file": "storico/2024/01-bahrain-grand-prix.json.gz",
@@ -507,7 +507,7 @@
    "errori": [],
    "scaricato": "2026-10-20T09:12:33Z",
    "parziale": false,
-   "kb": 310
+   "kb": 550
   },
   {
    "file": "storico/2024/02-saudi-arabian-grand-prix.json.gz",
@@ -529,7 +529,7 @@
    "errori": [],
    "scaricato": "2026-10-20T09:14:31Z",
    "parziale": false,
-   "kb": 305
+   "kb": 477
   },
   {
    "file": "storico/2024/03-australian-grand-prix.json.gz",
@@ -551,7 +551,7 @@
    "errori": [],
    "scaricato": "2026-10-20T09:16:29Z",
    "parziale": false,
-   "kb": 287
+   "kb": 453
   },
   {
    "file": "storico/2024/04-japanese-grand-prix.json.gz",
@@ -573,7 +573,7 @@
    "errori": [],
    "scaricato": "2026-10-20T09:18:24Z",
    "parziale": false,
-   "kb": 293
+   "kb": 465
   },
   {
    "file": "storico/2024/05-chinese-grand-prix.json.gz",
@@ -595,7 +595,7 @@
    "errori": [],
    "scaricato": "2026-10-20T09:20:22Z",
    "parziale": false,
-   "kb": 504
+   "kb": 749
   },
   {
    "file": "storico/2024/06-miami-grand-prix.json.gz",
@@ -617,7 +617,7 @@
    "errori": [],
    "scaricato": "2026-10-20T09:23:10Z",
    "parziale": false,
-   "kb": 497
+   "kb": 773
   },
   {
    "file": "storico/2024/07-emilia-romagna-grand-prix.json.gz",
@@ -639,7 +639,7 @@
    "errori": [],
    "scaricato": "2026-10-20T09:25:58Z",
    "parziale": false,
-   "kb": 302
+   "kb": 489
   },
   {
    "file": "storico/2024/08-monaco-grand-prix.json.gz",
@@ -661,7 +661,7 @@
    "errori": [],
    "scaricato": "2026-10-20T09:27:56Z",
    "parziale": false,
-   "kb": 227
+   "kb": 412
   },
   {
    "file": "storico/2024/09-canadian-grand-prix.json.gz",
@@ -683,7 +683,7 @@
    "errori": [],
    "scaricato": "2026-10-20T09:29:54Z",
    "parziale": false,
-   "kb": 307
+   "kb": 492
   },
   {
    "file": "storico/2024/10-spanish-grand-prix.json.gz",
@@ -705,7 +705,7 @@
    "errori": [],
    "scaricato": "2026-10-20T09:31:51Z",
    "parziale": false,
-   "kb": 310
+   "kb": 514
   },
   {
    "file": "storico/2024/11-austrian-grand-prix.json.gz",
@@ -727,7 +727,7 @@
    "errori": [],
    "scaricato": "2026-10-20T09:33:50Z",
    "parziale": false,
-   "kb": 494
+   "kb": 766
   },
   {
    "file": "storico/2024/12-british-grand-prix.json.gz",
@@ -749,7 +749,7 @@
    "errori": [],
    "scaricato": "2026-10-20T09:36:38Z",
    "parziale": false,
-   "kb": 298
+   "kb": 477
   },
   {
    "file": "storico/2024/13-hungarian-grand-prix.json.gz",
@@ -771,7 +771,7 @@
    "errori": [],
    "scaricato": "2026-10-20T09:38:36Z",
    "parziale": false,
-   "kb": 305
+   "kb": 509
   },
   {
    "file": "storico/2024/14-belgian-grand-prix.json.gz",
@@ -793,7 +793,7 @@
    "errori": [],
    "scaricato": "2026-10-20T09:40:34Z",
    "parziale": false,
-   "kb": 291
+   "kb": 465
   },
   {
    "file": "storico/2024/15-dutch-grand-prix.json.gz",
@@ -815,7 +815,7 @@
    "errori": [],
    "scaricato": "2026-10-20T09:42:32Z",
    "parziale": false,
-   "kb": 295
+   "kb": 538
   },
   {
    "file": "storico/2024/16-italian-grand-prix.json.gz",
@@ -837,7 +837,7 @@
    "errori": [],
    "scaricato": "2026-10-20T09:44:29Z",
    "parziale": false,
-   "kb": 298
+   "kb": 462
   },
   {
    "file": "storico/2024/17-azerbaijan-grand-prix.json.gz",
@@ -859,7 +859,7 @@
    "errori": [],
    "scaricato": "2026-10-20T09:46:29Z",
    "parziale": false,
-   "kb": 299
+   "kb": 502
   },
   {
    "file": "storico/2024/18-singapore-grand-prix.json.gz",
@@ -881,7 +881,7 @@
    "errori": [],
    "scaricato": "2026-10-20T09:48:27Z",
    "parziale": false,
-   "kb": 312
+   "kb": 542
   },
   {
    "file": "storico/2024/19-united-states-grand-prix.json.gz",
@@ -903,7 +903,7 @@
    "errori": [],
    "scaricato": "2026-10-20T09:50:24Z",
    "parziale": false,
-   "kb": 504
+   "kb": 739
   },
   {
    "file": "storico/2024/20-mexico-city-grand-prix.json.gz",
@@ -925,7 +925,7 @@
    "errori": [],
    "scaricato": "2026-10-20T09:53:12Z",
    "parziale": false,
-   "kb": 307
+   "kb": 499
   },
   {
    "file": "storico/2024/21-s-o-paulo-grand-prix.json.gz",
@@ -969,7 +969,7 @@
    "errori": [],
    "scaricato": "2026-10-20T09:57:58Z",
    "parziale": false,
-   "kb": 308
+   "kb": 461
   },
   {
    "file": "storico/2024/23-qatar-grand-prix.json.gz",
@@ -991,7 +991,7 @@
    "errori": [],
    "scaricato": "2026-10-20T09:59:56Z",
    "parziale": false,
-   "kb": 499
+   "kb": 729
   },
   {
    "file": "storico/2024/24-abu-dhabi-grand-prix.json.gz",
@@ -1013,7 +1013,7 @@
    "errori": [],
    "scaricato": "2026-10-20T10:02:44Z",
    "parziale": false,
-   "kb": 305
+   "kb": 493
   },
   {
    "file": "storico/2025/01-australian-grand-prix.json.gz",
@@ -1035,7 +1035,7 @@
    "errori": [],
    "scaricato": "2026-10-20T10:04:41Z",
    "parziale": false,
-   "kb": 955
+   "kb": 1113
   },
   {
    "file": "storico/2025/02-chinese-grand-prix.json.gz",
@@ -1057,7 +1057,7 @@
    "errori": [],
    "scaricato": "2026-10-20T10:11:18Z",
    "parziale": false,
-   "kb": 1340
+   "kb": 1583
   },
   {
    "file": "storico/2025/03-japanese-grand-prix.json.gz",
@@ -1079,7 +1079,7 @@
    "errori": [],
    "scaricato": "2026-10-20T10:18:39Z",
    "parziale": false,
-   "kb": 982
+   "kb": 1187
   },
   {
    "file": "storico/2025/04-bahrain-grand-prix.json.gz",
@@ -1101,7 +1101,7 @@
    "errori": [],
    "scaricato": "2026-10-20T10:25:20Z",
    "parziale": false,
-   "kb": 1172
+   "kb": 1434
   },
   {
    "file": "storico/2025/05-saudi-arabian-grand-prix.json.gz",
@@ -1123,7 +1123,7 @@
    "errori": [],
    "scaricato": "2026-10-20T10:32:24Z",
    "parziale": false,
-   "kb": 940
+   "kb": 1118
   },
   {
    "file": "storico/2025/06-miami-grand-prix.json.gz",
@@ -1145,9 +1145,9 @@
    "errori": [
     "Race: car_data partenza: giro 2 non trovato"
    ],
-   "scaricato": "2026-10-20T13:03:41Z",
+   "scaricato": "2026-11-05T16:42:30Z",
    "parziale": false,
-   "kb": 856
+   "kb": 1121
   },
   {
    "file": "storico/2025/07-emilia-romagna-grand-prix.json.gz",
@@ -1169,7 +1169,7 @@
    "errori": [],
    "scaricato": "2026-10-20T10:44:48Z",
    "parziale": false,
-   "kb": 950
+   "kb": 1147
   },
   {
    "file": "storico/2025/08-monaco-grand-prix.json.gz",
@@ -1191,7 +1191,7 @@
    "errori": [],
    "scaricato": "2026-10-20T10:51:43Z",
    "parziale": false,
-   "kb": 938
+   "kb": 1145
   },
   {
    "file": "storico/2025/09-spanish-grand-prix.json.gz",
@@ -1213,7 +1213,7 @@
    "errori": [],
    "scaricato": "2026-10-20T10:58:34Z",
    "parziale": false,
-   "kb": 1004
+   "kb": 1194
   },
   {
    "file": "storico/2025/10-canadian-grand-prix.json.gz",
@@ -1235,7 +1235,7 @@
    "errori": [],
    "scaricato": "2026-10-20T11:05:41Z",
    "parziale": false,
-   "kb": 971
+   "kb": 1162
   },
   {
    "file": "storico/2025/11-austrian-grand-prix.json.gz",
@@ -1257,7 +1257,7 @@
    "errori": [],
    "scaricato": "2026-10-20T11:12:43Z",
    "parziale": false,
-   "kb": 916
+   "kb": 1087
   },
   {
    "file": "storico/2025/12-british-grand-prix.json.gz",
@@ -1279,7 +1279,7 @@
    "errori": [],
    "scaricato": "2026-10-20T11:19:54Z",
    "parziale": false,
-   "kb": 1108
+   "kb": 1274
   },
   {
    "file": "storico/2025/13-belgian-grand-prix.json.gz",
@@ -1301,7 +1301,7 @@
    "errori": [],
    "scaricato": "2026-10-20T11:26:52Z",
    "parziale": false,
-   "kb": 1340
+   "kb": 1590
   },
   {
    "file": "storico/2025/14-hungarian-grand-prix.json.gz",
@@ -1323,7 +1323,7 @@
    "errori": [],
    "scaricato": "2026-10-20T11:34:10Z",
    "parziale": false,
-   "kb": 1078
+   "kb": 1292
   },
   {
    "file": "storico/2025/15-dutch-grand-prix.json.gz",
@@ -1345,7 +1345,7 @@
    "errori": [],
    "scaricato": "2026-10-20T11:41:29Z",
    "parziale": false,
-   "kb": 988
+   "kb": 1238
   },
   {
    "file": "storico/2025/16-italian-grand-prix.json.gz",
@@ -1367,7 +1367,7 @@
    "errori": [],
    "scaricato": "2026-10-20T11:48:37Z",
    "parziale": false,
-   "kb": 905
+   "kb": 1067
   },
   {
    "file": "storico/2025/17-azerbaijan-grand-prix.json.gz",
@@ -1389,7 +1389,7 @@
    "errori": [],
    "scaricato": "2026-10-20T11:55:25Z",
    "parziale": false,
-   "kb": 1035
+   "kb": 1228
   },
   {
    "file": "storico/2025/18-singapore-grand-prix.json.gz",
@@ -1411,7 +1411,7 @@
    "errori": [],
    "scaricato": "2026-10-20T12:01:20Z",
    "parziale": false,
-   "kb": 979
+   "kb": 1203
   },
   {
    "file": "storico/2025/19-united-states-grand-prix.json.gz",
@@ -1433,7 +1433,7 @@
    "errori": [],
    "scaricato": "2026-10-20T12:07:43Z",
    "parziale": false,
-   "kb": 1341
+   "kb": 1576
   },
   {
    "file": "storico/2025/20-mexico-city-grand-prix.json.gz",
@@ -1455,7 +1455,7 @@
    "errori": [],
    "scaricato": "2026-10-20T13:07:51Z",
    "parziale": false,
-   "kb": 970
+   "kb": 1182
   },
   {
    "file": "storico/2025/21-s-o-paulo-grand-prix.json.gz",
@@ -1499,7 +1499,7 @@
    "errori": [],
    "scaricato": "2026-10-20T13:22:28Z",
    "parziale": false,
-   "kb": 898
+   "kb": 1043
   },
   {
    "file": "storico/2025/23-qatar-grand-prix.json.gz",
@@ -1521,7 +1521,7 @@
    "errori": [],
    "scaricato": "2026-10-20T13:28:40Z",
    "parziale": false,
-   "kb": 1225
+   "kb": 1487
   },
   {
    "file": "storico/2025/24-abu-dhabi-grand-prix.json.gz",
@@ -1543,7 +1543,7 @@
    "errori": [],
    "scaricato": "2026-10-20T13:36:03Z",
    "parziale": false,
-   "kb": 1142
+   "kb": 1352
   },
   {
    "file": "storico/2026/01-australian-grand-prix.json.gz",
