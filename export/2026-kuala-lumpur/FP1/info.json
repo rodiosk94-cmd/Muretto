@@ -1,0 +1,48 @@
+{
+ "evento": "Bahrain Grand Prix",
+ "luogo": "Kuala Lumpur",
+ "sessione": "Practice 1",
+ "session_key": 11727,
+ "inizio": "2026-10-02T04:30:00+00:00",
+ "fine": "2026-10-02T05:30:00+00:00",
+ "piloti_top": [
+  "NOR",
+  "VER",
+  "HAD",
+  "ANT",
+  "LEC",
+  "HAM",
+  "RUS",
+  "PIA"
+ ],
+ "piloti_telemetria": [
+  "NOR",
+  "VER",
+  "BOR",
+  "HAD",
+  "GAS",
+  "PER",
+  "ANT",
+  "ALO",
+  "LEC",
+  "STR",
+  "ALB",
+  "HUL",
+  "LAW",
+  "OCO",
+  "LIN",
+  "COL",
+  "HAM",
+  "SAI",
+  "RUS",
+  "BOT",
+  "PIA",
+  "BEA"
+ ],
+ "giri": 484,
+ "giri_telemetria_valida": [
+  404,
+  484
+ ],
+ "scaricato": "2026-11-05T18:25:36Z"
+}

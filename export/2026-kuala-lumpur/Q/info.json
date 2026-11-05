@@ -1,0 +1,48 @@
+{
+ "evento": "Bahrain Grand Prix",
+ "luogo": "Kuala Lumpur",
+ "sessione": "Qualifying",
+ "session_key": 11730,
+ "inizio": "2026-10-03T08:00:00+00:00",
+ "fine": "2026-10-03T09:00:00+00:00",
+ "piloti_top": [
+  "NOR",
+  "VER",
+  "HAD",
+  "ANT",
+  "LEC",
+  "HAM",
+  "RUS",
+  "PIA"
+ ],
+ "piloti_telemetria": [
+  "NOR",
+  "VER",
+  "BOR",
+  "HAD",
+  "GAS",
+  "PER",
+  "ANT",
+  "ALO",
+  "LEC",
+  "STR",
+  "ALB",
+  "HUL",
+  "LAW",
+  "OCO",
+  "LIN",
+  "COL",
+  "HAM",
+  "SAI",
+  "RUS",
+  "BOT",
+  "PIA",
+  "BEA"
+ ],
+ "giri": 209,
+ "giri_telemetria_valida": [
+  151,
+  209
+ ],
+ "scaricato": "2026-11-05T18:29:41Z"
+}
