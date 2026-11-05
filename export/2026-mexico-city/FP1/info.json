@@ -15,10 +15,34 @@
   "VES",
   "PIA"
  ],
+ "piloti_telemetria": [
+  "HAD",
+  "GAS",
+  "PER",
+  "ANT",
+  "ALO",
+  "LEC",
+  "HER",
+  "HUL",
+  "CRA",
+  "IWA",
+  "LIN",
+  "HAM",
+  "BRO",
+  "HIR",
+  "SAI",
+  "MIN",
+  "FOR",
+  "VES",
+  "PIA",
+  "BEA",
+  "TSO",
+  "SLA"
+ ],
  "giri": 566,
  "giri_telemetria_valida": [
-  172,
-  199
+  486,
+  566
  ],
- "scaricato": "2026-10-30T20:08:35Z"
+ "scaricato": "2026-11-05T18:49:11Z"
 }

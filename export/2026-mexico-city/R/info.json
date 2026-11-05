@@ -4,7 +4,7 @@
  "sessione": "Race",
  "session_key": 11404,
  "inizio": "2026-11-01T20:00:00+00:00",
- "fine": "2026-11-01T23:00:00+00:00",
+ "fine": "2026-11-01T22:00:00+00:00",
  "piloti_top": [
   "NOR",
   "VER",
@@ -15,10 +15,34 @@
   "RUS",
   "PIA"
  ],
+ "piloti_telemetria": [
+  "NOR",
+  "VER",
+  "BOR",
+  "HAD",
+  "GAS",
+  "PER",
+  "ANT",
+  "ALO",
+  "LEC",
+  "STR",
+  "ALB",
+  "HUL",
+  "LAW",
+  "LIN",
+  "COL",
+  "HAM",
+  "HIR",
+  "SAI",
+  "RUS",
+  "BOT",
+  "PIA",
+  "BEA"
+ ],
  "giri": 1355,
  "giri_telemetria_valida": [
-  551,
-  561
+  1332,
+  1355
  ],
- "scaricato": "2026-11-01T23:37:56Z"
+ "scaricato": "2026-11-05T18:55:16Z"
 }

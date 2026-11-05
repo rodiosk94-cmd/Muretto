@@ -1,5 +1,5 @@
 {
- "aggiornato": "2026-11-05T18:47:43Z",
+ "aggiornato": "2026-11-05T18:55:16Z",
  "sessioni": [
   {
    "evento": "Australian Grand Prix",
@@ -4182,12 +4182,36 @@
     "VES",
     "PIA"
    ],
+   "piloti_telemetria": [
+    "HAD",
+    "GAS",
+    "PER",
+    "ANT",
+    "ALO",
+    "LEC",
+    "HER",
+    "HUL",
+    "CRA",
+    "IWA",
+    "LIN",
+    "HAM",
+    "BRO",
+    "HIR",
+    "SAI",
+    "MIN",
+    "FOR",
+    "VES",
+    "PIA",
+    "BEA",
+    "TSO",
+    "SLA"
+   ],
    "giri": 566,
    "giri_telemetria_valida": [
-    172,
-    199
+    486,
+    566
    ],
-   "scaricato": "2026-10-30T20:08:35Z",
+   "scaricato": "2026-11-05T18:49:11Z",
    "cartella": "2026-mexico-city/FP1"
   },
   {
@@ -4207,12 +4231,36 @@
     "RUS",
     "PIA"
    ],
+   "piloti_telemetria": [
+    "NOR",
+    "VER",
+    "BOR",
+    "HAD",
+    "GAS",
+    "PER",
+    "ANT",
+    "ALO",
+    "LEC",
+    "STR",
+    "ALB",
+    "HUL",
+    "LAW",
+    "OCO",
+    "LIN",
+    "COL",
+    "HAM",
+    "SAI",
+    "RUS",
+    "BOT",
+    "PIA",
+    "BEA"
+   ],
    "giri": 615,
    "giri_telemetria_valida": [
-    188,
-    217
+    534,
+    615
    ],
-   "scaricato": "2026-10-30T23:36:18Z",
+   "scaricato": "2026-11-05T18:50:32Z",
    "cartella": "2026-mexico-city/FP2"
   },
   {
@@ -4232,12 +4280,36 @@
     "RUS",
     "PIA"
    ],
+   "piloti_telemetria": [
+    "NOR",
+    "VER",
+    "BOR",
+    "HAD",
+    "GAS",
+    "PER",
+    "ANT",
+    "ALO",
+    "LEC",
+    "STR",
+    "ALB",
+    "HUL",
+    "LAW",
+    "LIN",
+    "COL",
+    "HAM",
+    "HIR",
+    "SAI",
+    "RUS",
+    "BOT",
+    "PIA",
+    "BEA"
+   ],
    "giri": 451,
    "giri_telemetria_valida": [
-    142,
-    168
+    376,
+    444
    ],
-   "scaricato": "2026-10-31T22:49:51Z",
+   "scaricato": "2026-11-05T18:51:52Z",
    "cartella": "2026-mexico-city/FP3"
   },
   {
@@ -4257,12 +4329,36 @@
     "RUS",
     "PIA"
    ],
+   "piloti_telemetria": [
+    "NOR",
+    "VER",
+    "BOR",
+    "HAD",
+    "GAS",
+    "PER",
+    "ANT",
+    "ALO",
+    "LEC",
+    "STR",
+    "ALB",
+    "HUL",
+    "LAW",
+    "LIN",
+    "COL",
+    "HAM",
+    "HIR",
+    "SAI",
+    "RUS",
+    "BOT",
+    "PIA",
+    "BEA"
+   ],
    "giri": 320,
    "giri_telemetria_valida": [
-    103,
-    142
+    232,
+    320
    ],
-   "scaricato": "2026-10-31T22:50:37Z",
+   "scaricato": "2026-11-05T18:53:12Z",
    "cartella": "2026-mexico-city/Q"
   },
   {
@@ -4271,7 +4367,7 @@
    "sessione": "Race",
    "session_key": 11404,
    "inizio": "2026-11-01T20:00:00+00:00",
-   "fine": "2026-11-01T23:00:00+00:00",
+   "fine": "2026-11-01T22:00:00+00:00",
    "piloti_top": [
     "NOR",
     "VER",
@@ -4282,12 +4378,36 @@
     "RUS",
     "PIA"
    ],
+   "piloti_telemetria": [
+    "NOR",
+    "VER",
+    "BOR",
+    "HAD",
+    "GAS",
+    "PER",
+    "ANT",
+    "ALO",
+    "LEC",
+    "STR",
+    "ALB",
+    "HUL",
+    "LAW",
+    "LIN",
+    "COL",
+    "HAM",
+    "HIR",
+    "SAI",
+    "RUS",
+    "BOT",
+    "PIA",
+    "BEA"
+   ],
    "giri": 1355,
    "giri_telemetria_valida": [
-    551,
-    561
+    1332,
+    1355
    ],
-   "scaricato": "2026-11-01T23:37:56Z",
+   "scaricato": "2026-11-05T18:55:16Z",
    "cartella": "2026-mexico-city/R"
   }
  ]
