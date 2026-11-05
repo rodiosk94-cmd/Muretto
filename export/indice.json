@@ -1,5 +1,5 @@
 {
- "aggiornato": "2026-11-05T18:40:09Z",
+ "aggiornato": "2026-11-05T18:47:43Z",
  "sessioni": [
   {
    "evento": "Australian Grand Prix",
@@ -3937,12 +3937,36 @@
     "RUS",
     "PIA"
    ],
+   "piloti_telemetria": [
+    "NOR",
+    "VER",
+    "BOR",
+    "HAD",
+    "GAS",
+    "ANT",
+    "ALO",
+    "LEC",
+    "STR",
+    "ALB",
+    "HER",
+    "HUL",
+    "LAW",
+    "OCO",
+    "LIN",
+    "COL",
+    "HAM",
+    "SAI",
+    "RUS",
+    "BOT",
+    "PIA",
+    "BEA"
+   ],
    "giri": 485,
    "giri_telemetria_valida": [
-    155,
-    185
+    406,
+    485
    ],
-   "scaricato": "2026-10-23T19:39:06Z",
+   "scaricato": "2026-11-05T18:41:40Z",
    "cartella": "2026-austin/FP1"
   },
   {
@@ -3962,12 +3986,36 @@
     "RUS",
     "PIA"
    ],
+   "piloti_telemetria": [
+    "NOR",
+    "VER",
+    "BOR",
+    "HAD",
+    "GAS",
+    "PER",
+    "ANT",
+    "ALO",
+    "LEC",
+    "STR",
+    "ALB",
+    "HUL",
+    "LAW",
+    "OCO",
+    "LIN",
+    "COL",
+    "HAM",
+    "SAI",
+    "RUS",
+    "BOT",
+    "PIA",
+    "BEA"
+   ],
    "giri": 567,
    "giri_telemetria_valida": [
-    172,
-    202
+    494,
+    567
    ],
-   "scaricato": "2026-10-23T22:41:01Z",
+   "scaricato": "2026-11-05T18:43:07Z",
    "cartella": "2026-austin/FP2"
   },
   {
@@ -3987,12 +4035,36 @@
     "RUS",
     "PIA"
    ],
+   "piloti_telemetria": [
+    "NOR",
+    "VER",
+    "BOR",
+    "HAD",
+    "GAS",
+    "PER",
+    "ANT",
+    "ALO",
+    "LEC",
+    "STR",
+    "ALB",
+    "HUL",
+    "LAW",
+    "OCO",
+    "LIN",
+    "COL",
+    "HAM",
+    "SAI",
+    "RUS",
+    "BOT",
+    "PIA",
+    "BEA"
+   ],
    "giri": 401,
    "giri_telemetria_valida": [
-    107,
-    136
+    332,
+    401
    ],
-   "scaricato": "2026-10-24T19:10:09Z",
+   "scaricato": "2026-11-05T18:44:29Z",
    "cartella": "2026-austin/FP3"
   },
   {
@@ -4012,12 +4084,36 @@
     "RUS",
     "PIA"
    ],
+   "piloti_telemetria": [
+    "NOR",
+    "VER",
+    "BOR",
+    "HAD",
+    "GAS",
+    "PER",
+    "ANT",
+    "ALO",
+    "LEC",
+    "STR",
+    "ALB",
+    "HUL",
+    "LAW",
+    "OCO",
+    "LIN",
+    "COL",
+    "HAM",
+    "SAI",
+    "RUS",
+    "BOT",
+    "PIA",
+    "BEA"
+   ],
    "giri": 255,
    "giri_telemetria_valida": [
-    80,
-    113
+    184,
+    255
    ],
-   "scaricato": "2026-10-24T23:01:57Z",
+   "scaricato": "2026-11-05T18:45:49Z",
    "cartella": "2026-austin/Q"
   },
   {
@@ -4037,12 +4133,36 @@
     "RUS",
     "PIA"
    ],
+   "piloti_telemetria": [
+    "NOR",
+    "VER",
+    "BOR",
+    "HAD",
+    "GAS",
+    "PER",
+    "ANT",
+    "ALO",
+    "LEC",
+    "STR",
+    "ALB",
+    "HUL",
+    "LAW",
+    "OCO",
+    "LIN",
+    "COL",
+    "HAM",
+    "SAI",
+    "RUS",
+    "BOT",
+    "PIA",
+    "BEA"
+   ],
    "giri": 1163,
    "giri_telemetria_valida": [
-    425,
-    448
+    1138,
+    1163
    ],
-   "scaricato": "2026-10-25T23:00:55Z",
+   "scaricato": "2026-11-05T18:47:43Z",
    "cartella": "2026-austin/R"
   },
   {

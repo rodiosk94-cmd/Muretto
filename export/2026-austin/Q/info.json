@@ -15,10 +15,34 @@
   "RUS",
   "PIA"
  ],
+ "piloti_telemetria": [
+  "NOR",
+  "VER",
+  "BOR",
+  "HAD",
+  "GAS",
+  "PER",
+  "ANT",
+  "ALO",
+  "LEC",
+  "STR",
+  "ALB",
+  "HUL",
+  "LAW",
+  "OCO",
+  "LIN",
+  "COL",
+  "HAM",
+  "SAI",
+  "RUS",
+  "BOT",
+  "PIA",
+  "BEA"
+ ],
  "giri": 255,
  "giri_telemetria_valida": [
-  80,
-  113
+  184,
+  255
  ],
- "scaricato": "2026-10-24T23:01:57Z"
+ "scaricato": "2026-11-05T18:45:49Z"
 }
