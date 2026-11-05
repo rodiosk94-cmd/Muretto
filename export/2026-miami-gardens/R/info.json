@@ -1,0 +1,48 @@
+{
+ "evento": "Miami Grand Prix",
+ "luogo": "Miami Gardens",
+ "sessione": "Race",
+ "session_key": 11280,
+ "inizio": "2026-05-03T17:00:00+00:00",
+ "fine": "2026-05-03T19:00:00+00:00",
+ "piloti_top": [
+  "NOR",
+  "VER",
+  "HAD",
+  "ANT",
+  "LEC",
+  "HAM",
+  "RUS",
+  "PIA"
+ ],
+ "piloti_telemetria": [
+  "NOR",
+  "VER",
+  "BOR",
+  "HAD",
+  "GAS",
+  "PER",
+  "ANT",
+  "ALO",
+  "LEC",
+  "STR",
+  "ALB",
+  "HUL",
+  "LAW",
+  "OCO",
+  "LIN",
+  "COL",
+  "HAM",
+  "SAI",
+  "RUS",
+  "BOT",
+  "PIA",
+  "BEA"
+ ],
+ "giri": 1038,
+ "giri_telemetria_valida": [
+  1010,
+  1038
+ ],
+ "scaricato": "2026-11-05T17:03:02Z"
+}
