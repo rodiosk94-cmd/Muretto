@@ -1,0 +1,48 @@
+{
+ "evento": "Singapore Grand Prix",
+ "luogo": "Marina Bay",
+ "sessione": "Sprint",
+ "session_key": 11383,
+ "inizio": "2026-10-10T09:00:00+00:00",
+ "fine": "2026-10-10T09:30:00+00:00",
+ "piloti_top": [
+  "NOR",
+  "VER",
+  "HAD",
+  "ANT",
+  "LEC",
+  "HAM",
+  "RUS",
+  "PIA"
+ ],
+ "piloti_telemetria": [
+  "NOR",
+  "VER",
+  "BOR",
+  "HAD",
+  "GAS",
+  "PER",
+  "ANT",
+  "ALO",
+  "LEC",
+  "STR",
+  "ALB",
+  "HUL",
+  "LAW",
+  "OCO",
+  "LIN",
+  "COL",
+  "HAM",
+  "SAI",
+  "RUS",
+  "BOT",
+  "PIA",
+  "BEA"
+ ],
+ "giri": 310,
+ "giri_telemetria_valida": [
+  307,
+  310
+ ],
+ "scaricato": "2026-11-05T18:36:49Z"
+}
