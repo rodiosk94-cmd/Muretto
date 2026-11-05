@@ -1,0 +1,48 @@
+{
+ "evento": "Japanese Grand Prix",
+ "luogo": "Suzuka",
+ "sessione": "Practice 1",
+ "session_key": 11246,
+ "inizio": "2026-03-27T02:30:00+00:00",
+ "fine": "2026-03-27T03:30:00+00:00",
+ "piloti_top": [
+  "NOR",
+  "VER",
+  "HAD",
+  "ANT",
+  "LEC",
+  "HAM",
+  "RUS",
+  "PIA"
+ ],
+ "piloti_telemetria": [
+  "NOR",
+  "VER",
+  "BOR",
+  "HAD",
+  "GAS",
+  "PER",
+  "ANT",
+  "LEC",
+  "STR",
+  "ALB",
+  "HUL",
+  "LAW",
+  "OCO",
+  "CRA",
+  "LIN",
+  "COL",
+  "HAM",
+  "SAI",
+  "RUS",
+  "BOT",
+  "PIA",
+  "BEA"
+ ],
+ "giri": 501,
+ "giri_telemetria_valida": [
+  296,
+  501
+ ],
+ "scaricato": "2026-11-05T16:50:05Z"
+}
