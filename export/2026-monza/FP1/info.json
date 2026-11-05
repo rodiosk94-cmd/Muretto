@@ -1,0 +1,48 @@
+{
+ "evento": "Italian Grand Prix",
+ "luogo": "Monza",
+ "sessione": "Practice 1",
+ "session_key": 11354,
+ "inizio": "2026-09-04T10:30:00+00:00",
+ "fine": "2026-09-04T11:30:00+00:00",
+ "piloti_top": [
+  "NOR",
+  "ANT",
+  "LEC",
+  "LAW",
+  "IWA",
+  "HAM",
+  "RUS",
+  "PIA"
+ ],
+ "piloti_telemetria": [
+  "NOR",
+  "BOR",
+  "ANT",
+  "ALO",
+  "LEC",
+  "STR",
+  "TSU",
+  "HER",
+  "HUL",
+  "LAW",
+  "OCO",
+  "IWA",
+  "LIN",
+  "COL",
+  "HAM",
+  "BRO",
+  "SAI",
+  "ARO",
+  "RUS",
+  "BOT",
+  "PIA",
+  "BEA"
+ ],
+ "giri": 514,
+ "giri_telemetria_valida": [
+  476,
+  514
+ ],
+ "scaricato": "2026-11-05T18:03:01Z"
+}

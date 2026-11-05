@@ -1,0 +1,48 @@
+{
+ "evento": "Italian Grand Prix",
+ "luogo": "Monza",
+ "sessione": "Qualifying",
+ "session_key": 11357,
+ "inizio": "2026-09-05T14:00:00+00:00",
+ "fine": "2026-09-05T15:00:00+00:00",
+ "piloti_top": [
+  "NOR",
+  "VER",
+  "ANT",
+  "LEC",
+  "LAW",
+  "HAM",
+  "RUS",
+  "PIA"
+ ],
+ "piloti_telemetria": [
+  "NOR",
+  "VER",
+  "BOR",
+  "GAS",
+  "PER",
+  "ANT",
+  "ALO",
+  "LEC",
+  "STR",
+  "TSU",
+  "ALB",
+  "HUL",
+  "LAW",
+  "OCO",
+  "LIN",
+  "COL",
+  "HAM",
+  "SAI",
+  "RUS",
+  "BOT",
+  "PIA",
+  "BEA"
+ ],
+ "giri": 275,
+ "giri_telemetria_valida": [
+  221,
+  275
+ ],
+ "scaricato": "2026-11-05T18:07:07Z"
+}
