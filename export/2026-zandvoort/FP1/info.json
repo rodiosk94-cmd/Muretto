@@ -1,0 +1,48 @@
+{
+ "evento": "Dutch Grand Prix",
+ "luogo": "Zandvoort",
+ "sessione": "Practice 1",
+ "session_key": 11343,
+ "inizio": "2026-08-21T10:30:00+00:00",
+ "fine": "2026-08-21T11:30:00+00:00",
+ "piloti_top": [
+  "NOR",
+  "VER",
+  "ANT",
+  "LEC",
+  "LAW",
+  "HAM",
+  "RUS",
+  "PIA"
+ ],
+ "piloti_telemetria": [
+  "NOR",
+  "VER",
+  "BOR",
+  "GAS",
+  "PER",
+  "ANT",
+  "ALO",
+  "LEC",
+  "STR",
+  "TSU",
+  "ALB",
+  "HUL",
+  "LAW",
+  "OCO",
+  "LIN",
+  "COL",
+  "HAM",
+  "SAI",
+  "RUS",
+  "BOT",
+  "PIA",
+  "BEA"
+ ],
+ "giri": 671,
+ "giri_telemetria_valida": [
+  553,
+  671
+ ],
+ "scaricato": "2026-11-05T17:55:25Z"
+}

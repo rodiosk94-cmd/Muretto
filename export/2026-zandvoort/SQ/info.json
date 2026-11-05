@@ -1,0 +1,48 @@
+{
+ "evento": "Dutch Grand Prix",
+ "luogo": "Zandvoort",
+ "sessione": "Sprint Qualifying",
+ "session_key": 11344,
+ "inizio": "2026-08-21T14:30:00+00:00",
+ "fine": "2026-08-21T15:14:00+00:00",
+ "piloti_top": [
+  "NOR",
+  "VER",
+  "ANT",
+  "LEC",
+  "LAW",
+  "HAM",
+  "RUS",
+  "PIA"
+ ],
+ "piloti_telemetria": [
+  "NOR",
+  "VER",
+  "BOR",
+  "GAS",
+  "PER",
+  "ANT",
+  "ALO",
+  "LEC",
+  "STR",
+  "TSU",
+  "ALB",
+  "HUL",
+  "LAW",
+  "OCO",
+  "LIN",
+  "COL",
+  "HAM",
+  "SAI",
+  "RUS",
+  "BOT",
+  "PIA",
+  "BEA"
+ ],
+ "giri": 226,
+ "giri_telemetria_valida": [
+  191,
+  226
+ ],
+ "scaricato": "2026-11-05T17:56:42Z"
+}
