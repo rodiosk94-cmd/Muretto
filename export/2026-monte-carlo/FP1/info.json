@@ -1,0 +1,48 @@
+{
+ "evento": "Monaco Grand Prix",
+ "luogo": "Monte Carlo",
+ "sessione": "Practice 1",
+ "session_key": 11292,
+ "inizio": "2026-06-05T11:30:00+00:00",
+ "fine": "2026-06-05T12:30:00+00:00",
+ "piloti_top": [
+  "NOR",
+  "VER",
+  "HAD",
+  "ANT",
+  "LEC",
+  "HAM",
+  "RUS",
+  "PIA"
+ ],
+ "piloti_telemetria": [
+  "NOR",
+  "VER",
+  "BOR",
+  "HAD",
+  "GAS",
+  "PER",
+  "ANT",
+  "ALO",
+  "LEC",
+  "STR",
+  "ALB",
+  "HUL",
+  "LAW",
+  "OCO",
+  "LIN",
+  "COL",
+  "HAM",
+  "SAI",
+  "RUS",
+  "BOT",
+  "PIA",
+  "BEA"
+ ],
+ "giri": 598,
+ "giri_telemetria_valida": [
+  538,
+  597
+ ],
+ "scaricato": "2026-11-05T17:11:42Z"
+}
