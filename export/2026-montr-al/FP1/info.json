@@ -1,0 +1,48 @@
+{
+ "evento": "Canadian Grand Prix",
+ "luogo": "Montréal",
+ "sessione": "Practice 1",
+ "session_key": 11281,
+ "inizio": "2026-05-22T16:30:00+00:00",
+ "fine": "2026-05-22T17:30:00+00:00",
+ "piloti_top": [
+  "NOR",
+  "VER",
+  "HAD",
+  "ANT",
+  "LEC",
+  "HAM",
+  "RUS",
+  "PIA"
+ ],
+ "piloti_telemetria": [
+  "NOR",
+  "VER",
+  "BOR",
+  "HAD",
+  "GAS",
+  "PER",
+  "ANT",
+  "ALO",
+  "LEC",
+  "STR",
+  "ALB",
+  "HUL",
+  "LAW",
+  "OCO",
+  "LIN",
+  "COL",
+  "HAM",
+  "SAI",
+  "RUS",
+  "BOT",
+  "PIA",
+  "BEA"
+ ],
+ "giri": 594,
+ "giri_telemetria_valida": [
+  496,
+  594
+ ],
+ "scaricato": "2026-11-05T17:04:31Z"
+}
