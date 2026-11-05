@@ -157,6 +157,24 @@ def start_telemetry(key, drivers, win):
     return out
 
 
+def intervalli(key):
+    """Distacchi in gara (endpoint intervals, circa ogni 4 s), compatti per pilota:
+    {"t0": inizio, "piloti": {numero: [[secondi da t0, distacco dal primo, distacco da chi precede], ...]}}.
+    I distacchi possono essere testo (es. "+1 LAP"). Aggiunto il 5/11/2026: serve a separare l'Overtake
+    (entro 1 s dall'auto davanti) da un calo di potenza e a misurare il passo in aria libera."""
+    rows = get("intervals", f"session_key={key}")
+    rows = [r for r in rows if r.get("date")]
+    if not rows:
+        return None
+    rows.sort(key=lambda r: r["date"])
+    t0 = ts(rows[0]["date"])
+    out = {}
+    for r in rows:
+        out.setdefault(str(r["driver_number"]), []).append(
+            [round(ts(r["date"]) - t0, 1), r.get("gap_to_leader"), r.get("interval")])
+    return {"t0": iso(t0), "piloti": out}
+
+
 def fetch_session(s, with_car):
     key = s["session_key"]
     rec = {"session": {k: s.get(k) for k in ("session_key", "session_name", "session_type", "date_start",
@@ -171,6 +189,15 @@ def fetch_session(s, with_car):
             rec[ep] = []
             rec["errori"].append(f"{ep}: {type(e).__name__}: {e}")
             warn(f"  {s['session_name']} {ep}: {e}")
+    if s["session_name"] in RACES:
+        try:
+            rec["intervals"] = intervalli(key)
+        except Denied:
+            raise
+        except Exception as e:  # noqa: BLE001
+            rec["intervals"] = None
+            rec["errori"].append(f"intervals: {type(e).__name__}: {e}")
+            warn(f"  {s['session_name']} intervals: {e}")
     if s["session_name"] == "Qualifying":
         try:  # in alcune stagioni la griglia è legata alla sessione di qualifica
             g = strip(get("starting_grid", f"session_key={key}"))
@@ -425,6 +452,28 @@ def aggiungi_energia(path, data, scadenza=None):
     return True
 
 
+def manca_intervalli(data):
+    return [r for r in data.get("sessioni", []) if r["session"]["session_name"] in RACES and "intervals" not in r]
+
+
+def aggiungi_intervalli(path, data):
+    """Aggiunge i distacchi alle gare già in archivio che non li hanno (scaricate prima del 5/11/2026)."""
+    mancanti = manca_intervalli(data)
+    if not mancanti:
+        return False
+    for rec in mancanti:
+        try:
+            rec["intervals"] = intervalli(rec["session"]["session_key"])
+            n = len((rec["intervals"] or {}).get("piloti", {}))
+            log(f"  distacchi {rec['session']['session_name']}: {n} piloti")
+        except Denied:
+            raise
+        except Exception as e:  # noqa: BLE001
+            warn(f"  distacchi {rec['session']['session_name']}: {e}")
+    salva(path, data)
+    return True
+
+
 def energia_vecchia(path):
     """Telemetria dei giri di un file che si sta riscaricando, per non riscaricarla (session_key -> dict).
     Se il file era parziale non si tengono i blocchi senza dati: si riprovano."""
@@ -526,6 +575,11 @@ def fetch_meeting(m, rnd, year, out_dir, with_car, parziale=False, now=None, ene
     if with_car and os.path.exists(path) and done_ok(path) and senza_partenze(path):
         log(f"{year} {rnd:02d} {name}: edizione passata senza partenze, la riscarico intera")
     elif os.path.exists(path) and done_ok(path):
+        with gzip.open(path, "rt", encoding="utf-8") as f:
+            dati = json.load(f)
+        if manca_intervalli(dati):
+            log(f"{year} {rnd:02d} {name}: aggiungo i distacchi in gara")
+            aggiungi_intervalli(path, dati)
         if energia:
             with gzip.open(path, "rt", encoding="utf-8") as f:
                 data = json.load(f)

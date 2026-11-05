@@ -4,14 +4,16 @@ export_fetch.py — Muretto: il pacchetto di analisi di ogni sessione, al posto 
 (F1_export_v3). Stessi file e stesse regole del notebook, salvati nel repo invece che in Drive.
 
 Fonte: OpenF1 (dati gratuiti da 30 minuti dopo la fine della sessione).
-Piloti con telemetria completa: top team (Mercedes, McLaren, Red Bull, Ferrari; Racing Bulls escluso).
+Piloti con telemetria completa: tutti (dal 5/11/2026; prima solo i top team Mercedes, McLaren, Red Bull,
+Ferrari). La colonna TopTeam di laps.csv.gz resta per filtrare i top team. Il giro più veloce con le coordinate
+resta solo per i top team (le coordinate non si usano nelle analisi).
 
 Uscita: export/<anno>-<luogo>/<SESSIONE>/ con
     laps.csv.gz                tutti i giri di TUTTI i piloti (gomma, vita gomma, settori, trappole)
-    sectors_summary.csv        top team: migliori S1/S2/S3, giro ideale, velocità alle trappole
-    telemetry_top4.csv.gz      top team: telemetria di ogni giro (TelValid = dati affidabili)
+    sectors_summary.csv        tutti: migliori S1/S2/S3, giro ideale, velocità alle trappole
+    telemetry_top4.csv.gz      tutti i piloti (nome storico del file): telemetria di ogni giro (TelValid = dati affidabili)
     track_fastest_top4.csv.gz  top team: giro più veloce con coordinate X/Y/Z
-    clipping_events.csv        top team: tratti a gas pieno con velocità in calo o piatta
+    clipping_events.csv        tutti: tratti a gas pieno con velocità in calo o piatta
     weather.csv, race_control.csv
     info.json                  evento, sessione, piloti, numero di giri, data dello scaricamento
 e l'indice export/indice.json.
@@ -37,6 +39,7 @@ import requests
 
 BASE = os.environ.get("OPENF1_BASE", "https://api.openf1.org/v1")
 TOP_TEAMS = ["mercedes", "mclaren", "red bull", "ferrari"]  # "Racing Bulls" escluso
+TUTTI = os.environ.get("EXPORT_SOLO_TOP", "") != "1"   # telemetria di tutti i piloti (5/11/2026)
 SESSION_NAMES = {"FP1": ["practice 1"], "FP2": ["practice 2"], "FP3": ["practice 3"],
                  "Q": ["qualifying"], "R": ["race"], "S": ["sprint"],
                  "SQ": ["sprint qualifying", "sprint shootout"]}
@@ -183,7 +186,8 @@ def esporta(meeting, sess, out):
     acr = dict(zip(drivers["driver_number"], drivers["name_acronym"]))
     team = dict(zip(drivers["driver_number"], drivers["team_name"]))
     top_nums = [n for n in drivers["driver_number"] if is_top(team.get(n))]
-    print("Piloti top team:", ", ".join(acr[n] for n in top_nums))
+    print("Piloti top team:", ", ".join(str(acr[n]) for n in top_nums))
+    tel_nums = sorted(drivers["driver_number"]) if TUTTI else top_nums
 
     # Giri + gomme
     laps = get("laps", f"session_key={sk}")
@@ -226,7 +230,7 @@ def esporta(meeting, sess, out):
 
     # Riepilogo settori
     summ = []
-    for n in top_nums:
+    for n in tel_nums:
         d = laps[(laps["driver_number"] == n) & laps["LapTime"].notna()]
         v = d[d["PitOutLap"] != True]  # noqa: E712
         if v.empty:
@@ -244,7 +248,7 @@ def esporta(meeting, sess, out):
 
     # Telemetria
     tel_all, locs = [], {}
-    for n in top_nums:
+    for n in tel_nums:
         drv = acr[n]
         print(f"  telemetria {drv}...")
         car = get("car_data", f"session_key={sk}&driver_number={n}")
@@ -279,7 +283,8 @@ def esporta(meeting, sess, out):
         m["Driver"] = drv
         m["driver_number"] = n
         tel_all.append(m)
-        locs[n] = get("location", f"session_key={sk}&driver_number={n}")
+        if n in top_nums:
+            locs[n] = get("location", f"session_key={sk}&driver_number={n}")
 
     track_all, clip_all, valide = [], [], (0, 0)
     if tel_all:
@@ -356,7 +361,7 @@ def esporta(meeting, sess, out):
     info = {"evento": str(meeting["meeting_name"]), "luogo": str(meeting.get("location")),
             "sessione": str(sess["session_name"]), "session_key": sk,
             "inizio": pd.Timestamp(sess.get("date_start")).isoformat(), "fine": pd.Timestamp(sess.get("date_end")).isoformat(),
-            "piloti_top": [acr[n] for n in top_nums], "giri": int(laps["LapTime"].notna().sum()),
+            "piloti_top": [acr[n] for n in top_nums], "piloti_telemetria": [acr[n] for n in tel_nums], "giri": int(laps["LapTime"].notna().sum()),
             "giri_telemetria_valida": list(valide),
             "scaricato": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")}
     with open(f"{tmp}/info.json", "w") as f:
@@ -396,6 +401,18 @@ def main():
     ap.add_argument("--forza", action="store_true", help="riscarica anche le sessioni già presenti")
     a = ap.parse_args()
     os.makedirs(a.out_dir, exist_ok=True)
+    if a.gara and "," in a.gara:   # più gare in un lancio (recupero della stagione)
+        for g in [x.strip() for x in a.gara.split(",") if x.strip()]:
+            a1 = argparse.Namespace(**vars(a)); a1.gara = g
+            try:
+                esegui(a1)
+            except SystemExit as e:
+                print(f"{g}: {e}")
+        return
+    esegui(a)
+
+
+def esegui(a):
     now = datetime.now(timezone.utc)
 
     try:  # durante una sessione in diretta OpenF1 nega l'accesso anche a meetings e sessions

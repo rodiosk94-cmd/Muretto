@@ -11,7 +11,7 @@ on:
   workflow_dispatch:
     inputs:
       gara:
-        description: "Gara, es. Austin (vuoto = weekend in corso)"
+        description: "Gara, es. Austin; più gare separate da virgola per il recupero (vuoto = weekend in corso)"
         required: false
         default: ""
       sessione:
@@ -33,7 +33,7 @@ concurrency:
 jobs:
   export:
     runs-on: ubuntu-latest
-    timeout-minutes: 60
+    timeout-minutes: 350
     steps:
       - uses: actions/checkout@v4
 
@@ -44,30 +44,40 @@ jobs:
       - name: Installa le librerie
         run: pip install numpy pandas requests
 
-      - name: Scarica le sessioni da OpenF1
+      - name: Scarica le sessioni da OpenF1 (e salva dopo ogni gara)
         env:
           GARA: ${{ github.event.inputs.gara }}
           SESSIONE: ${{ github.event.inputs.sessione }}
           FORZA: ${{ github.event.inputs.forza }}
         run: |
+          git config user.name "muretto-bot"
+          git config user.email "muretto-bot@users.noreply.github.com"
+          salva() {
+            if [ -n "$(git status --porcelain export)" ]; then
+              git add export
+              git commit -m "Export sessioni aggiornato${1:+: $1}"
+              for i in 1 2 3; do
+                git pull --rebase && git push && return 0
+                sleep 15
+              done
+              return 1
+            fi
+            echo "Nessuna novità${1:+ per $1}."
+          }
           ARGS=(--out-dir export)
-          if [ -n "$GARA" ]; then ARGS+=(--gara "$GARA"); fi
           if [ -n "$SESSIONE" ]; then ARGS+=(--sessione "$SESSIONE"); fi
           if [ "$FORZA" = "si" ]; then ARGS+=(--forza); fi
-          python export_fetch.py "${ARGS[@]}"
-
-      - name: Salva se ci sono novità
-        run: |
-          if [ -n "$(git status --porcelain export)" ]; then
-            git config user.name "muretto-bot"
-            git config user.email "muretto-bot@users.noreply.github.com"
-            git add export
-            git commit -m "Export sessioni aggiornato"
-            for i in 1 2 3; do
-              git pull --rebase && git push && exit 0
-              sleep 15
-            done
-            exit 1
-          else
-            echo "Nessuna novità."
+          if [ -z "$GARA" ]; then
+            python export_fetch.py "${ARGS[@]}"
+            salva
+            exit 0
           fi
+          # una o più gare (recupero della stagione): ogni gara salvata subito, così un lancio lungo
+          # interrotto dal limite di tempo non perde le gare già fatte
+          IFS=',' read -ra GARE <<< "$GARA"
+          for g in "${GARE[@]}"; do
+            g="$(echo "$g" | xargs)"
+            [ -z "$g" ] && continue
+            python export_fetch.py "${ARGS[@]}" --gara "$g" || echo "::warning::$g non riuscita"
+            salva "$g"
+          done
