@@ -1,0 +1,48 @@
+{
+ "evento": "Chinese Grand Prix",
+ "luogo": "Shanghai",
+ "sessione": "Qualifying",
+ "session_key": 11241,
+ "inizio": "2026-03-14T07:00:00+00:00",
+ "fine": "2026-03-14T08:00:00+00:00",
+ "piloti_top": [
+  "NOR",
+  "VER",
+  "HAD",
+  "ANT",
+  "LEC",
+  "HAM",
+  "RUS",
+  "PIA"
+ ],
+ "piloti_telemetria": [
+  "NOR",
+  "VER",
+  "BOR",
+  "HAD",
+  "GAS",
+  "PER",
+  "ANT",
+  "ALO",
+  "LEC",
+  "STR",
+  "ALB",
+  "HUL",
+  "LAW",
+  "OCO",
+  "LIN",
+  "COL",
+  "HAM",
+  "SAI",
+  "RUS",
+  "BOT",
+  "PIA",
+  "BEA"
+ ],
+ "giri": 303,
+ "giri_telemetria_valida": [
+  91,
+  303
+ ],
+ "scaricato": "2026-11-05T16:47:02Z"
+}
