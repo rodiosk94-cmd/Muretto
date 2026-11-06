@@ -1,7 +1,7 @@
 {
- "aggiornato": "2026-11-06T17:09:08Z",
+ "aggiornato": "2026-11-06T20:33:22Z",
  "fermato": null,
- "richieste": 50,
+ "richieste": 64,
  "file": [
   {
    "file": "storico/2023/01-bahrain-grand-prix.json.gz",
@@ -1970,16 +1970,17 @@
    "gp": "São Paulo Grand Prix",
    "luogo": "São Paulo",
    "sessioni": [
-    "Practice 1"
+    "Practice 1",
+    "Practice 2"
    ],
    "giri_gara": 0,
    "partenze": 0,
-   "energia": 34,
+   "energia": 76,
    "energia_errori": [],
    "errori": [],
-   "scaricato": "2026-11-06T17:07:43Z",
+   "scaricato": "2026-11-06T20:31:27Z",
    "parziale": true,
-   "kb": 160
+   "kb": 386
   }
  ],
  "circuiti": [
