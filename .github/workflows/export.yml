@@ -1,13 +1,11 @@
 name: Export sessioni
 
 # Pacchetto di analisi di ogni sessione (ex notebook Colab F1_export_v3) salvato in export/.
-# Automatico: ogni 30 minuti nel weekend scarica le sessioni finite da almeno 35 minuti.
+# Solo lancio a mano (Francesco, 6/11/2026: niente più lanci programmati). OpenF1 apre i dati di una
+# sessione circa 30 minuti dopo la fine: prima di allora il lancio non scarica niente.
 # A mano: Actions → Export sessioni → Run workflow (gara e sessione facoltative).
 
 on:
-  schedule:
-    # Ogni 30 minuti (al minuto 10 e 40), solo domenica, lunedì, venerdì e sabato (orari UTC)
-    - cron: "10,40 * * * 0,1,5,6"
   workflow_dispatch:
     inputs:
       gara:

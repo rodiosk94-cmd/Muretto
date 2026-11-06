@@ -1,27 +1,10 @@
 name: Storico
 
 on:
-  # Lanci programmati del GP di San Paolo 2026 (orari UTC; San Paolo UTC-3, Italia UTC+1).
-  # GitHub ritarda o salta spesso i lanci programmati, quindi ogni sessione ha tre lanci PRIMA della
-  # fine: il primo che parte aspetta fino a 25 minuti dopo la fine prevista e poi riprova ogni 2 minuti
-  # finché OpenF1 non dà i dati della sessione (di solito circa 30 minuti dopo la fine). I lanci
-  # successivi trovano la sessione già in archivio e si chiudono subito.
-  schedule:
-    - cron: "2 16 6 11 *"     # FP1: fine ven 16:30 UTC (17:30 in Italia), dati da 17:55
-    - cron: "11 16 6 11 *"
-    - cron: "21 16 6 11 *"
-    - cron: "32 19 6 11 *"    # FP2: fine ven 20:00 UTC (21:00 in Italia), dati da 21:25
-    - cron: "41 19 6 11 *"
-    - cron: "51 19 6 11 *"
-    - cron: "2 15 7 11 *"     # FP3: fine sab 15:30 UTC (16:30 in Italia), dati da 16:55
-    - cron: "11 15 7 11 *"
-    - cron: "21 15 7 11 *"
-    - cron: "32 18 7 11 *"    # qualifica: fine sab 19:00 UTC (20:00 in Italia), dati da 20:25
-    - cron: "41 18 7 11 *"
-    - cron: "51 18 7 11 *"
-    - cron: "12 18 8 11 *"    # gara: fine prevista dom 18:40 UTC (19:40 in Italia), dati da 20:05
-    - cron: "22 18 8 11 *"
-    - cron: "33 18 8 11 *"
+  # Solo lancio a mano (Francesco, 6/11/2026: GitHub non fa partire i lanci programmati, niente più
+  # schedule). Per scaricare una sessione appena finita: sessione + fine (UTC). Il lancio aspetta fino a
+  # 25 minuti dopo la fine e poi riprova ogni 2 minuti finché OpenF1 non dà i dati (di solito circa
+  # 30 minuti dopo la fine); per la gara riprova fino a 2 ore.
   workflow_dispatch:
     inputs:
       anni:
@@ -80,7 +63,6 @@ jobs:
           ANNI_ENERGIA: ${{ github.event.inputs.anni_energia }}
           SESSIONE: ${{ github.event.inputs.sessione }}
           FINE_IN: ${{ github.event.inputs.fine }}
-          CRON: ${{ github.event.schedule }}
         run: |
           scarica() {
             python backfill_fetch.py --out-dir storico --anni "${ANNI:-2026}" --circuito "$CIRCUITO" \
@@ -96,13 +78,7 @@ jobs:
             python verifica_integrita.py --anni "$(date -u -d "$2" +%Y)" --sessione "$1" --fine "$2" --esito > /tmp/integrita.txt 2>&1
           }
           SESS="$SESSIONE"; FINE="$FINE_IN"; MAXMIN=60
-          case "$CRON" in
-            "2 16 6 11 *"|"11 16 6 11 *"|"21 16 6 11 *") SESS="Practice 1"; FINE="2026-11-06T16:30:00Z" ;;
-            "32 19 6 11 *"|"41 19 6 11 *"|"51 19 6 11 *") SESS="Practice 2"; FINE="2026-11-06T20:00:00Z" ;;
-            "2 15 7 11 *"|"11 15 7 11 *"|"21 15 7 11 *") SESS="Practice 3"; FINE="2026-11-07T15:30:00Z" ;;
-            "32 18 7 11 *"|"41 18 7 11 *"|"51 18 7 11 *") SESS="Qualifying"; FINE="2026-11-07T19:00:00Z" ;;
-            "12 18 8 11 *"|"22 18 8 11 *"|"33 18 8 11 *") SESS="Race"; FINE="2026-11-08T18:40:00Z"; MAXMIN=120 ;;
-          esac
+          if [ "$SESS" = "Race" ]; then MAXMIN=120; fi
           if [ -z "$SESS" ] || [ -z "$FINE" ]; then
             scarica
             exit 0
