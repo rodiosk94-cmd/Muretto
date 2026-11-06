@@ -1,9 +1,9 @@
 {
- "controllato": "2026-11-06T20:31:37Z",
+ "controllato": "2026-11-06T20:37:05Z",
  "riepilogo": {
   "completo": 32,
   "lacune lievi": 54,
-  "lacune gravi": 10
+  "lacune gravi": 11
  },
  "sessioni": [
   {
@@ -1411,6 +1411,21 @@
     {
      "gravita": "lieve",
      "testo": "meteo: 1 letture con la pista a 0 °C (da scartare)"
+    }
+   ]
+  },
+  {
+   "anno": 2026,
+   "round": 20,
+   "gp": "São Paulo",
+   "sessione": "Practice 2",
+   "session_key": 11406,
+   "parziale": true,
+   "stato": "lacune gravi",
+   "problemi": [
+    {
+     "gravita": "grave",
+     "testo": "Export assente (export/2026-s-o-paulo/FP2)"
     }
    ]
   }
