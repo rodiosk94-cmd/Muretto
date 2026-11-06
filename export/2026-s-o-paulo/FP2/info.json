@@ -1,0 +1,48 @@
+{
+ "evento": "São Paulo Grand Prix",
+ "luogo": "São Paulo",
+ "sessione": "Practice 2",
+ "session_key": 11406,
+ "inizio": "2026-11-06T19:00:00+00:00",
+ "fine": "2026-11-06T20:00:00+00:00",
+ "piloti_top": [
+  "NOR",
+  "VER",
+  "HAD",
+  "ANT",
+  "LEC",
+  "HAM",
+  "RUS",
+  "PIA"
+ ],
+ "piloti_telemetria": [
+  "NOR",
+  "VER",
+  "BOR",
+  "HAD",
+  "GAS",
+  "PER",
+  "ANT",
+  "ALO",
+  "LEC",
+  "STR",
+  "ALB",
+  "HUL",
+  "LAW",
+  "LIN",
+  "COL",
+  "HAM",
+  "CAM",
+  "SAI",
+  "RUS",
+  "BOT",
+  "PIA",
+  "BEA"
+ ],
+ "giri": 681,
+ "giri_telemetria_valida": [
+  612,
+  681
+ ],
+ "scaricato": "2026-11-06T20:44:20Z"
+}

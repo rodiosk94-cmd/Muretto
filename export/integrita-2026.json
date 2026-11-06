@@ -1,9 +1,9 @@
 {
- "controllato": "2026-11-06T20:37:05Z",
+ "controllato": "2026-11-06T20:46:05Z",
  "riepilogo": {
-  "completo": 32,
+  "completo": 33,
   "lacune lievi": 54,
-  "lacune gravi": 11
+  "lacune gravi": 10
  },
  "sessioni": [
   {
@@ -1421,13 +1421,8 @@
    "sessione": "Practice 2",
    "session_key": 11406,
    "parziale": true,
-   "stato": "lacune gravi",
-   "problemi": [
-    {
-     "gravita": "grave",
-     "testo": "Export assente (export/2026-s-o-paulo/FP2)"
-    }
-   ]
+   "stato": "completo",
+   "problemi": []
   }
  ]
 }
