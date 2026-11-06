@@ -1,8 +1,8 @@
 {
- "controllato": "2026-11-06T17:10:53Z",
+ "controllato": "2026-11-06T20:31:37Z",
  "riepilogo": {
   "completo": 32,
-  "lacune lievi": 53,
+  "lacune lievi": 54,
   "lacune gravi": 10
  },
  "sessioni": [
@@ -1396,6 +1396,21 @@
     {
      "gravita": "lieve",
      "testo": "meteo: 2 letture con la pista a 0 °C (da scartare)"
+    }
+   ]
+  },
+  {
+   "anno": 2026,
+   "round": 20,
+   "gp": "São Paulo",
+   "sessione": "Practice 1",
+   "session_key": 11405,
+   "parziale": true,
+   "stato": "lacune lievi",
+   "problemi": [
+    {
+     "gravita": "lieve",
+     "testo": "meteo: 1 letture con la pista a 0 °C (da scartare)"
     }
    ]
   }
