@@ -1,0 +1,1403 @@
+{
+ "controllato": "2026-11-06T06:35:34Z",
+ "riepilogo": {
+  "completo": 32,
+  "lacune lievi": 53,
+  "lacune gravi": 10
+ },
+ "sessioni": [
+  {
+   "anno": 2026,
+   "round": 1,
+   "gp": "Melbourne",
+   "sessione": "Practice 1",
+   "session_key": 11227,
+   "parziale": false,
+   "stato": "completo",
+   "problemi": []
+  },
+  {
+   "anno": 2026,
+   "round": 1,
+   "gp": "Melbourne",
+   "sessione": "Practice 2",
+   "session_key": 11228,
+   "parziale": false,
+   "stato": "completo",
+   "problemi": []
+  },
+  {
+   "anno": 2026,
+   "round": 1,
+   "gp": "Melbourne",
+   "sessione": "Practice 3",
+   "session_key": 11229,
+   "parziale": false,
+   "stato": "lacune lievi",
+   "problemi": [
+    {
+     "gravita": "lieve",
+     "testo": "primo giro al minuto 20 (meteo regolare: probabilmente nessuno in pista)"
+    }
+   ]
+  },
+  {
+   "anno": 2026,
+   "round": 1,
+   "gp": "Melbourne",
+   "sessione": "Qualifying",
+   "session_key": 11230,
+   "parziale": false,
+   "stato": "lacune lievi",
+   "problemi": [
+    {
+     "gravita": "lieve",
+     "testo": "Export: telemetria valida nel 79% dei giri"
+    }
+   ]
+  },
+  {
+   "anno": 2026,
+   "round": 1,
+   "gp": "Melbourne",
+   "sessione": "Race",
+   "session_key": 11234,
+   "parziale": false,
+   "stato": "lacune gravi",
+   "problemi": [
+    {
+     "gravita": "lieve",
+     "testo": "giri mancanti (3): RUS 57/58, LEC 57/58, HAM 57/58"
+    },
+    {
+     "gravita": "lieve",
+     "testo": "numeri di giro saltati: RUS 2; LEC 2; HAM 2"
+    },
+    {
+     "gravita": "grave",
+     "testo": "6 stint senza mescola"
+    },
+    {
+     "gravita": "lieve",
+     "testo": "piloti con giri ma senza stint: PIA"
+    }
+   ]
+  },
+  {
+   "anno": 2026,
+   "round": 2,
+   "gp": "Shanghai",
+   "sessione": "Practice 1",
+   "session_key": 11235,
+   "parziale": false,
+   "stato": "lacune lievi",
+   "problemi": [
+    {
+     "gravita": "lieve",
+     "testo": "Export: telemetria valida nel 0% dei giri"
+    }
+   ]
+  },
+  {
+   "anno": 2026,
+   "round": 2,
+   "gp": "Shanghai",
+   "sessione": "Sprint Qualifying",
+   "session_key": 11236,
+   "parziale": false,
+   "stato": "lacune lievi",
+   "problemi": [
+    {
+     "gravita": "lieve",
+     "testo": "Export: telemetria valida nel 27% dei giri"
+    }
+   ]
+  },
+  {
+   "anno": 2026,
+   "round": 2,
+   "gp": "Shanghai",
+   "sessione": "Sprint",
+   "session_key": 11240,
+   "parziale": false,
+   "stato": "lacune lievi",
+   "problemi": [
+    {
+     "gravita": "lieve",
+     "testo": "Export: telemetria valida nel 7% dei giri"
+    }
+   ]
+  },
+  {
+   "anno": 2026,
+   "round": 2,
+   "gp": "Shanghai",
+   "sessione": "Qualifying",
+   "session_key": 11241,
+   "parziale": false,
+   "stato": "lacune lievi",
+   "problemi": [
+    {
+     "gravita": "lieve",
+     "testo": "Export: telemetria valida nel 30% dei giri"
+    }
+   ]
+  },
+  {
+   "anno": 2026,
+   "round": 2,
+   "gp": "Shanghai",
+   "sessione": "Race",
+   "session_key": 11245,
+   "parziale": false,
+   "stato": "lacune lievi",
+   "problemi": [
+    {
+     "gravita": "lieve",
+     "testo": "Export: telemetria valida nel 51% dei giri"
+    }
+   ]
+  },
+  {
+   "anno": 2026,
+   "round": 3,
+   "gp": "Suzuka",
+   "sessione": "Practice 1",
+   "session_key": 11246,
+   "parziale": false,
+   "stato": "lacune gravi",
+   "problemi": [
+    {
+     "gravita": "grave",
+     "testo": "giri mancanti (4): RUS 26/27, ANT 25/26, VER 26/27, HAD 26/27"
+    },
+    {
+     "gravita": "lieve",
+     "testo": "numeri di giro saltati: RUS 12; ANT 13; HAD 11; VER 10"
+    },
+    {
+     "gravita": "lieve",
+     "testo": "1 stint senza mescola"
+    },
+    {
+     "gravita": "lieve",
+     "testo": "Export: telemetria valida nel 59% dei giri"
+    }
+   ]
+  },
+  {
+   "anno": 2026,
+   "round": 3,
+   "gp": "Suzuka",
+   "sessione": "Practice 2",
+   "session_key": 11247,
+   "parziale": false,
+   "stato": "lacune lievi",
+   "problemi": [
+    {
+     "gravita": "lieve",
+     "testo": "giri mancanti (1): LAW 30/31"
+    },
+    {
+     "gravita": "lieve",
+     "testo": "numeri di giro saltati: LAW 24"
+    },
+    {
+     "gravita": "lieve",
+     "testo": "Export: telemetria valida nel 71% dei giri"
+    }
+   ]
+  },
+  {
+   "anno": 2026,
+   "round": 3,
+   "gp": "Suzuka",
+   "sessione": "Practice 3",
+   "session_key": 11248,
+   "parziale": false,
+   "stato": "lacune lievi",
+   "problemi": [
+    {
+     "gravita": "lieve",
+     "testo": "Export: telemetria valida nel 69% dei giri"
+    }
+   ]
+  },
+  {
+   "anno": 2026,
+   "round": 3,
+   "gp": "Suzuka",
+   "sessione": "Qualifying",
+   "session_key": 11249,
+   "parziale": false,
+   "stato": "lacune lievi",
+   "problemi": [
+    {
+     "gravita": "lieve",
+     "testo": "Export: 1 giri con tempo ma senza telemetria su 302"
+    },
+    {
+     "gravita": "lieve",
+     "testo": "Export: telemetria valida nel 36% dei giri"
+    }
+   ]
+  },
+  {
+   "anno": 2026,
+   "round": 3,
+   "gp": "Suzuka",
+   "sessione": "Race",
+   "session_key": 11253,
+   "parziale": false,
+   "stato": "lacune lievi",
+   "problemi": [
+    {
+     "gravita": "lieve",
+     "testo": "Export: telemetria valida nel 58% dei giri"
+    }
+   ]
+  },
+  {
+   "anno": 2026,
+   "round": 4,
+   "gp": "Miami Gardens",
+   "sessione": "Practice 1",
+   "session_key": 11270,
+   "parziale": false,
+   "stato": "completo",
+   "problemi": []
+  },
+  {
+   "anno": 2026,
+   "round": 4,
+   "gp": "Miami Gardens",
+   "sessione": "Sprint Qualifying",
+   "session_key": 11271,
+   "parziale": false,
+   "stato": "completo",
+   "problemi": []
+  },
+  {
+   "anno": 2026,
+   "round": 4,
+   "gp": "Miami Gardens",
+   "sessione": "Sprint",
+   "session_key": 11275,
+   "parziale": false,
+   "stato": "completo",
+   "problemi": []
+  },
+  {
+   "anno": 2026,
+   "round": 4,
+   "gp": "Miami Gardens",
+   "sessione": "Qualifying",
+   "session_key": 11276,
+   "parziale": false,
+   "stato": "completo",
+   "problemi": []
+  },
+  {
+   "anno": 2026,
+   "round": 4,
+   "gp": "Miami Gardens",
+   "sessione": "Race",
+   "session_key": 11280,
+   "parziale": false,
+   "stato": "completo",
+   "problemi": []
+  },
+  {
+   "anno": 2026,
+   "round": 5,
+   "gp": "Montréal",
+   "sessione": "Practice 1",
+   "session_key": 11281,
+   "parziale": false,
+   "stato": "lacune lievi",
+   "problemi": [
+    {
+     "gravita": "lieve",
+     "testo": "Export: telemetria valida nel 84% dei giri"
+    }
+   ]
+  },
+  {
+   "anno": 2026,
+   "round": 5,
+   "gp": "Montréal",
+   "sessione": "Sprint Qualifying",
+   "session_key": 11282,
+   "parziale": false,
+   "stato": "completo",
+   "problemi": []
+  },
+  {
+   "anno": 2026,
+   "round": 5,
+   "gp": "Montréal",
+   "sessione": "Sprint",
+   "session_key": 11286,
+   "parziale": false,
+   "stato": "completo",
+   "problemi": []
+  },
+  {
+   "anno": 2026,
+   "round": 5,
+   "gp": "Montréal",
+   "sessione": "Qualifying",
+   "session_key": 11287,
+   "parziale": false,
+   "stato": "completo",
+   "problemi": []
+  },
+  {
+   "anno": 2026,
+   "round": 5,
+   "gp": "Montréal",
+   "sessione": "Race",
+   "session_key": 11291,
+   "parziale": false,
+   "stato": "completo",
+   "problemi": []
+  },
+  {
+   "anno": 2026,
+   "round": 6,
+   "gp": "Monte Carlo",
+   "sessione": "Practice 1",
+   "session_key": 11292,
+   "parziale": false,
+   "stato": "lacune lievi",
+   "problemi": [
+    {
+     "gravita": "lieve",
+     "testo": "Export: 1 giri con tempo ma senza telemetria su 598"
+    }
+   ]
+  },
+  {
+   "anno": 2026,
+   "round": 6,
+   "gp": "Monte Carlo",
+   "sessione": "Practice 2",
+   "session_key": 11293,
+   "parziale": false,
+   "stato": "completo",
+   "problemi": []
+  },
+  {
+   "anno": 2026,
+   "round": 6,
+   "gp": "Monte Carlo",
+   "sessione": "Practice 3",
+   "session_key": 11294,
+   "parziale": false,
+   "stato": "lacune lievi",
+   "problemi": [
+    {
+     "gravita": "lieve",
+     "testo": "Export: 1 giri con tempo ma senza telemetria su 496"
+    }
+   ]
+  },
+  {
+   "anno": 2026,
+   "round": 6,
+   "gp": "Monte Carlo",
+   "sessione": "Qualifying",
+   "session_key": 11295,
+   "parziale": false,
+   "stato": "completo",
+   "problemi": []
+  },
+  {
+   "anno": 2026,
+   "round": 6,
+   "gp": "Monte Carlo",
+   "sessione": "Race",
+   "session_key": 11299,
+   "parziale": false,
+   "stato": "completo",
+   "problemi": []
+  },
+  {
+   "anno": 2026,
+   "round": 7,
+   "gp": "Barcelona",
+   "sessione": "Practice 1",
+   "session_key": 11300,
+   "parziale": false,
+   "stato": "lacune lievi",
+   "problemi": [
+    {
+     "gravita": "lieve",
+     "testo": "Export: telemetria valida nel 83% dei giri"
+    }
+   ]
+  },
+  {
+   "anno": 2026,
+   "round": 7,
+   "gp": "Barcelona",
+   "sessione": "Practice 2",
+   "session_key": 11301,
+   "parziale": false,
+   "stato": "lacune lievi",
+   "problemi": [
+    {
+     "gravita": "lieve",
+     "testo": "Export: telemetria valida nel 83% dei giri"
+    }
+   ]
+  },
+  {
+   "anno": 2026,
+   "round": 7,
+   "gp": "Barcelona",
+   "sessione": "Practice 3",
+   "session_key": 11302,
+   "parziale": false,
+   "stato": "lacune lievi",
+   "problemi": [
+    {
+     "gravita": "lieve",
+     "testo": "Export: telemetria valida nel 74% dei giri"
+    }
+   ]
+  },
+  {
+   "anno": 2026,
+   "round": 7,
+   "gp": "Barcelona",
+   "sessione": "Qualifying",
+   "session_key": 11303,
+   "parziale": false,
+   "stato": "lacune lievi",
+   "problemi": [
+    {
+     "gravita": "lieve",
+     "testo": "Export: telemetria valida nel 79% dei giri"
+    }
+   ]
+  },
+  {
+   "anno": 2026,
+   "round": 7,
+   "gp": "Barcelona",
+   "sessione": "Race",
+   "session_key": 11307,
+   "parziale": false,
+   "stato": "completo",
+   "problemi": []
+  },
+  {
+   "anno": 2026,
+   "round": 8,
+   "gp": "Spielberg",
+   "sessione": "Practice 1",
+   "session_key": 11308,
+   "parziale": false,
+   "stato": "lacune lievi",
+   "problemi": [
+    {
+     "gravita": "lieve",
+     "testo": "Export: telemetria valida nel 85% dei giri"
+    }
+   ]
+  },
+  {
+   "anno": 2026,
+   "round": 8,
+   "gp": "Spielberg",
+   "sessione": "Practice 2",
+   "session_key": 11309,
+   "parziale": false,
+   "stato": "completo",
+   "problemi": []
+  },
+  {
+   "anno": 2026,
+   "round": 8,
+   "gp": "Spielberg",
+   "sessione": "Practice 3",
+   "session_key": 11310,
+   "parziale": false,
+   "stato": "lacune lievi",
+   "problemi": [
+    {
+     "gravita": "lieve",
+     "testo": "giri mancanti (2): PIA 16/17, BEA 18/19"
+    },
+    {
+     "gravita": "lieve",
+     "testo": "numeri di giro saltati: BEA 18; PIA 16"
+    }
+   ]
+  },
+  {
+   "anno": 2026,
+   "round": 8,
+   "gp": "Spielberg",
+   "sessione": "Qualifying",
+   "session_key": 11311,
+   "parziale": false,
+   "stato": "completo",
+   "problemi": []
+  },
+  {
+   "anno": 2026,
+   "round": 8,
+   "gp": "Spielberg",
+   "sessione": "Race",
+   "session_key": 11315,
+   "parziale": false,
+   "stato": "completo",
+   "problemi": []
+  },
+  {
+   "anno": 2026,
+   "round": 9,
+   "gp": "Silverstone",
+   "sessione": "Practice 1",
+   "session_key": 11316,
+   "parziale": false,
+   "stato": "completo",
+   "problemi": []
+  },
+  {
+   "anno": 2026,
+   "round": 9,
+   "gp": "Silverstone",
+   "sessione": "Sprint Qualifying",
+   "session_key": 11317,
+   "parziale": false,
+   "stato": "lacune lievi",
+   "problemi": [
+    {
+     "gravita": "lieve",
+     "testo": "Export: telemetria valida nel 80% dei giri"
+    }
+   ]
+  },
+  {
+   "anno": 2026,
+   "round": 9,
+   "gp": "Silverstone",
+   "sessione": "Sprint",
+   "session_key": 11321,
+   "parziale": false,
+   "stato": "completo",
+   "problemi": []
+  },
+  {
+   "anno": 2026,
+   "round": 9,
+   "gp": "Silverstone",
+   "sessione": "Qualifying",
+   "session_key": 11322,
+   "parziale": false,
+   "stato": "completo",
+   "problemi": []
+  },
+  {
+   "anno": 2026,
+   "round": 9,
+   "gp": "Silverstone",
+   "sessione": "Race",
+   "session_key": 11326,
+   "parziale": false,
+   "stato": "completo",
+   "problemi": []
+  },
+  {
+   "anno": 2026,
+   "round": 10,
+   "gp": "Spa-Francorchamps",
+   "sessione": "Practice 1",
+   "session_key": 11327,
+   "parziale": false,
+   "stato": "lacune gravi",
+   "problemi": [
+    {
+     "gravita": "grave",
+     "testo": "Export assente (export/2026-spa-francorchamps/FP1)"
+    }
+   ]
+  },
+  {
+   "anno": 2026,
+   "round": 10,
+   "gp": "Spa-Francorchamps",
+   "sessione": "Practice 2",
+   "session_key": 11328,
+   "parziale": false,
+   "stato": "lacune gravi",
+   "problemi": [
+    {
+     "gravita": "grave",
+     "testo": "Export assente (export/2026-spa-francorchamps/FP2)"
+    }
+   ]
+  },
+  {
+   "anno": 2026,
+   "round": 10,
+   "gp": "Spa-Francorchamps",
+   "sessione": "Practice 3",
+   "session_key": 11329,
+   "parziale": false,
+   "stato": "lacune gravi",
+   "problemi": [
+    {
+     "gravita": "grave",
+     "testo": "Export assente (export/2026-spa-francorchamps/FP3)"
+    }
+   ]
+  },
+  {
+   "anno": 2026,
+   "round": 10,
+   "gp": "Spa-Francorchamps",
+   "sessione": "Qualifying",
+   "session_key": 11330,
+   "parziale": false,
+   "stato": "lacune gravi",
+   "problemi": [
+    {
+     "gravita": "grave",
+     "testo": "Export assente (export/2026-spa-francorchamps/Q)"
+    }
+   ]
+  },
+  {
+   "anno": 2026,
+   "round": 10,
+   "gp": "Spa-Francorchamps",
+   "sessione": "Race",
+   "session_key": 11334,
+   "parziale": false,
+   "stato": "lacune gravi",
+   "problemi": [
+    {
+     "gravita": "grave",
+     "testo": "Export assente (export/2026-spa-francorchamps/R)"
+    }
+   ]
+  },
+  {
+   "anno": 2026,
+   "round": 11,
+   "gp": "Budapest",
+   "sessione": "Practice 1",
+   "session_key": 11335,
+   "parziale": false,
+   "stato": "lacune lievi",
+   "problemi": [
+    {
+     "gravita": "lieve",
+     "testo": "Export: telemetria valida nel 84% dei giri"
+    }
+   ]
+  },
+  {
+   "anno": 2026,
+   "round": 11,
+   "gp": "Budapest",
+   "sessione": "Practice 2",
+   "session_key": 11336,
+   "parziale": false,
+   "stato": "completo",
+   "problemi": []
+  },
+  {
+   "anno": 2026,
+   "round": 11,
+   "gp": "Budapest",
+   "sessione": "Practice 3",
+   "session_key": 11337,
+   "parziale": false,
+   "stato": "lacune lievi",
+   "problemi": [
+    {
+     "gravita": "lieve",
+     "testo": "Export: telemetria valida nel 81% dei giri"
+    }
+   ]
+  },
+  {
+   "anno": 2026,
+   "round": 11,
+   "gp": "Budapest",
+   "sessione": "Qualifying",
+   "session_key": 11338,
+   "parziale": false,
+   "stato": "lacune lievi",
+   "problemi": [
+    {
+     "gravita": "lieve",
+     "testo": "Export: telemetria valida nel 70% dei giri"
+    }
+   ]
+  },
+  {
+   "anno": 2026,
+   "round": 11,
+   "gp": "Budapest",
+   "sessione": "Race",
+   "session_key": 11342,
+   "parziale": false,
+   "stato": "lacune lievi",
+   "problemi": [
+    {
+     "gravita": "lieve",
+     "testo": "1 stint senza mescola"
+    },
+    {
+     "gravita": "lieve",
+     "testo": "Export: telemetria valida nel 9% dei giri"
+    }
+   ]
+  },
+  {
+   "anno": 2026,
+   "round": 12,
+   "gp": "Zandvoort",
+   "sessione": "Practice 1",
+   "session_key": 11343,
+   "parziale": false,
+   "stato": "lacune lievi",
+   "problemi": [
+    {
+     "gravita": "lieve",
+     "testo": "Export: telemetria valida nel 82% dei giri"
+    }
+   ]
+  },
+  {
+   "anno": 2026,
+   "round": 12,
+   "gp": "Zandvoort",
+   "sessione": "Sprint Qualifying",
+   "session_key": 11344,
+   "parziale": false,
+   "stato": "lacune lievi",
+   "problemi": [
+    {
+     "gravita": "lieve",
+     "testo": "Export: telemetria valida nel 85% dei giri"
+    }
+   ]
+  },
+  {
+   "anno": 2026,
+   "round": 12,
+   "gp": "Zandvoort",
+   "sessione": "Sprint",
+   "session_key": 11348,
+   "parziale": false,
+   "stato": "completo",
+   "problemi": []
+  },
+  {
+   "anno": 2026,
+   "round": 12,
+   "gp": "Zandvoort",
+   "sessione": "Qualifying",
+   "session_key": 11349,
+   "parziale": false,
+   "stato": "lacune lievi",
+   "problemi": [
+    {
+     "gravita": "lieve",
+     "testo": "Export: telemetria valida nel 84% dei giri"
+    }
+   ]
+  },
+  {
+   "anno": 2026,
+   "round": 12,
+   "gp": "Zandvoort",
+   "sessione": "Race",
+   "session_key": 11353,
+   "parziale": false,
+   "stato": "lacune lievi",
+   "problemi": [
+    {
+     "gravita": "lieve",
+     "testo": "giri mancanti (3): NOR 71/72, HUL 70/71, TSU 70/71"
+    },
+    {
+     "gravita": "lieve",
+     "testo": "numeri di giro saltati: NOR 44; TSU 43; HUL 43"
+    }
+   ]
+  },
+  {
+   "anno": 2026,
+   "round": 13,
+   "gp": "Monza",
+   "sessione": "Practice 1",
+   "session_key": 11354,
+   "parziale": false,
+   "stato": "completo",
+   "problemi": []
+  },
+  {
+   "anno": 2026,
+   "round": 13,
+   "gp": "Monza",
+   "sessione": "Practice 2",
+   "session_key": 11355,
+   "parziale": false,
+   "stato": "completo",
+   "problemi": []
+  },
+  {
+   "anno": 2026,
+   "round": 13,
+   "gp": "Monza",
+   "sessione": "Practice 3",
+   "session_key": 11356,
+   "parziale": false,
+   "stato": "completo",
+   "problemi": []
+  },
+  {
+   "anno": 2026,
+   "round": 13,
+   "gp": "Monza",
+   "sessione": "Qualifying",
+   "session_key": 11357,
+   "parziale": false,
+   "stato": "lacune lievi",
+   "problemi": [
+    {
+     "gravita": "lieve",
+     "testo": "Export: telemetria valida nel 80% dei giri"
+    }
+   ]
+  },
+  {
+   "anno": 2026,
+   "round": 13,
+   "gp": "Monza",
+   "sessione": "Race",
+   "session_key": 11361,
+   "parziale": false,
+   "stato": "lacune lievi",
+   "problemi": [
+    {
+     "gravita": "lieve",
+     "testo": "Export: telemetria valida nel 83% dei giri"
+    }
+   ]
+  },
+  {
+   "anno": 2026,
+   "round": 14,
+   "gp": "Madrid",
+   "sessione": "Practice 1",
+   "session_key": 11362,
+   "parziale": false,
+   "stato": "lacune lievi",
+   "problemi": [
+    {
+     "gravita": "lieve",
+     "testo": "Export: telemetria valida nel 79% dei giri"
+    }
+   ]
+  },
+  {
+   "anno": 2026,
+   "round": 14,
+   "gp": "Madrid",
+   "sessione": "Practice 2",
+   "session_key": 11363,
+   "parziale": false,
+   "stato": "lacune lievi",
+   "problemi": [
+    {
+     "gravita": "lieve",
+     "testo": "Export: telemetria valida nel 81% dei giri"
+    }
+   ]
+  },
+  {
+   "anno": 2026,
+   "round": 14,
+   "gp": "Madrid",
+   "sessione": "Practice 3",
+   "session_key": 11364,
+   "parziale": false,
+   "stato": "lacune lievi",
+   "problemi": [
+    {
+     "gravita": "lieve",
+     "testo": "Export: telemetria valida nel 80% dei giri"
+    }
+   ]
+  },
+  {
+   "anno": 2026,
+   "round": 14,
+   "gp": "Madrid",
+   "sessione": "Qualifying",
+   "session_key": 11365,
+   "parziale": false,
+   "stato": "lacune lievi",
+   "problemi": [
+    {
+     "gravita": "lieve",
+     "testo": "Export: telemetria valida nel 75% dei giri"
+    }
+   ]
+  },
+  {
+   "anno": 2026,
+   "round": 14,
+   "gp": "Madrid",
+   "sessione": "Race",
+   "session_key": 11369,
+   "parziale": false,
+   "stato": "completo",
+   "problemi": []
+  },
+  {
+   "anno": 2026,
+   "round": 15,
+   "gp": "Baku",
+   "sessione": "Practice 1",
+   "session_key": 11370,
+   "parziale": false,
+   "stato": "lacune lievi",
+   "problemi": [
+    {
+     "gravita": "lieve",
+     "testo": "giri mancanti (2): HAM 24/25, HAD 7/8"
+    },
+    {
+     "gravita": "lieve",
+     "testo": "numeri di giro saltati: HAM 8"
+    },
+    {
+     "gravita": "lieve",
+     "testo": "Export: telemetria valida nel 84% dei giri"
+    }
+   ]
+  },
+  {
+   "anno": 2026,
+   "round": 15,
+   "gp": "Baku",
+   "sessione": "Practice 2",
+   "session_key": 11371,
+   "parziale": false,
+   "stato": "completo",
+   "problemi": []
+  },
+  {
+   "anno": 2026,
+   "round": 15,
+   "gp": "Baku",
+   "sessione": "Practice 3",
+   "session_key": 11372,
+   "parziale": false,
+   "stato": "lacune lievi",
+   "problemi": [
+    {
+     "gravita": "lieve",
+     "testo": "meteo: 1 letture con la pista a 0 °C (da scartare)"
+    }
+   ]
+  },
+  {
+   "anno": 2026,
+   "round": 15,
+   "gp": "Baku",
+   "sessione": "Qualifying",
+   "session_key": 11373,
+   "parziale": false,
+   "stato": "completo",
+   "problemi": []
+  },
+  {
+   "anno": 2026,
+   "round": 15,
+   "gp": "Baku",
+   "sessione": "Race",
+   "session_key": 11377,
+   "parziale": false,
+   "stato": "lacune lievi",
+   "problemi": [
+    {
+     "gravita": "lieve",
+     "testo": "meteo: 2 letture con la pista a 0 °C (da scartare)"
+    }
+   ]
+  },
+  {
+   "anno": 2026,
+   "round": 16,
+   "gp": "Kuala Lumpur",
+   "sessione": "Practice 1",
+   "session_key": 11727,
+   "parziale": false,
+   "stato": "lacune lievi",
+   "problemi": [
+    {
+     "gravita": "lieve",
+     "testo": "meteo: 1 letture con la pista a 0 °C (da scartare)"
+    },
+    {
+     "gravita": "lieve",
+     "testo": "Export: telemetria valida nel 83% dei giri"
+    }
+   ]
+  },
+  {
+   "anno": 2026,
+   "round": 16,
+   "gp": "Kuala Lumpur",
+   "sessione": "Practice 2",
+   "session_key": 11728,
+   "parziale": false,
+   "stato": "lacune lievi",
+   "problemi": [
+    {
+     "gravita": "lieve",
+     "testo": "meteo: 1 letture con la pista a 0 °C (da scartare)"
+    }
+   ]
+  },
+  {
+   "anno": 2026,
+   "round": 16,
+   "gp": "Kuala Lumpur",
+   "sessione": "Practice 3",
+   "session_key": 11729,
+   "parziale": false,
+   "stato": "lacune lievi",
+   "problemi": [
+    {
+     "gravita": "lieve",
+     "testo": "meteo: 1 letture con la pista a 0 °C (da scartare)"
+    },
+    {
+     "gravita": "lieve",
+     "testo": "Export: telemetria valida nel 79% dei giri"
+    }
+   ]
+  },
+  {
+   "anno": 2026,
+   "round": 16,
+   "gp": "Kuala Lumpur",
+   "sessione": "Qualifying",
+   "session_key": 11730,
+   "parziale": false,
+   "stato": "lacune lievi",
+   "problemi": [
+    {
+     "gravita": "lieve",
+     "testo": "meteo: 1 letture con la pista a 0 °C (da scartare)"
+    },
+    {
+     "gravita": "lieve",
+     "testo": "Export: telemetria valida nel 72% dei giri"
+    }
+   ]
+  },
+  {
+   "anno": 2026,
+   "round": 16,
+   "gp": "Kuala Lumpur",
+   "sessione": "Race",
+   "session_key": 11731,
+   "parziale": false,
+   "stato": "lacune lievi",
+   "problemi": [
+    {
+     "gravita": "lieve",
+     "testo": "meteo: 2 letture con la pista a 0 °C (da scartare)"
+    }
+   ]
+  },
+  {
+   "anno": 2026,
+   "round": 17,
+   "gp": "Marina Bay",
+   "sessione": "Practice 1",
+   "session_key": 11378,
+   "parziale": false,
+   "stato": "lacune lievi",
+   "problemi": [
+    {
+     "gravita": "lieve",
+     "testo": "meteo: 1 letture con la pista a 0 °C (da scartare)"
+    }
+   ]
+  },
+  {
+   "anno": 2026,
+   "round": 17,
+   "gp": "Marina Bay",
+   "sessione": "Sprint Qualifying",
+   "session_key": 11379,
+   "parziale": false,
+   "stato": "lacune lievi",
+   "problemi": [
+    {
+     "gravita": "lieve",
+     "testo": "meteo: 1 letture con la pista a 0 °C (da scartare)"
+    }
+   ]
+  },
+  {
+   "anno": 2026,
+   "round": 17,
+   "gp": "Marina Bay",
+   "sessione": "Sprint",
+   "session_key": 11383,
+   "parziale": false,
+   "stato": "completo",
+   "problemi": []
+  },
+  {
+   "anno": 2026,
+   "round": 17,
+   "gp": "Marina Bay",
+   "sessione": "Qualifying",
+   "session_key": 11384,
+   "parziale": false,
+   "stato": "lacune gravi",
+   "problemi": [
+    {
+     "gravita": "grave",
+     "testo": "dati dal minuto 30 della sessione: inizio perso da OpenF1"
+    },
+    {
+     "gravita": "lieve",
+     "testo": "meteo dal minuto 18 della sessione"
+    },
+    {
+     "gravita": "lieve",
+     "testo": "meteo: 43 letture su 60 minuti"
+    },
+    {
+     "gravita": "lieve",
+     "testo": "meteo: 1 letture con la pista a 0 °C (da scartare)"
+    }
+   ]
+  },
+  {
+   "anno": 2026,
+   "round": 17,
+   "gp": "Marina Bay",
+   "sessione": "Race",
+   "session_key": 11388,
+   "parziale": false,
+   "stato": "lacune lievi",
+   "problemi": [
+    {
+     "gravita": "lieve",
+     "testo": "meteo: 1 letture con la pista a 0 °C (da scartare)"
+    }
+   ]
+  },
+  {
+   "anno": 2026,
+   "round": 18,
+   "gp": "Austin",
+   "sessione": "Practice 1",
+   "session_key": 11389,
+   "parziale": false,
+   "stato": "lacune lievi",
+   "problemi": [
+    {
+     "gravita": "lieve",
+     "testo": "meteo: 1 letture con la pista a 0 °C (da scartare)"
+    },
+    {
+     "gravita": "lieve",
+     "testo": "Export: telemetria valida nel 84% dei giri"
+    }
+   ]
+  },
+  {
+   "anno": 2026,
+   "round": 18,
+   "gp": "Austin",
+   "sessione": "Practice 2",
+   "session_key": 11390,
+   "parziale": false,
+   "stato": "lacune lievi",
+   "problemi": [
+    {
+     "gravita": "lieve",
+     "testo": "meteo: 1 letture con la pista a 0 °C (da scartare)"
+    }
+   ]
+  },
+  {
+   "anno": 2026,
+   "round": 18,
+   "gp": "Austin",
+   "sessione": "Practice 3",
+   "session_key": 11391,
+   "parziale": false,
+   "stato": "lacune lievi",
+   "problemi": [
+    {
+     "gravita": "lieve",
+     "testo": "meteo: 1 letture con la pista a 0 °C (da scartare)"
+    },
+    {
+     "gravita": "lieve",
+     "testo": "Export: telemetria valida nel 83% dei giri"
+    }
+   ]
+  },
+  {
+   "anno": 2026,
+   "round": 18,
+   "gp": "Austin",
+   "sessione": "Qualifying",
+   "session_key": 11392,
+   "parziale": false,
+   "stato": "lacune lievi",
+   "problemi": [
+    {
+     "gravita": "lieve",
+     "testo": "Export: telemetria valida nel 72% dei giri"
+    }
+   ]
+  },
+  {
+   "anno": 2026,
+   "round": 18,
+   "gp": "Austin",
+   "sessione": "Race",
+   "session_key": 11396,
+   "parziale": false,
+   "stato": "lacune lievi",
+   "problemi": [
+    {
+     "gravita": "lieve",
+     "testo": "meteo: 1 letture con la pista a 0 °C (da scartare)"
+    }
+   ]
+  },
+  {
+   "anno": 2026,
+   "round": 19,
+   "gp": "Mexico City",
+   "sessione": "Practice 1",
+   "session_key": 11397,
+   "parziale": false,
+   "stato": "completo",
+   "problemi": []
+  },
+  {
+   "anno": 2026,
+   "round": 19,
+   "gp": "Mexico City",
+   "sessione": "Practice 2",
+   "session_key": 11398,
+   "parziale": false,
+   "stato": "lacune lievi",
+   "problemi": [
+    {
+     "gravita": "lieve",
+     "testo": "meteo: 1 letture con la pista a 0 °C (da scartare)"
+    }
+   ]
+  },
+  {
+   "anno": 2026,
+   "round": 19,
+   "gp": "Mexico City",
+   "sessione": "Practice 3",
+   "session_key": 11399,
+   "parziale": false,
+   "stato": "lacune gravi",
+   "problemi": [
+    {
+     "gravita": "grave",
+     "testo": "giri mancanti (26): HUL 25/32, COL 25/31, GAS 22/26, STR 20/21, HIR 25/32, BOT 21/22"
+    },
+    {
+     "gravita": "lieve",
+     "testo": "numeri di giro saltati: HUL 2,3,4,5,6,7…; GAS 2,3,4,5; COL 2,3,4,5,6,7; HIR 2,3,4,5,6,7…; BOT 2; STR 2"
+    },
+    {
+     "gravita": "grave",
+     "testo": "dati dal minuto 14 della sessione: inizio perso da OpenF1"
+    },
+    {
+     "gravita": "lieve",
+     "testo": "meteo dal minuto 15 della sessione"
+    },
+    {
+     "gravita": "lieve",
+     "testo": "meteo: 46 letture su 60 minuti"
+    },
+    {
+     "gravita": "lieve",
+     "testo": "piloti con giri ma senza stint: BOR, PER"
+    },
+    {
+     "gravita": "grave",
+     "testo": "Export: piloti senza telemetria: BOR"
+    },
+    {
+     "gravita": "lieve",
+     "testo": "Export: 6 giri con tempo ma senza telemetria su 450"
+    },
+    {
+     "gravita": "lieve",
+     "testo": "Export: telemetria valida nel 85% dei giri"
+    }
+   ]
+  },
+  {
+   "anno": 2026,
+   "round": 19,
+   "gp": "Mexico City",
+   "sessione": "Qualifying",
+   "session_key": 11400,
+   "parziale": false,
+   "stato": "lacune lievi",
+   "problemi": [
+    {
+     "gravita": "lieve",
+     "testo": "Export: telemetria valida nel 72% dei giri"
+    }
+   ]
+  },
+  {
+   "anno": 2026,
+   "round": 19,
+   "gp": "Mexico City",
+   "sessione": "Race",
+   "session_key": 11404,
+   "parziale": false,
+   "stato": "lacune gravi",
+   "problemi": [
+    {
+     "gravita": "grave",
+     "testo": "giri mancanti (8): VER 70/71, HAM 70/71, ANT 70/71, LEC 70/71, NOR 70/71, RUS 70/71, PIA 70/71, COL 70/71"
+    },
+    {
+     "gravita": "lieve",
+     "testo": "numeri di giro saltati: LEC 5; VER 5; HAM 5; ANT 5; RUS 5; LIN 5; COL 5; NOR 5"
+    },
+    {
+     "gravita": "lieve",
+     "testo": "meteo: 2 letture con la pista a 0 °C (da scartare)"
+    }
+   ]
+  }
+ ]
+}
