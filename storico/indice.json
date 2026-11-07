@@ -1,7 +1,7 @@
 {
- "aggiornato": "2026-11-07T16:08:09Z",
+ "aggiornato": "2026-11-07T21:30:57Z",
  "fermato": null,
- "richieste": 50,
+ "richieste": 57,
  "file": [
   {
    "file": "storico/2023/01-bahrain-grand-prix.json.gz",
@@ -1972,16 +1972,17 @@
    "sessioni": [
     "Practice 1",
     "Practice 2",
-    "Practice 3"
+    "Practice 3",
+    "Qualifying"
    ],
    "giri_gara": 0,
    "partenze": 0,
-   "energia": 98,
+   "energia": 120,
    "energia_errori": [],
    "errori": [],
-   "scaricato": "2026-11-07T16:06:44Z",
+   "scaricato": "2026-11-07T21:29:16Z",
    "parziale": true,
-   "kb": 448
+   "kb": 520
   }
  ],
  "circuiti": [
