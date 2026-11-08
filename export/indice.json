@@ -1,5 +1,5 @@
 {
- "aggiornato": "2026-11-07T21:33:59Z",
+ "aggiornato": "2026-11-08T22:02:42Z",
  "sessioni": [
   {
    "evento": "Australian Grand Prix",
@@ -4605,6 +4605,55 @@
    ],
    "scaricato": "2026-11-07T21:33:59Z",
    "cartella": "2026-s-o-paulo/Q"
+  },
+  {
+   "evento": "São Paulo Grand Prix",
+   "luogo": "São Paulo",
+   "sessione": "Race",
+   "session_key": 11412,
+   "inizio": "2026-11-08T17:00:00+00:00",
+   "fine": "2026-11-08T19:00:00+00:00",
+   "piloti_top": [
+    "NOR",
+    "VER",
+    "HAD",
+    "ANT",
+    "LEC",
+    "HAM",
+    "RUS",
+    "PIA"
+   ],
+   "piloti_telemetria": [
+    "NOR",
+    "VER",
+    "BOR",
+    "HAD",
+    "GAS",
+    "PER",
+    "ANT",
+    "ALO",
+    "LEC",
+    "STR",
+    "ALB",
+    "HUL",
+    "LAW",
+    "LIN",
+    "COL",
+    "HAM",
+    "CAM",
+    "SAI",
+    "RUS",
+    "BOT",
+    "PIA",
+    "BEA"
+   ],
+   "giri": 1435,
+   "giri_telemetria_valida": [
+    1430,
+    1435
+   ],
+   "scaricato": "2026-11-08T22:02:42Z",
+   "cartella": "2026-s-o-paulo/R"
   }
  ]
 }
