@@ -87,7 +87,10 @@ P = dict(
     errore_giro_p=0.010,      # probabilità di errore (perdita 1.5-5 s) per giro
     # partenza
     metri_per_posizione=8.0,  # distanza tra due caselle
-    peso_scatto=0.9,          # posizioni guadagnate ogni 8 m di scatto in più (dati 2026: 1 ogni 9 m)
+    peso_scatto=0.45,         # posizioni guadagnate ogni 8 m di scatto in più. Dimezzato il 10/11/2026 (era 0,9, dai
+                              # dati 2026: 1 ogni 9 m): sulle 22 corse 2026 vittoria Brier −0,007, podio −0,011, testa
+                              # dopo il giro 1 −0,010, nessuno dimostrato ma tutti nello stesso verso; nel 2024-2025
+                              # quasi indifferente (claude/indagine-modelli-2026-11-10.md)
     gap_lap1=0.75,            # s tra due auto dopo il primo giro
     # gomme e soste
     quota_degrado=0.45,       # frazione del degrado lordo che separa gomma nuova e usata
