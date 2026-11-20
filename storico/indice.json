@@ -1,7 +1,7 @@
 {
- "aggiornato": "2026-11-08T22:04:12Z",
+ "aggiornato": "2026-11-20T08:21:17Z",
  "fermato": null,
- "richieste": 109,
+ "richieste": 111,
  "file": [
   {
    "file": "storico/2023/01-bahrain-grand-prix.json.gz",
@@ -1976,14 +1976,33 @@
     "Qualifying",
     "Race"
    ],
-   "giri_gara": 1438,
+   "giri_gara": 1437,
    "partenze": 1,
    "energia": 161,
    "energia_errori": [],
    "errori": [],
-   "scaricato": "2026-11-08T22:00:41Z",
-   "parziale": true,
+   "scaricato": "2026-11-20T08:17:41Z",
+   "parziale": false,
    "kb": 1336
+  },
+  {
+   "file": "storico/2026/21-las-vegas-grand-prix.json.gz",
+   "anno": 2026,
+   "round": 21,
+   "gp": "Las Vegas Grand Prix",
+   "luogo": "Las Vegas",
+   "sessioni": [
+    "Practice 1",
+    "Practice 2"
+   ],
+   "giri_gara": 0,
+   "partenze": 0,
+   "energia": 30,
+   "energia_errori": [],
+   "errori": [],
+   "scaricato": "2026-11-20T08:19:47Z",
+   "parziale": true,
+   "kb": 175
   }
  ],
  "circuiti": [
