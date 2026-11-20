@@ -1,0 +1,48 @@
+{
+ "evento": "Las Vegas Grand Prix",
+ "luogo": "Las Vegas",
+ "sessione": "Practice 2",
+ "session_key": 11414,
+ "inizio": "2026-11-20T04:00:00+00:00",
+ "fine": "2026-11-20T05:00:00+00:00",
+ "piloti_top": [
+  "NOR",
+  "VER",
+  "HAD",
+  "ANT",
+  "LEC",
+  "HAM",
+  "RUS",
+  "PIA"
+ ],
+ "piloti_telemetria": [
+  "NOR",
+  "VER",
+  "BOR",
+  "HAD",
+  "GAS",
+  "PER",
+  "ANT",
+  "ALO",
+  "LEC",
+  "STR",
+  "ALB",
+  "HUL",
+  "LAW",
+  "LIN",
+  "COL",
+  "HAM",
+  "CAM",
+  "SAI",
+  "RUS",
+  "BOT",
+  "PIA",
+  "BEA"
+ ],
+ "giri": 376,
+ "giri_telemetria_valida": [
+  369,
+  376
+ ],
+ "scaricato": "2026-11-20T08:19:43Z"
+}

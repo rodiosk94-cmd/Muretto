@@ -1,5 +1,5 @@
 {
- "aggiornato": "2026-11-08T22:02:42Z",
+ "aggiornato": "2026-11-20T08:19:43Z",
  "sessioni": [
   {
    "evento": "Australian Grand Prix",
@@ -4654,6 +4654,104 @@
    ],
    "scaricato": "2026-11-08T22:02:42Z",
    "cartella": "2026-s-o-paulo/R"
+  },
+  {
+   "evento": "Las Vegas Grand Prix",
+   "luogo": "Las Vegas",
+   "sessione": "Practice 1",
+   "session_key": 11413,
+   "inizio": "2026-11-20T00:30:00+00:00",
+   "fine": "2026-11-20T01:30:00+00:00",
+   "piloti_top": [
+    "NOR",
+    "VER",
+    "HAD",
+    "ANT",
+    "LEC",
+    "BEG",
+    "RUS",
+    "PIA"
+   ],
+   "piloti_telemetria": [
+    "NOR",
+    "VER",
+    "BOR",
+    "HAD",
+    "GAS",
+    "PER",
+    "ANT",
+    "LEC",
+    "STR",
+    "ALB",
+    "HUL",
+    "LAW",
+    "CRA",
+    "BEG",
+    "LIN",
+    "COL",
+    "HIR",
+    "CAM",
+    "SAI",
+    "RUS",
+    "BOT",
+    "PIA"
+   ],
+   "giri": 1,
+   "giri_telemetria_valida": [
+    0,
+    1
+   ],
+   "scaricato": "2026-11-20T08:18:21Z",
+   "cartella": "2026-las-vegas/FP1"
+  },
+  {
+   "evento": "Las Vegas Grand Prix",
+   "luogo": "Las Vegas",
+   "sessione": "Practice 2",
+   "session_key": 11414,
+   "inizio": "2026-11-20T04:00:00+00:00",
+   "fine": "2026-11-20T05:00:00+00:00",
+   "piloti_top": [
+    "NOR",
+    "VER",
+    "HAD",
+    "ANT",
+    "LEC",
+    "HAM",
+    "RUS",
+    "PIA"
+   ],
+   "piloti_telemetria": [
+    "NOR",
+    "VER",
+    "BOR",
+    "HAD",
+    "GAS",
+    "PER",
+    "ANT",
+    "ALO",
+    "LEC",
+    "STR",
+    "ALB",
+    "HUL",
+    "LAW",
+    "LIN",
+    "COL",
+    "HAM",
+    "CAM",
+    "SAI",
+    "RUS",
+    "BOT",
+    "PIA",
+    "BEA"
+   ],
+   "giri": 376,
+   "giri_telemetria_valida": [
+    369,
+    376
+   ],
+   "scaricato": "2026-11-20T08:19:43Z",
+   "cartella": "2026-las-vegas/FP2"
   }
  ]
 }
