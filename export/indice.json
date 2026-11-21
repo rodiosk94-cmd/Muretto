@@ -1,5 +1,5 @@
 {
- "aggiornato": "2026-11-20T08:19:43Z",
+ "aggiornato": "2026-11-21T10:52:00Z",
  "sessioni": [
   {
    "evento": "Australian Grand Prix",
@@ -4752,6 +4752,55 @@
    ],
    "scaricato": "2026-11-20T08:19:43Z",
    "cartella": "2026-las-vegas/FP2"
+  },
+  {
+   "evento": "Las Vegas Grand Prix",
+   "luogo": "Las Vegas",
+   "sessione": "Practice 3",
+   "session_key": 11415,
+   "inizio": "2026-11-21T00:30:00+00:00",
+   "fine": "2026-11-21T01:30:00+00:00",
+   "piloti_top": [
+    "NOR",
+    "VER",
+    "HAD",
+    "ANT",
+    "LEC",
+    "HAM",
+    "RUS",
+    "PIA"
+   ],
+   "piloti_telemetria": [
+    "NOR",
+    "VER",
+    "BOR",
+    "HAD",
+    "GAS",
+    "PER",
+    "ANT",
+    "ALO",
+    "LEC",
+    "STR",
+    "ALB",
+    "HUL",
+    "LAW",
+    "LIN",
+    "COL",
+    "HAM",
+    "CAM",
+    "SAI",
+    "RUS",
+    "BOT",
+    "PIA",
+    "BEA"
+   ],
+   "giri": 611,
+   "giri_telemetria_valida": [
+    574,
+    611
+   ],
+   "scaricato": "2026-11-21T10:52:00Z",
+   "cartella": "2026-las-vegas/FP3"
   }
  ]
 }

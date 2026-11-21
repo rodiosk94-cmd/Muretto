@@ -1,9 +1,9 @@
 {
- "controllato": "2026-11-20T08:22:12Z",
+ "controllato": "2026-11-21T10:53:14Z",
  "riepilogo": {
   "completo": 33,
-  "lacune lievi": 57,
-  "lacune gravi": 10
+  "lacune lievi": 58,
+  "lacune gravi": 11
  },
  "sessioni": [
   {
@@ -1405,7 +1405,7 @@
    "gp": "São Paulo",
    "sessione": "Practice 1",
    "session_key": 11405,
-   "parziale": true,
+   "parziale": false,
    "stato": "lacune lievi",
    "problemi": [
     {
@@ -1420,7 +1420,7 @@
    "gp": "São Paulo",
    "sessione": "Practice 2",
    "session_key": 11406,
-   "parziale": true,
+   "parziale": false,
    "stato": "completo",
    "problemi": []
   },
@@ -1430,7 +1430,7 @@
    "gp": "São Paulo",
    "sessione": "Practice 3",
    "session_key": 11407,
-   "parziale": true,
+   "parziale": false,
    "stato": "lacune lievi",
    "problemi": [
     {
@@ -1449,7 +1449,7 @@
    "gp": "São Paulo",
    "sessione": "Qualifying",
    "session_key": 11408,
-   "parziale": true,
+   "parziale": false,
    "stato": "lacune lievi",
    "problemi": [
     {
@@ -1464,6 +1464,44 @@
    "gp": "São Paulo",
    "sessione": "Race",
    "session_key": 11412,
+   "parziale": false,
+   "stato": "lacune lievi",
+   "problemi": [
+    {
+     "gravita": "lieve",
+     "testo": "meteo: 1 letture con la pista a 0 °C (da scartare)"
+    }
+   ]
+  },
+  {
+   "anno": 2026,
+   "round": 21,
+   "gp": "Las Vegas",
+   "sessione": "Practice 1",
+   "session_key": 11413,
+   "parziale": true,
+   "stato": "lacune gravi",
+   "problemi": [
+    {
+     "gravita": "grave",
+     "testo": "classifica con 0 piloti"
+    },
+    {
+     "gravita": "lieve",
+     "testo": "primo giro al minuto 19 (meteo regolare: probabilmente nessuno in pista)"
+    },
+    {
+     "gravita": "lieve",
+     "testo": "Export: telemetria valida nel 0% dei giri"
+    }
+   ]
+  },
+  {
+   "anno": 2026,
+   "round": 21,
+   "gp": "Las Vegas",
+   "sessione": "Practice 2",
+   "session_key": 11414,
    "parziale": true,
    "stato": "lacune lievi",
    "problemi": [
