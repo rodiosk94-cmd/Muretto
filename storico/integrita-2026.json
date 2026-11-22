@@ -1,8 +1,8 @@
 {
- "controllato": "2026-11-21T10:53:25Z",
+ "controllato": "2026-11-22T17:52:32Z",
  "riepilogo": {
   "completo": 71,
-  "lacune lievi": 27,
+  "lacune lievi": 28,
   "lacune gravi": 6
  },
  "sessioni": [
@@ -1238,7 +1238,7 @@
    "gp": "Las Vegas",
    "sessione": "Practice 1",
    "session_key": 11413,
-   "parziale": true,
+   "parziale": false,
    "stato": "lacune gravi",
    "problemi": [
     {
@@ -1257,7 +1257,7 @@
    "gp": "Las Vegas",
    "sessione": "Practice 2",
    "session_key": 11414,
-   "parziale": true,
+   "parziale": false,
    "stato": "lacune lievi",
    "problemi": [
     {
@@ -1272,7 +1272,7 @@
    "gp": "Las Vegas",
    "sessione": "Practice 3",
    "session_key": 11415,
-   "parziale": true,
+   "parziale": false,
    "stato": "completo",
    "problemi": []
   },
@@ -1282,7 +1282,22 @@
    "gp": "Las Vegas",
    "sessione": "Qualifying",
    "session_key": 11416,
-   "parziale": true,
+   "parziale": false,
+   "stato": "lacune lievi",
+   "problemi": [
+    {
+     "gravita": "lieve",
+     "testo": "meteo: 1 letture con la pista a 0 °C (da scartare)"
+    }
+   ]
+  },
+  {
+   "anno": 2026,
+   "round": 21,
+   "gp": "Las Vegas",
+   "sessione": "Race",
+   "session_key": 11420,
+   "parziale": false,
    "stato": "lacune lievi",
    "problemi": [
     {
