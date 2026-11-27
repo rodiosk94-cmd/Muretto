@@ -1,5 +1,5 @@
 {
- "aggiornato": "2026-11-22T17:50:32Z",
+ "aggiornato": "2026-11-27T20:01:11Z",
  "sessioni": [
   {
    "evento": "Australian Grand Prix",
@@ -4899,6 +4899,104 @@
    ],
    "scaricato": "2026-11-22T17:50:32Z",
    "cartella": "2026-las-vegas/R"
+  },
+  {
+   "evento": "Qatar Grand Prix",
+   "luogo": "Lusail",
+   "sessione": "Practice 1",
+   "session_key": 11421,
+   "inizio": "2026-11-27T13:30:00+00:00",
+   "fine": "2026-11-27T14:30:00+00:00",
+   "piloti_top": [
+    "NOR",
+    "VER",
+    "HAD",
+    "ANT",
+    "LEC",
+    "HAM",
+    "RUS",
+    "PIA"
+   ],
+   "piloti_telemetria": [
+    "NOR",
+    "VER",
+    "BOR",
+    "HAD",
+    "GAS",
+    "PER",
+    "ANT",
+    "LEC",
+    "STR",
+    "ALB",
+    "HUL",
+    "LAW",
+    "CRA",
+    "LIN",
+    "COL",
+    "HAM",
+    "CAM",
+    "SAI",
+    "RUS",
+    "BOT",
+    "PIA",
+    "BEA"
+   ],
+   "giri": 569,
+   "giri_telemetria_valida": [
+    474,
+    569
+   ],
+   "scaricato": "2026-11-27T19:59:50Z",
+   "cartella": "2026-lusail/FP1"
+  },
+  {
+   "evento": "Qatar Grand Prix",
+   "luogo": "Lusail",
+   "sessione": "Practice 2",
+   "session_key": 11422,
+   "inizio": "2026-11-27T17:00:00+00:00",
+   "fine": "2026-11-27T18:00:00+00:00",
+   "piloti_top": [
+    "NOR",
+    "VER",
+    "HAD",
+    "ANT",
+    "LEC",
+    "HAM",
+    "RUS",
+    "PIA"
+   ],
+   "piloti_telemetria": [
+    "NOR",
+    "VER",
+    "BOR",
+    "HAD",
+    "GAS",
+    "PER",
+    "ANT",
+    "ALO",
+    "LEC",
+    "STR",
+    "ALB",
+    "HUL",
+    "LAW",
+    "LIN",
+    "COL",
+    "HAM",
+    "CAM",
+    "SAI",
+    "RUS",
+    "BOT",
+    "PIA",
+    "BEA"
+   ],
+   "giri": 575,
+   "giri_telemetria_valida": [
+    469,
+    575
+   ],
+   "scaricato": "2026-11-27T20:01:11Z",
+   "cartella": "2026-lusail/FP2"
   }
  ]
 }
