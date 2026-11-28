@@ -1,8 +1,8 @@
 {
- "controllato": "2026-11-27T20:03:07Z",
+ "controllato": "2026-11-28T16:20:05Z",
  "riepilogo": {
   "completo": 34,
-  "lacune lievi": 60,
+  "lacune lievi": 62,
   "lacune gravi": 11
  },
  "sessioni": [
@@ -1548,6 +1548,44 @@
     {
      "gravita": "lieve",
      "testo": "meteo: 1 letture con la pista a 0 °C (da scartare)"
+    },
+    {
+     "gravita": "lieve",
+     "testo": "Export: telemetria valida nel 82% dei giri"
+    }
+   ]
+  },
+  {
+   "anno": 2026,
+   "round": 22,
+   "gp": "Lusail",
+   "sessione": "Practice 1",
+   "session_key": 11421,
+   "parziale": true,
+   "stato": "lacune lievi",
+   "problemi": [
+    {
+     "gravita": "lieve",
+     "testo": "meteo: 1 letture con la pista a 0 °C (da scartare)"
+    },
+    {
+     "gravita": "lieve",
+     "testo": "Export: telemetria valida nel 83% dei giri"
+    }
+   ]
+  },
+  {
+   "anno": 2026,
+   "round": 22,
+   "gp": "Lusail",
+   "sessione": "Practice 2",
+   "session_key": 11422,
+   "parziale": true,
+   "stato": "lacune lievi",
+   "problemi": [
+    {
+     "gravita": "lieve",
+     "testo": "meteo: 2 letture con la pista a 0 °C (da scartare)"
     },
     {
      "gravita": "lieve",
