@@ -1,7 +1,7 @@
 {
- "controllato": "2026-11-27T20:01:44Z",
+ "controllato": "2026-11-28T16:19:28Z",
  "riepilogo": {
-  "completo": 71,
+  "completo": 72,
   "lacune lievi": 30,
   "lacune gravi": 6
  },
@@ -1335,6 +1335,16 @@
      "testo": "meteo: 2 letture con la pista a 0 °C (da scartare)"
     }
    ]
+  },
+  {
+   "anno": 2026,
+   "round": 22,
+   "gp": "Lusail",
+   "sessione": "Practice 3",
+   "session_key": 11423,
+   "parziale": true,
+   "stato": "completo",
+   "problemi": []
   }
  ]
 }

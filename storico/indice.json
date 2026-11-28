@@ -1,7 +1,7 @@
 {
- "aggiornato": "2026-11-27T20:01:43Z",
+ "aggiornato": "2026-11-28T16:19:23Z",
  "fermato": null,
- "richieste": 95,
+ "richieste": 50,
  "file": [
   {
    "file": "storico/2023/01-bahrain-grand-prix.json.gz",
@@ -2015,16 +2015,17 @@
    "luogo": "Lusail",
    "sessioni": [
     "Practice 1",
-    "Practice 2"
+    "Practice 2",
+    "Practice 3"
    ],
    "giri_gara": 0,
    "partenze": 0,
-   "energia": 73,
+   "energia": 95,
    "energia_errori": [],
    "errori": [],
-   "scaricato": "2026-11-27T19:58:43Z",
+   "scaricato": "2026-11-28T16:17:58Z",
    "parziale": true,
-   "kb": 413
+   "kb": 478
   }
  ],
  "circuiti": [
